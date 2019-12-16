@@ -4,13 +4,12 @@
     box-sizing: border-box;
 }
 body{
-    margin: auto;
     background-color: #F6F8F9;
 }
 .Main-Container{
     width:100%;
-    border: 1px solid red;
 }
+/* Request page Header */
 .main-container-header{
     display: flex;
     align-items: flex-start;
@@ -38,6 +37,8 @@ body{
     padding-left: 0.5%;
     padding-right: 2%;
 }
+
+/* request Page Body content */
 .main-container-sub-body{
     width: 96%;
     margin: 2%;
@@ -89,6 +90,8 @@ width: 10%;
     box-shadow: 1px 1px 3px #000000;
 }
     
+
+
 .FilterDiv{
    display: flex;
     align-items: center;
@@ -104,6 +107,9 @@ padding: 0 0.8%;
 .showingText{
     font-size: 0.7vw;
 }
+
+
+
 .requestList-1{
     width: 100%;
     display: flex;
@@ -154,6 +160,8 @@ padding: 0 0.8%;
     border-radius: 50px;
     background-color: #D03E24; 
 }
+
+/* Request Page Footer */
 .showMoreDiv{
     display: flex;
     align-items: flex-start;

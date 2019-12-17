@@ -39,9 +39,9 @@ body{
 }
 
 /* request Page Body content */
-.main-container-sub-body{
+.main-container-myRequest-body{
     width: 96%;
-    margin: 2%;
+    margin: 2% 2% 0 2%;
     background: #FFFFFF;
 }
 .myRequest{
@@ -91,7 +91,11 @@ width: 10%;
 }
     
 
-
+.main-container-filter-body{
+    width: 96%;
+    margin: 0.3% 2% 2% 2%;
+    background: #FFFFFF;
+}
 .FilterDiv{
    display: flex;
     align-items: center;

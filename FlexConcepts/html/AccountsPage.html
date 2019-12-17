@@ -5,7 +5,7 @@
     <title>
         Accounts page Using flex
     </title>
-    <link rel="stylesheet" type="text/css" href="AccountsPage.css">
+    <link rel="stylesheet" type="text/css" href="../css/AccountsPage.css">
 </head>
 
 <body>
@@ -13,17 +13,17 @@
 
         <div class="main-container-header">
             <div class="burgerIcon">
-                <img src="../images/icons/request-icons-02.png" width="30" height="30" alt="Burger Icon">
+                <img src="../icons/request-icons-02.png" width="30" height="30" alt="Burger Icon">
             </div>
             <div class="profileIcon">
-                <img src="../images/icons/profile-picture.png" width="30" height="30" alt="Profile Icon"
+                <img src="../icons/profile-picture.png" width="30" height="30" alt="Profile Icon"
                     style="border-radius: 50px">
             </div>
             <div class="profileNameDiv">
                 <span style="font-size: 0.8vw;color:#595959"> John Doe</span>
             </div>
             <div class="dropDownIcon">
-                <img src="../images/icons/request-icons-05.png" width="12" height="12" alt="Drop Down Icon ">
+                <img src="../icons/request-icons-05.png" width="12" height="12" alt="Drop Down Icon ">
             </div>
         </div>
 
@@ -41,6 +41,7 @@
                     </p>
                 </div>
             </div>
+
             <div class="main-container-rentInvoice-div">
 
                 <div class="accountDetails">
@@ -53,33 +54,35 @@
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </p>
                         </div>
+                        <div class="receiptMainDiv">
+                            <div class="receiptsDiv">
+                                <p class="receiptsTitle">RECEIPTS</p>
+                                <p class="receiptsDescription">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis,<br>
+                                    tortor sit amet tempor vehicula.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
 
-                        <div class="receiptsDiv">
-                            <p class="receiptsTitle">RECEIPTS</p>
-                            <p class="receiptsDescription">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis,<br>
-                                tortor sit amet tempor vehicula.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
+                            <div class="ledgerDiv">
+                                <p class="ledgerTitle">LEDGER</p>
+                                <p class="ledgerDescription">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis,<br>
+                                    tortor sit amet tempor vehicula.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+
+                            <div class="billsDiv">
+                                <p class="billsTitle">BILLS</p>
+                                <p class="billsDescription">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis,<br>
+                                    tortor sit amet tempor vehicula.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
                         </div>
 
-                        <div class="ledgerDiv">
-                            <p class="ledgerTitle">LEDGER</p>
-                            <p class="ledgerDescription">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis,<br>
-                                tortor sit amet tempor vehicula.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                        </div>
-
-                        <div class="billsDiv">
-                            <p class="billsTitle">BILLS</p>
-                            <p class="billsDescription">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis,<br>
-                                tortor sit amet tempor vehicula.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                        </div>
                     </div>
                     <div class="accountsRightDiv">
                         <div class="debitOrCreditCardDiv">
@@ -130,44 +133,27 @@
                         </div>
 
                         <div class="quikPayDiv">
-                            <input type="checkbox">QuikPay<br>
+                            <input type="checkbox">&nbsp; QuikPay<br>
                             <span style="color:#9b9797;font-size:0.8vw;padding-left: 2%">Save the card information to
                                 this account and make faster payments.</span>
 
                         </div>
+
                         <div class="accountsMainFooter">
                             <div class="accountSubFooter">
-                                <div class="backButton">
-                                    <p>Back</p>
+                                <div class="backButtonDiv">
+                                    <p>
+                                        < Back</p> </div> <div class="payButtonDiv">
+                                            <button type="button" class="payButton">Pay Rs 10,988</button>
                                 </div>
                             </div>
-                            <div class="payButtonDiv">
-                                <button type="button" class="payButton">Pay 10,988</button>
-                            </div>
-
                         </div>
+
                     </div>
-
-
-
                 </div>
-
-
-                <!-- <div class="additionalChargesFooter">
-                    <div class="additionalChargeFooterDiv">
-                        <div class="CancelText">
-                            <p style="font-size: 0.8vw;letter-spacing: 0.6px;color: #595959;font-weight: bold">
-                                <u>CANCEL</u></p>
-                        </div>
-                        <div class="saveButtonDiv">
-                            <button type="button" class="saveButton">SAVE</button>
-                        </div>
-                    </div>
-                </div> -->
-
             </div>
+            <div style="clear:both"></div>
         </div>
-        <div style="clear:both"></div>
     </div>
 </body>
 

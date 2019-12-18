@@ -9,7 +9,7 @@ body{
 }
 .Main-Container{
     width:100%;
-    border: 1px solid red;
+
 }
 .main-container-header{
     display: flex;
@@ -38,9 +38,10 @@ body{
     padding-left: 0.5%;
     padding-right: 2%;
 }
-.main-container-sub-body{
+
+.main-container-additionalCharges-body{
     width: 96%;
-    margin: 2%;
+    margin: 2% 2% 0 2%;
     background: #FFFFFF;
 }
 .additionalChargesDiv{
@@ -59,6 +60,12 @@ body{
     font-weight:normal;
     color: #505050;
   
+}
+
+.main-container-additionalChargesDetails-body{
+    width: 96%;
+    margin:0.3% 2% 2% 2%;
+    background: #FFFFFF;
 }
 .chargeTitle{
     font-size: 0.8vw;

@@ -9,7 +9,6 @@ body{
 }
 .Main-Container{
     width:100%;
-    border: 1px solid red;
 }
 .main-container-header{
     display: flex;
@@ -38,9 +37,11 @@ body{
     padding-left: 0.5%;
     padding-right: 2%;
 }
+
+
 .main-container-account-div{
     width: 96%;
-    margin: 2%;
+    margin: 2% 2% 0 2%;
     background: #FFFFFF;
 }
 .accountsDiv{
@@ -63,7 +64,7 @@ body{
 
 .main-container-rentInvoice-div{
     width: 96%;
-    margin: 0.2% 2%;
+    margin: 0.3% 2% 2% 2%;
     background: #FFFFFF;
 }
 .accountDetails{
@@ -71,18 +72,16 @@ body{
 }
 .accountsLeftDiv{
     width: 40%;
-    border: 2px solid rgb(47, 184, 20);
+
 }
 .accountsRightDiv{
     width: 60%;
-    border: 2px solid rgb(144, 11, 221);
 }
 
 
 .rentInvoiceDiv{
     padding: 4%;
     border-bottom: 0.5px solid rgb(240, 234, 234); 
-
 }
 .rentInvoiceTitle{
     font-size: 0.9vw;
@@ -97,6 +96,7 @@ body{
     color: #505050;
   
 }
+
 
 .receiptsDiv{
     padding: 4%;
@@ -141,7 +141,6 @@ body{
 
 .billsDiv{
     padding: 4%;
-    border-bottom: 0.5px solid rgb(80, 76, 76); 
     border-right: 0.5px solid rgb(153, 146, 146); 
     background-color: #eeeaea;
 }
@@ -248,21 +247,33 @@ padding: 3%;
     box-shadow: 1px 1px 3px rgb(197, 194, 194);
     padding: 1% 2%;
 }
+
 .quikPayDiv{
     padding: 2%;
 }
-.accountMainFooter{
-    padding: 2%;
-}
+
+
 .accountSubFooter{
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
 }
-.backButton{
-    width: 50%;
+.backButtonDiv{
+    padding:4% 2%;
+    width: 60%;
+}
+.backButtonDiv p{
+    color: #32BDD2;
+    font-weight: bold;
 }
 .payButtonDiv{
-    width: 50%;
+    padding:4% 2%;
+    width: 40%;
+
+}
+.payButton{
+    padding: 1% 5%;
+    background-color: #32BDD2;
+    color:#FFFFFF;
 }

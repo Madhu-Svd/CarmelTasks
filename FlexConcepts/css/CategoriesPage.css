@@ -12,33 +12,45 @@ body{
     border: 1px solid red;
 }
 .main-container-header{
-    padding: 1%;
+    padding: 1% 0%;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
     box-shadow: 0px 0px 4px #000000;
     background: #FFFFFF;
 }
-/* .burgerIcon{
-    flex: 3;
-    padding: 0.5% 2%;
+.CategoriesLogo{
+    width: 20%;
+    padding-left: 3%;
+}
+.dashboardDiv{
+    width: 10%
+}
+.catalogueDiv{
+    width: 10%
+}
+.inventoryDiv{
+    width: 10%
+}
+.peopleDiv{
+    width: 10%
+}
+.circulationDiv{
+    width: 10%
+}
+.accountsDiv{
+    width: 10%
+}
+.reportsDiv{
+    width: 8%
 }
 .profileIcon{
-    padding: 0.5%;
-    
-}
-.profileNameDiv{
-    padding-top: 0.8%;
-    text-align: center;
-    font-size:0.9vw;letter-spacing: 0.9px;
-    color: #595959;
-    
+    width: 2%;
 }
 .dropDownIcon{ 
-    padding-top: 0.9%;
-    padding-left: 0.5%;
-    padding-right: 2%;
-} */
+    width: 2%;
+    padding-right: 3%;
+}
  .main-container-categories-body{
     width: 96%;
     margin: 2%;
@@ -94,7 +106,7 @@ width: 10%;
     box-shadow: 1px 1px 3px #000000;
 } 
 .categoriesErrorField{
-    margin-left: 30%;
+    width: 100%;
     padding-bottom: 1%;
 }
 .ErrorImage{
@@ -103,7 +115,8 @@ width: 10%;
 }
 .categoriesErrorFieldDiv{
     background-color: rgb(247, 224, 224);
-    width: 50%;
+    width: 38%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -119,7 +132,6 @@ width: 10%;
 }
 .CategoriesTitle{
     width: 90%;
-    /* padding-left: 3%; */
 }
 .EditIconDiv{
     width: 5%;
@@ -127,86 +139,17 @@ width: 10%;
 .DeleteIconDiv{
     width: 5%;
 }
- /*   
-.FilterDiv{
-   display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    border-bottom: 0.5px solid rgb(240, 234, 234); 
-    background: #FFFFFF;
-    padding:1% 2%;
-}
-.filter-text{
-    width: 20%;
-padding: 0 0.8%;
-}
-.showingText{
-    font-size: 0.7vw;
-}
-.requestList-1{
+.CategoriesFooter{
     width: 100%;
     display: flex;
-    flex-flow: wrap;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 0.5px solid rgb(240, 234, 234);  
-    padding: 2%;
-}
-.requestDetails{
-    width: 48%;
-}
-.bellIconDiv{
-    width: 30%;
-}
-.requestStatus{
-    width: 17%;
-    text-align: right;
-}
-.circleDiv{
-    width: 2%;
+    justify-content: center;
+position: relative;
 }
 .circle{
-    width:12px;
-    height:12px;
-    border: 1px solid #FFC60A;
-    border-radius: 50px;
-    background-color: #FFC60A; 
-}
-.circle1{
-    width:12px;
-    height:12px;
-    border: 1px solid #24D081;
-    border-radius: 50px;
-    background-color: #24D081; 
-}
-.circle2{
-    width:12px;
-    height:12px;
-    border: 1px solid #D0C824;
-    border-radius: 50px;
-    background-color: #CB9928; 
-}
-.circle3{
-    width:12px;
-    height:12px;
-    border: 1px solid #D03E24;
-    border-radius: 50px;
-    background-color: #D03E24; 
-}
-.showMoreDiv{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    width: 6%;
+    border: 1px solid red;
     padding: 2%;
-    background: #FFFFFF;
-
+    border-radius: 50%;
+    position: absolute;
+    top: 1%;
 }
-.showMoreText{
-    width: 52%;
-    text-align: right;
-}
-.ShowMoreIcon{
-    padding: 0 1%;
-    width: 48%;
-    
-} */

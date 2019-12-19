@@ -4,13 +4,9 @@
     box-sizing: border-box;
 }
 body{
-    margin: auto;
     background-color: #F6F8F9;
 }
-.Main-Container{
-    width:100%;
-    border: 1px solid red;
-}
+
 .main-container-header{
     padding: 1% 0%;
     display: flex;
@@ -45,7 +41,7 @@ body{
     width: 8%
 }
 .profileIcon{
-    width: 2%;
+    width: 3%;
 }
 .dropDownIcon{ 
     width: 2%;
@@ -53,7 +49,6 @@ body{
 }
 
  .main-container-categories-body{
-    width: 96%;
     margin: 2%;
     background: #FFFFFF;
     
@@ -97,30 +92,23 @@ body{
 }
 .serach{
     width: 84%;
-
     float: left;
     padding: 1.5% 0;
 }
 .search-text{
     font-size: 0.6vw;
-    margin: auto;
     border: none;
+    width: 95%;
 }
 .search-icon{
     float: right;
 }
 
 .PeopleList1{
-    width: 100%;
     background: rgb(218, 230, 230);
-    box-shadow: 0px 0px 5px 16% #000000;
-    border: 1px solid #D5E2E8;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     padding: 2%;
-    margin: auto;
-
 }
 .PeopleProfilePicture1{
     width: 5%;
@@ -143,16 +131,12 @@ body{
 
 
 .PeopleList{
-    width: 100%;
     background: #FFFFFF;
     box-shadow: 0px 0px 5px 16% #000000;
-    border: 1px solid #D5E2E8;
+    border-bottom: 1px solid rgb(233, 236, 238);
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     padding: 2%;
-    margin: auto;
-
 }
 .PeopleProfilePicture{
     width: 5%;
@@ -172,23 +156,24 @@ body{
 
 
 .CheckInFooter{
-        border: 1px solid rgb(43, 23, 221);
+    border-bottom: 1px solid rgb(233, 236, 238);
         padding: 2%;
-       
-
+        display: flex;
+        justify-content: flex-end;
 }
 .CheckInSubFooter{
-    width: 40%;
-    border: 1px solid rgb(56, 221, 23);
+    width: 20%;
+    border: 1px dashed #32BDD2;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 .PeopleProfilePicture2{
-    width: 10%;
+    /* width: 10%; */
+    padding-left: 4%;
 }
 .PeopleProfileName2{
-    padding-right: 6%;
+    /* padding-right: 6%; */
 }
 .PeopleProfileName2 p{
     font-size: 1vw;
@@ -198,4 +183,12 @@ body{
     font-size: 1vw;
     font-weight: bold;
     color: #B5B5B5;
+}
+.nextButtonDiv{
+    
+}
+.nextButton{
+    background-color: #32BDD2;
+    color: #FFFFFF;
+    border-radius: 50px;
 }

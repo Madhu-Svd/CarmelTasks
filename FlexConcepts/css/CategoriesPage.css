@@ -45,7 +45,7 @@ body{
     width: 8%
 }
 .profileIcon{
-    width: 2%;
+    width: 3%;
 }
 .dropDownIcon{ 
     width: 2%;
@@ -144,6 +144,7 @@ width: 10%;
     display: flex;
     justify-content: center;
 position: relative;
+/* padding-bottom: %; */
 }
 .circle{
     width: 6%;
@@ -151,5 +152,7 @@ position: relative;
     padding: 2%;
     border-radius: 50%;
     position: absolute;
+    background: #FFFFFF;
+    
     top: 1%;
 }

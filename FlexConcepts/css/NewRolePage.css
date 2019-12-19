@@ -4,17 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    margin: auto;
     background-color: #F6F8F9;
-}
-.Main-Container{
-    width:100%;
-    border: 1px solid red;
 }
 .main-container-header{
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
     box-shadow: 0px 0px 4px #000000;
     background: #FFFFFF;
 }
@@ -24,58 +17,96 @@ body{
 }
 .profileIcon{
     padding: 0.5%;
-    
 }
 .profileNameDiv{
     padding-top: 0.8%;
     text-align: center;
     font-size:0.9vw;letter-spacing: 0.9px;
-    color: #595959;
-    
+    color: #595959;  
 }
 .dropDownIcon{ 
     padding-top: 0.9%;
     padding-left: 0.5%;
     padding-right: 2%;
 }
-.main-container-additionalCharges-body{
+
+
+.main-container-NewRole-div{
     width: 96%;
     margin:2% 2% 0 2%;
     background: #FFFFFF;
 }
-.main-container-additionalChargesDetails-body{
+.main-container-NewRoleDetails-div{
     width: 96%;
     margin:0.3% 2% 2% 2%;
     background: #FFFFFF;
 }
-.additionalChargesDiv{
+.NewRoleDiv{
     padding: 2%;
     border-bottom: 0.5px solid rgb(240, 234, 234); 
 }
-.additionalTitle{
+.NewRoleTitle{
     font-size: 0.9vw;
     font-weight: bold;
     color: #505050;
   
 }
-.additionalDescription{
+.NewRoleDescription{
     font-size: 0.9vw;
     padding-top: 0.7%;
     font-weight:normal;
     color: #505050;
-  
 }
-.chargeTitle{
+
+
+.RoleNameTitle{
     font-size: 0.8vw;
     color: #4d4c4c;
     padding-left: 2%;
     padding-top: 1%;
 }
-.chargeInputBoxDiv{
+.RoleNameInputBoxDiv{
     width: 100%;
     padding: 1% 2%;
 }
-.ShuttleInputBox{
+.RoleNameInputBox{
+    width: 28%;
+    border-radius: 8px;
+    border: 1px solid #FFFFFF;
+    box-shadow: 1px 1px 3px rgb(197, 194, 194);
+    padding: 0.8% 1%;
+}
+
+
+.HomePageTitle{
+    font-size: 0.8vw;
+    color: #4d4c4c;
+    padding-left: 2%;
+    padding-top: 1%;
+}
+.HomePageInputBoxDiv{
+    width: 100%;
+    padding: 1% 2%;
+}
+.HomePageInputBox{
+    width: 28%;
+    border-radius: 8px;
+    border: 1px solid #FFFFFF;
+    box-shadow: 1px 1px 3px rgb(197, 194, 194);
+    padding: 0.8% 1%;
+}
+
+.DescriptionTitle{
+    font-size: 0.8vw;
+    color: #4d4c4c;
+    padding-left: 2%;
+    padding-top: 1%;
+}
+.DescriptionInputBoxDiv{
+    width: 100%;
+    padding: 1% 2%;
+}
+.DescriptionInputBox{
     width: 28%;
     border-radius: 8px;
     border: 1px solid #FFFFFF;
@@ -83,91 +114,24 @@ body{
     padding: 0.8% 2%;
 }
 
-
-.NarrationTitle{
-    font-size: 0.8vw;
-    color: #4d4c4c;
-    padding-left: 2%;
-    padding-top: 1%;
-}
-.NarrationInputBoxDiv{
-    width: 100%;
-    padding: 1% 2%;
-}
-.NarrationInputBox{
-    width: 28%;
-    border-radius: 8px;
-    border: 1px solid #FFFFFF;
-    box-shadow: 1px 1px 3px rgb(197, 194, 194);
-    padding: 0.8% 2%;
+.GrantsListsDiv{
+width: 40%;
+border: 1px solid rgb(228, 223, 223);
+display: flex;
+align-items: center;
+padding: 0.3%;
+background-color: rgb(228, 229, 230);
 }
 
-.AmountTitle{
-    font-size: 0.8vw;
-    color: #4d4c4c;
-    padding-left: 2%;
-    padding-top: 1%;
-}
-.AmountInputBoxDiv{
-    width: 100%;
-    padding: 1% 2%;
-}
-.AmountInputBox{
-    width: 28%;
-    border-radius: 8px;
-    border: 1px solid #FFFFFF;
-    box-shadow: 1px 1px 3px rgb(197, 194, 194);
-    padding: 0.8% 2%;
-}
-
-.BillingCycleTitle{
-    font-size: 0.8vw;
-    color: #4d4c4c;
-    padding-left: 2%;
-    padding-top: 1%;
-}
-.BillingCycleInputBoxDiv{
-    width: 100%;
-    padding: 1% 2%;
-}
-.BillingCycleInputBox{
-    width: 28%;
-    border-radius: 8px;
-    border: 1px solid #FFFFFF;
-    box-shadow: 1px 1px 3px rgb(197, 194, 194);
-    padding: 0.8% 2%;
-}
-
-
-.ChargeMethodTitle{
-    font-size: 0.8vw;
-    color: #4d4c4c;
-    padding-left: 2%;
-    padding-top: 1%;
-}
-.ChargeMethodInputBoxDiv{
-    width: 100%;
-    padding: 1% 2%;
-}
-.ChargeMethodInputBox{
-    width: 28%;
-    border-radius: 8px;
-    border: 1px solid #FFFFFF;
-    box-shadow: 1px 1px 3px rgb(197, 194, 194);
-    padding: 0.8% 2%;
-}
-
-
-
-.additionalChargesFooter{
+.NewRoleFooter{
     width: 100%;
 }
 
-.additionalChargeFooterDiv{
+.NewRoleFooterDiv{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 2%;
+    padding: 4% 2% 2% 2%;
     
 }
 .saveButton{
@@ -175,5 +139,5 @@ body{
     color: #FFFFFF;
     font-size: 0.7vw;
     padding: 6px 25px;
-    border-radius: 8px;
+    border-radius: 30px;
 }

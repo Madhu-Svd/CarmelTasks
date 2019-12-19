@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: auto;
+    background-color: #F6F8F9;
+}
+.Main-Container{
+    width:100%;
+
+}
+.main-container-header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-shadow: 0px 0px 4px #000000;
+    background: #FFFFFF;
+}
+.burgerIcon{
+    flex: 3;
+    padding: 0.5% 2%;
+}
+.profileIcon{
+    padding: 0.5%;
+    
+}
+.profileNameDiv{
+    padding-top: 0.8%;
+    text-align: center;
+    font-size:0.9vw;letter-spacing: 0.9px;
+    color: #595959;
+    
+}
+.dropDownIcon{ 
+    padding-top: 0.9%;
+    padding-left: 0.5%;
+    padding-right: 2%;
+}
+
+.main-container-Booking-body{
+    width: 96%;
+    margin: 2% 2% 0 2%;
+    background: #FFFFFF;
+}
+.sub-container-Booking-body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}
+.BookingDiv{
+    width: 40%;
+}
+.BookingTitle{
+    font-size: 0.9vw;
+    font-weight: bold;
+    color: #505050;
+  
+}
+.BookingDescription{
+    font-size: 0.9vw;
+    padding-top: 0.9%;
+    font-weight:normal;
+    color: #505050;
+  
+}
+.BookingRightDiv{
+    width: 60%;
+    padding: 1% 0;
+}
+.OptionsDiv{
+    width: 10%;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50px;
+    margin-right: 2%;
+    border:1px solid #b8b6b6;
+}
+
+.main-container-BookingDetails-body{
+    width: 96%;
+    margin:0.4% 2% 2% 2%;
+    background: #FFFFFF;
+}
+.CheckInMainDiv{
+    padding: 1%;
+}
+.CheckInDiv{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1%;
+    border-bottom: 0.5px solid #b9b5b5;
+}
+.CheckInButtonDiv{
+    flex: 1;
+}
+.CheckInButton{
+    background-color:#FFFFFF;
+    color: #000000;
+    font-size: 0.7vw;
+    padding: 6px 25px;
+    border-radius: 25px;
+}
+.CheckOutButtonDiv{
+    flex: 4;
+}
+.CheckOutButton{
+    background-color:#FFFFFF;
+    color: #000000;
+    font-size: 0.7vw;
+    padding: 6px 25px;
+    border-radius: 25px;
+}
+.CheckInDetails{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+}
+.PackageDiv{
+    border: 1px solid rgb(222, 228, 222);
+    margin: 0 2%;
+    padding: 2%;
+}
+.ChargesDetailsDiv{
+    margin: 0 2% ;
+    padding: 1%;
+}
+.AdditionalDetailsSubDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+}
+.AddtionalDetailsMainDiv{
+border: 1px solid rgb(208, 214, 208);
+margin: 0 2%;
+}

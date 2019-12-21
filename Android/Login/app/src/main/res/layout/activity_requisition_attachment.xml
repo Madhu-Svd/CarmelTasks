@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/attachmentMainLayout"
+    tools:context=".RequisitionAttachment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:orientation="horizontal"
+            android:id="@+id/attachmentPageHeader"
+            android:background="#F6F8F9">
+            <ImageView
+                android:id="@+id/burgerIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/burger_icon"></ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="630dp"
+            android:orientation="vertical">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="30dp"
+               android:background="@drawable/layout_border"
+               android:orientation="vertical">
+               <LinearLayout
+                   android:id="@+id/requisitionLayout"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+                   <TextView
+                       android:id="@+id/requisitionTitle"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="3"
+                       android:fontFamily="@font/roboto_bold"
+                       android:padding="5dp"
+                       android:text="REQUISITION"
+                       android:textColor="#545454"
+                       android:textSize="16dp">
+                   </TextView>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_marginTop="30dp"
+                   android:layout_marginRight="60dp"
+                   android:background="@drawable/requisition_line">
+                   <TextView
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:text="1"
+                       android:gravity="center"
+                       android:textColor="#C2BEBE"
+                       android:textSize="12dp"
+                       android:background="@drawable/requisition_small_circle">
+                   </TextView>
+
+                   <TextView
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:layout_marginLeft="27dp"
+                       android:text="2"
+                       android:gravity="center"
+                       android:textColor="#C2BEBE"
+                       android:textSize="12dp"
+                       android:background="@drawable/requisition_small_circle">
+                   </TextView>
+
+                   <TextView
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:layout_marginLeft="27dp"
+                       android:text="3"
+                       android:gravity="center"
+                       android:textColor="#FFFFFF"
+                       android:textSize="12dp"
+                       android:background="@drawable/requisition_skyblue_circle">
+                   </TextView>
+
+                   <TextView
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:layout_marginLeft="27dp"
+                       android:text="4"
+                       android:gravity="center"
+                       android:textColor="#C2BEBE"
+                       android:textSize="12dp"
+                       android:background="@drawable/requisition_small_circle">
+                   </TextView>
+
+                   <TextView
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:layout_marginLeft="27dp"
+                       android:text="5"
+                       android:gravity="center"
+                       android:textColor="#C2BEBE"
+                       android:textSize="12dp"
+                       android:background="@drawable/requisition_small_circle">
+                   </TextView>
+
+                   <TextView
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:layout_marginLeft="28dp"
+                       android:text="6"
+                       android:gravity="center"
+                       android:textColor="#C2BEBE"
+                       android:textSize="12dp"
+                       android:background="@drawable/requisition_small_circle">
+                   </TextView>
+               </LinearLayout>
+
+           </LinearLayout>
+            <LinearLayout
+                android:id="@+id/attachmentsMainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:background="@drawable/attachment_border">
+                <LinearLayout
+                    android:id="@+id/attchmentLeftLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/attachmentTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="ATTACHMENTS"
+                        android:textSize="14dp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/attachmentSmallDescription"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="#747474"
+                        android:text=" Lorem ipsum dolor sit amet,consectetur adipiscing elit."
+                        android:textSize="10dp">
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/attachmentRightLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/attachmentIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/attach_icon">
+
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/attachFilesTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="ATTACH FILES"
+                        android:padding="5dp"
+                        android:textSize="12dp">
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="25dp"
+            android:background="@drawable/layout_border"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/attachmentsFooterLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="14dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/saveDraftTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginTop="5dp"
+                    android:text="SAVE DRAFT"
+                    android:layout_marginLeft="18dp"
+                    android:background="@drawable/underline_border"
+                    android:textColor="#545454"
+                    android:textSize="12dp">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+
+                <Button
+                    android:id="@+id/nextButton"
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/button_border"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="NEXT -->"
+                    android:textSize="12dp"
+                    android:textColor="#FFFFFF">
+                </Button>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

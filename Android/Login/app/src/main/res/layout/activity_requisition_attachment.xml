@@ -196,7 +196,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingRight="25dp"
-            android:background="@drawable/layout_border"
             android:orientation="horizontal">
             <LinearLayout
                 android:id="@+id/attachmentsFooterLayout"

@@ -27,7 +27,7 @@ body{
 .rightBodyContent{
     margin: 4% 3%;
     background: #FFFFFF;
-
+    border: 1px solid #F0F0F0;
 }
 .itemSubheader{
     display: grid;
@@ -48,9 +48,6 @@ font-size: 12px;
 }
 .AddIconDiv{
     align-self: center;
-}
-.itemsBody{
-    border: 1px solid #F0F0F0;
 }
 .itemList1{
     border-bottom: 0.5px solid #f7f0f0;

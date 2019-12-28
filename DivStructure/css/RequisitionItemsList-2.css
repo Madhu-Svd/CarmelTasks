@@ -19,7 +19,7 @@ body{
     background: #FCFCFC ;
     width: 100%;
     display: grid;
-    grid-template-columns: 10fr 90fr; 
+    grid-template-columns: 10% 90%; 
 }
 .leftContainer{
     background: #FFFFFF;
@@ -31,7 +31,7 @@ body{
 }
 .itemSubheader{
     display: grid;
-    grid-template-columns: 86fr 10fr 4fr;
+    grid-template-columns: 86% 10% 4%;
     padding: 2% 3%;
     background-color: #F0F0F0;
 }
@@ -52,12 +52,12 @@ font-size: 12px;
 .itemList1{
     border-bottom: 0.5px solid #f7f0f0;
     display: grid;
-    grid-template-columns: 45fr 15fr 22fr 14fr 3fr;
+    grid-template-columns: 45% 15% 22% 14% 3%;
     padding: 4% 3%;
 }
 .footer{
     display: grid;
-    grid-template-columns: 84fr 10fr 6fr;
+    grid-template-columns: 84% 10% 6%;
     margin: 10% 0 4% 0;
 }
 .savedraft{
@@ -74,7 +74,7 @@ font-size: 12px;
 .nextButtonSubDiv{
     border-radius: 29px;
     display: grid;
-    grid-template-columns: 15fr 6fr;
+    grid-template-columns: 15% 6%;
     background: #32BDD2;
     padding: 4px 8px;
 }

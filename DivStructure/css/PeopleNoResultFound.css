@@ -7,7 +7,7 @@ body{
     background-color: #00000067;
 }
 .SubContainer{
-    width: 40%;
+    width: 30%;
     margin:10% auto;
 }
 .SubHeader{
@@ -55,14 +55,32 @@ body{
     padding-left:3%;
     width: 97%;
     border: none ;
+    padding-top: 1%;
+    color: #909090;
 
 }
 .rightSearchBox{
     float: right;
     width: 4%
 }
-.peopleListDiv{
-    padding: 8% 8%;
+.noResultsFoundIcon{
+    padding: 14% 0 3% 0;
+    text-align: center;
+}
+.noResultsFoundDescription{
+    text-align: center;
+    padding: 0 0 22% 0;
+}
+.noResultsFoundDescription p{
+    letter-spacing: 0.7px;
+    color: #747474;
+    font-size: 14px;
+    font-weight: bold;
+}
+.noResultsFoundDescription span{
+    letter-spacing: 0.6px;
+    color: #909090;
+    font-size: 12px;
 }
 .peopleList{
     display: grid;

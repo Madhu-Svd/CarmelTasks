@@ -1,0 +1,367 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F6F8F9;
+}
+.header{
+    box-shadow: 0px 0px 2px #00000029;
+    padding: 0.5% 0;
+    background: #FFFFFF;
+}
+.burgerIconDiv{
+    width: 89%;
+    padding:0.5% 0 0 2%;
+    float: left;
+}
+.profileIconDiv{
+    width: 3%;
+    text-align: right;
+    float: left;
+}
+.profileIcon{
+    border-radius: 50px;
+}
+.profileNameDiv{
+    width: 5%;
+    text-align: center;
+    float: left;
+    padding: 0.5% 0;
+}
+.profileNameDiv p{
+    font-size:0.8vw;
+    letter-spacing: 0.9px;
+    color: #595959"
+}   
+.dropDownDiv{
+    padding: 0.6% 0 0 0;
+    float: left;
+    width: 2%;
+}
+
+
+.MainContainerBody{
+    margin: 2%;
+}
+.bodyContent{
+    background: #FCFCFC ;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 8% 92%; 
+}
+.leftContainer{
+    background: #F6F8F9;
+}
+.leftSubContainer{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+}
+.leftArrowIcon{
+    border-radius: 15px 0px 0px 0px;
+    background: #245070;
+    padding: 30% 5% ;
+    margin: auto;
+}
+.homeIcon{
+    margin: 30% 0 ;
+    border-right: 3px solid #E6AF2E;
+}
+.messageIcon{
+    padding: 30% 5%;
+}
+.calenderIcon{
+    padding: 30% 5%;
+}
+.editIcon{
+    padding: 30% 5%;
+}
+.arrowIcon{
+    padding: 30% 5%;
+}
+
+
+
+.rightContainer{
+    background-color: #FCFCFC;
+     box-shadow: 0px 0px 4px #00000029;
+}
+.previewMainDiv{
+    padding: 3% 3% 8% 3%;
+    border: 1px solid blue;
+    background: #245070;
+}
+.Title{
+    padding: 2% 0;
+    letter-spacing: 1.4px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+}
+.previewSubDiv p{
+    letter-spacing: 0.6px;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+.previewSubDiv span{
+    letter-spacing: 1.4px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.requestSubDiv{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 43% 33% 24%;
+    padding: 2% 2% 2% 4%;
+    margin-top: -4%;
+    background: #FCFDFF ;
+    border-radius: 50px;
+    box-shadow: 0px 3px 6px #A3A3C45A;
+}
+.requestTitleDiv p{
+    letter-spacing: 1.2px;
+    color: #909090;
+    font-size: 12px;
+    padding-bottom: 2%
+}
+.requestTitleDiv span{
+    letter-spacing: 0;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+}
+.submittedTitleDiv p{
+    letter-spacing: 1.2px;
+    color: #909090;
+    font-size: 12px;
+    padding-bottom: 2%
+}
+.submittedTitleDiv span{
+    letter-spacing: 0;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+}
+.statusTitleDiv p{
+    letter-spacing: 1.2px;
+    color: #909090;
+    font-size: 12px;
+    padding-bottom: 2%
+}
+.statusTitleDiv span{
+    letter-spacing: 0;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+
+.noteMainDiv{
+    padding: 3%;
+}
+.noteMainDiv p{
+    padding: 1% 0;
+    letter-spacing: 0.78px;
+    color: #747474;
+    font-size: 12px;
+}
+.requestType{
+    letter-spacing: 0.6px;
+    color: #747474;
+    font-size: 12px;
+}
+.itemsMainDiv{
+     padding: 0 3%;
+}
+.FirstItemsList{
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #F0F0F0;
+}
+.itemsDescription{
+    width: 40%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3% 0;
+}
+.itemsDescription p{
+    padding-top: 2%;
+    letter-spacing: 0.78px;
+    color: #747474;
+    font-size: 12px;
+}
+.itemsSize{
+    width: 20%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    letter-spacing: 0.78px;
+    color: #747474;
+    font-size: 12px;
+}
+.itemDate{
+    width: 20%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    letter-spacing: 0.78px;
+    color: #747474;
+    font-size: 12px;
+}
+.itemsCost{
+    width: 20%;
+    text-align: right;
+    display: table-cell;
+    vertical-align: middle;
+    letter-spacing: 0.78px;
+    color: #747474;
+    font-size: 12px;
+}
+
+.attachmentsMainDiv{
+    padding:4% 3%;
+}
+.attachmentOne{
+    border: 1px solid #D5E2E8;
+    width: 30%;
+    margin-top: 2%;
+}
+.attachmentTitleSubDiv{
+    border-bottom: 0.5px solid #D5E2E8;
+    width: 100%;
+    padding: 2% 3%;
+}
+.attachmentTitleSubDiv{
+    float: left;
+}
+.attachmentTitleLeftDiv{
+    float: left;
+    width: 80%;
+    color: #595959;
+    font-size: 12px;
+}
+.attachmentTitleRightDiv{
+    float: left;
+    width: 20%;
+    text-align: right;
+    color: #595959;
+    font-size: 12px;
+}
+.attachmantsDescription{
+    padding: 2% 3%;
+    color: #747474;
+    font-size: 10px;
+}
+
+
+.inviteesMainDiv{
+    padding:4% 3%;
+}
+.InviteesDetails{
+    float: left;
+    border: 1px solid #D5E2E8;
+    width: 30%;
+    padding: 1% 3%;
+    margin-top: 2%;
+
+}
+.inviteesProfileIcon{
+    float: left;
+    width: 18%;
+}
+.inviteesProfileName{
+    float:right;
+    width: 82%;
+    padding-top: 1%;
+}
+.inviteesProfileName span{
+    letter-spacing: 0.6px;
+    color: #505050;
+    font-size: 12px;
+}
+.inviteesProfileName p{
+    letter-spacing: 0.5px;
+    color: #505050;
+    font-size: 10px;
+}
+
+.approvalsMainDiv{
+    padding:4% 3%;
+}
+.approvalsDetails{
+    float: left;
+    border: 1px solid #D5E2E8;
+    width: 30%;
+    padding: 1% 3%;
+    margin-top: 2%;
+}
+.approvalsProfileIcon{
+    float: left;
+    width: 18%;
+}
+.approvalsProfileName{
+    float:right;
+    width: 82%;
+    padding-top: 1%;
+}
+.approvalsProfileName span{
+    letter-spacing: 0.6px;
+    color: #505050;
+    font-size: 12px;
+}
+.approvalsProfileName p{
+    letter-spacing: 0.5px;
+    color: #505050;
+    font-size: 10px;
+}
+#profileIcon{
+    border-radius: 50px;
+}
+
+
+.footerMainDiv{
+    padding:4% 3%;
+}
+.footer{
+    float: left;
+    width: 100%;
+}
+.savedraft{
+    float: left;
+    width: 80%;
+    align-self: center;
+    font-size: 0.9vw;
+    font-weight: bold;
+}
+.backButton{
+    float: left;
+    width: 10%;
+    align-self: center;
+    font-size: 0.9vw;
+    font-weight: bold;
+    color: #32BDD2;
+    text-align: right;
+}
+.submitButtonDiv{
+    float: left;
+    width: 10%;
+   
+}
+#submitButton{
+    background: #32BDD2;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 29px;
+    padding: 4px 10px;
+    float: right;
+}

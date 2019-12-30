@@ -1,0 +1,204 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F6F8F9;
+}
+.header{
+    box-shadow: 0px 0px 2px #00000029;
+    padding: 0.5% 0;
+    background: #FFFFFF;
+}
+.burgerIconDiv{
+    width: 89%;
+    padding:0.5% 0 0 2%;
+    float: left;
+}
+.profileIconDiv{
+    width: 3%;
+    text-align: right;
+    float: left;
+}
+.profileIcon{
+    border-radius: 50px;
+}
+.profileNameDiv{
+    width: 5%;
+    text-align: center;
+    float: left;
+    padding: 0.5% 0;
+}
+.profileNameDiv p{
+    font-size:0.8vw;
+    letter-spacing: 0.9px;
+    color: #595959"
+}   
+.dropDownDiv{
+    padding: 0.6% 0 0 0;
+    float: left;
+    width: 2%;
+}
+
+
+.MainContainerBody{
+    margin: 2%;
+}
+.bodyContent{
+    background: #FCFCFC ;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 8% 92%; 
+}
+.leftContainer{
+    background: #F6F8F9;
+}
+.leftSubContainer{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+}
+.leftArrowIcon{
+    border-radius: 15px 0px 0px 0px;
+    background: #245070;
+    padding: 30% 5% ;
+    margin: auto;
+}
+.homeIcon{
+    padding: 30% 5%; 
+}
+.messageIcon{
+    margin: 30% 0;
+    border-right: 3px solid #E6AF2E;
+}
+.calenderIcon{
+    padding: 30% 5%;
+}
+.editIcon{
+    padding: 30% 5%;
+}
+.arrowIcon{
+    padding: 30% 5%;
+}
+
+
+
+.rightContainer{
+    background-color: #FCFCFC;
+     box-shadow: 0px 0px 4px #00000029;
+}
+.rightBodyContent{
+    /* padding: 3%; */
+}
+.previewMainDiv{
+    padding: 3%;
+    border: 1px solid blue;
+}
+.previewSubDiv span{
+    letter-spacing: 1.4px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+}
+.previewSubDiv p{
+    letter-spacing: 0.6px;
+    color: #909090;
+    font-size: 12px;
+}
+
+.buttonsSubDiv{
+    float: left;
+    padding: 2% 3% 6% 3% ;
+    width: 100%;
+}
+.privateButtonDiv{
+    float: left;
+    width: 10%;
+   
+}
+.pulicButtonDiv{
+    float: left;
+   
+}
+#privateButton{
+    background: #245070;
+    border: 0.5px solid #245070;
+    border-radius: 7px;
+    color: #FFFFFF;
+    padding: 10px;
+    letter-spacing: 1.2px;
+    font-size: 12px;
+    font-weight: bold;
+}
+#publicButton{
+    background: #FFFFFF;
+    border: 0.5px solid #245070;
+    border-radius: 7px;
+    color:#245070;
+    padding: 10px;
+    letter-spacing: 1.2px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.peopleList{
+    display: grid;
+    width: 98%;
+    padding: 2%;
+    grid-template-columns: 5% 3% 87% 5%;
+    margin: auto;
+    background: #F7F7F7 ;
+    margin-top: 1%;
+}
+.profileDiv{
+    text-align: center;
+    align-self: center;
+}
+.redCircleMainDiv{
+    text-align: center;
+    align-self: center;
+}
+.circle{
+    border-radius:50%;
+    background-color:#FF0000;
+    display: inline-block;
+    padding: 5px;
+}
+.profileNamesDiv{
+    padding: 1% 2% 0 0;
+    float: left;
+}
+.profileNamesDiv p{
+    letter-spacing: 1.4px;
+    color: #000000;
+    font-size: 14px;
+}
+.profileNamesDiv span{
+    letter-spacing: 1.2px;
+    color: #747474;
+    font-size: 12px;
+}
+.dropDownIconDiv{
+    text-align: center;
+    align-self: center;
+}
+
+
+.Container{
+    border: 1px solid red;
+    width: 88%;
+    margin: auto;
+}
+.submitMainDiv{
+    padding: 4% 2% 0 2%;
+}
+.submitSubDiv{
+    border: 1px solid blue;
+    background-color: #F4F8FA;
+}
+.textAreaDiv{
+    padding: 2%;
+}

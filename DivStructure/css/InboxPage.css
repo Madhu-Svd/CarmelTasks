@@ -89,14 +89,11 @@ body{
 
 .rightContainer{
     background-color: #FCFCFC;
-     box-shadow: 0px 0px 4px #00000029;
-}
-.rightBodyContent{
-    /* padding: 3%; */
+    box-shadow: 0px 0px 4px #00000029;
+    padding-bottom: 4%;
 }
 .previewMainDiv{
     padding: 3%;
-    border: 1px solid blue;
 }
 .previewSubDiv span{
     letter-spacing: 1.4px;
@@ -112,13 +109,12 @@ body{
 
 .buttonsSubDiv{
     float: left;
-    padding: 2% 3% 6% 3% ;
+    padding: 2% 3% 4% 3% ;
     width: 100%;
 }
 .privateButtonDiv{
     float: left;
-    width: 10%;
-   
+    width: 7%;
 }
 .pulicButtonDiv{
     float: left;
@@ -129,7 +125,7 @@ body{
     border: 0.5px solid #245070;
     border-radius: 7px;
     color: #FFFFFF;
-    padding: 10px;
+    padding: 10px 14px;
     letter-spacing: 1.2px;
     font-size: 12px;
     font-weight: bold;
@@ -139,7 +135,7 @@ body{
     border: 0.5px solid #245070;
     border-radius: 7px;
     color:#245070;
-    padding: 10px;
+    padding: 10px 14px;
     letter-spacing: 1.2px;
     font-size: 12px;
     font-weight: bold;
@@ -185,10 +181,17 @@ body{
     text-align: center;
     align-self: center;
 }
-
+.peopleList2{
+    display: grid;
+    width: 98%;
+    padding: 2%;
+    grid-template-columns: 5% 90% 5%;
+    margin: auto;
+    background: #F7F7F7 ;
+    margin-top: 1%;
+}
 
 .Container{
-    border: 1px solid red;
     width: 88%;
     margin: auto;
 }
@@ -196,9 +199,100 @@ body{
     padding: 4% 2% 0 2%;
 }
 .submitSubDiv{
-    border: 1px solid blue;
     background-color: #F4F8FA;
+    padding: 2%;
 }
 .textAreaDiv{
-    padding: 2%;
+    padding-bottom: 1%;
+}
+.submitButton{
+    background: #32BDD2;
+    box-shadow: 0px 2px 4px #00000029;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 29px;
+    padding: 0.5% 1.5%;
+    border: none;
+}
+
+.PeopleDescriptionSubDiv{
+    padding: 6% 0;
+}
+.redCircleDiv{
+    text-align: center;
+    align-self: center;
+}
+.redSmallCircle{
+    border-radius:50%;
+    background-color:#FF0000;
+    display: inline-block;
+    padding: 5px;
+}
+.PeopleDescription{
+    display: grid;
+    grid-template-columns: 2% 98%;
+}
+.PeopleName{
+    padding-bottom: 1%;
+}
+.PeopleName p{
+    letter-spacing: 0.6px;
+    color: #707070;
+    font-size: 12px;
+    font-weight: bold;
+}
+.PeopleName span{
+    letter-spacing: 0.6px;
+    color: #747474;
+    font-size: 12px;
+}
+.Description1{
+    padding: 0 2%;
+    border-left: 4px solid #41A6DF;
+    letter-spacing: 0.7px;
+    color: #747474;
+    font-size: 14px;
+}
+.Description2{
+    padding: 0 2%;
+    border-left: 4px solid #747474;
+    letter-spacing: 0.7px;
+    color: #747474;
+    font-size: 14px;
+}
+.Description3{
+    padding:   0 2%;
+    border-left: 4px solid #41A6DF;
+    letter-spacing: 0.7px;
+    color: #747474;
+    font-size: 14px;
+}
+.PeopleName2{
+    padding: 2% 0 1% 2%;
+}
+.PeopleName2 p{
+    letter-spacing: 0.6px;
+    color: #707070;
+    font-size: 12px;
+    font-weight: bold;
+}
+.PeopleName2 span{
+    letter-spacing: 0.6px;
+    color: #747474;
+    font-size: 12px;
+}
+.PeopleName3{
+    padding: 2% 0 1% 2%;
+}
+.PeopleName3 p{
+    letter-spacing: 0.6px;
+    color: #707070;
+    font-size: 12px;
+    font-weight: bold;
+}
+.PeopleName3 span{
+    letter-spacing: 0.6px;
+    color: #747474;
+    font-size: 12px;
 }

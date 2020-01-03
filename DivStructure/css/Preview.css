@@ -18,14 +18,44 @@ body{
     background: #FCFCFC ;
     width: 100%;
     display: grid;
-    grid-template-columns: 10% 90%; 
+    grid-template-columns: 8% 92%; 
 }
 .leftContainer{
     background: #FFFFFF;
 }
+.requisitionTitle p{
+    font-size: 14px;
+    transform: rotate(-90deg);
+    padding-right:50%;
+    margin-top: 50% ;
+    color: #000000;
+    font-weight: bold;
+}
+.firstDiv{
+    padding-top: 60% ;
+}
+
+.circle{
+    fill:#FFFFFF;
+    stroke: #D3D3D3;
+    stroke-width: 0.5;
+}
+.circleBlue{
+    fill:#32BDD2;
+    stroke: #32BDD2;
+    stroke-width: 0.5;
+}
+.text{
+    font-size: 4px;
+    color: #D3D3D3;
+}
+.svgImg{
+    transform: translate(50%);
+}
+
+
 .rightContainer{
     background-color: #FCFCFC;
-     box-shadow: 0px 0px 4px #00000029;
 }
 .rightBodyContent{
     padding: 3%;

@@ -60,13 +60,16 @@ body{
     margin: auto;
     margin-top: 50%;
     background: #FFFFFF;
-    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px 0px 0px 0px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.28);
+    
 }
 .leftArrowIcon{
     border-radius: 15px 0px 0px 0px;
     background: #245070;
     padding: 30% 5% ;
     margin: auto;
+    
 }
 .homeIcon{
     margin: 30% 0 ;
@@ -93,7 +96,6 @@ body{
 }
 .previewMainDiv{
     padding: 3% 3% 8% 3%;
-    border: 1px solid blue;
     background: #245070;
 }
 .Title{

@@ -9,7 +9,7 @@ body{
 .header{
     box-shadow: 0px 0px 4px #00000029;
     padding: 0.5% 0;
-    background: #FFFFFF;
+    background-color: #FFFFFF;
 }
 .burgerIconDiv{
     width: 89%;
@@ -45,14 +45,16 @@ body{
 .MainContainerBody{
     margin: 2%;
 }
-.subBodyContent{
+.bodyContent{
     width: 100%;
     display: grid;
     grid-template-columns: 8% 92%; 
+    box-shadow: 0px 0px 4px #00000029;
 }
 .leftContainer{
     background: #FFFFFF;
 }
+
 .requisitionTitle p{
     font-size: 14px;
     transform: rotate(-90deg);
@@ -83,73 +85,28 @@ body{
     transform: translate(50%);
 }
 
-.rightContainer{
-    background: #FCFCFC;
-}
+
 .rightBodyContent{
-    margin: 4% 3%;
+    padding: 3% 3% 36% 3% ;
+    background: #FCFCFC;
+   
 }
-.itemSubheader{
-    display: grid;
-    grid-template-columns: 86% 10% 4%;
-    padding: 2% 3%;
-    background-color: #F0F0F0;
+.acknowledgementTitle{
+    letter-spacing: 1.4px;
+    color: #B5B5B5;
+    font-size: 14px;
+    padding-bottom: 2%;
 }
-.AddItemsDiv{
-    align-self: center;
-}
-.itemsDiv p{
+.rightBodyContent span{
+    letter-spacing: 1.4px;
     color: #747474;
-    font-size: 12px;
-}
-.AddItemsDiv span{
-    text-align: right;
-    color: #505050;
-}
-.AddIconDiv{
-    align-self: center;
-}
-
-
-.itemsBody{
-    border: 1px solid #F0F0F0;
-}
-.itemList1{
-    border-bottom: 0.5px solid #f7f0f0;
-    display: grid;
-    grid-template-columns: 45% 15% 22% 14% 3%;
-    padding: 4% 3%;
-}
-
-
-.footer{
-    display: grid;
-    grid-template-columns: 84% 10% 6%;
-    margin: 10% 0 4% 0;
-}
-.savedraft{
-    align-self: center;
-    font-size: 0.9vw;
+    font-size: 14px;
     font-weight: bold;
 }
-.backButton{
-    align-self: center;
-    font-size: 0.9vw;
-    font-weight: bold;
-    color: #32BDD2;
-}
-.nextButtonSubDiv{
-    border-radius: 29px;
-    display: grid;
-    grid-template-columns: 65% 6%;
-    background: #32BDD2;
-    padding: 4px 8px;
-}
-.nextDiv{
-    text-align: center;
-}
-#nextBtn{
-    background: #32BDD2;
-    color: #FFFFFF;
-    border: none;
+
+.description{
+    padding-top: 1%;
+    letter-spacing: 1.4px;
+    color: #747474;
+    font-size: 14px;
 }

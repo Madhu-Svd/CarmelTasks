@@ -25,6 +25,7 @@ body{
     color: #5A5A5A;
     padding-top: 1%;
     letter-spacing: 1px;
+    font-weight: bold;
 }
 .rightHeader{
     float: left;
@@ -125,10 +126,9 @@ body{
     align-self: center;
 }
 .doneButton{
-    padding: 10px 15px;
+    padding: 10%;
     border-radius: 29px;
     background: #32BDD2;
-    border-radius: 29px;
     border: none;
     font-weight: bold;
     font-size: 12px;

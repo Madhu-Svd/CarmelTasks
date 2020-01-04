@@ -25,6 +25,7 @@ body{
     color: #5A5A5A;
     padding-top: 1%;
     letter-spacing: 1px;
+    font-weight: bold;
 }
 .rightHeader{
     float: left;
@@ -36,16 +37,14 @@ body{
     box-shadow: 0px 0px 25px rgb(0, 0, 0,0.29 );
 }
 .SubBodyContent{
-    padding:8%;
+    padding:8% 10% 8% 6%;
 }
 
 .descriptionDiv{
     font-size: 0.9vw;
     color:#747474;
     letter-spacing: 1px;
-}
-.textAreaDiv{
-   
+    padding-bottom: 2%;
 }
 .textArea{
     border-radius: 4px;
@@ -58,7 +57,7 @@ body{
     margin-top: 5%;
 }
 .inputDiv{
-    padding: 2% 2% 1% 0;
+    padding-top: 2%;
     
 }
 .inputBox{
@@ -115,10 +114,9 @@ body{
     text-align: right;
 }
 .doneButton{
-    padding: 10px 15px;
+    padding: 3% 5%;
     border-radius: 29px;
     background: #32BDD2;
-    border-radius: 29px;
     border: none;
     font-weight: bold;
     font-size: 12px;

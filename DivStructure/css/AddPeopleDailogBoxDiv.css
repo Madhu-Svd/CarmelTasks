@@ -25,6 +25,7 @@ body{
     color: #5A5A5A;
     padding-top: 1%;
     letter-spacing: 1px;
+    font-weight: bold;
 }
 .rightHeader{
     float: left;
@@ -66,8 +67,8 @@ body{
 }
 .peopleList{
     display: grid;
-    grid-template-columns: 10% 85% 5%; 
-    padding: 1% 2% 1% 4%;
+    grid-template-columns: 12% 80% 8%; 
+    padding: 1% 0 1% 6%;
     background: #F4F8FA;
     border: 1px solid #D5E2E8;
 }
@@ -135,10 +136,9 @@ body{
     align-self: center;
 }
 .doneButton{
-    padding: 10px 15px;
+    padding: 10%;
     border-radius: 29px;
     background: #32BDD2;
-    border-radius: 29px;
     border: none;
     font-weight: bold;
     font-size: 12px;

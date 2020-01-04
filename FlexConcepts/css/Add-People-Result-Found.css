@@ -10,7 +10,7 @@ html body{
 }
 .Main-Sub-Container{
     width: 40%;
-    margin: auto;
+    margin:10% auto;
 }
 .AddPeopleHeaderDiv{
     border: 0.5px solid #cac5c5;

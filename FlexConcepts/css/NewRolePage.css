@@ -8,30 +8,47 @@ body{
 }
 .main-container-header{
     display: flex;
+    align-items: center;
     box-shadow: 0px 0px 4px #000000;
     background: #FFFFFF;
+    padding: 0.5% 0;
 }
 .burgerIcon{
-    flex: 3;
-    padding: 0.5% 2%;
+    width: 87%;
+    padding-left: 2%;
+}
+.burgerIcon img{
+    vertical-align: middle;
 }
 .profileIcon{
-    padding: 0.5%;
+    width: 5%;
+    text-align: right;
+
+}
+.profileIcon img{
+    vertical-align: middle;
+    border-radius: 50px;
 }
 .profileNameDiv{
-    padding-top: 0.8%;
     text-align: center;
-    font-size:0.9vw;letter-spacing: 0.9px;
-    color: #595959;  
+    font-size:0.9vw;
+    letter-spacing: 0.9px;
+    color: #595959;
+    width: 5%;
 }
 .dropDownIcon{ 
-    padding-top: 0.9%;
-    padding-left: 0.5%;
-    padding-right: 2%;
+    width: 3%
+}
+.dropDownIcon img{
+    vertical-align: middle;
 }
 
-
-.main-container-NewRole-div{
+.main-container-body{
+    margin: 2%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px #00000029;
+}
+/* .main-container-NewRole-div{
     width: 96%;
     margin:2% 2% 0 2%;
     background: #FFFFFF;
@@ -40,7 +57,7 @@ body{
     width: 96%;
     margin:0.3% 2% 2% 2%;
     background: #FFFFFF;
-}
+} */
 .NewRoleDiv{
     padding: 2%;
     border-bottom: 0.5px solid rgb(240, 234, 234); 
@@ -114,14 +131,36 @@ body{
     padding: 0.8% 2%;
 }
 
-.GrantsListsDiv{
-width: 40%;
-border: 1px solid rgb(228, 223, 223);
-display: flex;
-align-items: center;
-padding: 0.3%;
-background-color: rgb(228, 229, 230);
+.GrantListMainDiv{
+    padding: 1% 2%;
 }
+.GrantsListsDiv{
+    width: 40%;
+    border: 1px solid rgb(228, 223, 223);
+    display: flex;
+    align-items: center;
+    padding: 0.3%;
+    background-color: rgb(228, 229, 230);
+}
+.GrantsDropDownIcon{
+    width: 7%;
+    padding-left: 3%;
+}
+.GrantsTitle{
+    width: 87%;
+}
+.GrantsTitle span{
+    color: #595959;
+    font-size:0.8vw;
+}
+.GrantsCheckBox{
+    width: 6%;
+    float: right;
+}
+.uncheckBoxIcon{
+    background-color: #FFFFFF;
+}
+
 
 .NewRoleFooter{
     width: 100%;
@@ -129,7 +168,7 @@ background-color: rgb(228, 229, 230);
 
 .NewRoleFooterDiv{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     padding: 4% 2% 2% 2%;
     
@@ -140,4 +179,5 @@ background-color: rgb(228, 229, 230);
     font-size: 0.7vw;
     padding: 6px 25px;
     border-radius: 30px;
+    font-weight: bold;
 }

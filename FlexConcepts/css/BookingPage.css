@@ -80,24 +80,27 @@ body{
 .main-container-BookingDetails-body{
     background: #FFFFFF;
 }
+.guestInformationDiv{
+    padding: 1% 0;
+}
 
+.FullNameDiv{
+    width: 100%;
+    padding: 1% 0;
+}
 .FullNameTitle{
     display: flex;
     font-size: 0.8vw;
     color: #4d4c4c;
-    padding: 1% 0 1% 2%;
+    padding-top: 1%;
 }
 .redStar{
     vertical-align: super; 
 }
-.FullNameDiv{
-    width: 100%;
-    padding: 1% 2%;
-}
 .FullNameInputBox{
     width: 28%;
     border-radius: 8px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid rgb(196, 194, 194);
     box-shadow: 1px 1px 3px rgb(197, 194, 194);
     padding: 0.8% 1%;
 }
@@ -107,16 +110,16 @@ body{
     display: flex;
     font-size: 0.8vw;
     color: #4d4c4c;
-    padding: 1% 0 1% 2%;
+    padding-top: 1%;
 }
 .GenderInputBoxDiv{
     width: 100%;
-    padding: 1% 2%;
+    padding: 1% 0;
 }
 .GenderInputBox{
     width: 28%;
     border-radius: 8px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid rgb(196, 194, 194);
     box-shadow: 1px 1px 3px rgb(197, 194, 194);
     padding: 0.8% 1%;
 }
@@ -125,16 +128,16 @@ body{
     display: flex;
     font-size: 0.8vw;
     color: #4d4c4c;
-    padding: 1% 0 1% 2%;
+    padding-top: 1%;
 }
 .PhoneNumberInputBoxDiv{
     width: 100%;
-    padding: 1% 2%;
+    padding: 1% 0;
 }
 .PhoneNumberInputBox{
     width: 28%;
     border-radius: 8px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid rgb(196, 194, 194);
     box-shadow: 1px 1px 3px rgb(197, 194, 194);
     padding: 0.8% 1%;
 }
@@ -142,17 +145,16 @@ body{
 .PromoCodeTitle{
     font-size: 0.8vw;
     color: #4d4c4c;
-    padding-left: 2%;
     padding-top: 1%;
 }
 .PromoCodeInputBoxDiv{
     width: 100%;
-    padding: 1% 2%;
+    padding: 1% 0;
 }
 .PromoCodeInputBox{
     width: 28%;
     border-radius: 8px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid rgb(196, 194, 194);
     box-shadow: 1px 1px 3px rgb(197, 194, 194);
     padding: 0.8% 1%;
 }
@@ -160,88 +162,87 @@ body{
 
 .DiscountDetailsDiv{
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    padding-left: 1%;
-
+    align-items: center;
 }
 .DiscountValueDiv{
-    width: 33%
+    padding-left: 4%;
 }
 .DiscountValueTitle{
     font-size: 0.8vw;
     color: #4d4c4c;
     padding-left: 2%;
-    padding-top: 1%;
 }
 .DiscountValueInputBoxDiv{
     padding: 1% 2%;
 }
 .DiscountValueInputBox{
-    width: 50%;
+    width: 90%;
     border-radius: 8px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid rgb(196, 194, 194);
     box-shadow: 1px 1px 3px rgb(197, 194, 194);
     padding: 2% 1%;
 }
 
-.DiscountValueTypeDiv{
-    width: 33%
-}
+
 .DiscountValueTypeTitle{
     font-size: 0.8vw;
     color: #4d4c4c;
-    padding-left: 2%;
-    padding-top: 1%;
 }
 .DiscountValueTypeInputBoxDiv{
-    width: 100%;
-    padding: 1% 2%;
-}
-.DiscountValueTypeInputBox{
-    width: 50%;
+    width: 90%;
+    display: flex;
     border-radius: 8px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid rgb(196, 194, 194);
     box-shadow: 1px 1px 3px rgb(197, 194, 194);
     padding: 2% 1%;
 }
-
-.DiscountTypeDiv{
-    width: 33%
+.DiscountValueTypeInputBox{
+    width: 100%;
+    border: none;
 }
+
+
+
 .DiscountTypeTitle{
     font-size: 0.8vw;
     color: #4d4c4c;
-    padding-left: 2%;
-    padding-top: 1%;
 }
 .DiscountTypeInputBoxDiv{
-    width: 100%;
-    padding: 1% 2%;
-}
-.DiscountTypeInputBox{
-    width: 50%;
+    width: 90%;
+    display: flex;
     border-radius: 8px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid rgb(196, 194, 194);
     box-shadow: 1px 1px 3px rgb(197, 194, 194);
     padding: 2% 1%;
 }
-
-.BookingFooter{
+.DiscountTypeInputBox{
     width: 100%;
+    border: none;
 }
 
 .BookingFooterDiv{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 4% 2% 2% 2%;
-    
+    padding: 4% 2% 2% 2%;  
+}
+.CancelText{
+    width: 95%;
+}
+.nextButtonDiv{
+    width: 5%;
+    text-align: center;
+}
+.nextButtonSubDiv{
+    display: flex;
+    background-color: #32BDD2;
+    align-items: center;
+    border-radius: 25px;
+    padding: 5%;
 }
 .nextButton{
     background-color: #32BDD2;
     color: #FFFFFF;
-    font-size: 0.7vw;
-    padding: 6px 25px;
+    font-weight: bold;
+    border: none;
     border-radius: 25px;
 }

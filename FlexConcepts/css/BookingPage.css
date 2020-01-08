@@ -31,10 +31,12 @@ body{
 }
 .profileNameDiv{
     text-align: center;
-    font-size:0.9vw;
-    letter-spacing: 0.9px;
-    color: #595959;
     width: 5%;
+}
+.profileNameDiv span{
+    font-size: 0.8vw;
+    color:#595959;
+    letter-spacing: 0.9px;
 }
 .dropDownIcon{ 
     width: 3%

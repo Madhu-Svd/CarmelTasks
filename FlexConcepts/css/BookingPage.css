@@ -52,14 +52,12 @@ body{
     box-shadow: 0px 0px 4px #00000029;
 }
 .sub-container-Booking-body{
-    width: 100%;
-    float: left;
+    display:flex; 
     padding: 2%;
     border-bottom: 0.5px solid rgb(240, 234, 234); 
 }
 .BookingDiv{
   width: 80%;
-  float: left;
 }
 .BookingTitle{
     font-size: 0.9vw;
@@ -72,11 +70,8 @@ body{
     color: #505050;
 }
 .BookingRightDiv{
-    float: right;
     padding: 1%;
-    display: flex;
-    justify-content: flex-end;
-    width: 20%;
+    width: 30%;
 }
 
 .main-container-BookingDetails-body{
@@ -247,4 +242,37 @@ body{
     font-weight: bold;
     border: none;
     border-radius: 25px;
+}
+.circle{
+    padding: 1% 2%;
+    border-radius: 50px;
+    border: 1px solid blue;
+}
+.BookingRightSubDiv{
+    display: flex;
+}
+.main {
+    border: 1px solid red;
+    width: 20%;
+}
+
+.circle {
+    fill: #FFFFFF;
+    stroke: #D3D3D3;
+    stroke-width: 0.5;
+}
+
+.circleBlue {
+    fill: #32BDD2;
+    stroke: #32BDD2;
+    stroke-width: 0.5;
+}
+
+.text {
+    font-size: 4px;
+    color: #D3D3D3;
+}
+
+.svgImg {
+    transform: translate(50%);
 }

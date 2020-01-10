@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ParentContainer{
+}
+.MainContainer{
+
+
+}
+
+.backIconDiv{
+    border: 1px solid blue;
+    padding: 2% 0;
+}
+#backIcon{
+    width:30px;
+    height:30px; 
+    vertical-align: middle;  
+}
+.leftTitleDiv {
+    border: 1px solid red;
+}
+.leftCirclesDiv{
+border: 1px solid green;
+}
+.circle{
+    fill:#FFFFFF;
+    stroke: #D3D3D3;
+    stroke-width: 0.5;
+}
+.redCircle{
+    fill:red;
+    stroke: #D3D3D3;
+    stroke-width: 0.5;
+}
+.circleBlue{
+    fill:#32BDD2;
+    stroke: #32BDD2;
+    stroke-width: 0.5;
+}
+.text{
+    font-size: 4px;
+    color: #D3D3D3;
+}
+.svgImg{
+    vertical-align: middle;
+    /* transform: translate(50%); */
+}

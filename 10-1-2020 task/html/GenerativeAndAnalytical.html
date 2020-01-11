@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Generative and Analytical Screen
+    </title>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        .mainContainer {
+            display: flex;
+        }
+
+        .leftContainer {
+            width: 5%;
+            text-align: center;
+        }
+
+        .DestruptiveIdeation {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .circle {
+            fill: #FFFFFF;
+            stroke: #D3D3D3;
+            stroke-width: 0.5;
+        }
+
+        .redCircle {
+            fill: red;
+            stroke: #D3D3D3;
+            stroke-width: 0.5;
+        }
+
+        .text {
+            font-size: 4px;
+            color: #D3D3D3;
+        }
+
+        .svgImg {
+            vertical-align: middle;
+        }
+
+        .rightMainContainer {
+            width: 95%;
+            background: #E25959;
+        }
+
+        .rightSubContainer {
+            display: flex;
+        }
+
+        .GenerativeTitleDiv {
+            width: 60%;
+            border: 1px solid red;
+        }
+
+        .rightImageDiv {
+            width: 40%;
+            border: 1px solid blue;
+        }
+
+        .generativeTitleSubDiv {
+            padding: 15% 30% 15% 10%;
+        }
+
+        .GenerativeAndAnalyticalTitle {
+            font-size: 38px;
+            letter-spacing: 2.85px;
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+        .generativeDescription p{
+            font-size: 18px;
+            color: #5C2323;
+        }
+        .imagesDiv{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top:4%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="ParentContainer">
+
+        <div class="mainContainer">
+            <div class="leftContainer">
+                <div class="leftSubContainer">
+                    <div class="backIconDiv">
+                        <div class="backIcon">
+                            <img src="../images/icons/back-button-mobile.png" width="60" height="60" id="backIcon"
+                                alt="Back Icon">
+                        </div>
+                    </div>
+                    <div class="leftTitleDiv">
+                        <div class="DestruptiveIdeationDiv">
+                            <span class="DestruptiveIdeation">disruptive ideation</span>
+                        </div>
+                    </div>
+                    <div class="leftCirclesDiv">
+                        <div>
+                            <div>
+                                <svg class="svgImg" viewBox="0 0 20 150" width="80%">
+                                    <circle class="circle" cx="10" cy="10" r="4"></circle>
+                                    <circle class="redCircle" cx="10" cy="10" r="2"></circle>
+
+                                    <line x1="10" y1="14" x2="10" y2="30" stroke="#595959"
+                                        style="stroke-width: 0.5;stroke:#D3D3D3" />
+
+                                    <circle class="circle" cx="10" cy="34" r="4"></circle>
+                                    <line x1="10" y1="38" x2="10" y2="54" stroke="#595959"
+                                        style="stroke-width: 0.5;stroke:#D3D3D3" />
+
+                                    <circle class="circle" cx="10" cy="58" r="4"></circle>
+                                    <line x1="10" y1="62" x2="10" y2="78" stroke="#595959"
+                                        style="stroke-width: 0.5;stroke:#D3D3D3" />
+
+                                    <circle class="circle" cx="10" cy="82" r="4"></circle>
+                                    <line x1="10" y1="86" x2="10" y2="102" stroke="#595959"
+                                        style="stroke-width: 0.5;stroke:#D3D3D3" />
+
+                                    <circle class="circle" cx="10" cy="106" r="4"></circle>
+                                </svg>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightMainContainer">
+                <div class="rightSubContainer">
+                    <div class="GenerativeTitleDiv">
+                        <div class="generativeTitleSubDiv">
+                            <div>
+                                <div>
+                                    <div style="width:64%">
+                                        <p class="GenerativeAndAnalyticalTitle">GENERATIVE & ANALYTICAL</p>
+                                    </div>
+                                    <div class="generativeDescription" style="padding: 4% 0">
+                                        <p>
+                                            Inherently,humans are system thinkers -althrough the systems they build on
+                                            their
+                                            implicit
+                                            world-views differ over a signifinat range of scale and complexity.
+                                            Behind every thinking there is a story hidden about the way we think things
+                                            should work.
+                                            Words seldom represent this hidden story. We use generative methods and
+                                            techniques to
+                                            transend your thoughts biyond words into technical features of the envisaged
+                                            product.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="imagesDiv">
+                                    <div class="backIconDiv">
+                                        <img src="../images/cw-icons-07.png" width="60" height="60"
+                                            id="backIcon" alt="Back Icon">
+                                    </div>
+                                    <div class="nextIconDiv">
+                                        <img src="../images/cw-icons-04.png" width="60" height="60"
+                                            id="nextIcon" alt="Next Icon">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightImageDiv">
+
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

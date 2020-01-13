@@ -7,4 +7,5 @@
     <string name="email_error_message">This email is not registered with GuestJini.</string>
     <string name="verification_code">Verification Code</string>
     <string name="verification_code_description">Please type the verification code sent to your mobile number.</string>
+    <string name="app_access_request_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim felis et magna</string>
 </resources>

@@ -210,7 +210,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/fotgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
@@ -226,7 +226,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout"></TextView>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/login"
                 android:layout_width="110dp"
                 android:layout_height="38dp"
                 android:layout_marginStart="8dp"
@@ -243,7 +243,7 @@
                 android:letterSpacing="0.10"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"></Button>
+                app:layout_constraintTop_toBottomOf="@+id/fotgotPassword"></Button>
 
             <TextView
                 android:id="@+id/textView4"
@@ -257,9 +257,10 @@
                 android:textColor="#747474"
                 android:textSize="14dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button" />
+                app:layout_constraintTop_toBottomOf="@+id/login" />
 
             <TextView
+                android:id="@+id/getOneNow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -268,13 +269,13 @@
                 android:layout_marginEnd="90dp"
                 android:layout_marginRight="90dp"
                 android:background="@drawable/underline"
+                android:fontFamily="@font/roboto_medium"
                 android:text="Get one now."
                 android:textColor="#32BDD2"
-                android:fontFamily="@font/roboto_medium"
                 android:textSize="14dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView4"
-                app:layout_constraintTop_toBottomOf="@+id/button">
+                app:layout_constraintTop_toBottomOf="@+id/login">
 
             </TextView>
         </androidx.constraintlayout.widget.ConstraintLayout>

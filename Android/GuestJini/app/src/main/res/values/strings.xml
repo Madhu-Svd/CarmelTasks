@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GuestJini</string>
+    <string name="guesture_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies.</string>
+    <string name="app_title">Login</string>
+    <string name="forgot_password_title">Forgot password?</string>
+    <string name="forgot_password_description">The link to reset your password will be sent to your registered email address and mobile number.</string>
+    <string name="email_error_message">This email is not registered with GuestJini.</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="verification_code_description">Please type the verification code sent to your mobile number.</string>
+</resources>

@@ -84,7 +84,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/invalidCredentialsErrorField"
+                android:id="@+id/invalidCredentials"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -102,6 +102,7 @@
                 android:textColor="@color/colorErrorField"
                 android:textSize="12dp"
 
+                android:visibility="gone"
                 app:fontFamily="@font/roboto_medium"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -113,13 +114,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginLeft="32dp"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="32dp"
                 android:layout_marginRight="32dp"
                 android:background="@drawable/edit_textbox"
                 android:elevation="1dp"
                 android:hint="Email or Mobile Number"
-                android:inputType="textEmailAddress|phone"
+                android:inputType="textEmailAddress"
                 android:letterSpacing="0.05"
                 android:paddingLeft="20dp"
                 android:paddingTop="16dp"
@@ -130,7 +131,7 @@
                 app:fontFamily="@font/roboto"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/invalidCredentialsErrorField" />
+                app:layout_constraintTop_toBottomOf="@+id/invalidCredentials" />
 
             <TextView
                 android:id="@+id/emailErrorField"
@@ -144,6 +145,7 @@
                 android:text="This field is required"
                 android:textColor="@color/colorErrorField"
                 android:textSize="12dp"
+                android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email" />
 
@@ -178,6 +180,7 @@
                     android:paddingBottom="2dp"
                     android:textColorHint="#909090"
                     android:textSize="14dp"
+                    android:inputType="textPassword"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"></EditText>
@@ -200,7 +203,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/passwordErrorField1"
+                android:id="@+id/passwordErrorField"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="46dp"
@@ -211,11 +214,12 @@
                 android:text="This field is required"
                 android:textColor="@color/colorErrorField"
                 android:textSize="12dp"
+                android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/passwordLayout" />
 
             <TextView
-                android:id="@+id/fotgotPassword"
+                android:id="@+id/forgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -248,7 +252,7 @@
                 android:textSize="14dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fotgotPassword"></Button>
+                app:layout_constraintTop_toBottomOf="@+id/forgotPassword"></Button>
 
             <TextView
                 android:id="@+id/dontHave"

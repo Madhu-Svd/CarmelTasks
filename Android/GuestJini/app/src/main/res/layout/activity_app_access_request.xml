@@ -5,7 +5,7 @@
     android:id="@+id/GetAccountMainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GetAccount">
+    tools:context=".AppAccessRequest">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/GetAccountSubLayout"
@@ -68,7 +68,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="38dp"
                 android:letterSpacing="0.08"
-                android:text="CUSTOMER CARE"
+                android:text="@string/customer_care"
                 android:textColor="#595959"
                 android:textSize="16dp"
                 app:fontFamily="@font/roboto_bold"
@@ -83,7 +83,7 @@
                 android:layout_marginLeft="64dp"
                 android:layout_marginTop="46dp"
                 android:letterSpacing="0.08"
-                android:text="APP ACCESS REQUEST"
+                android:text="@string/app_access_request"
                 android:textColor="#595959"
                 android:textSize="14dp"
                 app:fontFamily="@font/roboto_bold"
@@ -123,10 +123,11 @@
                 android:paddingLeft="14dp"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
-                android:text="Invalid credentials"
+                android:text="@string/invalid_credentials"
                 android:textColor="@color/colorErrorField"
                 android:textSize="12dp"
 
+                android:visibility="gone"
                 app:fontFamily="@font/roboto_medium"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -138,17 +139,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="64dp"
                 android:layout_marginLeft="64dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="38dp"
                 android:fontFamily="@font/roboto_bold"
                 android:letterSpacing="0.05"
-                android:text="REGISTERED EMAIL"
+                android:text="@string/registered_email"
                 android:textColor="#32BDD2"
                 android:textSize="12dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/invalidCredentialsErrorField" />
 
             <EditText
-                android:id="@+id/registredEmail"
+                android:id="@+id/registeredEmailEditbox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="64dp"
@@ -158,12 +159,12 @@
                 android:layout_marginRight="64dp"
                 android:background="@drawable/edit_textbox"
                 android:elevation="2dp"
-                android:hint="someone@something.com"
+                android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:letterSpacing="0.05"
                 android:paddingLeft="16dp"
-                android:paddingTop="14dp"
-                android:paddingBottom="14dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
                 android:shadowColor="#0000002F"
                 android:textColorHint="#909090"
                 android:textSize="14dp"
@@ -174,7 +175,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/registeredEmail" />
 
             <TextView
-                android:id="@+id/emailErrorField"
+                android:id="@+id/regesteredEmailErrorField"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="80dp"
@@ -182,29 +183,30 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto"
                 android:letterSpacing="0.05"
-                android:text="This field is required"
+                android:text="@string/error_field"
                 android:textColor="@color/colorErrorField"
                 android:textSize="10dp"
+                android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registredEmail" />
+                app:layout_constraintTop_toBottomOf="@+id/registeredEmailEditbox" />
 
             <TextView
-                android:id="@+id/registeredPhoneNumber"
+                android:id="@+id/registeredMobileNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="64dp"
                 android:layout_marginLeft="64dp"
-                android:layout_marginTop="38dp"
+                android:layout_marginTop="37dp"
                 android:fontFamily="@font/roboto_bold"
                 android:letterSpacing="0.05"
                 android:text="REGISTERED MOBILE NUMBER"
                 android:textColor="#32BDD2"
                 android:textSize="12dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/emailErrorField" />
+                app:layout_constraintTop_toBottomOf="@+id/regesteredEmailErrorField" />
 
             <EditText
-                android:id="@+id/registredPhoneNumber"
+                android:id="@+id/registeredMobileNumberEditbox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="64dp"
@@ -214,19 +216,19 @@
                 android:layout_marginRight="64dp"
                 android:background="@drawable/edit_textbox"
                 android:elevation="2dp"
-                android:hint="98445 54783"
-                android:inputType="textEmailAddress"
+                android:hint="@string/mobile_number"
+                android:inputType="phone"
                 android:letterSpacing="0.05"
                 android:paddingLeft="16dp"
-                android:paddingTop="14dp"
-                android:paddingBottom="14dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
                 android:shadowColor="#0000002F"
                 android:textColorHint="#909090"
                 android:textSize="14dp"
                 app:fontFamily="@font/roboto"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registeredPhoneNumber" />
+                app:layout_constraintTop_toBottomOf="@+id/registeredMobileNumber" />
 
             <TextView
                 android:id="@+id/mobileNumberErrorField"
@@ -237,26 +239,27 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto"
                 android:letterSpacing="0.05"
-                android:text="This field is required"
+                android:text="@string/error_field"
                 android:textColor="@color/colorErrorField"
                 android:textSize="10dp"
+                android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registredPhoneNumber" />
+                app:layout_constraintTop_toBottomOf="@+id/registeredMobileNumberEditbox" />
 
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <Button
+                android:id="@+id/appAccessDoneButton"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="97dp"
+                android:layout_marginTop="246dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:background="@drawable/done_button"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registredPhoneNumber"
-                app:srcCompat="@drawable/done_icon" />
+                app:layout_constraintTop_toBottomOf="@+id/registeredEmailEditbox"></Button>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

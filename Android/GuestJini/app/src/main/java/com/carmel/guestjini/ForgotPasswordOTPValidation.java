@@ -2,6 +2,9 @@ package com.carmel.guestjini;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,6 +17,7 @@ public class ForgotPasswordOTPValidation extends AppCompatActivity {
     TextView resendOtp,otpErrorField,getOneNow;
     Button submitButton;
     EditText firstOtp,secondOtp,thirdOtp,fourthOtp;
+    final Context context=this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,9 +131,27 @@ public class ForgotPasswordOTPValidation extends AppCompatActivity {
                 }if(!(firstOtpBox.length()==1) || !(secondOtpBox.length()==1) || !(thirdOtpBox.length()==1) || (fourthOtpBox.length()==1)){
                     otpErrorField.setVisibility(View.VISIBLE);
                 }else {
+                    final Dialog dialog = new Dialog(context);
+                    dialog.setContentView(R.layout.alert_dailogbox);
 
+
+                    TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);
+                    alertDailogTitle.setText("FORGOT PASSWORD");
+
+                    TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
+                    alertDailogMessage.setText("New password has been sent to your registered mobile number.");
+
+                    Button doneButton = (Button) dialog.findViewById(R.id.done_button);
+                    doneButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getApplicationContext(), ForgotPasswordOTPValidation.class);
+                            startActivity(intent);
+                        }
+                    });
+
+                    dialog.show();
                 }
-
 
             }
         });

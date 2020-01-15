@@ -2,6 +2,8 @@ package com.carmel.guestjini;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +19,7 @@ public class ForgotPassword extends AppCompatActivity {
     ImageView backIcon;
     String MobilePattern = "[0-9]{10}";
     String EMAIL_PATTERN = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,27 +32,58 @@ public class ForgotPassword extends AppCompatActivity {
         resetPassword=findViewById(R.id.resetPasswordButton);
         forgotPasswordErrorMessage=findViewById(R.id.forgotPasswordErrorMessage);
 
+
         resetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(email.getText().toString().trim().length()==0){
+                if(email.getText().toString().trim().length()==0) {
                     emailErrorField.setVisibility(View.VISIBLE);
                     email.setBackgroundResource(R.drawable.edit_red_textbox);
-                }else if(!email.getText().toString().trim().matches(EMAIL_PATTERN) && !email.getText().toString().trim().matches(MobilePattern)){
-                    emailErrorField.setVisibility(View.VISIBLE);
-                    email.setBackgroundResource(R.drawable.edit_red_textbox);
+                }
+                else if(!email.getText().toString().trim().matches(EMAIL_PATTERN) && !email.getText().toString().trim().matches(MobilePattern))  {
                     forgotPasswordErrorMessage.setVisibility(View.VISIBLE);
                     emailErrorField.setVisibility(View.GONE);
                     backIcon.setVisibility(View.GONE);
                     email.setBackgroundResource(R.drawable.edit_textbox);
                 }
+                else{
+                    final Dialog dialog=new Dialog(context);
+                    dialog.setContentView(R.layout.alert_dailogbox);
+
+                    TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);
+                    alertDailogTitle.setText("FORGOT PASSWORD");
+
+                    TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
+                    alertDailogMessage.setText("A link has been sent to your email account to reset your password.");
+
+                    Button doneButton=(Button) dialog.findViewById(R.id.done_button);
+                    doneButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent=new Intent(getApplicationContext(), ForgotPasswordOTPValidation.class);
+                            startActivity(intent);
+                        }
+                    });
+
+                    dialog.show();
+
+
+                }
+            }
+        });
+
+        backIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
             }
         });
 
         getOneNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),GetAccount.class);
+                Intent intent=new Intent(getApplicationContext(), AppAccessRequest.class);
                 startActivity(intent);
             }
         });

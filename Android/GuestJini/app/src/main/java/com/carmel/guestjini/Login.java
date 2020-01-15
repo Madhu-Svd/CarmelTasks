@@ -107,7 +107,7 @@ public class Login extends AppCompatActivity {
         getOneNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),GetAccount.class);
+                Intent intent=new Intent(getApplicationContext(), AppAccessRequest.class);
                 startActivity(intent);
             }
         });

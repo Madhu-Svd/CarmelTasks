@@ -28,7 +28,7 @@
             android:fontFamily="@font/roboto_medium"
             android:letterSpacing="0.1"
             android:text="Alert Dailog Title"
-            android:textColor="#32BDD2"
+            android:textColor="@color/colorSkyBlue"
             android:textSize="12dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"></TextView>

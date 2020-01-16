@@ -22,4 +22,20 @@
     <string name="email">Email</string>
     <string name="mobile_number">Mobile Number</string>
     <string name="app_access_request_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim felis et magna</string>
+    <string name="my_profile">My Profile</string>
+    <string name="change_password">Change Password</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="term_conditions">Term &amp; Conditions</string>
+    <string name="notifications">Notifications</string>
+    <string name="log_out">Log Out</string>
+    <string name="change_password_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies quis.</string>
+    <string name="current_password">Current Password</string>
+    <string name="current_password_error_field">This field is required or Wrong Password.</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_password_error_field">This field is required or Passwords not matching.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

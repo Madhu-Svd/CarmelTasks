@@ -152,7 +152,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/passwordLayout"
-                android:layout_width="349dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginLeft="32dp"
@@ -161,9 +161,9 @@
                 android:layout_marginRight="32dp"
                 android:background="@drawable/edit_textbox"
                 android:elevation="2dp"
-                android:translationZ="1dp"
                 android:shadowColor="#0000002E"
                 android:shadowDy="3"
+                android:translationZ="1dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email">
@@ -177,12 +177,12 @@
                     android:background="@color/colorWhite"
                     android:ems="17"
                     android:hint="@string/password"
+                    android:inputType="textPassword"
                     android:letterSpacing="0.05"
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
                     android:textColorHint="#909090"
                     android:textSize="14dp"
-                    android:inputType="textPassword"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"></EditText>

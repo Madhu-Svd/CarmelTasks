@@ -7,4 +7,7 @@
     <color name="colorGuestureBackground">#E5E5E5</color>
     <color name="colorLoginTitle">#747474</color>
     <color name="colorErrorField">#BF574A</color>
+    <color name="red">#E65959</color>
+    <color name="colorCurrentPassword">#464646</color>
+    <color name="colorSkyBlue">#32BDD2</color>
 </resources>

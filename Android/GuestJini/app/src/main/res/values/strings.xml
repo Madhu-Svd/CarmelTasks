@@ -34,8 +34,16 @@
     <string name="new_password">New Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="confirm_password_error_field">This field is required or Passwords not matching.</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="help_title">We’re here to help you</string>
+    <string name="find_help">FIND HELP</string>
+    <string name="search">Search</string>
+    <string name="Popular_Searches">Popular Searches</string>
+    <string name="Explore">Explore</string>
+    <string name="explore_description">Lorem ipsum dolor sit amet consectetur adipiscing elit sodales primis, mollis viverra.</string>
+    <string name="tickets">TICKETS</string>
+    <string name="tickets_description">You can submit your complaint, track progress and communicate with our team.</string>
+    <string name="create_tickets">CREATE TICKET</string>
+    <string name="goto_your_tickets">Goto your ticket(s).</string>
+    <string name="phone_number">1800 0156 4237</string>
+    <string name="call_details">(Monday - Friday, 09:00am - 06:00pm)</string>
 </resources>

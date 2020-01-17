@@ -10,8 +10,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/subLayout"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +38,8 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:paddingBottom="50dp">
 
                         <TextView
                             android:id="@+id/profileTitle"
@@ -75,6 +77,7 @@
                             app:layout_constraintHorizontal_bias="0.498"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/profileTitle"></de.hdodenhof.circleimageview.CircleImageView>
+
                         <TextView
                             android:id="@+id/nameText"
                             android:layout_width="wrap_content"
@@ -82,8 +85,8 @@
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="202dp"
-                            android:text="NAME"
                             android:letterSpacing="0.1"
+                            android:text="NAME"
                             android:textColor="#747474"
                             android:textSize="12dp"
                             app:fontFamily="@font/roboto"
@@ -98,25 +101,24 @@
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="4dp"
+                            android:letterSpacing="0.1"
                             android:text="John Doe"
                             android:textColor="#505050"
-                            android:letterSpacing="0.1"
                             android:textSize="14dp"
                             app:fontFamily="@font/roboto_medium"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/nameText" />
 
-                        <TextView
+                        <View
                             android:id="@+id/nameDivider"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="1dp"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="14dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
-                            android:ems="10"
-                            android:inputType="textPersonName"
+                            android:background="@drawable/horizontal_line"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/johnDeoText" />
@@ -127,9 +129,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
-                            android:layout_marginTop="14dp"
-                            android:lineSpacingExtra="24sp"
+                            android:layout_marginTop="32dp"
                             android:letterSpacing="0.1"
+                            android:lineSpacingExtra="24sp"
                             android:text="GENDER"
                             android:textColor="#747474"
                             android:textSize="12dp"
@@ -162,17 +164,16 @@
                             app:layout_constraintBottom_toTopOf="@+id/genderDivider"
                             app:layout_constraintEnd_toEndOf="parent" />
 
-                        <TextView
+                        <View
                             android:id="@+id/genderDivider"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="1dp"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="14dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
-                            android:ems="10"
-                            android:inputType="textPersonName"
+                            android:background="@drawable/horizontal_line"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/maleText" />
@@ -183,7 +184,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
-                            android:layout_marginTop="16dp"
+                            android:layout_marginTop="34dp"
                             android:letterSpacing="0.1"
                             android:text="AGE"
                             android:textColor="#747474"
@@ -208,17 +209,16 @@
                             app:layout_constraintTop_toBottomOf="@+id/ageText" />
 
 
-                        <TextView
+                        <View
                             android:id="@+id/ageDivider"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="1dp"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="14dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
-                            android:ems="10"
-                            android:inputType="textPersonName"
+                            android:background="@drawable/horizontal_line"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/AgeEditText" />
@@ -239,7 +239,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
-                            android:layout_marginTop="14dp"
+                            android:layout_marginTop="32dp"
                             android:letterSpacing="0.1"
                             android:text="MOBILE NUMBER"
                             android:textColor="#747474"
@@ -274,17 +274,16 @@
                             app:layout_constraintBottom_toTopOf="@+id/phonenoDivider"
                             app:layout_constraintEnd_toEndOf="parent" />
 
-                        <TextView
+                        <View
                             android:id="@+id/phonenoDivider"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="1dp"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="14dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
-                            android:ems="10"
-                            android:inputType="textPersonName"
+                            android:background="@drawable/horizontal_line"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/phoneno" />
@@ -330,17 +329,16 @@
                             app:layout_constraintBottom_toTopOf="@+id/emailDivider"
                             app:layout_constraintEnd_toEndOf="parent" />
 
-                        <TextView
+                        <View
                             android:id="@+id/emailDivider"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="1dp"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="42dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
-                            android:ems="10"
-                            android:inputType="textPersonName"
+                            android:background="@drawable/horizontal_line"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/EmailText" />
@@ -366,20 +364,20 @@
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="12dp"
+                            android:background="@drawable/edit_icon_xhdpi"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/yourPlaceOfOriginText" />
 
-                        <TextView
+                        <View
                             android:id="@+id/yourPlaceOfOriginDivider"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="1dp"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
-                            android:ems="10"
-                            android:inputType="textPersonName"
+                            android:background="@drawable/horizontal_line"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/editIcon" />
@@ -415,6 +413,7 @@
                             android:layout_marginStart="133dp"
                             android:layout_marginLeft="133dp"
                             android:layout_marginTop="18dp"
+                            android:background="@drawable/red_small_circle"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/yourPlaceOfOriginDivider" />
 
@@ -426,15 +425,24 @@
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:background="@drawable/setup_button_border"
+                            android:letterSpacing="0.1"
                             android:paddingLeft="5dp"
                             android:paddingRight="5dp"
-                            android:letterSpacing="0.1"
                             android:text="SETUP"
                             android:textColor="#FFFFFF"
                             android:textSize="12dp"
                             app:fontFamily="@font/roboto_medium"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/yourPlaceOfOriginDivider" />
+
+                        <Button
+                            android:id="@+id/profileEdit"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="82dp"
+                            android:background="@drawable/button"
+                            app:layout_constraintStart_toEndOf="@+id/cameraIcon"
+                            app:layout_constraintTop_toTopOf="parent" />
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>

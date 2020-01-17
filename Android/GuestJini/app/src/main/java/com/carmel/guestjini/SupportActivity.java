@@ -6,19 +6,20 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import com.carmel.guestjini.Settings.ChangePasswordFragment;
 import com.carmel.guestjini.Settings.SettingsLandingFragment;
+import com.carmel.guestjini.Support.SupportLandingFragment;
 
-public class SettingsActivity extends AppCompatActivity {
+public class SupportActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
-        SettingsLandingFragment settingsLandingFragment=new SettingsLandingFragment();
+        setContentView(R.layout.activity_support);
+        SupportLandingFragment supportLandingFragment=new SupportLandingFragment();
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.SettingsPlaceHolder,settingsLandingFragment);
+        fragmentTransaction.replace(R.id.SuppotPlaceHolder,supportLandingFragment);
         fragmentTransaction.commit();
+
     }
 }

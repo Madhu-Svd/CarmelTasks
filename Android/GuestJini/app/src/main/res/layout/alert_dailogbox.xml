@@ -10,8 +10,8 @@
   >
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="320dp"
+        android:layout_height="210dp"
         android:background="@drawable/dailogbox"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +43,7 @@
             android:letterSpacing="0.02"
             android:text="Alert Dailog Message"
             android:textColor="#909090"
-            android:textSize="10dp"
+            android:textSize="11dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/alertDailogTitle"></TextView>
 
@@ -56,7 +56,7 @@
             android:layout_marginTop="44dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginBottom="29dp"
+            android:layout_marginBottom="32dp"
             android:background="@drawable/done_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

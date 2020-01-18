@@ -49,9 +49,10 @@
                             android:layout_marginLeft="24dp"
                             android:layout_marginTop="32dp"
                             android:letterSpacing="0.1"
-                            android:text="MY PROFILE"
-                            android:textColor="#747474"
+                            android:text="@string/my_profile"
+                            android:textColor="#595959"
                             android:textSize="14dp"
+                            android:textAllCaps="true"
                             app:fontFamily="@font/roboto_bold"
                             app:layout_constraintStart_toEndOf="@+id/leftArrowMark"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -69,14 +70,24 @@
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/cameraIcon"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginTop="48dp"
+                            android:layout_width="51dp"
+                            android:layout_height="51dp"
+                            android:layout_marginTop="62dp"
                             android:src="@drawable/profile_image"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.498"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/profileTitle"></de.hdodenhof.circleimageview.CircleImageView>
+
+                        <ImageView
+                            android:id="@+id/ageToggleIconOn1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/toggle_icon_on_xxhdpi"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cameraIcon" />
 
                         <TextView
                             android:id="@+id/nameText"
@@ -115,7 +126,7 @@
                             android:layout_height="1dp"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
-                            android:layout_marginTop="14dp"
+                            android:layout_marginTop="24dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:background="@drawable/horizontal_line"
@@ -129,7 +140,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
-                            android:layout_marginTop="32dp"
+                            android:layout_marginTop="24dp"
                             android:letterSpacing="0.1"
                             android:lineSpacingExtra="24sp"
                             android:text="GENDER"
@@ -161,6 +172,7 @@
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="12dp"
+                            android:background="@drawable/toggle_icon_on_xxhdpi"
                             app:layout_constraintBottom_toTopOf="@+id/genderDivider"
                             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -170,7 +182,7 @@
                             android:layout_height="1dp"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
-                            android:layout_marginTop="14dp"
+                            android:layout_marginTop="24dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:background="@drawable/horizontal_line"
@@ -184,7 +196,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
-                            android:layout_marginTop="34dp"
+                            android:layout_marginTop="24dp"
                             android:letterSpacing="0.1"
                             android:text="AGE"
                             android:textColor="#747474"
@@ -215,7 +227,7 @@
                             android:layout_height="1dp"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
-                            android:layout_marginTop="14dp"
+                            android:layout_marginTop="24dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:background="@drawable/horizontal_line"
@@ -230,6 +242,7 @@
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="12dp"
+                            android:background="@drawable/toggle_icon_on_xxhdpi"
                             app:layout_constraintBottom_toTopOf="@+id/ageDivider"
                             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -239,7 +252,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
-                            android:layout_marginTop="32dp"
+                            android:layout_marginTop="24dp"
                             android:letterSpacing="0.1"
                             android:text="MOBILE NUMBER"
                             android:textColor="#747474"
@@ -271,6 +284,7 @@
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="12dp"
+                            android:background="@drawable/toggle_icon_off_xxhdpi"
                             app:layout_constraintBottom_toTopOf="@+id/phonenoDivider"
                             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -280,7 +294,7 @@
                             android:layout_height="1dp"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
-                            android:layout_marginTop="14dp"
+                            android:layout_marginTop="24dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:background="@drawable/horizontal_line"
@@ -295,7 +309,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
-                            android:layout_marginTop="16dp"
+                            android:layout_marginTop="24dp"
                             android:letterSpacing="0.1"
                             android:text="EMAIL"
                             android:textColor="#747474"
@@ -326,6 +340,7 @@
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="4dp"
+                            android:background="@drawable/toggle_icon_on_xxhdpi"
                             app:layout_constraintBottom_toTopOf="@+id/emailDivider"
                             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -335,7 +350,7 @@
                             android:layout_height="1dp"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
-                            android:layout_marginTop="42dp"
+                            android:layout_marginTop="54dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:background="@drawable/horizontal_line"
@@ -349,7 +364,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
-                            android:layout_marginTop="16dp"
+                            android:layout_marginTop="24dp"
                             android:text="YOUR PLACE OF ORIGIN"
                             android:textColor="#747474"
                             android:textSize="12dp"
@@ -374,7 +389,7 @@
                             android:layout_height="1dp"
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginTop="26dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:background="@drawable/horizontal_line"
@@ -389,6 +404,7 @@
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="16dp"
+                            android:background="@drawable/toggle_icon_off_xxhdpi"
                             app:layout_constraintBottom_toTopOf="@+id/yourPlaceOfOriginDivider"
                             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -437,11 +453,13 @@
 
                         <Button
                             android:id="@+id/profileEdit"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_marginTop="82dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="222dp"
+                            android:layout_marginLeft="222dp"
+                            android:layout_marginTop="98dp"
                             android:background="@drawable/button"
-                            app:layout_constraintStart_toEndOf="@+id/cameraIcon"
+                            app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
 

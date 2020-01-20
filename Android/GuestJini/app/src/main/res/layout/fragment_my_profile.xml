@@ -80,11 +80,11 @@
                             app:layout_constraintTop_toBottomOf="@+id/profileTitle"></de.hdodenhof.circleimageview.CircleImageView>
 
                         <ImageView
-                            android:id="@+id/ageToggleIconOn1"
+                            android:id="@+id/profileToggleButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/toggle_icon_on_xxhdpi"
+                            android:src="@drawable/toggle_icon_on_xxhdpi"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/cameraIcon" />
@@ -166,13 +166,13 @@
                             app:layout_constraintTop_toBottomOf="@+id/genderText" />
 
                         <ImageView
-                            android:id="@+id/genderToggleIconOff"
+                            android:id="@+id/genderToggleIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="12dp"
-                            android:background="@drawable/toggle_icon_on_xxhdpi"
+                            android:src="@drawable/toggle_icon_on_xxhdpi"
                             app:layout_constraintBottom_toTopOf="@+id/genderDivider"
                             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -236,13 +236,13 @@
                             app:layout_constraintTop_toBottomOf="@+id/AgeEditText" />
 
                         <ImageView
-                            android:id="@+id/ageToggleIconOn"
+                            android:id="@+id/ageToggleIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="12dp"
-                            android:background="@drawable/toggle_icon_on_xxhdpi"
+                            android:src="@drawable/toggle_icon_on_xxhdpi"
                             app:layout_constraintBottom_toTopOf="@+id/ageDivider"
                             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -278,13 +278,13 @@
 
 
                         <ImageView
-                            android:id="@+id/mobileNoToggleIconOff"
+                            android:id="@+id/mobileNoToggleIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="12dp"
-                            android:background="@drawable/toggle_icon_off_xxhdpi"
+                            android:src="@drawable/toggle_icon_off_xxhdpi"
                             app:layout_constraintBottom_toTopOf="@+id/phonenoDivider"
                             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -334,13 +334,13 @@
                             app:layout_constraintTop_toBottomOf="@+id/emailText" />
 
                         <ImageView
-                            android:id="@+id/emailToggleIconOn"
+                            android:id="@+id/emailToggleIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="4dp"
-                            android:background="@drawable/toggle_icon_on_xxhdpi"
+                            android:src="@drawable/toggle_icon_on_xxhdpi"
                             app:layout_constraintBottom_toTopOf="@+id/emailDivider"
                             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -379,7 +379,7 @@
                             android:layout_marginStart="32dp"
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="12dp"
-                            android:background="@drawable/edit_icon_xhdpi"
+                            android:src="@drawable/edit_icon_xhdpi"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/yourPlaceOfOriginText" />
 
@@ -398,13 +398,13 @@
                             app:layout_constraintTop_toBottomOf="@+id/editIcon" />
 
                         <ImageView
-                            android:id="@+id/yourPlaceToggleIconOff"
+                            android:id="@+id/yourPlaceToggleIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="16dp"
-                            android:background="@drawable/toggle_icon_off_xxhdpi"
+                            android:src="@drawable/toggle_icon_off_xxhdpi"
                             app:layout_constraintBottom_toTopOf="@+id/yourPlaceOfOriginDivider"
                             app:layout_constraintEnd_toEndOf="parent" />
 

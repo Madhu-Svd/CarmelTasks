@@ -52,7 +52,20 @@
     <string name="draft">DRAFT</string>
     <string name="filer_description">86 articles found in 07 categories.</string>
     <string name="show_categories">Showing all categories.</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="clear_filter">CLEAR FILTER</string>
+    <string name="elevateors">ELEVATORS</string>
+    <string name="security">SECURITY</string>
+    <string name="house_rules">HOUSE RULES</string>
+    <string name="wifi">WIFI</string>
+    <string name="plumbing">  PLUMBING</string>
+    <string name="filter">FILTER</string>
+    <string name="clear_all">CLEAR ALL</string>
+    <string name="filter_description">You have not applied any filter</string>
+    <string name="status">STATUS</string>
+    <string name="submitted_date">SUBMITTED DATE</string>
+    <string name="today">Today</string>
+    <string name="sort">SORT</string>
+    <string name="ascending">ASCENDING</string>
+    <string name="submitted_date_time">SUBMITTED DATE &amp; TIME</string>
+    <string name="subject">SUBJECT</string>
 </resources>

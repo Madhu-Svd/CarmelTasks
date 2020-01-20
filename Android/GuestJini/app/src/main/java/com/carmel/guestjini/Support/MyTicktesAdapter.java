@@ -37,7 +37,7 @@ class MyTicktesAdapter extends RecyclerView.Adapter<MyTicktesAdapter.ViewHolder>
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         MyTicketsModel myTicketsModel=this.myTicketsModelArrayList.get(position);
         holder.ticketsStatus.setText(String.valueOf(myTicketsModel.getTicketsStatus()));
-        holder.ticketsDate.setText(String.valueOf(myTicketsModel.getTicketsDate()));
+        holder.ticketsDate.setText(String.valueOf(myTicketsModel.getTicketsDateAndTime()));
         holder.ticketsName.setText(String.valueOf(myTicketsModel.getTicketsName()));
         holder.ticketsNo.setText(String.valueOf(myTicketsModel.getTicketsNo()));
         holder.ticketsValue.setText(String.valueOf(myTicketsModel.getTicketsValue()));
@@ -56,7 +56,7 @@ class MyTicktesAdapter extends RecyclerView.Adapter<MyTicktesAdapter.ViewHolder>
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ticketsStatus=itemView.findViewById(R.id.ticketsStatus);
-            ticketsDate=itemView.findViewById(R.id.ticketDate);
+            ticketsDate=itemView.findViewById(R.id.tickestsDateAndTime);
             ticketsName=itemView.findViewById(R.id.ticketsName);
             ticketsNo=itemView.findViewById(R.id.ticketsNo);
             ticketsValue=itemView.findViewById(R.id.ticketsValue);

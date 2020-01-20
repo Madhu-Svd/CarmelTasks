@@ -33,10 +33,10 @@ public class SupportLandingFragment extends Fragment {
         gotoTicketsIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyTicketsFragment myTicketsFragment=new MyTicketsFragment();
+                MyTicketsRecyclerViewFragment MyTicketsRecyclerViewFragment=new MyTicketsRecyclerViewFragment();
                 FragmentManager fragmentManager=getFragmentManager();
                 FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.SuppotPlaceHolder,myTicketsFragment);
+                fragmentTransaction.replace(R.id.SuppotPlaceHolder,MyTicketsRecyclerViewFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

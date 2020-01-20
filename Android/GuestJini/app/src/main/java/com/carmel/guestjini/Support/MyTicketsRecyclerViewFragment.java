@@ -37,9 +37,32 @@ public class MyTicketsRecyclerViewFragment extends Fragment {
 
         MyTicketsModel myTicketsModel=new MyTicketsModel();
         myTicketsModel.setTicketsStatus("OPEN");
+        myTicketsModel.setTicketsDateAndTime("09:15 AM");
         myTicketsModel.setTicketsName("Elevator is not working most of the time.");
         myTicketsModel.setTicketsNo("Ticket #");
+        myTicketsModel.setTicketsValue("TT/AV/004/2016");
         myTicketsModel.setClock("Clock");
+        myTicketsModel.setTicketsTime("05:48");
+        myTicketsModelsList.add(myTicketsModel);
+
+        myTicketsModel=new MyTicketsModel();
+        myTicketsModel.setTicketsStatus("CLOSED");
+        myTicketsModel.setTicketsDateAndTime("25 July 2019 11:47 AM");
+        myTicketsModel.setTicketsName("Lorem ipsum dolor sit amet, consectetur.");
+        myTicketsModel.setTicketsNo("Ticket #");
+        myTicketsModel.setTicketsValue("TT/AV/003/2016");
+        myTicketsModel.setClock("Clock");
+        myTicketsModel.setTicketsTime("2 Days 05:48");
+        myTicketsModelsList.add(myTicketsModel);
+
+        myTicketsModel=new MyTicketsModel();
+        myTicketsModel.setTicketsStatus("OPEN");
+        myTicketsModel.setTicketsDateAndTime("24 July 2019 11:47 AM");
+        myTicketsModel.setTicketsName("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        myTicketsModel.setTicketsNo("Ticket #");
+        myTicketsModel.setTicketsValue("TT/AV/002/2016");
+        myTicketsModel.setClock("Clock");
+        myTicketsModel.setTicketsTime("3 Days 05:48");
         myTicketsModelsList.add(myTicketsModel);
 
         return rootView;

@@ -4,6 +4,7 @@ package com.carmel.guestjini.Support;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,7 +28,7 @@ public class ExploreFragment extends Fragment {
         // Inflate the layout for this fragment
         final View rootView=inflater.inflate(R.layout.fragment_explore, container, false);
         recyclerView=rootView.findViewById(R.id.recyclerView);
-
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(),LinearLayoutManager.VERTICAL));
 
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);

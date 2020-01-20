@@ -1,13 +1,13 @@
 package Model;
 
 public class MyTicketsModel {
-   private String ticketsStatus;
-    private int ticketsDate;
+    private String ticketsStatus;
+    private String ticketsDateAndTime;
     private String ticketsName;
     private String ticketsNo;
-    private int ticketsValue;
+    private String ticketsValue;
     private String clock;
-    private int ticketsTime;
+    private String ticketsTime;
     private int notificationIcon;
 
     public String getTicketsStatus() {
@@ -18,12 +18,12 @@ public class MyTicketsModel {
         this.ticketsStatus = ticketsStatus;
     }
 
-    public int getTicketsDate() {
-        return ticketsDate;
+    public String getTicketsDateAndTime() {
+        return ticketsDateAndTime;
     }
 
-    public void setTicketsDate(int ticketsDate) {
-        this.ticketsDate = ticketsDate;
+    public void setTicketsDateAndTime(String ticketsDateAndTime) {
+        this.ticketsDateAndTime = ticketsDateAndTime;
     }
 
     public String getTicketsName() {
@@ -42,11 +42,11 @@ public class MyTicketsModel {
         this.ticketsNo = ticketsNo;
     }
 
-    public int getTicketsValue() {
+    public String getTicketsValue() {
         return ticketsValue;
     }
 
-    public void setTicketsValue(int ticketsValue) {
+    public void setTicketsValue(String ticketsValue) {
         this.ticketsValue = ticketsValue;
     }
 
@@ -58,11 +58,11 @@ public class MyTicketsModel {
         this.clock = clock;
     }
 
-    public int getTicketsTime() {
+    public String getTicketsTime() {
         return ticketsTime;
     }
 
-    public void setTicketsTime(int ticketsTime) {
+    public void setTicketsTime(String ticketsTime) {
         this.ticketsTime = ticketsTime;
     }
 
@@ -73,4 +73,5 @@ public class MyTicketsModel {
     public void setNotificationIcon(int notificationIcon) {
         this.notificationIcon = notificationIcon;
     }
+
 }

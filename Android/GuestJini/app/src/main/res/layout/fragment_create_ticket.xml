@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Support.CreateTicketFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/leftArrowMark"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="36dp"
+                android:src="@drawable/back_arrow_icon_xxhdpi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/NewTicketTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="32dp"
+                android:letterSpacing="0.1"
+                android:text="@string/my_tickets"
+                android:textColor="@color/colorZambezi"
+                android:textSize="14dp"
+                app:fontFamily="@font/roboto_bold"
+                app:layout_constraintStart_toEndOf="@+id/leftArrowMark"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/subjectTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="42dp"
+                android:fontFamily="@font/roboto_bold"
+                android:letterSpacing="0.02"
+                android:text="@string/subject"
+                android:textColor="@color/colorZambezi"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NewTicketTitle" />
+
+            <TextView
+                android:id="@+id/redStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="38dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="*"
+                android:textColor="@color/colorRoman"
+                android:textSize="10dp"
+                app:layout_constraintStart_toEndOf="@+id/subjectTitle"
+                app:layout_constraintTop_toBottomOf="@+id/NewTicketTitle" />
+
+            <EditText
+                android:id="@+id/subjectEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/subject_editbox"
+                android:ems="10"
+                android:hint="@string/subject_hint"
+                android:inputType="text"
+                android:paddingLeft="15dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/colorSuvaGray"
+                android:textColorHint="@color/colorSuvaGray"
+                android:textSize="12dp"
+                android:shadowColor="@color/colorBlackRussian"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subjectTitle" />
+
+            <TextView
+                android:id="@+id/subjectErrorField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="14dp"
+                android:text="@string/error_field"
+                android:textColor="@color/colorMabel"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subjectEditText" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_navigation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+            <ImageView
+                android:id="@+id/supportIcon"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/support_icon_xxhdpi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/supportTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="Support"
+                android:textColor="@color/colorSummerSky"
+                android:textSize="8dp"
+                app:fontFamily="@font/roboto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/supportIcon" />
+
+            <ImageView
+                android:id="@+id/communityIcon"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="62dp"
+                android:layout_marginLeft="62dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/community_icon_xxhdpi"
+                app:layout_constraintStart_toEndOf="@+id/supportIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/communityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="Community"
+                android:textColor="@color/colorDimGray"
+                android:textSize="8dp"
+                app:fontFamily="@font/roboto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/supportIcon"
+                app:layout_constraintTop_toBottomOf="@+id/communityIcon" />
+
+            <ImageView
+                android:id="@+id/accountsIcon"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="66dp"
+                android:layout_marginLeft="66dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/accounts_icon_xhdpi"
+                app:layout_constraintStart_toEndOf="@+id/communityIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/accountsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="Accounts"
+                android:textColor="@color/colorDimGray"
+                android:textSize="8dp"
+                app:fontFamily="@font/roboto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/communityTitle"
+                app:layout_constraintTop_toBottomOf="@+id/accountsIcon" />
+
+            <ImageView
+                android:id="@+id/rewardsIcon"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginLeft="64dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/rewards_icon_xhdpi"
+                app:layout_constraintStart_toEndOf="@+id/accountsIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/rewardsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="Rewards"
+                android:textColor="@color/colorDimGray"
+                android:textSize="8dp"
+                app:fontFamily="@font/roboto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/accountsTitle"
+                app:layout_constraintTop_toBottomOf="@+id/rewardsIcon" />
+
+            <ImageView
+                android:id="@+id/settingsIcon"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/settings_icon_xhdpi"
+                app:layout_constraintStart_toEndOf="@+id/rewardsIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/settingsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="Settings"
+                android:textColor="@color/colorDimGray"
+                android:textSize="8dp"
+                app:fontFamily="@font/roboto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rewardsTitle"
+                app:layout_constraintTop_toBottomOf="@+id/settingsIcon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

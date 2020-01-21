@@ -772,7 +772,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="8dp"
                 android:text="Support"
-                android:textColor="@color/colorSkyBlue"
+                android:textColor="@color/colorSummerSky"
                 android:textSize="8dp"
                 app:fontFamily="@font/roboto"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -33,15 +33,15 @@ public class MyTicketsRecyclerViewFragment extends Fragment {
         // Inflate the layout for this fragment
         final View rootView= inflater.inflate(R.layout.fragment_my_tickets_recycler_view, container, false);
         ticketsRecyclerView=rootView.findViewById(R.id.myTicketsRecyclerView);
-//        drawerLayout=rootView.findViewById(R.id.drawerLayout);
-//        ticketsFilterIcon=rootView.findViewById(R.id.filterIcon);
-//
-//        ticketsFilterIcon.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                drawerLayout.openDrawer(GravityCompat.START);
-//            }
-//        });
+        drawerLayout=rootView.findViewById(R.id.drawerLayout);
+        ticketsFilterIcon=rootView.findViewById(R.id.filterIcon);
+
+        ticketsFilterIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
 
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         ticketsRecyclerView.setLayoutManager(linearLayoutManager);

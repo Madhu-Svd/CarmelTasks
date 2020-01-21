@@ -55,7 +55,7 @@
                 android:layout_marginTop="8dp"
                 android:letterSpacing="0.02"
                 android:text="@string/guesture_description"
-                android:textColor="#5A5A5A"
+                android:textColor="@color/colorZambezi1"
                 android:textSize="12dp"
                 app:fontFamily="@font/roboto"
                 app:layout_constraintEnd_toEndOf="parent"

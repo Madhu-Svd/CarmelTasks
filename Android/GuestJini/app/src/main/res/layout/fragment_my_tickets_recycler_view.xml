@@ -65,7 +65,7 @@
                                 android:layout_marginTop="32dp"
                                 android:letterSpacing="0.1"
                                 android:text="@string/my_tickets"
-                                android:textColor="#595959"
+                                android:textColor="@color/colorZambezi"
                                 android:textSize="14dp"
                                 app:fontFamily="@font/roboto_bold"
                                 app:layout_constraintStart_toEndOf="@+id/leftArrowMark"
@@ -133,7 +133,7 @@
                                     android:letterSpacing="0.07"
                                     android:paddingTop="2dp"
                                     android:paddingBottom="2dp"
-                                    android:textColorHint="#909090"
+                                    android:textColorHint="@color/colorSuvaGray"
                                     android:textSize="10dp"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -210,16 +210,17 @@
 
 
             <com.google.android.material.navigation.NavigationView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
+                android:background="@color/colorWhite"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ScrollView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -238,8 +239,8 @@
 
                             <ImageView
                                 android:id="@+id/FilterIamge"
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
                                 android:layout_marginTop="50dp"
                                 android:src="@drawable/filter_image_xxhdpi"
                                 app:layout_constraintStart_toStartOf="@+id/guideline5"
@@ -253,10 +254,10 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginLeft="16dp"
-                                android:layout_marginTop="52dp"
+                                android:layout_marginTop="48dp"
                                 android:letterSpacing="0.05"
                                 android:text="@string/filter"
-                                android:textColor="#5A5A5A"
+                                android:textColor="@color/colorZambezi1"
                                 android:textSize="14dp"
                                 app:fontFamily="@font/roboto_medium"
                                 app:layout_constraintStart_toEndOf="@+id/FilterIamge"
@@ -274,29 +275,15 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <androidx.constraintlayout.widget.Guideline
-                                android:id="@+id/guideline6"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="365dp"
-                                android:layout_marginLeft="365dp"
-                                android:layout_marginEnd="42dp"
-                                android:layout_marginRight="42dp"
-                                android:layout_marginBottom="500dp"
-                                android:orientation="vertical"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintGuide_begin="349dp"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:id="@+id/clearAllLayout"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="24dp"
-                                android:background="#E6E6E6"
-                                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                                android:layout_marginEnd="90dp"
+                                android:layout_marginRight="90dp"
+                                android:background="@color/colorWhisper4"
+                                app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="@+id/guideline5"
                                 app:layout_constraintTop_toBottomOf="@+id/FilterIamge">
 
@@ -304,12 +291,12 @@
                                     android:id="@+id/clearAll"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="32dp"
-                                    android:layout_marginLeft="32dp"
-                                    android:layout_marginTop="16dp"
+                                    android:layout_marginStart="24dp"
+                                    android:layout_marginLeft="24dp"
+                                    android:layout_marginTop="8dp"
                                     android:letterSpacing="0.05"
                                     android:text="@string/clear_all"
-                                    android:textColor="#B5B5B5"
+                                    android:textColor="@color/colorPinkSwan"
                                     android:textSize="13dp"
                                     app:fontFamily="@font/roboto_bold"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -319,14 +306,14 @@
                                     android:id="@+id/clearDescription"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="32dp"
-                                    android:layout_marginLeft="32dp"
-                                    android:layout_marginTop="8dp"
-                                    android:layout_marginBottom="16dp"
-                                    android:letterSpacing="0.05"
+                                    android:layout_marginStart="24dp"
+                                    android:layout_marginLeft="24dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:letterSpacing="0.04"
                                     android:text="@string/filter_description"
-                                    android:textColor="#909090"
-                                    android:textSize="12dp"
+                                    android:textColor="@color/colorSuvaGray"
+                                    android:textSize="13dp"
                                     app:fontFamily="@font/roboto_medium"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -338,30 +325,31 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="42dp"
-                                android:letterSpacing="0.05"
+                                android:letterSpacing="0.06"
                                 android:text="@string/status"
-                                android:textColor="#464646"
+                                android:textColor="@color/colorCharcoal"
                                 android:textSize="12dp"
                                 app:fontFamily="@font/roboto_medium"
                                 app:layout_constraintStart_toStartOf="@+id/guideline5"
                                 app:layout_constraintTop_toBottomOf="@+id/clearAllLayout" />
 
-                            <view
+                            <View
                                 android:id="@+id/statusDivider"
-                                android:layout_width="343dp"
-                                android:layout_height="0.5dp"
+                                android:layout_width="0dp"
+                                android:layout_height="0.6dp"
                                 android:layout_marginTop="8dp"
-                                android:layout_marginEnd="40dp"
-                                android:layout_marginRight="40dp"
+                                android:layout_marginEnd="60dp"
+                                android:layout_marginRight="60dp"
+                                android:background="@color/colorVeryLightGray"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="@+id/guideline5"
-                                app:layout_constraintTop_toBottomOf="@+id/status"></view>
+                                app:layout_constraintTop_toBottomOf="@+id/status"></View>
 
 
                             <LinearLayout
                                 android:id="@+id/openCheckBox"
-                                android:layout_width="14dp"
-                                android:layout_height="14dp"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
                                 android:layout_marginTop="24dp"
                                 android:background="@drawable/custom_checkbox"
                                 android:orientation="vertical"
@@ -374,10 +362,12 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginLeft="16dp"
-                                android:layout_marginTop="24dp"
+                                android:layout_marginTop="20dp"
+                                android:letterSpacing="0.07"
                                 android:text="@string/open"
-                                android:textColor="#747474"
+                                android:textColor="@color/colorDimGray"
                                 android:textSize="12dp"
+                                app:fontFamily="@font/roboto_medium"
                                 app:layout_constraintStart_toEndOf="@+id/openCheckBox"
                                 app:layout_constraintTop_toBottomOf="@+id/statusDivider" />
 
@@ -388,8 +378,9 @@
                                 android:layout_marginStart="30dp"
                                 android:layout_marginLeft="30dp"
                                 android:layout_marginTop="6dp"
+                                android:letterSpacing="0.08"
                                 android:text="Tickets that are assigned but not closed."
-                                android:textColor="#747474"
+                                android:textColor="@color/colorDimGray"
                                 android:textSize="10dp"
                                 app:fontFamily="@font/roboto_italic"
                                 app:layout_constraintStart_toStartOf="@+id/guideline5"
@@ -398,9 +389,9 @@
 
                             <LinearLayout
                                 android:id="@+id/closedCheckBox"
-                                android:layout_width="14dp"
-                                android:layout_height="14dp"
-                                android:layout_marginTop="46dp"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginTop="44dp"
                                 android:background="@drawable/custom_checkbox"
                                 android:orientation="vertical"
                                 app:layout_constraintStart_toStartOf="@+id/guideline5"
@@ -412,10 +403,12 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginLeft="16dp"
-                                android:layout_marginTop="22dp"
+                                android:layout_marginTop="20dp"
+                                android:letterSpacing="0.07"
                                 android:text="@string/closeed"
-                                android:textColor="#747474"
+                                android:textColor="@color/colorDimGray"
                                 android:textSize="12dp"
+                                app:fontFamily="@font/roboto_medium"
                                 app:layout_constraintStart_toEndOf="@+id/closedCheckBox"
                                 app:layout_constraintTop_toBottomOf="@+id/openDescription" />
 
@@ -427,8 +420,9 @@
                                 android:layout_marginStart="30dp"
                                 android:layout_marginLeft="30dp"
                                 android:layout_marginTop="6dp"
+                                android:letterSpacing="0.08"
                                 android:text="Tickets that have been closed."
-                                android:textColor="#747474"
+                                android:textColor="@color/colorDimGray"
                                 android:textSize="10dp"
                                 app:fontFamily="@font/roboto_italic"
                                 app:layout_constraintStart_toStartOf="@+id/guideline5"
@@ -436,9 +430,9 @@
 
                             <LinearLayout
                                 android:id="@+id/draftCheckBox"
-                                android:layout_width="14dp"
-                                android:layout_height="14dp"
-                                android:layout_marginTop="46dp"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginTop="44dp"
                                 android:background="@drawable/custom_checkbox"
                                 android:orientation="vertical"
                                 app:layout_constraintStart_toStartOf="@+id/guideline5"
@@ -450,10 +444,12 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginLeft="16dp"
-                                android:layout_marginTop="22dp"
+                                android:layout_marginTop="20dp"
+                                android:letterSpacing="0.07"
                                 android:text="@string/draft"
-                                android:textColor="#747474"
+                                android:textColor="@color/colorDimGray"
                                 android:textSize="12dp"
+                                app:fontFamily="@font/roboto_medium"
                                 app:layout_constraintStart_toEndOf="@+id/draftCheckBox"
                                 app:layout_constraintTop_toBottomOf="@+id/closedDescription" />
 
@@ -464,8 +460,9 @@
                                 android:layout_marginStart="30dp"
                                 android:layout_marginLeft="30dp"
                                 android:layout_marginTop="6dp"
+                                android:letterSpacing="0.08"
                                 android:text="Tickets that are saved but not submitted."
-                                android:textColor="#747474"
+                                android:textColor="@color/colorDimGray"
                                 android:textSize="10dp"
                                 app:fontFamily="@font/roboto_italic"
                                 app:layout_constraintStart_toStartOf="@+id/guideline5"
@@ -475,83 +472,86 @@
                                 android:id="@+id/submittedDate"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="42dp"
+                                android:layout_marginTop="44dp"
+                                android:letterSpacing="0.06"
                                 android:text="@string/submitted_date"
-                                android:textColor="#464646"
+                                android:textColor="@color/colorCharcoal"
                                 android:textSize="12dp"
                                 app:fontFamily="@font/roboto_medium"
                                 app:layout_constraintStart_toStartOf="@+id/guideline5"
                                 app:layout_constraintTop_toBottomOf="@+id/draftDescription" />
 
-                            <view
+                            <View
                                 android:id="@+id/submittedDateDivider"
                                 android:layout_width="0dp"
-                                android:layout_height="0.5dp"
+                                android:layout_height="0.6dp"
                                 android:layout_marginTop="8dp"
-                                android:layout_marginEnd="40dp"
-                                android:layout_marginRight="40dp"
+                                android:layout_marginEnd="60dp"
+                                android:layout_marginRight="60dp"
+                                android:background="@color/colorVeryLightGray"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="@+id/guideline5"
-                                app:layout_constraintTop_toBottomOf="@+id/submittedDate"></view>
+                                app:layout_constraintTop_toBottomOf="@+id/submittedDate"></View>
 
-                            <view
+                            <View
                                 android:id="@+id/submittedDateDivider2"
                                 android:layout_width="0dp"
-                                android:layout_height="0.5dp"
-                                android:layout_marginTop="50dp"
+                                android:layout_height="0.6dp"
+                                android:layout_marginTop="40dp"
+                                android:background="@color/colorVeryLightGray"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="0.0"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"></view>
+                                app:layout_constraintTop_toBottomOf="@+id/todayLayout"></View>
 
                             <androidx.constraintlayout.widget.ConstraintLayout
-                                android:id="@+id/constraintLayout9"
+                                android:id="@+id/todayLayout"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="24dp"
+                                android:layout_marginTop="32dp"
                                 android:background="@drawable/today"
-                                android:elevation="5dp"
+                                android:elevation="1dp"
                                 android:shadowColor="#00000033"
                                 app:layout_constraintStart_toStartOf="@+id/guideline5"
                                 app:layout_constraintTop_toBottomOf="@id/submittedDateDivider">
 
                                 <TextView
-                                    android:id="@+id/textView5"
+                                    android:id="@+id/todayTitle"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="8dp"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginTop="6dp"
-                                    android:layout_marginBottom="6dp"
-                                    android:letterSpacing="0.03"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:letterSpacing="0.04"
                                     android:text="@string/today"
-                                    android:textColor="#747474"
+                                    android:textColor="@color/colorDimGray"
                                     android:textSize="11dp"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent" />
 
                                 <ImageView
-                                    android:id="@+id/imageView3"
+                                    android:id="@+id/todayDropDownIcon"
                                     android:layout_width="9dp"
                                     android:layout_height="9dp"
-                                    android:layout_marginStart="100dp"
-                                    android:layout_marginLeft="100dp"
-                                    android:layout_marginEnd="8dp"
-                                    android:layout_marginRight="8dp"
+                                    android:layout_marginStart="90dp"
+                                    android:layout_marginLeft="90dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginRight="16dp"
                                     android:src="@drawable/black_drop_down"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/textView5"
+                                    app:layout_constraintStart_toEndOf="@+id/todayTitle"
                                     app:layout_constraintTop_toTopOf="parent" />
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
                             <ImageView
                                 android:id="@+id/sortIcon"
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:layout_marginTop="32dp"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginTop="36dp"
                                 android:src="@drawable/filter_sort_icon_xxhdpi"
                                 app:layout_constraintStart_toStartOf="@+id/guideline5"
                                 app:layout_constraintTop_toBottomOf="@+id/submittedDateDivider2">
@@ -564,10 +564,10 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginLeft="16dp"
-                                android:layout_marginTop="34dp"
+                                android:layout_marginTop="36dp"
                                 android:letterSpacing="0.05"
                                 android:text="@string/sort"
-                                android:textColor="#5A5A5A"
+                                android:textColor="@color/colorZambezi1"
                                 android:textSize="14dp"
                                 app:fontFamily="@font/roboto_medium"
                                 app:layout_constraintStart_toEndOf="@+id/sortIcon"
@@ -577,8 +577,10 @@
                                 android:id="@+id/constraintLayout"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="34dp"
-                                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                                android:layout_marginTop="38dp"
+                                android:layout_marginEnd="90dp"
+                                android:layout_marginRight="90dp"
+                                app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/submittedDateDivider2">
 
                                 <TextView
@@ -587,9 +589,9 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginEnd="8dp"
                                     android:layout_marginRight="8dp"
-                                    android:letterSpacing="0.03"
+                                    android:letterSpacing="0.05"
                                     android:text="@string/ascending"
-                                    android:textColor="#747474"
+                                    android:textColor="@color/colorDimGray"
                                     android:textSize="10dp"
                                     app:fontFamily="@font/roboto_medium"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -613,8 +615,8 @@
 
                             <LinearLayout
                                 android:id="@+id/submittedRadio"
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
                                 android:layout_marginTop="42dp"
                                 android:background="@drawable/custom_radio"
                                 android:orientation="vertical"
@@ -625,11 +627,12 @@
                                 android:id="@+id/submittedRadioTitle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="24dp"
-                                android:layout_marginLeft="24dp"
-                                android:layout_marginTop="44dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="40dp"
+                                android:letterSpacing="0.06"
                                 android:text="@string/submitted_date_time"
-                                android:textColor="#747474"
+                                android:textColor="@color/colorDimGray"
                                 android:textSize="12dp"
                                 app:fontFamily="@font/roboto_medium"
                                 app:layout_constraintStart_toEndOf="@+id/submittedRadio"
@@ -637,8 +640,8 @@
 
                             <LinearLayout
                                 android:id="@+id/subjectRadio"
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
                                 android:layout_marginTop="32dp"
                                 android:background="@drawable/custom_radio"
                                 android:orientation="vertical"
@@ -649,20 +652,22 @@
                                 android:id="@+id/subject"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="24dp"
-                                android:layout_marginLeft="24dp"
-                                android:layout_marginTop="32dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="30dp"
+                                android:letterSpacing="0.06"
                                 android:text="@string/subject"
-                                android:textColor="#747474"
+                                android:textColor="@color/colorDimGray"
                                 android:textSize="12dp"
+                                android:textAllCaps="true"
                                 app:fontFamily="@font/roboto_medium"
                                 app:layout_constraintStart_toEndOf="@+id/subjectRadio"
                                 app:layout_constraintTop_toBottomOf="@+id/submittedRadioTitle" />
 
                             <LinearLayout
                                 android:id="@+id/statusRadio"
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
                                 android:layout_marginTop="32dp"
                                 android:background="@drawable/custom_radio"
                                 android:orientation="vertical"
@@ -673,11 +678,12 @@
                                 android:id="@+id/statusRadioTitle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="24dp"
-                                android:layout_marginLeft="24dp"
-                                android:layout_marginTop="32dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="30dp"
+                                android:letterSpacing="0.06"
                                 android:text="@string/status"
-                                android:textColor="#747474"
+                                android:textColor="@color/colorDimGray"
                                 android:textSize="12dp"
                                 app:fontFamily="@font/roboto_medium"
                                 app:layout_constraintStart_toEndOf="@+id/subjectRadio"
@@ -687,8 +693,6 @@
                     </LinearLayout>
                 </ScrollView>
             </com.google.android.material.navigation.NavigationView>
-
-
 
         </androidx.drawerlayout.widget.DrawerLayout>
 
@@ -722,7 +726,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="8dp"
                 android:text="Support"
-                android:textColor="@color/colorSkyBlue"
+                android:textColor="@color/colorSummerSky"
                 android:textSize="8dp"
                 app:fontFamily="@font/roboto"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -749,7 +753,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="8dp"
                 android:text="Community"
-                android:textColor="#747474"
+                android:textColor="@color/colorDimGray"
                 android:textSize="8dp"
                 app:fontFamily="@font/roboto"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -776,7 +780,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="8dp"
                 android:text="Accounts"
-                android:textColor="#747474"
+                android:textColor="@color/colorDimGray"
                 android:textSize="8dp"
                 app:fontFamily="@font/roboto"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -803,7 +807,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="8dp"
                 android:text="Rewards"
-                android:textColor="#747474"
+                android:textColor="@color/colorDimGray"
                 android:textSize="8dp"
                 app:fontFamily="@font/roboto"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -830,14 +834,13 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="8dp"
                 android:text="Settings"
-                android:textColor="#747474"
+                android:textColor="@color/colorDimGray"
                 android:textSize="8dp"
                 app:fontFamily="@font/roboto"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/rewardsTitle"
                 app:layout_constraintTop_toBottomOf="@+id/settingsIcon" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

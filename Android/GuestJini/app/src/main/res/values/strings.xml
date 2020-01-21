@@ -11,6 +11,7 @@
     <string name="reset_password">RESET PASSWORD</string>
     <string name="forgot_password_description">The link to reset your password will be sent to your registered email address and mobile number.</string>
     <string name="email_error_message">This email is not registered with GuestJini.</string>
+    <string name="otpErrorMessage">You have entered wrong OTP.</string>
     <string name="verification_code">Verification Code</string>
     <string name="resend_otp">Resend OTP?</string>
     <string name="submit">SUBMIT</string>
@@ -67,5 +68,7 @@
     <string name="sort">SORT</string>
     <string name="ascending">ASCENDING</string>
     <string name="submitted_date_time">SUBMITTED DATE &amp; TIME</string>
-    <string name="subject">SUBJECT</string>
+    <string name="subject">Subject</string>
+    <string name="subject_hint">Please write your subject here.</string>
+
 </resources>

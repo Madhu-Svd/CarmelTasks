@@ -38,6 +38,8 @@
                 android:id="@+id/password_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/edit_textbox"
+
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -51,7 +53,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:backgroundTint="#32BDD2"
+                android:elevation="20dp"
+                app:cornerRadius="18dp"
+                app:elevation="5dp"
+                android:backgroundTint="@color/colorSummerSky"
                 android:text="NEXT" />
 
             <com.google.android.material.button.MaterialButton
@@ -70,8 +75,52 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:checked="true"
-            style="@style/Widget.MaterialComponents.CompoundButton.Switch"/>
+            app:switchMinWidth="20dp"
+            app:useMaterialThemeColors="false"
+
+            android:thumbTint="@color/colorSwitchMaterial"
+            android:trackTint="@color/colorSwitchMaterialTrackTint"
+
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/doneButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="142dp"
+                android:layout_marginLeft="142dp"
+                android:layout_marginTop="0dp"
+
+                android:src="@drawable/ic_done_black_24dp"
+                app:backgroundTint="@color/colorSummerSky"
+                app:fabCustomSize="30dp"
+                app:maxImageSize="18dp">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/doneButton"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="144dp"
+                android:layout_marginLeft="144dp"
+                android:layout_marginTop="17dp"
+                app:backgroundTint="@color/colorSummerSky"
+                app:fabCustomSize="30dp"
+                app:maxImageSize="13dp">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        </RelativeLayout>
 
     </LinearLayout>
+
 
 </LinearLayout>

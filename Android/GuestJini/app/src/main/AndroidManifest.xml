@@ -16,11 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity">
-
-        </activity>
-        <activity android:name=".Login"></activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".AppAccessRequest" />
         <activity android:name=".ForgotPasswordOTPValidation" />

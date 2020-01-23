@@ -246,20 +246,24 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/registeredMobileNumberEditbox" />
 
-            <Button
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/appAccessDoneButton"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="246dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/done_button"
+                android:backgroundTint="@color/colorSummerSky"
+                app:cornerRadius="18dp"
+                app:maxImageSize="20dp"
+                app:fabCustomSize="40dp"
+                android:src="@drawable/ic_done_black_24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registeredEmailEditbox"></Button>
+                app:layout_constraintTop_toBottomOf="@+id/registeredEmailEditbox"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

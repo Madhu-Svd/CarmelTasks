@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.carmel.guestjini.ForgotPasswordOTPValidation;
 import com.carmel.guestjini.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
 public class ChangePasswordFragment extends Fragment {
@@ -68,7 +69,7 @@ Button changePasswordButton;
                     TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
                     alertDailogMessage.setText("There was some error while changing password. Please try again!!");
 
-                    Button doneButton=(Button) dialog.findViewById(R.id.done_button);
+                    FloatingActionButton doneButton= (FloatingActionButton) dialog.findViewById(R.id.done_button);
                     doneButton.setBackgroundResource(R.drawable.red_done_button);
 
                     doneButton.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +85,7 @@ Button changePasswordButton;
                             TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
                             alertDailogMessage.setText("Your password has been successfully changed.");
 
-                            Button doneButton=(Button) dialog.findViewById(R.id.done_button);
+                            FloatingActionButton doneButton= (FloatingActionButton) dialog.findViewById(R.id.done_button);
                             doneButton.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {

@@ -50,9 +50,9 @@
                             android:layout_marginTop="32dp"
                             android:letterSpacing="0.1"
                             android:text="@string/my_profile"
+                            android:textAllCaps="true"
                             android:textColor="@color/colorZambezi"
                             android:textSize="14dp"
-                            android:textAllCaps="true"
                             app:fontFamily="@font/roboto_bold"
                             app:layout_constraintStart_toEndOf="@+id/leftArrowMark"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -79,15 +79,23 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/profileTitle"></de.hdodenhof.circleimageview.CircleImageView>
 
-                        <ImageView
-                            android:id="@+id/profileToggleButton"
+                        <com.google.android.material.switchmaterial.SwitchMaterial
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:src="@drawable/toggle_icon_on_xxhdpi"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:checked="true"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/cameraIcon" />
+                            app:layout_constraintTop_toBottomOf="@+id/cameraIcon"
+                            app:switchMinWidth="60dp"
+                            app:thumbTint="@color/colorSwitchMaterial"
+                            app:trackTint="@color/colorSwitchMaterialTrackTint">
+
+                        </com.google.android.material.switchmaterial.SwitchMaterial>
 
                         <TextView
                             android:id="@+id/nameText"
@@ -165,16 +173,19 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/genderText" />
 
-                        <ImageView
+                        <com.google.android.material.switchmaterial.SwitchMaterial
                             android:id="@+id/genderToggleIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="12dp"
-                            android:src="@drawable/toggle_icon_on_xxhdpi"
+                            android:checked="true"
                             app:layout_constraintBottom_toTopOf="@+id/genderDivider"
-                            app:layout_constraintEnd_toEndOf="parent" />
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:switchMinWidth="60dp"
+                            app:thumbTint="@color/colorSwitchMaterial"
+                            app:trackTint="@color/colorSwitchMaterialTrackTint" />
 
                         <View
                             android:id="@+id/genderDivider"
@@ -235,16 +246,19 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/AgeEditText" />
 
-                        <ImageView
+                        <com.google.android.material.switchmaterial.SwitchMaterial
                             android:id="@+id/ageToggleIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="12dp"
-                            android:src="@drawable/toggle_icon_on_xxhdpi"
+                            android:checked="true"
                             app:layout_constraintBottom_toTopOf="@+id/ageDivider"
-                            app:layout_constraintEnd_toEndOf="parent" />
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:switchMinWidth="60dp"
+                            app:thumbTint="@color/colorSwitchMaterial"
+                            app:trackTint="@color/colorSwitchMaterialTrackTint" />
 
                         <TextView
                             android:id="@+id/phonenoText"
@@ -277,16 +291,18 @@
                             app:layout_constraintTop_toBottomOf="@+id/phonenoText" />
 
 
-                        <ImageView
+                        <com.google.android.material.switchmaterial.SwitchMaterial
                             android:id="@+id/mobileNoToggleIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="12dp"
-                            android:src="@drawable/toggle_icon_off_xxhdpi"
+                            android:checked="false"
                             app:layout_constraintBottom_toTopOf="@+id/phonenoDivider"
-                            app:layout_constraintEnd_toEndOf="parent" />
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:switchMinWidth="60dp"
+                            app:thumbTint="@color/colorSwitchMaterial" />
 
                         <View
                             android:id="@+id/phonenoDivider"
@@ -333,16 +349,19 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/emailText" />
 
-                        <ImageView
+                        <com.google.android.material.switchmaterial.SwitchMaterial
                             android:id="@+id/emailToggleIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="4dp"
-                            android:src="@drawable/toggle_icon_on_xxhdpi"
+                            android:checked="true"
                             app:layout_constraintBottom_toTopOf="@+id/emailDivider"
-                            app:layout_constraintEnd_toEndOf="parent" />
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:switchMinWidth="60dp"
+                            app:thumbTint="@color/colorSwitchMaterial"
+                            app:trackTint="@color/colorSwitchMaterialTrackTint" />
 
                         <View
                             android:id="@+id/emailDivider"
@@ -397,16 +416,18 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/editIcon" />
 
-                        <ImageView
+                        <com.google.android.material.switchmaterial.SwitchMaterial
                             android:id="@+id/yourPlaceToggleIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
                             android:layout_marginBottom="16dp"
-                            android:src="@drawable/toggle_icon_off_xxhdpi"
+                            android:checked="false"
                             app:layout_constraintBottom_toTopOf="@+id/yourPlaceOfOriginDivider"
-                            app:layout_constraintEnd_toEndOf="parent" />
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:switchMinWidth="60dp"
+                            app:thumbTint="@color/colorSwitchMaterial" />
 
                         <TextView
                             android:id="@+id/myInterests"
@@ -433,34 +454,42 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/yourPlaceOfOriginDivider" />
 
-                        <Button
+                        <com.google.android.material.button.MaterialButton
                             android:id="@+id/setupButton"
-                            android:layout_width="88dp"
-                            android:layout_height="32dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="42dp"
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginRight="32dp"
-                            android:background="@drawable/setup_button_border"
+                            android:backgroundTint="@color/colorSummerSky"
                             android:letterSpacing="0.1"
                             android:paddingLeft="5dp"
                             android:paddingRight="5dp"
                             android:text="SETUP"
                             android:textColor="#FFFFFF"
                             android:textSize="12dp"
+                            app:cornerRadius="3dp"
                             app:fontFamily="@font/roboto_medium"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/yourPlaceOfOriginDivider" />
 
-                        <Button
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
                             android:id="@+id/profileEdit"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
                             android:layout_marginStart="222dp"
-                            android:layout_marginLeft="222dp"
+                            android:layout_marginLeft="216dp"
                             android:layout_marginTop="98dp"
-                            android:background="@drawable/button"
+                            app:backgroundTint="@color/colorSummerSky"
+                            android:src="@drawable/ic_mode_edit_black_24dp"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:maxImageSize="10dp"
+                            app:fabCustomSize="20dp">
+
+                        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#32BDD2</color>
     <color name="colorSummerSky">#32BDD2</color>
-    <color name="colorSwitchMaterialTrackTint">#32BDD2</color>
+    <color name="colorSwitchMaterialTrackTint">#000000</color>
     <color name="colorSwitchMaterial">#F5F5F5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="dim_gray">#747474</color>
 </resources>

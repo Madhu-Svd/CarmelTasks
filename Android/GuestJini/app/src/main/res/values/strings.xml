@@ -8,6 +8,7 @@
     <string name="forgot_password_title">Forgot password?</string>
     <string name="dont_have_text">Don’t have an account yet?</string>
     <string name="get_one_now">Get one now.</string>
+    <string name="loginCredential">Invalid login credentials</string>
     <string name="reset_password">RESET PASSWORD</string>
     <string name="forgot_password_description">The link to reset your password will be sent to your registered email address and mobile number.</string>
     <string name="email_error_message">This email is not registered with GuestJini.</string>

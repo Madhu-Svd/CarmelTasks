@@ -8,4 +8,5 @@
     <color name="colorSwitchMaterial">#F5F5F5</color>
     <color name="white">#FFFFFF</color>
     <color name="dim_gray">#747474</color>
+    <color name="colorRoman">#E65959</color>
 </resources>

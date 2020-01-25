@@ -14,4 +14,8 @@
     <string name="accounts">Accounts</string>
     <string name="rewards">Rewards</string>
     <string name="settings">Settings</string>
+    <string name="subjectHint">Please write your subject here.</string>
+    <string name="attachFiles">ATTACH FILES</string>
+    <string name="done">DONE</string>
+    <string name="delete">DELETE</string>
 </resources>

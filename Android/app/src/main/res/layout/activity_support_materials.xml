@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SupportMaterialsActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/writeReviewInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="310dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="50dp"
+        app:boxCornerRadiusBottomEnd="@dimen/editfileds_corners_radius"
+        app:boxCornerRadiusBottomStart="@dimen/editfileds_corners_radius"
+        app:boxCornerRadiusTopEnd="@dimen/editfileds_corners_radius"
+        app:boxCornerRadiusTopStart="@dimen/editfileds_corners_radius"
+        app:boxStrokeWidth="1dp"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/writeReview"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="@dimen/margin"
+            android:backgroundTint="@color/white"
+            android:inputType="textPassword"
+            android:textColor="@color/dim_gray"
+            android:textSize="@dimen/userName_textsize" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/subjectInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/white"
+        app:boxCornerRadiusBottomEnd="@dimen/submit_button_radius"
+        app:boxCornerRadiusBottomStart="@dimen/submit_button_radius"
+        app:boxCornerRadiusTopEnd="@dimen/submit_button_radius"
+        app:boxCornerRadiusTopStart="@dimen/submit_button_radius"
+        app:boxStrokeWidth="1dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/writeReviewInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/subjectEditText"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_margin="@dimen/margin"
+            android:backgroundTint="@color/white"
+            android:hint="@string/subjectHint"
+            android:inputType="textPassword"
+            android:textColor="@color/dim_gray"
+            android:textSize="12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/complaintsInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/white"
+        app:boxCornerRadiusBottomEnd="@dimen/submit_button_radius"
+        app:boxCornerRadiusBottomStart="@dimen/submit_button_radius"
+        app:boxCornerRadiusTopEnd="@dimen/submit_button_radius"
+        app:boxCornerRadiusTopStart="@dimen/submit_button_radius"
+        app:boxStrokeWidth="1dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subjectInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/complaintEditText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="@dimen/margin"
+            android:backgroundTint="@color/white"
+            android:gravity="top"
+            android:hint="@string/subjectHint"
+            android:inputType="textPassword"
+            android:textColor="@color/dim_gray"
+            android:textSize="12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/changePasswordInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="403dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="4dp"
+        app:boxCornerRadiusBottomEnd="@dimen/editfileds_corners_radius"
+        app:boxCornerRadiusBottomStart="@dimen/editfileds_corners_radius"
+        app:boxCornerRadiusTopEnd="@dimen/editfileds_corners_radius"
+        app:boxCornerRadiusTopStart="@dimen/editfileds_corners_radius"
+        app:boxStrokeWidth="1dp"
+
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/complaintsInputLayout"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/changePasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/margin"
+            android:backgroundTint="@color/white"
+            android:inputType="textPassword"
+            android:textColor="@color/dim_gray"
+            android:textSize="@dimen/userName_textsize" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

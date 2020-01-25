@@ -39,7 +39,7 @@
             app:passwordToggleEnabled="true"
             android:id="@+id/password_text_input"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="58dp"
             app:boxCornerRadiusBottomEnd="@dimen/editfileds_corners_radius"
             app:boxCornerRadiusBottomStart="@dimen/editfileds_corners_radius"
             app:boxCornerRadiusTopEnd="@dimen/editfileds_corners_radius"
@@ -63,11 +63,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
             android:backgroundTint="@color/colorSummerSky"
             android:text="@string/submit"
             app:cornerRadius="@dimen/login_button_corners_radius"
@@ -84,8 +86,8 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="16dp"
             android:backgroundTint="@color/colorSummerSky"
-            android:text="@string/changePassword"
             android:fontFamily="@font/roboto_bold"
+            android:text="@string/changePassword"
             app:cornerRadius="@dimen/change_password_radius"
             app:layout_constraintStart_toEndOf="@+id/submitButton"
             app:layout_constraintTop_toBottomOf="@+id/resetButton" />
@@ -108,7 +110,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="2dp"
             android:layout_toStartOf="@id/loginButton"
             android:backgroundTint="@color/colorSummerSky"
             android:elevation="50dp"
@@ -123,7 +124,6 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
             android:layout_marginEnd="33dp"
             app:boxCornerRadiusBottomEnd="@dimen/otpbox_radius"
             app:boxCornerRadiusBottomStart="@dimen/otpbox_radius"
@@ -153,6 +153,8 @@
             android:layout_height="45dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
             android:backgroundTint="@color/colorSummerSky"
             app:cornerRadius="@dimen/login_button_corners_radius"
             app:icon="@drawable/arrow_forward_xxhdpi"
@@ -176,8 +178,10 @@
         </com.google.android.material.button.MaterialButton>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/createTicket"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/colorSummerSky"
             android:fontFamily="@font/roboto_bold"
@@ -188,12 +192,112 @@
 
         </com.google.android.material.button.MaterialButton>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/attachFiles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/colorSummerSky"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/attachFiles"
+            app:cornerRadius="@dimen/attach_files_radius"
+            app:layout_constraintStart_toEndOf="@+id/createTicket"
+            app:layout_constraintTop_toBottomOf="@+id/changePassword">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/colorSummerSky"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/done"
+            app:cornerRadius="@dimen/change_password_radius"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createTicket">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="@color/colorRoman"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/delete"
+            app:cornerRadius="@dimen/change_password_radius"
+            app:layout_constraintStart_toEndOf="@+id/done"
+            app:layout_constraintTop_toBottomOf="@+id/createTicket">
+
+        </com.google.android.material.button.MaterialButton>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="180dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/galleryIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/doneButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/ic_insert_photo_black_24dp"
+            app:backgroundTint="@color/colorSummerSky"
+            app:fabCustomSize="50dp"
+            app:layout_constraintStart_toEndOf="@+id/cameraIcon"
+            app:layout_constraintTop_toBottomOf="@+id/navigationNext"
+            app:maxImageSize="25dp">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cameraIcon"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/doneButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            app:backgroundTint="@color/colorSummerSky"
+            app:fabCustomSize="50dp"
+            app:iconSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doneButton"
+            app:maxImageSize="25dp"
+            app:srcCompat="@drawable/ic_photo_camera_black_24dp"
+            app:tint="@color/white">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:id="@+id/videoCamIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/doneButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/ic_videocam_24px"
+            app:backgroundTint="@color/colorSummerSky"
+            app:fabCustomSize="50dp"
+            app:layout_constraintStart_toEndOf="@+id/galleryIcon"
+            app:layout_constraintTop_toBottomOf="@+id/editIcon"
+            app:maxImageSize="25dp">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/deleteIcon"
@@ -201,7 +305,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/doneButton"
             android:layout_alignParentStart="true"
-            android:src="@drawable/ic_delete_black_24dp"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/ic_delete_black_24dp"
             app:backgroundTint="@color/colorSummerSky"
             app:fabCustomSize="30dp"
             app:layout_constraintStart_toEndOf="@+id/editIcon"
@@ -216,7 +321,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/ic_done_black_24dp"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/ic_done_black_24dp"
             app:backgroundTint="@color/colorSummerSky"
             app:fabCustomSize="30dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -226,12 +332,47 @@
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/likeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/doneButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/ic_thumb_up_black_24dp"
+            app:backgroundTint="#747474"
+            app:fabCustomSize="50dp"
+            app:layout_constraintStart_toEndOf="@+id/deleteIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:maxImageSize="25dp">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/dislikeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/doneButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="17dp"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/ic_thumb_down_black_24dp"
+            app:backgroundTint="#747474"
+            app:fabCustomSize="50dp"
+            app:layout_constraintStart_toEndOf="@+id/likeIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:maxImageSize="25dp">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/editIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/doneButton"
             android:layout_alignParentStart="true"
-            android:src="@drawable/ic_mode_edit_black_24dp"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/ic_mode_edit_black_24dp"
             app:backgroundTint="@color/colorSummerSky"
             app:fabCustomSize="30dp"
             app:layout_constraintStart_toEndOf="@+id/navigationNext"
@@ -245,7 +386,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/doneButton"
-            android:src="@drawable/ic_navigate_next_black_24dp"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/ic_navigate_next_black_24dp"
             app:backgroundTint="@color/colorSummerSky"
             app:fabCustomSize="30dp"
             app:layout_constraintStart_toEndOf="@+id/navigationBefore"
@@ -260,7 +402,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/navigationNext"
             android:layout_toEndOf="@id/editIcon"
-            android:src="@drawable/ic_navigate_before_black_24dp"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/ic_navigate_before_black_24dp"
             app:backgroundTint="@color/colorSummerSky"
             app:fabCustomSize="30dp"
             app:layout_constraintStart_toEndOf="@+id/doneButton"
@@ -268,6 +411,114 @@
             app:maxImageSize="20dp">
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/voiceIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/doneButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/ic_keyboard_voice_24px"
+            app:backgroundTint="@color/colorSummerSky"
+            app:fabCustomSize="50dp"
+            app:layout_constraintStart_toEndOf="@+id/videoCamIcon"
+            app:layout_constraintTop_toBottomOf="@+id/deleteIcon"
+            app:maxImageSize="30dp">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/folderIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/doneButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/ic_folder_open_black_24dp"
+            app:backgroundTint="@color/colorSummerSky"
+            app:fabCustomSize="50dp"
+            app:layout_constraintStart_toEndOf="@+id/voiceIcon"
+            app:layout_constraintTop_toBottomOf="@+id/likeIcon"
+            app:maxImageSize="25dp">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/doneButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="4dp"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/ic_add_black_24dp"
+            app:backgroundTint="@color/colorSummerSky"
+            app:fabCustomSize="50dp"
+            app:layout_constraintStart_toEndOf="@+id/folderIcon"
+            app:layout_constraintTop_toBottomOf="@+id/likeIcon"
+            app:maxImageSize="30dp">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/attachFilesIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/doneButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/attachment_icon"
+            app:backgroundTint="@color/colorSummerSky"
+            app:fabCustomSize="50dp"
+            app:layout_constraintStart_toEndOf="@+id/addIcon"
+            app:layout_constraintTop_toBottomOf="@+id/dislikeIcon"
+            app:maxImageSize="25dp">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sliderButton"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/colorSummerSky"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:icon="@drawable/slider_icon_xxhdpi"
+            app:iconSize="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/galleryIcon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Button"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="18dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/colorSummerSky"
+            android:paddingLeft="24dp"
+            app:iconGravity="textStart"
+            app:icon="@drawable/ic_keyboard_arrow_up_black_24dp"
+            app:iconSize="20dp"
+            app:layout_constraintStart_toEndOf="@+id/sliderButton"
+            app:layout_constraintTop_toBottomOf="@+id/galleryIcon" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -326,46 +577,22 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:layout_editor_absoluteY="539dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/changePasswordInputLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxCornerRadiusBottomEnd="@dimen/editfileds_corners_radius"
-            app:boxCornerRadiusBottomStart="@dimen/editfileds_corners_radius"
-            app:boxCornerRadiusTopEnd="@dimen/editfileds_corners_radius"
-            app:boxCornerRadiusTopStart="@dimen/editfileds_corners_radius"
-            app:boxStrokeWidth="1dp"
-            app:errorEnabled="true"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:passwordToggleEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/changePasswordEditText"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="@dimen/margin"
-                android:backgroundTint="@color/white"
-                android:inputType="textPassword"
-                android:textColor="@color/dim_gray"
-                android:textSize="@dimen/userName_textsize" />
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            app:labelVisibilityMode="labeled"
             app:itemIconTint="@drawable/item_selected"
             app:itemTextColor="@drawable/item_selected"
+            app:labelVisibilityMode="labeled"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:menu="@menu/bottom_navigation_menu" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

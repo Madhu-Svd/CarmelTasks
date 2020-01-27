@@ -10,12 +10,15 @@
         android:supportsRtl="true"
         android:hardwareAccelerated="true"
         android:theme="@style/AppTheme1">
-        <activity android:name=".SettingsActivity">
+        <activity android:name=".ForgotPasswordOTPValidation" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".SettingsActivity">
+
         </activity>
         <activity android:name=".Login" >
 
@@ -34,7 +37,6 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".AppAccessRequest" />
-        <activity android:name=".ForgotPasswordOTPValidation" />
 
         <meta-data
             android:name="preloaded_fonts"

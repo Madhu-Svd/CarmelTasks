@@ -16,21 +16,18 @@
             app:boxCornerRadiusBottomStart="@dimen/editfileds_corners_radius"
             app:boxCornerRadiusTopEnd="@dimen/editfileds_corners_radius"
             app:boxCornerRadiusTopStart="@dimen/editfileds_corners_radius"
-            app:boxStrokeColor="@color/colorSummerSky"
-
-            >
+            android:hint="@string/userName"
+            app:hintTextColor="@color/colorSuvaGray"
+            app:boxStrokeColor="@color/colorWhiteSmoke">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userName"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="@string/userName"
                 android:backgroundTint="@color/white"
                 android:inputType="text"
-                android:textColorHint="@color/dim_gray"
                 android:layout_margin="@dimen/margin"
-
                 android:textSize="@dimen/userName_textsize"
-
                />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,11 +37,13 @@
             android:id="@+id/password_text_input"
             android:layout_width="match_parent"
             android:layout_height="58dp"
+            android:hint="@string/password"
+            app:hintTextColor="@color/colorSuvaGray"
+            app:boxStrokeColor="@color/colorSummerSky"
             app:boxCornerRadiusBottomEnd="@dimen/editfileds_corners_radius"
             app:boxCornerRadiusBottomStart="@dimen/editfileds_corners_radius"
             app:boxCornerRadiusTopEnd="@dimen/editfileds_corners_radius"
             app:boxCornerRadiusTopStart="@dimen/editfileds_corners_radius"
-            app:boxStrokeWidth="1dp"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -54,9 +53,7 @@
                 android:layout_margin="@dimen/margin"
                 android:backgroundTint="@color/white"
                 android:inputType="textPassword"
-                android:textSize="@dimen/userName_textsize"
-                android:textColor="@color/dim_gray"
-                android:hint="@string/password"/>
+                android:textSize="@dimen/userName_textsize" />
         </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -93,15 +90,12 @@
             app:layout_constraintTop_toBottomOf="@+id/resetButton" />
 
         <com.google.android.material.button.MaterialButton
+            style="@style/button"
             android:id="@+id/loginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="30dp"
-            android:backgroundTint="@color/colorSummerSky"
-            android:text="@string/login"
-            app:cornerRadius="@dimen/login_button_corners_radius"
-            app:fontFamily="@font/roboto_bold"
             app:layout_constraintStart_toEndOf="@+id/landingButton"
             app:layout_constraintTop_toTopOf="parent" />
 

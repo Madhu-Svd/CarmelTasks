@@ -9,4 +9,6 @@
     <color name="white">#FFFFFF</color>
     <color name="dim_gray">#747474</color>
     <color name="colorRoman">#E65959</color>
+    <color name="colorWhiteSmoke">#F7F4F4</color>
+    <color name="colorSuvaGray">#909090</color>
 </resources>

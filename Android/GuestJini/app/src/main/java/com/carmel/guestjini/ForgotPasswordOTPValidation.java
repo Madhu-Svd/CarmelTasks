@@ -13,10 +13,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.textfield.TextInputEditText;
+
 public class ForgotPasswordOTPValidation extends AppCompatActivity {
     TextView resendOtp,otpErrorField,getOneNow;
-    Button submitButton;
-    EditText firstOtp,secondOtp,thirdOtp,fourthOtp;
+    MaterialButton submitButton;
+    TextInputEditText firstOtp,secondOtp,thirdOtp,fourthOtp;
     final Context context=this;
 
     @Override
@@ -118,16 +122,16 @@ public class ForgotPasswordOTPValidation extends AppCompatActivity {
 
                 if((firstOtpBox.length()==0) && (secondOtpBox.length()==0) && (thirdOtpBox.length()==0) && (fourthOtpBox.length()==0)){
                     otpErrorField.setVisibility(View.VISIBLE);
-                    firstOtp.setBackgroundResource(R.drawable.otp_error_box);
-                    secondOtp.setBackgroundResource(R.drawable.otp_error_box);
-                    thirdOtp.setBackgroundResource(R.drawable.otp_error_box);
-                    fourthOtp.setBackgroundResource(R.drawable.otp_error_box);
+//                    firstOtp.setBackgroundResource(R.drawable.otp_error_box);
+//                    secondOtp.setBackgroundResource(R.drawable.otp_error_box);
+//                    thirdOtp.setBackgroundResource(R.drawable.otp_error_box);
+//                    fourthOtp.setBackgroundResource(R.drawable.otp_error_box);
                 }else {
                     otpErrorField.setVisibility(View.GONE);
-                    firstOtp.setBackgroundResource(R.drawable.otp_box);
-                    secondOtp.setBackgroundResource(R.drawable.otp_box);
-                    thirdOtp.setBackgroundResource(R.drawable.otp_box);
-                    fourthOtp.setBackgroundResource(R.drawable.otp_box);
+//                    firstOtp.setBackgroundResource(R.drawable.otp_box);
+//                    secondOtp.setBackgroundResource(R.drawable.otp_box);
+//                    thirdOtp.setBackgroundResource(R.drawable.otp_box);
+//                    fourthOtp.setBackgroundResource(R.drawable.otp_box);
                 }if(!(firstOtpBox.length()==1) || !(secondOtpBox.length()==1) || !(thirdOtpBox.length()==1) || (fourthOtpBox.length()==1)){
                     otpErrorField.setVisibility(View.VISIBLE);
                 }else {
@@ -141,7 +145,7 @@ public class ForgotPasswordOTPValidation extends AppCompatActivity {
                     TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
                     alertDailogMessage.setText("New password has been sent to your registered mobile number.");
 
-                    Button doneButton = (Button) dialog.findViewById(R.id.done_button);
+                    FloatingActionButton doneButton = (FloatingActionButton) dialog.findViewById(R.id.done_button);
                     doneButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {

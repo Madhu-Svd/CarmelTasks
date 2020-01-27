@@ -104,8 +104,9 @@
         app:boxCornerRadiusTopEnd="@dimen/editfileds_corners_radius"
         app:boxCornerRadiusTopStart="@dimen/editfileds_corners_radius"
         app:boxStrokeWidth="1dp"
-
+        app:boxStrokeColor="@color/dim_gray"
         app:errorEnabled="true"
+        app:hintTextColor="@color/colorSuvaGray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/complaintsInputLayout"
         app:passwordToggleEnabled="true">
@@ -117,7 +118,6 @@
             android:layout_margin="@dimen/margin"
             android:backgroundTint="@color/white"
             android:inputType="textPassword"
-            android:textColor="@color/dim_gray"
             android:textSize="@dimen/userName_textsize" />
     </com.google.android.material.textfield.TextInputLayout>
 

@@ -2,4 +2,9 @@
 <resources>
     <dimen name="hepl_title_size">24dp</dimen>
     <dimen name="find_help_textsize">12dp</dimen>
+    <dimen name="editfileds_corners_radius">12dp</dimen>
+    <dimen name="login_button_corners_radius">18dp</dimen>
+    <dimen name="userName_textsize">12sp</dimen>
+    <dimen name="margin">10dp</dimen>
+    <dimen name="otpbox_radius">7dp</dimen>
 </resources>

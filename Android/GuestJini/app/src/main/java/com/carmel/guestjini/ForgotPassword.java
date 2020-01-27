@@ -12,10 +12,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.textfield.TextInputEditText;
+
 public class ForgotPassword extends AppCompatActivity {
     TextView emailErrorField,getOneNow,forgotPasswordErrorMessage;
-    EditText email;
-    Button resetPassword;
+    TextInputEditText email;
+    MaterialButton resetPassword;
     ImageView backIcon;
     String MobilePattern = "[0-9]{10}";
     String EMAIL_PATTERN = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
@@ -38,13 +42,13 @@ public class ForgotPassword extends AppCompatActivity {
             public void onClick(View v) {
                 if(email.getText().toString().trim().length()==0) {
                     emailErrorField.setVisibility(View.VISIBLE);
-                    email.setBackgroundResource(R.drawable.edit_red_textbox);
+//                    email.setBackgroundResource(R.drawable.edit_red_textbox);
                 }
                 else if(!email.getText().toString().trim().matches(EMAIL_PATTERN) && !email.getText().toString().trim().matches(MobilePattern))  {
                     forgotPasswordErrorMessage.setVisibility(View.VISIBLE);
                     emailErrorField.setVisibility(View.GONE);
                     backIcon.setVisibility(View.GONE);
-                    email.setBackgroundResource(R.drawable.edit_textbox);
+//                    email.setBackgroundResource(R.drawable.edit_textbox);
                 }
                 else{
                     final Dialog dialog=new Dialog(context);
@@ -56,7 +60,7 @@ public class ForgotPassword extends AppCompatActivity {
                     TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
                     alertDailogMessage.setText("A link has been sent to your email account to reset your password.");
 
-                    Button doneButton=(Button) dialog.findViewById(R.id.done_button);
+                    FloatingActionButton doneButton= (FloatingActionButton) dialog.findViewById(R.id.done_button);
                     doneButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {

@@ -112,23 +112,22 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                app:errorEnabled="true"
-                app:placeholderText="@string/email_or_mobilenumber"
-                app:placeholderTextColor="@color/colorSuvaGray"
-                app:placeholderTextAppearance="@dimen/userName_textsize"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="24dp"
                 app:boxCornerRadiusBottomEnd="@dimen/editfileds_corners_radius"
                 app:boxCornerRadiusBottomStart="@dimen/editfileds_corners_radius"
                 app:boxCornerRadiusTopEnd="@dimen/editfileds_corners_radius"
                 app:boxCornerRadiusTopStart="@dimen/editfileds_corners_radius"
                 app:boxStrokeColor="@color/colorWhiteSmoke"
                 app:boxStrokeErrorColor="@color/colorRoman"
+                app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/invalidCredentials">
+                app:layout_constraintTop_toBottomOf="@+id/invalidCredentials"
+                app:placeholderText="@string/email_or_mobilenumber"
+                app:placeholderTextColor="@color/colorSuvaGray">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/email"
@@ -136,8 +135,7 @@
                     android:layout_height="50dp"
                     android:layout_margin="@dimen/margin"
                     android:backgroundTint="@color/colorWhite"
-                    android:inputType="textEmailAddress"
-                    />
+                    android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -159,25 +157,24 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="26dp"
-                android:layout_marginEnd="32dp"
-                app:placeholderText="@string/password"
-                app:placeholderTextAppearance="@dimen/userName_textsize"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
                 app:boxCornerRadiusBottomEnd="@dimen/editfileds_corners_radius"
                 app:boxCornerRadiusBottomStart="@dimen/editfileds_corners_radius"
                 app:boxCornerRadiusTopEnd="@dimen/editfileds_corners_radius"
                 app:boxCornerRadiusTopStart="@dimen/editfileds_corners_radius"
                 app:boxStrokeColor="@color/colorWhiteSmoke"
+                app:boxStrokeErrorColor="@color/colorRoman"
                 app:boxStrokeWidth="1dp"
                 app:errorEnabled="true"
-                app:boxStrokeErrorColor="@color/colorRoman"
-                app:placeholderTextColor="@color/colorSuvaGray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="true"
+                app:placeholderText="@string/password"
+                app:placeholderTextColor="@color/colorSuvaGray">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/password_edit_text"
@@ -185,8 +182,7 @@
                     android:layout_height="50dp"
                     android:layout_margin="@dimen/margin"
                     android:backgroundTint="@color/colorWhite"
-                    android:inputType="textPassword"
-                    />
+                    android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
 

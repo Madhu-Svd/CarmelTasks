@@ -54,6 +54,7 @@
     <string name="draft">DRAFT</string>
     <string name="filer_description">86 articles found in 07 categories.</string>
     <string name="show_categories">Showing all categories.</string>
+    <string name="show">Showing 03 of 86</string>
     <string name="clear_filter">CLEAR FILTER</string>
     <string name="elevateors">ELEVATORS</string>
     <string name="security">SECURITY</string>
@@ -72,5 +73,26 @@
     <string name="subject">Subject</string>
     <string name="timer">0:59</string>
     <string name="subject_hint">Please write your subject here.</string>
-
+    <string name="registered_mobile_number1">REGISTERED MOBILE NUMBER</string>
+    <string name="support">Support</string>
+    <string name="community">Community</string>
+    <string name="accounts">Accounts</string>
+    <string name="rewards">Rewards</string>
+    <string name="settings">Settings</string>
+    <string name="back_arrow_icon">Back Arrow Icon</string>
+    <string name="red_star">*</string>
+    <string name="alert_message">Alert Dailog Message</string>
+    <string name="alert_title">Alert Dailog Title</string>
+    <string name="name">NAME</string>
+    <string name="john">John Doe</string>
+    <string name="gender">GENDER</string>
+    <string name="male_or_female">Male</string>
+    <string name="age">AGE</string>
+    <string name="age_value">33 years</string>
+    <string name="mobile">9090909090</string>
+    <string name="email_value">johndoe@gmail.com</string>
+    <string name="place_of_origin">YOUR PLACE OF ORIGIN</string>
+    <string name="my_interests">MY INTERESTS</string>
+    <string name="setup">SETUP</string>
+    <string name="edit_icon">edit icon</string>
 </resources>

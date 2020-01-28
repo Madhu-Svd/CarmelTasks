@@ -3,6 +3,7 @@ package com.carmel.guestjini.Settings;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,29 +22,34 @@ import android.widget.TextView;
 
 import com.carmel.guestjini.ForgotPasswordOTPValidation;
 import com.carmel.guestjini.R;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 
 public class ChangePasswordFragment extends Fragment {
-ConstraintLayout currentPasswordLayout,newPasswordLayout,confirmPasswordLayout;
-EditText currentPasswordEditText,newPasswordEditText,confirmPasswordEditText;
+TextInputLayout currentPasswordLayout,newPasswordLayout,confirmPasswordLayout;
+TextInputEditText currentPasswordEditText,newPasswordEditText,confirmPasswordEditText;
 TextView currentPaswordErrorField,newPaswordErrorField,confirmPaswordErrorField;
-Button changePasswordButton;
+MaterialButton changePasswordButton;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View rootview=inflater.inflate(R.layout.fragment_change_password, container, false);
-        currentPasswordLayout=rootview.findViewById(R.id.currentPasswordLayout);
-        currentPasswordEditText=rootview.findViewById(R.id.currentPasswordEditbox);
+//        currentPasswordLayout=rootview.findViewById(R.id.);
+        currentPasswordEditText=rootview.findViewById(R.id.currentPasswordEditText);
         currentPaswordErrorField=rootview.findViewById(R.id.currentPasswordErrorField);
+//        currentPasswordLayout.setBoxStrokeColorStateList(ColorStateList.valueOf(Color
+//                .parseColor("#E65959")));
 
-        newPasswordLayout=rootview.findViewById(R.id.newPasswordLayout);
-        newPasswordEditText=rootview.findViewById(R.id.newPasswordEditbox);
+//        newPasswordLayout=rootview.findViewById(R.id.newPasswordLayout);
+        newPasswordEditText=rootview.findViewById(R.id.newPasswordEditText);
         newPaswordErrorField=rootview.findViewById(R.id.newPasswordErrorField);
 
-        confirmPasswordLayout=rootview.findViewById(R.id.confirmPasswordLayout);
-        confirmPasswordEditText=rootview.findViewById(R.id.confirmPasswordEditbox);
+//        confirmPasswordLayout=rootview.findViewById(R.id.confirmPasswordLayout);
+        confirmPasswordEditText=rootview.findViewById(R.id.confirmPasswordEditText);
         confirmPaswordErrorField=rootview.findViewById(R.id.confirmPasswordErrorField);
 
         changePasswordButton=rootview.findViewById(R.id.changePasswordButton);
@@ -54,10 +60,9 @@ Button changePasswordButton;
                     currentPaswordErrorField.setVisibility(View.VISIBLE);
                     newPaswordErrorField.setVisibility(View.VISIBLE);
                     confirmPaswordErrorField.setVisibility(View.VISIBLE);
-
-                    currentPasswordLayout.setBackgroundResource(R.drawable.edit_red_textbox);
-                    newPasswordLayout.setBackgroundResource(R.drawable.edit_red_textbox);
-                    confirmPasswordLayout.setBackgroundResource(R.drawable.edit_red_textbox);
+//                    currentPasswordLayout.setBackgroundResource(R.drawable.edit_red_textbox);
+//                    newPasswordLayout.setBackgroundResource(R.drawable.edit_red_textbox);
+//                    confirmPasswordLayout.setBackgroundResource(R.drawable.edit_red_textbox);
                 }else {
                     final Dialog dialog=new Dialog(getContext());
                     dialog.setContentView(R.layout.alert_dailogbox);
@@ -70,12 +75,14 @@ Button changePasswordButton;
                     alertDailogMessage.setText("There was some error while changing password. Please try again!!");
 
                     FloatingActionButton doneButton= (FloatingActionButton) dialog.findViewById(R.id.done_button);
-                    doneButton.setBackgroundResource(R.drawable.red_done_button);
+                    doneButton.setBackgroundTintList(ColorStateList.valueOf(Color
+                            .parseColor("#E65959")));
 
                     doneButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             dialog.dismiss();
+
                             final Dialog dialog=new Dialog(getContext());
                             dialog.setContentView(R.layout.alert_dailogbox);
 
@@ -86,6 +93,8 @@ Button changePasswordButton;
                             alertDailogMessage.setText("Your password has been successfully changed.");
 
                             FloatingActionButton doneButton= (FloatingActionButton) dialog.findViewById(R.id.done_button);
+                            doneButton.setBackgroundTintList(ColorStateList.valueOf(Color
+                                    .parseColor("#32BDD2")));
                             doneButton.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -102,8 +111,6 @@ Button changePasswordButton;
                     });
 
                     dialog.show();
-
-
 
                 }
             }

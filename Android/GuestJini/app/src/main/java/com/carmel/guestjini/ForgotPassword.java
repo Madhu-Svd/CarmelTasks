@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -61,6 +63,8 @@ public class ForgotPassword extends AppCompatActivity {
                     alertDailogMessage.setText("A link has been sent to your email account to reset your password.");
 
                     FloatingActionButton doneButton= (FloatingActionButton) dialog.findViewById(R.id.done_button);
+                    doneButton.setBackgroundTintList(ColorStateList.valueOf(Color
+                            .parseColor("#32BDD2")));
                     doneButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {

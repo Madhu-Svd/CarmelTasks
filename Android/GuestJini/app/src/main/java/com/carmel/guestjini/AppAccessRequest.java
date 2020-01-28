@@ -12,10 +12,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.textfield.TextInputEditText;
+
 public class AppAccessRequest extends AppCompatActivity {
     TextView emailErrorField,mobileNumberErrorField,invalidCredentials;
-    EditText email,mobileNumber;
-    Button doneButton;
+    TextInputEditText email,mobileNumber;
+    FloatingActionButton doneButton;
     String MobilePattern = "[0-9]{10}";
     String EMAIL_PATTERN = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     final Context context=this;
@@ -23,8 +26,8 @@ public class AppAccessRequest extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app_access_request);
-        email=findViewById(R.id.registeredEmailEditbox);
-        mobileNumber=findViewById(R.id.registeredMobileNumberEditbox);
+        email=findViewById(R.id.registeredEmailEditBox);
+        mobileNumber=findViewById(R.id.registeredMobileNumberEditBox);
 
         emailErrorField=findViewById(R.id.regesteredEmailErrorField);
         mobileNumberErrorField=findViewById(R.id.mobileNumberErrorField);
@@ -38,16 +41,16 @@ public class AppAccessRequest extends AppCompatActivity {
                 if(email.getText().toString().trim().length()==0 && mobileNumber.getText().toString().trim().length()==0){
                     emailErrorField.setVisibility(View.VISIBLE);
                     mobileNumberErrorField.setVisibility(View.VISIBLE);
-                    email.setBackgroundResource(R.drawable.edit_red_textbox);
-                    mobileNumber.setBackgroundResource(R.drawable.edit_red_textbox);
+//                    email.setBackgroundResource(R.drawable.edit_red_textbox);
+//                    mobileNumber.setBackgroundResource(R.drawable.edit_red_textbox);
                 }else{
                     emailErrorField.setVisibility(View.GONE);
                     mobileNumberErrorField.setVisibility(View.GONE);
-                    email.setBackgroundResource(R.drawable.edit_textbox);
-                    mobileNumber.setBackgroundResource(R.drawable.edit_textbox);
+//                    email.setBackgroundResource(R.drawable.edit_textbox);
+//                    mobileNumber.setBackgroundResource(R.drawable.edit_textbox);
                     if(email.getText().toString().trim().length()==0){
                         emailErrorField.setVisibility(View.VISIBLE);
-                        email.setBackgroundResource(R.drawable.edit_red_textbox);
+//                        email.setBackgroundResource(R.drawable.edit_red_textbox);
                         invalidCredentials.setVisibility(View.GONE);
                     }else if(mobileNumber.getText().toString().trim().length()==0){
                         mobileNumberErrorField.setVisibility(View.VISIBLE);
@@ -56,13 +59,13 @@ public class AppAccessRequest extends AppCompatActivity {
                     }else if(!email.getText().toString().trim().matches(EMAIL_PATTERN)){
                         invalidCredentials.setVisibility(View.VISIBLE);
                         emailErrorField.setVisibility(View.GONE);
-                        email.setBackgroundResource(R.drawable.edit_textbox);
-                        mobileNumber.setBackgroundResource(R.drawable.edit_textbox);
+//                        email.setBackgroundResource(R.drawable.edit_textbox);
+//                        mobileNumber.setBackgroundResource(R.drawable.edit_textbox);
                     }else if (!mobileNumber.getText().toString().trim().matches(MobilePattern)){
                         mobileNumberErrorField.setVisibility(View.GONE);
                         invalidCredentials.setVisibility(View.VISIBLE);
-                        email.setBackgroundResource(R.drawable.edit_textbox);
-                        mobileNumberErrorField.setBackgroundResource(R.drawable.edit_textbox);
+//                        email.setBackgroundResource(R.drawable.edit_textbox);
+//                        mobileNumberErrorField.setBackgroundResource(R.drawable.edit_textbox);
                     }else {
                         final Dialog dialog = new Dialog(context);
                         dialog.setContentView(R.layout.alert_dailogbox);
@@ -74,7 +77,7 @@ public class AppAccessRequest extends AppCompatActivity {
                         TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
                         alertDailogMessage.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim felis et magna mattis finibus.");
 
-                        Button doneButton = (Button) dialog.findViewById(R.id.done_button);
+                        FloatingActionButton doneButton = (FloatingActionButton) dialog.findViewById(R.id.done_button);
                         doneButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {

@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -132,7 +134,8 @@ public class ForgotPasswordOTPValidation extends AppCompatActivity {
 //                    secondOtp.setBackgroundResource(R.drawable.otp_box);
 //                    thirdOtp.setBackgroundResource(R.drawable.otp_box);
 //                    fourthOtp.setBackgroundResource(R.drawable.otp_box);
-                }if(!(firstOtpBox.length()==1) || !(secondOtpBox.length()==1) || !(thirdOtpBox.length()==1) || (fourthOtpBox.length()==1)){
+                }
+                if(!(firstOtpBox.length()==1) || !(secondOtpBox.length()==1) || !(thirdOtpBox.length()==1) || !(fourthOtpBox.length()==1)){
                     otpErrorField.setVisibility(View.VISIBLE);
                 }else {
                     final Dialog dialog = new Dialog(context);
@@ -146,6 +149,8 @@ public class ForgotPasswordOTPValidation extends AppCompatActivity {
                     alertDailogMessage.setText("New password has been sent to your registered mobile number.");
 
                     FloatingActionButton doneButton = (FloatingActionButton) dialog.findViewById(R.id.done_button);
+                    doneButton.setBackgroundTintList(ColorStateList.valueOf(Color
+                            .parseColor("#32BDD2")));
                     doneButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {

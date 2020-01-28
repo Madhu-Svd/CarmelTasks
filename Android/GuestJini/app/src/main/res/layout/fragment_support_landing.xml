@@ -24,7 +24,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@color/colorWhite"
-            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout10"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -70,10 +70,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="24dp"
-                            android:layout_marginLeft="24dp"
                             android:layout_marginTop="28dp"
                             android:layout_marginEnd="24dp"
-                            android:layout_marginRight="24dp"
                             app:cardBackgroundColor="@color/colorWhisper1"
                             app:cardCornerRadius="5dp"
                             app:cardElevation="5dp"
@@ -92,7 +90,6 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="34dp"
-                                    android:layout_marginLeft="34dp"
                                     android:layout_marginTop="34dp"
                                     android:fontFamily="@font/roboto_medium"
                                     android:letterSpacing="0.05"
@@ -107,10 +104,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="32dp"
-                                    android:layout_marginLeft="32dp"
                                     android:layout_marginTop="20dp"
                                     android:layout_marginEnd="32dp"
-                                    android:layout_marginRight="32dp"
                                     android:background="@drawable/search"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintHorizontal_bias="0.0"
@@ -122,16 +117,15 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="20dp"
-                                        android:layout_marginLeft="20dp"
                                         android:background="@color/colorWhite"
-                                        android:ems="17"
+                                        android:ems="18"
                                         android:hint="@string/search"
                                         android:inputType="textPassword"
                                         android:letterSpacing="0.07"
                                         android:paddingTop="2dp"
                                         android:paddingBottom="2dp"
                                         android:textColorHint="@color/colorSuvaGray"
-                                        android:textSize="10dp"
+                                        android:textSize="10sp"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent"></EditText>
@@ -142,7 +136,6 @@
                                         android:layout_height="17dp"
                                         android:layout_marginTop="9dp"
                                         android:layout_marginEnd="12dp"
-                                        android:layout_marginRight="12dp"
                                         android:layout_marginBottom="9dp"
                                         android:src="@drawable/search_icon_xxhdpi"
                                         app:layout_constraintBottom_toBottomOf="parent"
@@ -158,7 +151,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
                                     android:layout_marginEnd="36dp"
-                                    android:layout_marginRight="36dp"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/searchLayout">
 
@@ -167,11 +159,10 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginEnd="8dp"
-                                        android:layout_marginRight="8dp"
                                         android:letterSpacing="0.03"
                                         android:text="@string/Popular_Searches"
                                         android:textColor="@color/colorSuvaGray"
-                                        android:textSize="10dp"
+                                        android:textSize="10sp"
                                         app:layout_constraintEnd_toStartOf="@+id/populerSearchDropDown"
                                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -180,7 +171,6 @@
                                         android:layout_width="9dp"
                                         android:layout_height="9dp"
                                         android:layout_marginEnd="10dp"
-                                        android:layout_marginRight="10dp"
                                         android:src="@drawable/drop_down_icon_xhdpi"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintEnd_toEndOf="parent"
@@ -192,13 +182,12 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="32dp"
-                                    android:layout_marginLeft="32dp"
                                     android:layout_marginTop="54dp"
                                     android:fontFamily="@font/roboto_medium"
                                     android:letterSpacing="0.06"
                                     android:text="@string/Explore"
                                     android:textColor="@color/colorCharcoal"
-                                    android:textSize="12dp"
+                                    android:textSize="12sp"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/searchLayout" />
 
@@ -214,26 +203,37 @@
                                         android:layout_width="227dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="32dp"
-                                        android:layout_marginLeft="32dp"
                                         android:layout_marginTop="8dp"
                                         android:letterSpacing="0.04"
                                         android:text="@string/explore_description"
                                         android:textColor="@color/colorSuvaGray"
-                                        android:textSize="12dp"
+                                        android:textSize="12sp"
                                         app:fontFamily="@font/roboto"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent" />
 
-                                    <ImageView
+                                    <!--                                    <ImageView-->
+                                    <!--                                        android:id="@+id/exploreNavigationIcon"-->
+                                    <!--                                        android:layout_width="26dp"-->
+                                    <!--                                        android:layout_height="26dp"-->
+                                    <!--                                        android:src="@drawable/navigation_icon_xhdpi"-->
+                                    <!--                                        tools:layout_editor_absoluteX="282dp"-->
+                                    <!--                                        tools:layout_editor_absoluteY="14dp" />-->
+                                    <com.google.android.material.floatingactionbutton.FloatingActionButton
                                         android:id="@+id/exploreNavigationIcon"
-                                        android:layout_width="26dp"
-                                        android:layout_height="26dp"
-                                        android:layout_marginStart="22dp"
-                                        android:layout_marginLeft="22dp"
-                                        android:layout_marginTop="14dp"
-                                        android:src="@drawable/navigation_icon_xhdpi"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginTop="2dp"
+                                        app:backgroundTint="@color/colorSummerSky"
+                                        app:fabCustomSize="26dp"
                                         app:layout_constraintStart_toEndOf="@+id/textView9"
-                                        app:layout_constraintTop_toTopOf="parent" />
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:maxImageSize="16dp"
+                                        app:srcCompat="@drawable/ic_navigate_next_black_24dp"
+                                        app:tint="@color/colorWhite">
+
+                                    </com.google.android.material.floatingactionbutton.FloatingActionButton>
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -246,10 +246,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="24dp"
-                            android:layout_marginLeft="24dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="24dp"
-                            android:layout_marginRight="24dp"
                             app:cardBackgroundColor="@color/colorWhisper1"
                             app:cardCornerRadius="5dp"
                             app:cardElevation="5dp"
@@ -261,14 +259,13 @@
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:paddingBottom="14dp">
+                                android:paddingBottom="2dp">
 
                                 <TextView
                                     android:id="@+id/tickestsTitle"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="34dp"
-                                    android:layout_marginLeft="34dp"
                                     android:layout_marginTop="32dp"
                                     android:fontFamily="@font/roboto_medium"
                                     android:letterSpacing="0.05"
@@ -284,14 +281,12 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="32dp"
-                                    android:layout_marginLeft="32dp"
                                     android:layout_marginTop="17dp"
                                     android:layout_marginEnd="70dp"
-                                    android:layout_marginRight="70dp"
                                     android:letterSpacing="0.04"
                                     android:text="@string/tickets_description"
                                     android:textColor="@color/colorSuvaGray"
-                                    android:textSize="12dp"
+                                    android:textSize="12sp"
                                     app:fontFamily="@font/roboto"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -301,32 +296,29 @@
                                     android:id="@+id/view2"
                                     android:layout_width="match_parent"
                                     android:layout_height="1dp"
-                                    android:layout_marginTop="20dp"
+                                    android:layout_marginTop="16dp"
                                     android:layout_marginEnd="80dp"
-                                    android:layout_marginRight="80dp"
                                     android:background="#CCCCCC"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintHorizontal_bias="0.0"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/createTicketButton" />
+                                    app:layout_constraintTop_toBottomOf="@+id/createTicket" />
 
-                                <Button
-                                    android:id="@+id/createTicketButton"
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/createTicket"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="32dp"
+                                    android:layout_height="46dp"
                                     android:layout_marginStart="32dp"
-                                    android:layout_marginLeft="32dp"
-                                    android:layout_marginTop="20dp"
-                                    android:background="@drawable/change_password_button"
+                                    android:layout_marginTop="16dp"
+                                    android:backgroundTint="@color/colorSummerSky"
                                     android:fontFamily="@font/roboto_bold"
-                                    android:letterSpacing="0.03"
-                                    android:paddingLeft="13dp"
-                                    android:paddingRight="13dp"
                                     android:text="@string/create_tickets"
-                                    android:textColor="@color/colorWhite"
-                                    android:textSize="10dp"
+                                    android:textSize="10sp"
+                                    app:cornerRadius="@dimen/change_password_radius"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/tickestsDescription" />
+                                    app:layout_constraintTop_toBottomOf="@+id/tickestsDescription">
+
+                                </com.google.android.material.button.MaterialButton>
 
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:id="@+id/gotoTicketsLayout"
@@ -350,28 +342,32 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="32dp"
-                                        android:layout_marginLeft="32dp"
                                         android:layout_marginTop="12dp"
                                         android:fontFamily="@font/roboto_medium"
                                         android:letterSpacing="0.03"
                                         android:text="@string/goto_your_tickets"
                                         android:textColor="@color/colorCharcoal"
-                                        android:textSize="12dp"
+                                        android:textSize="12sp"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent" />
 
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                                <ImageView
+                                <com.google.android.material.floatingactionbutton.FloatingActionButton
                                     android:id="@+id/gotoTicketsIcon"
-                                    android:layout_width="26dp"
-                                    android:layout_height="26dp"
-                                    android:layout_marginStart="32dp"
-                                    android:layout_marginLeft="32dp"
-                                    android:layout_marginTop="16dp"
-                                    android:src="@drawable/navigation_icon_xhdpi"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="2dp"
+                                    app:backgroundTint="@color/colorSummerSky"
+                                    app:fabCustomSize="26dp"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/gotoTicketsLayout" />
+                                    app:layout_constraintTop_toBottomOf="@+id/gotoTicketsLayout"
+                                    app:maxImageSize="16dp"
+                                    app:srcCompat="@drawable/ic_navigate_next_black_24dp"
+                                    app:tint="@color/colorWhite">
+
+                                </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -381,10 +377,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="24dp"
-                            android:layout_marginLeft="24dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="24dp"
-                            android:layout_marginRight="24dp"
                             android:layout_marginBottom="26dp"
                             app:cardBackgroundColor="#EEEEEE"
                             app:cardCornerRadius="5dp"
@@ -406,14 +400,13 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="32dp"
-                                    android:layout_marginLeft="32dp"
                                     android:layout_marginTop="30dp"
                                     android:layout_marginEnd="32dp"
-                                    android:layout_marginRight="32dp"
                                     android:letterSpacing="0.04"
+                                    android:lineSpacingExtra="3dp"
                                     android:text="@string/explore_description"
                                     android:textColor="@color/colorSuvaGray"
-                                    android:textSize="12dp"
+                                    android:textSize="12sp"
                                     app:fontFamily="@font/roboto"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -433,7 +426,6 @@
                                         android:layout_width="16dp"
                                         android:layout_height="16dp"
                                         android:layout_marginStart="32dp"
-                                        android:layout_marginLeft="32dp"
                                         android:layout_marginTop="10dp"
                                         android:layout_marginBottom="8dp"
                                         android:src="@drawable/call_icon_xhdpi"
@@ -446,12 +438,12 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="16dp"
-                                        android:layout_marginLeft="16dp"
                                         android:layout_marginTop="8dp"
                                         android:layout_marginBottom="8dp"
+                                        android:letterSpacing="0.05"
                                         android:text="@string/phone_number"
                                         android:textColor="@color/colorNightRider"
-                                        android:textSize="14dp"
+                                        android:textSize="14sp"
                                         app:fontFamily="@font/roboto_black"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintStart_toEndOf="@+id/imageView5"
@@ -463,12 +455,11 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="32dp"
-                                    android:layout_marginLeft="32dp"
                                     android:layout_marginTop="8dp"
                                     android:letterSpacing="0.03"
                                     android:text="@string/call_details"
                                     android:textColor="@color/colorDimGray"
-                                    android:textSize="12dp"
+                                    android:textSize="12sp"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
 
@@ -476,7 +467,9 @@
 
                         </androidx.cardview.widget.CardView>
 
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
                 </LinearLayout>
@@ -484,153 +477,35 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/horizontal_line"
+            app:layout_constraintBottom_toTopOf="@id/constraintLayout10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></View>
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/bottomNavigationView"
-            android:layout_width="0dp"
+            android:id="@+id/constraintLayout10"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bottom_navigation"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bodyContent">
+            app:layout_constraintStart_toStartOf="parent">
 
-            <ImageView
-                android:id="@+id/supportIcon"
-                android:layout_width="21dp"
-                android:layout_height="21dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/support_icon_xxhdpi"
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                app:itemIconTint="@drawable/item_selected"
+                app:itemTextColor="@drawable/item_selected"
+                app:labelVisibilityMode="labeled"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/supportTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="8dp"
-                android:text="Support"
-                android:textColor="@color/colorSummerSky"
-                android:textSize="8dp"
-                app:fontFamily="@font/roboto"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/supportIcon" />
-
-            <ImageView
-                android:id="@+id/communityIcon"
-                android:layout_width="21dp"
-                android:layout_height="21dp"
-                android:layout_marginStart="62dp"
-                android:layout_marginLeft="62dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/community_icon_xxhdpi"
-                app:layout_constraintStart_toEndOf="@+id/supportIcon"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/communityTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="52dp"
-                android:layout_marginLeft="52dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="8dp"
-                android:text="Community"
-                android:textColor="@color/colorDimGray"
-                android:textSize="8dp"
-                app:fontFamily="@font/roboto"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/supportIcon"
-                app:layout_constraintTop_toBottomOf="@+id/communityIcon" />
-
-            <ImageView
-                android:id="@+id/accountsIcon"
-                android:layout_width="21dp"
-                android:layout_height="21dp"
-                android:layout_marginStart="66dp"
-                android:layout_marginLeft="66dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/accounts_icon_xhdpi"
-                app:layout_constraintStart_toEndOf="@+id/communityIcon"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/accountsTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="8dp"
-                android:text="Accounts"
-                android:textColor="@color/colorDimGray"
-                android:textSize="8dp"
-                app:fontFamily="@font/roboto"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/communityTitle"
-                app:layout_constraintTop_toBottomOf="@+id/accountsIcon" />
-
-            <ImageView
-                android:id="@+id/rewardsIcon"
-                android:layout_width="21dp"
-                android:layout_height="21dp"
-                android:layout_marginStart="64dp"
-                android:layout_marginLeft="64dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/rewards_icon_xhdpi"
-                app:layout_constraintStart_toEndOf="@+id/accountsIcon"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/rewardsTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="52dp"
-                android:layout_marginLeft="52dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="8dp"
-                android:text="Rewards"
-                android:textColor="@color/colorDimGray"
-                android:textSize="8dp"
-                app:fontFamily="@font/roboto"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/accountsTitle"
-                app:layout_constraintTop_toBottomOf="@+id/rewardsIcon" />
-
-            <ImageView
-                android:id="@+id/settingsIcon"
-                android:layout_width="21dp"
-                android:layout_height="21dp"
-                android:layout_marginStart="60dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/settings_icon_xhdpi"
-                app:layout_constraintStart_toEndOf="@+id/rewardsIcon"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/settingsTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="8dp"
-                android:text="Settings"
-                android:textColor="@color/colorDimGray"
-                android:textSize="8dp"
-                app:fontFamily="@font/roboto"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/rewardsTitle"
-                app:layout_constraintTop_toBottomOf="@+id/settingsIcon" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
+                app:layout_constraintTop_toTopOf="parent"
+                app:menu="@menu/bottom_navigation_menu" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.carmel.guestjini.R;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 
@@ -25,7 +26,7 @@ public class MyTicketsRecyclerViewFragment extends Fragment {
 
     RecyclerView ticketsRecyclerView;
     DrawerLayout drawerLayout;
-    ImageView ticketsFilterIcon;
+    MaterialButton ticketsFilterIcon;
     ArrayList<MyTicketsModel> myTicketsModelsList=new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

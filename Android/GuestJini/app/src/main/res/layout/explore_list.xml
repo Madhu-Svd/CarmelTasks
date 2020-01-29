@@ -20,7 +20,6 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="34dp"
-            android:layout_marginLeft="34dp"
             android:layout_marginTop="36dp"
             android:layout_marginBottom="72dp"
             android:src="@drawable/profile_image"
@@ -35,12 +34,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="36dp"
             android:letterSpacing="0.04"
-            android:text="Ticket Name"
+            android:text="@string/ticket_name"
             android:textColor="@color/colorZambezi1"
-            android:textSize="12dp"
+            android:textSize="12sp"
             app:fontFamily="@font/roboto"
             app:layout_constraintStart_toEndOf="@+id/profilePicture"
             app:layout_constraintTop_toTopOf="parent" />
@@ -50,12 +48,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="4dp"
             android:letterSpacing="0.04"
-            android:text="Ticket Author Name"
+            android:text="@string/ticket_author_name"
             android:textColor="@color/colorDimGray"
-            android:textSize="9dp"
+            android:textSize="9sp"
             app:fontFamily="@font/roboto_medium"
             app:layout_constraintStart_toEndOf="@+id/profilePicture"
             app:layout_constraintTop_toBottomOf="@+id/ticketName" />
@@ -65,12 +62,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:letterSpacing="0.04"
-            android:text="Ticket Date"
+            android:text="@string/ticket_date"
             android:textColor="@color/colorSuvaGray"
-            android:textSize="9dp"
+            android:textSize="9sp"
             app:fontFamily="@font/roboto"
             app:layout_constraintStart_toEndOf="@+id/profilePicture"
             app:layout_constraintTop_toBottomOf="@+id/ticketAuthorName" />
@@ -80,30 +76,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="82dp"
-            android:layout_marginLeft="82dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="130dp"
-            android:layout_marginRight="130dp"
             android:letterSpacing="0.05"
             android:lineSpacingExtra="4dp"
-            android:text="Ticket Description"
+            android:text="@string/ticket_description"
             android:textColor="@color/colorDimGray"
-            android:textSize="11dp"
+            android:textSize="11sp"
             app:fontFamily="@font/roboto"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ticketDate" />
 
-        <ImageView
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/navigationIcon"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginTop="70dp"
-            android:layout_marginEnd="34dp"
-            android:layout_marginRight="34dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="16dp"
+            app:backgroundTint="@color/colorSummerSky"
+            app:fabCustomSize="26dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/navigation_icon_xhdpi" />
+            app:maxImageSize="16dp"
+            app:srcCompat="@drawable/ic_navigate_next_black_24dp"
+            app:tint="@color/colorWhite">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

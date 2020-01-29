@@ -11,7 +11,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="320dp"
-        android:layout_height="210dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/dailogbox"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,11 +24,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="44dp"
-            app:fontFamily="@font/roboto_medium"
             android:letterSpacing="0.1"
             android:text="@string/alert_title"
             android:textColor="@color/colorSummerSky"
             android:textSize="12sp"
+            app:fontFamily="@font/roboto_medium"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"></TextView>
 
@@ -54,14 +54,14 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="32dp"
             app:cornerRadius="18dp"
-            app:maxImageSize="20dp"
             app:fabCustomSize="40dp"
-            app:tint="@color/colorWhite"
-            app:srcCompat="@drawable/ic_done_black_24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/alertDailogDescription" />
+            app:layout_constraintTop_toBottomOf="@+id/alertDailogDescription"
+            app:maxImageSize="20dp"
+            app:srcCompat="@drawable/ic_done_black_24dp"
+            app:tint="@color/colorWhite" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

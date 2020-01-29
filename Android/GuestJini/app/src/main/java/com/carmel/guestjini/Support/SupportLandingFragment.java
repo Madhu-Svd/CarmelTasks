@@ -13,14 +13,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.carmel.guestjini.R;
 import com.carmel.guestjini.Settings.SettingsLandingFragment;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
 public class SupportLandingFragment extends Fragment {
 
-    ImageView gotoTicketsIcon,exploreNavigationIcon;
+     FloatingActionButton gotoTicketsIcon,exploreNavigationIcon;
+     MaterialButton createTicket;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,6 +33,7 @@ public class SupportLandingFragment extends Fragment {
         final View rootView=inflater.inflate(R.layout.fragment_support_landing, container, false);
         gotoTicketsIcon=rootView.findViewById(R.id.gotoTicketsIcon);
         exploreNavigationIcon=rootView.findViewById(R.id.exploreNavigationIcon);
+        createTicket=rootView.findViewById(R.id.createTicket);
 
         gotoTicketsIcon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +42,17 @@ public class SupportLandingFragment extends Fragment {
                 FragmentManager fragmentManager=getFragmentManager();
                 FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.SuppotPlaceHolder,MyTicketsRecyclerViewFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+        createTicket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CreateTicketFragment createTicketFragment=new CreateTicketFragment();
+                FragmentManager fragmentManager=getFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.SuppotPlaceHolder,createTicketFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

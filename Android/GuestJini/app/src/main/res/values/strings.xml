@@ -49,6 +49,7 @@
     <string name="phone_number">1800 0156 4237</string>
     <string name="call_details">(Monday - Friday, 09:00am - 06:00pm)</string>
     <string name="my_tickets">MY TICKETS</string>
+    <string name="new_ticket">NEW TICKET</string>
     <string name="open">OPEN</string>
     <string name="closeed">CLOSED</string>
     <string name="draft">DRAFT</string>
@@ -59,7 +60,7 @@
     <string name="elevateors">ELEVATORS</string>
     <string name="security">SECURITY</string>
     <string name="house_rules">HOUSE RULES</string>
-    <string name="wifi">WIFI</string>
+    <string name="wifi">Wifi</string>
     <string name="plumbing">  PLUMBING</string>
     <string name="filter">FILTER</string>
     <string name="clear_all">CLEAR ALL</string>
@@ -95,4 +96,17 @@
     <string name="my_interests">MY INTERESTS</string>
     <string name="setup">SETUP</string>
     <string name="edit_icon">edit icon</string>
+    <string name="open_description">Tickets that are assigned but not closed.</string>
+    <string name="closed_description">Tickets that have been closed.</string>
+    <string name="draft_description">Tickets that are saved but not submitted.</string>
+    <string name="ticket_name">Ticket Name</string>
+    <string name="ticket_author_name">Ticket Author Name</string>
+    <string name="ticket_date">Ticket Date</string>
+    <string name="ticket_description">Ticket Description</string>
+    <string name="complaint">Complaint</string>
+    <string name="attachment">Attachments (0)</string>
+    <string name="attachment_description">You can attach photos, video, documents or any other files here.</string>
+    <string name="save_draft">SAVE AS DRAFT</string>
+    <string name="no_result_found">No Results Found</string>
+    <string name="no_result_found_description">Sorry, we couldn’t find any content for “search_keyword”</string>
 </resources>

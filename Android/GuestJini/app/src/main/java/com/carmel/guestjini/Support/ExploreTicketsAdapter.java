@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.carmel.guestjini.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -50,7 +51,8 @@ class ExploreTicketsAdapter extends RecyclerView.Adapter<ExploreTicketsAdapter.V
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView profilePicture,navigationIcon;
+        ImageView profilePicture;
+        FloatingActionButton navigationIcon;
         TextView ticketsName,ticketsDate,ticketsAuthorName,ticketsDescription;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -62,7 +64,6 @@ class ExploreTicketsAdapter extends RecyclerView.Adapter<ExploreTicketsAdapter.V
             ticketsDescription=itemView.findViewById(R.id.ticketDescription);
 
             profilePicture.setImageResource(R.drawable.profile_image);
-            navigationIcon.setImageResource(R.drawable.navigation_icon_xhdpi);
         }
     }
 }

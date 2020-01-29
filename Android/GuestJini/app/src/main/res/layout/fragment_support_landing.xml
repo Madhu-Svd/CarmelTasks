@@ -212,13 +212,6 @@
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent" />
 
-                                    <!--                                    <ImageView-->
-                                    <!--                                        android:id="@+id/exploreNavigationIcon"-->
-                                    <!--                                        android:layout_width="26dp"-->
-                                    <!--                                        android:layout_height="26dp"-->
-                                    <!--                                        android:src="@drawable/navigation_icon_xhdpi"-->
-                                    <!--                                        tools:layout_editor_absoluteX="282dp"-->
-                                    <!--                                        tools:layout_editor_absoluteY="14dp" />-->
                                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                                         android:id="@+id/exploreNavigationIcon"
                                         android:layout_width="wrap_content"

@@ -3,9 +3,12 @@ package com.carmel.guestjini.Support;
 
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -36,6 +39,7 @@ public class MyTicketsRecyclerViewFragment extends Fragment {
         ticketsRecyclerView=rootView.findViewById(R.id.myTicketsRecyclerView);
         drawerLayout=rootView.findViewById(R.id.drawerLayout);
         ticketsFilterIcon=rootView.findViewById(R.id.filterIcon);
+
 
         ticketsFilterIcon.setOnClickListener(new View.OnClickListener() {
             @Override

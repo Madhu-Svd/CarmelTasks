@@ -89,7 +89,7 @@
                                     android:id="@+id/textView3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="34dp"
+                                    android:layout_marginStart="32dp"
                                     android:layout_marginTop="34dp"
                                     android:fontFamily="@font/roboto_medium"
                                     android:letterSpacing="0.05"
@@ -199,7 +199,7 @@
                                     app:layout_constraintTop_toBottomOf="@+id/exploreTitle">
 
                                     <TextView
-                                        android:id="@+id/textView9"
+                                        android:id="@+id/exploreDescription"
                                         android:layout_width="227dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="32dp"
@@ -220,7 +220,7 @@
                                         android:layout_marginTop="2dp"
                                         app:backgroundTint="@color/colorSummerSky"
                                         app:fabCustomSize="26dp"
-                                        app:layout_constraintStart_toEndOf="@+id/textView9"
+                                        app:layout_constraintStart_toEndOf="@+id/exploreDescription"
                                         app:layout_constraintTop_toTopOf="parent"
                                         app:maxImageSize="16dp"
                                         app:srcCompat="@drawable/ic_navigate_next_black_24dp"
@@ -258,7 +258,7 @@
                                     android:id="@+id/tickestsTitle"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="34dp"
+                                    android:layout_marginStart="32dp"
                                     android:layout_marginTop="32dp"
                                     android:fontFamily="@font/roboto_medium"
                                     android:letterSpacing="0.05"
@@ -415,7 +415,7 @@
                                     app:layout_constraintTop_toBottomOf="@+id/loremText">
 
                                     <ImageView
-                                        android:id="@+id/imageView5"
+                                        android:id="@+id/callIcon"
                                         android:layout_width="16dp"
                                         android:layout_height="16dp"
                                         android:layout_marginStart="32dp"
@@ -427,7 +427,7 @@
                                         app:layout_constraintTop_toTopOf="parent" />
 
                                     <TextView
-                                        android:id="@+id/textView11"
+                                        android:id="@+id/phoneNumber"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="16dp"
@@ -439,12 +439,12 @@
                                         android:textSize="14sp"
                                         app:fontFamily="@font/roboto_black"
                                         app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintStart_toEndOf="@+id/imageView5"
+                                        app:layout_constraintStart_toEndOf="@+id/callIcon"
                                         app:layout_constraintTop_toTopOf="parent" />
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                                 <TextView
-                                    android:id="@+id/textView12"
+                                    android:id="@+id/callDateAndTime"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="32dp"
@@ -460,10 +460,7 @@
 
                         </androidx.cardview.widget.CardView>
 
-
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
                 </LinearLayout>
             </ScrollView>

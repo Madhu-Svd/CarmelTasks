@@ -9,4 +9,5 @@
     <dimen name="otpbox_radius">7dp</dimen>
     <dimen name="change_password_radius">4dp</dimen>
     <dimen name="submit_button_radius">4dp</dimen>
+    <dimen name="attach_files_radius">13dp</dimen>
 </resources>

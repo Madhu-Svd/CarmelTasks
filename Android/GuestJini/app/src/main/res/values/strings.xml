@@ -109,4 +109,12 @@
     <string name="save_draft">SAVE AS DRAFT</string>
     <string name="no_result_found">No Results Found</string>
     <string name="no_result_found_description">Sorry, we couldn’t find any content for “search_keyword”</string>
+    <string name="attachFiles">ATTACH FILES</string>
+    <string name="new_tickets_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. .</string>
+    <string name="done">DONE</string>
+    <string name="selected_files">Selected files</string>
+    <string name="cameraDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. .</string>
+    <string name="galleryDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. .</string>
+    <string name="attach_files_name">Attach Files Name</string>
+    <string name="attach_files_size">Attach Files Size</string>
 </resources>

@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.carmel.guestjini.R;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -25,6 +26,8 @@ public class CreateTicketFragment extends Fragment {
     MaterialButton submitButton;
     TextInputEditText subjectEditText;
     TextView subjectErrorField;
+    MaterialCardView attachmentsCardView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class CreateTicketFragment extends Fragment {
         submitButton=rootView.findViewById(R.id.newTicketSubmitButton);
         subjectEditText=rootView.findViewById(R.id.subjectEditText);
         subjectErrorField=rootView.findViewById(R.id.subjectErrorField);
+        attachmentsCardView=rootView.findViewById(R.id.attchmentCardView);
 
 
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -91,6 +95,18 @@ public class CreateTicketFragment extends Fragment {
 
                     dialog.show();
                 }
+            }
+        });
+
+        attachmentsCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AttachFilesFragment attachFilesFragment=new AttachFilesFragment();
+                FragmentManager fragmentManager=getFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.SuppotPlaceHolder,attachFilesFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
          return rootView;

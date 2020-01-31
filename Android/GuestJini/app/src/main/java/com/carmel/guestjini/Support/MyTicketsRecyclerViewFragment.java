@@ -19,6 +19,7 @@ import android.widget.ImageView;
 
 import com.carmel.guestjini.R;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -30,6 +31,8 @@ public class MyTicketsRecyclerViewFragment extends Fragment {
     RecyclerView ticketsRecyclerView;
     DrawerLayout drawerLayout;
     MaterialButton ticketsFilterIcon;
+    FloatingActionButton addIcon;
+    ImageView backArrow;
     ArrayList<MyTicketsModel> myTicketsModelsList=new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,7 +42,32 @@ public class MyTicketsRecyclerViewFragment extends Fragment {
         ticketsRecyclerView=rootView.findViewById(R.id.myTicketsRecyclerView);
         drawerLayout=rootView.findViewById(R.id.drawerLayout);
         ticketsFilterIcon=rootView.findViewById(R.id.filterIcon);
+        addIcon=rootView.findViewById(R.id.addIcon);
+        backArrow=rootView.findViewById(R.id.leftArrowMark);
 
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SupportLandingFragment supportLandingFragment=new SupportLandingFragment();
+                FragmentManager fragmentManager=getFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.SuppotPlaceHolder,supportLandingFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+        addIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               NewTicketFragment newTicketFragment=new NewTicketFragment();
+                FragmentManager fragmentManager=getFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.SuppotPlaceHolder,newTicketFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
 
         ticketsFilterIcon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +80,6 @@ public class MyTicketsRecyclerViewFragment extends Fragment {
         ticketsRecyclerView.setLayoutManager(linearLayoutManager);
         MyTicktesAdapter myTicktesAdapter=new MyTicktesAdapter(rootView.getContext(),myTicketsModelsList);
         ticketsRecyclerView.setAdapter(myTicktesAdapter);
-
 
         MyTicketsModel myTicketsModel=new MyTicketsModel();
         myTicketsModel.setTicketsStatus("OPEN");

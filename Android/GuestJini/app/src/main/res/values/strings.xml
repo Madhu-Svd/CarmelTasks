@@ -117,4 +117,12 @@
     <string name="galleryDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. .</string>
     <string name="attach_files_name">Attach Files Name</string>
     <string name="attach_files_size">Attach Files Size</string>
+    <string name="delete">delete</string>
+    <string name="ticketsDetailDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies quis sagittis ut, posuere eu eros. Suspendisse non feugiat neque. Sed ac magna nec turpis tincidunt ullamcorper nec in risus. Ut risus purus, suscipit et accumsan sit amet, ultrices quis leo. In non se mper diam. Cras dignissim porta velit, quis ullamcorper mifaucibus in. Duis rutrum orci sed.</string>
+    <string name="ticketDetailsDescription1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies quis sagittis ut, posuere eu eros. Suspendisse non feugiat neque. Sed ac magna nec turpis tincidunt ullamcorper nec in risus. Ut risus purus,</string>
+   <string name="was_this_helpful">Was this helpful?</string>
+    <string name="writeReview">Write a review</string>
+    <string name="reviewName">Reviewer Name</string>
+    <string name="reviewDate">Reviewer Date</string>
+    <string name="reviewDescription">Reviewer Description</string>
 </resources>

@@ -1,8 +1,5 @@
 package com.carmel.guestjini.Support;
 
-import android.content.Context;
-import android.media.Image;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -14,11 +11,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.carmel.guestjini.R;
-import com.carmel.guestjini.Settings.SettingsLandingFragment;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -64,10 +58,10 @@ public class SupportLandingFragment extends Fragment {
         createTicket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CreateTicketFragment createTicketFragment=new CreateTicketFragment();
+                NewTicketFragment newTicketFragment=new NewTicketFragment();
                 FragmentManager fragmentManager=getFragmentManager();
                 FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.SuppotPlaceHolder,createTicketFragment);
+                fragmentTransaction.replace(R.id.SuppotPlaceHolder,newTicketFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

@@ -22,7 +22,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 
 
-public class CreateTicketFragment extends Fragment {
+public class NewTicketFragment extends Fragment {
     MaterialButton submitButton;
     TextInputEditText subjectEditText;
     TextView subjectErrorField;
@@ -33,7 +33,7 @@ public class CreateTicketFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-         View rootView=inflater.inflate(R.layout.fragment_create_ticket, container, false);
+         View rootView=inflater.inflate(R.layout.fragment_new_ticket, container, false);
         submitButton=rootView.findViewById(R.id.newTicketSubmitButton);
         subjectEditText=rootView.findViewById(R.id.subjectEditText);
         subjectErrorField=rootView.findViewById(R.id.subjectErrorField);

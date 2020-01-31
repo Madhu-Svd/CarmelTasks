@@ -39,7 +39,7 @@
                 android:paddingBottom="50dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout9"
+                    android:id="@+id/newTicketHeaderLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +79,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
+                    app:layout_constraintTop_toBottomOf="@+id/newTicketHeaderLayout">
 
                     <TextView
                         android:id="@+id/newTicketDescription"
@@ -147,7 +147,7 @@
                     style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="32dp"
                     android:backgroundTint="@color/colorSummerSky"
                     android:fontFamily="@font/roboto_bold"
                     android:letterSpacing="0.04"
@@ -508,7 +508,14 @@
 
         </androidx.drawerlayout.widget.DrawerLayout>
 
-
+        <View
+            android:id="@+id/view8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/horizontal_line"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavigationViewLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></View>
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/bottomNavigationViewLayout"
             android:layout_width="match_parent"

@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.carmel.guestjini.R;
@@ -33,6 +34,7 @@ public class AttachFilesFragment extends Fragment {
     RecyclerView attachFilesRecyclerView;
     ArrayList<AttachFilesModel> attachFilesModelArrayList=new ArrayList<>();
     MaterialButton doneButoon;
+    ImageView backArrow;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,12 +44,25 @@ public class AttachFilesFragment extends Fragment {
         attachFiles=rootView.findViewById(R.id.attachFiles);
         attachDrawerLayout=rootView.findViewById(R.id.attachFilesDrawerLayout);
         attachFilesRecyclerView=rootView.findViewById(R.id.attachFilesRecyclerView);
+        backArrow=rootView.findViewById(R.id.leftArrowMark);
         doneButoon=rootView.findViewById(R.id.done);
         attachFiles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 attachDrawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NewTicketFragment newTicketFragment=new NewTicketFragment();
+                FragmentManager fragmentManager=getFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.SuppotPlaceHolder,newTicketFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 

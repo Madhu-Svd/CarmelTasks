@@ -3,6 +3,8 @@ package com.carmel.guestjini.Settings;
 
 import android.os.Bundle;
 
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -13,9 +15,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.carmel.guestjini.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MyProfileFragment extends Fragment {
     ImageView backIcon,profileToggleButton,gender,age,mobileNo,place,email;
+    DrawerLayout profileDrawerLayout;
+    FloatingActionButton profileEdit;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -23,6 +28,16 @@ public class MyProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         final View rootView=inflater.inflate(R.layout.fragment_my_profile, container, false);
         backIcon=rootView.findViewById(R.id.leftArrowMark);
+        profileDrawerLayout=rootView.findViewById(R.id.profileDrawerLayout);
+        profileEdit=rootView.findViewById(R.id.profileEdit);
+
+        profileEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                profileDrawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
 //        profileToggleButton=rootView.findViewById(R.id.profileToggleButton);
 //        gender=rootView.findViewById(R.id.genderToggleIcon);
 //        age=rootView.findViewById(R.id.ageToggleIcon);

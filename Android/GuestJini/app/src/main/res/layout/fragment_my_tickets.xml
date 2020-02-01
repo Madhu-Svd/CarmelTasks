@@ -185,8 +185,10 @@
                             android:layout_height="wrap_content"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/filterIconLayout">
+                            app:layout_constraintTop_toBottomOf="@id/filterIconLayout"
+                            app:layout_constraintVertical_bias="0.0">
 
                             <androidx.cardview.widget.CardView
                                 android:id="@+id/OpenCardView"
@@ -219,11 +221,11 @@
                                         android:layout_marginTop="20dp"
                                         android:background="#EF5351"
                                         android:fontFamily="@font/roboto_bold"
+                                        android:gravity="center"
                                         android:letterSpacing="0.08"
                                         android:text="@string/open"
                                         android:textColor="@color/colorWhite"
                                         android:textSize="10dp"
-                                        android:gravity="center"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent">
 
@@ -363,11 +365,11 @@
                                         android:layout_marginTop="20dp"
                                         android:background="#F7941D"
                                         android:fontFamily="@font/roboto_bold"
+                                        android:gravity="center"
                                         android:letterSpacing="0.08"
                                         android:text="@string/draft"
                                         android:textColor="@color/colorWhite"
                                         android:textSize="10dp"
-                                        android:gravity="center"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent">
 
@@ -472,10 +474,10 @@
                                         android:layout_marginTop="20dp"
                                         android:background="#8B9AB3"
                                         android:fontFamily="@font/roboto_bold"
+                                        android:gravity="center"
                                         android:text="@string/closeed"
                                         android:textColor="@color/colorWhite"
                                         android:textSize="10dp"
-                                        android:gravity="center"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent">
 
@@ -616,11 +618,11 @@
                                         android:layout_marginTop="20dp"
                                         android:background="#EF5351"
                                         android:fontFamily="@font/roboto_bold"
+                                        android:gravity="center"
                                         android:letterSpacing="0.08"
                                         android:text="@string/open"
                                         android:textColor="@color/colorWhite"
                                         android:textSize="10dp"
-                                        android:gravity="center"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent">
 

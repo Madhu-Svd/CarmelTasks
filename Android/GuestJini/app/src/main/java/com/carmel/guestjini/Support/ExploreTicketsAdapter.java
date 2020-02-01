@@ -8,6 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.carmel.guestjini.R;
@@ -20,10 +23,12 @@ import Model.TicketsModel;
 
 class ExploreTicketsAdapter extends RecyclerView.Adapter<ExploreTicketsAdapter.ViewHolder> {
     private Context context;
-    ArrayList<TicketsModel> ticketsModelArrayList;
-    public ExploreTicketsAdapter(Context context, ArrayList<TicketsModel> ticketsModelsList) {
+   private ArrayList<TicketsModel> ticketsModelArrayList;
+    private OnItemClickListener onItemClickListener;
+    public ExploreTicketsAdapter(Context context, ArrayList<TicketsModel> ticketsModelsList,OnItemClickListener onItemClickListener) {
         this.context=context;
         this.ticketsModelArrayList=ticketsModelsList;
+        this.onItemClickListener=onItemClickListener;
 
     }
 
@@ -31,7 +36,7 @@ class ExploreTicketsAdapter extends RecyclerView.Adapter<ExploreTicketsAdapter.V
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.explore_list,parent,false);
-        ViewHolder viewHolder=new ViewHolder(v);
+        ViewHolder viewHolder=new ViewHolder(v,onItemClickListener);
         return viewHolder;
     }
 
@@ -50,11 +55,13 @@ class ExploreTicketsAdapter extends RecyclerView.Adapter<ExploreTicketsAdapter.V
         return ticketsModelArrayList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView profilePicture;
         FloatingActionButton navigationIcon;
         TextView ticketsName,ticketsDate,ticketsAuthorName,ticketsDescription;
-        public ViewHolder(@NonNull View itemView) {
+        OnItemClickListener onItemClickListener;
+        ConstraintLayout exploreListLayout;
+        public ViewHolder(@NonNull View itemView,OnItemClickListener onItemClickListener) {
             super(itemView);
             profilePicture=itemView.findViewById(R.id.profilePicture);
             navigationIcon=itemView.findViewById(R.id.navigationIcon);
@@ -62,8 +69,18 @@ class ExploreTicketsAdapter extends RecyclerView.Adapter<ExploreTicketsAdapter.V
             ticketsDate=itemView.findViewById(R.id.ticketDate);
             ticketsAuthorName=itemView.findViewById(R.id.ticketAuthorName);
             ticketsDescription=itemView.findViewById(R.id.ticketDescription);
-
             profilePicture.setImageResource(R.drawable.profile_image);
+            exploreListLayout=itemView.findViewById(R.id.exploreListLayout);
+            this.onItemClickListener=onItemClickListener;
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View v) {
+        onItemClickListener.onItemClick(getAdapterPosition());
+        }
+    }
+    public interface OnItemClickListener {
+        void onItemClick(int position);
     }
 }

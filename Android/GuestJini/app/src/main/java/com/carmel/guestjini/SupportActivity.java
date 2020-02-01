@@ -15,11 +15,11 @@ public class SupportActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_support);
-        ArticlesDetailsFragment articlesDetailsFragment=new ArticlesDetailsFragment();
-//        SupportLandingFragment supportLandingFragment=new SupportLandingFragment();
+//        ArticlesDetailsFragment articlesDetailsFragment=new ArticlesDetailsFragment();
+        SupportLandingFragment supportLandingFragment=new SupportLandingFragment();
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.SuppotPlaceHolder,articlesDetailsFragment);
+        fragmentTransaction.replace(R.id.SuppotPlaceHolder,supportLandingFragment);
         fragmentTransaction.commit();
 
     }

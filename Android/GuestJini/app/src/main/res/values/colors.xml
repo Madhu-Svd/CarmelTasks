@@ -36,6 +36,8 @@
     <color name="colorSwitchMaterial">#F5F5F5</color>
     <color name="colorGrey">#868686</color>
     <color name="colorAzure">#EAF2F4</color>
+    <color name="colorTrinidad">#D05224</color>
+    <color name="colorReviewEditBox">#EDEAEA</color>
 
 
 </resources>

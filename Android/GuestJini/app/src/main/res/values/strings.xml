@@ -96,6 +96,8 @@
     <string name="my_interests">MY INTERESTS</string>
     <string name="setup">SETUP</string>
     <string name="edit_icon">edit icon</string>
+    <string name="menu_camera">Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit. .</string>
+    <string name="menu_gallery">Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit. .</string>
     <string name="open_description">Tickets that are assigned but not closed.</string>
     <string name="closed_description">Tickets that have been closed.</string>
     <string name="draft_description">Tickets that are saved but not submitted.</string>
@@ -120,9 +122,21 @@
     <string name="delete">delete</string>
     <string name="ticketsDetailDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies quis sagittis ut, posuere eu eros. Suspendisse non feugiat neque. Sed ac magna nec turpis tincidunt ullamcorper nec in risus. Ut risus purus, suscipit et accumsan sit amet, ultrices quis leo. In non se mper diam. Cras dignissim porta velit, quis ullamcorper mifaucibus in. Duis rutrum orci sed.</string>
     <string name="ticketDetailsDescription1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies quis sagittis ut, posuere eu eros. Suspendisse non feugiat neque. Sed ac magna nec turpis tincidunt ullamcorper nec in risus. Ut risus purus,</string>
-   <string name="was_this_helpful">Was this helpful?</string>
+    <string name="was_this_helpful">Was this helpful?</string>
     <string name="writeReview">Write a review</string>
     <string name="reviewName">Reviewer Name</string>
     <string name="reviewDate">Reviewer Date</string>
     <string name="reviewDescription">Reviewer Description</string>
+    <string name="ticketsStatus">Tickets Status</string>
+    <string name="tickestsDateAndTime">Tickests Date And Time</string>
+    <string name="ticketsName">Tickets Name</string>
+    <string name="ticketsNo">Tickets No</string>
+    <string name="ticketsValue">Tickets Value</string>
+    <string name="clock">Clock</string>
+    <string name="clockValue">Clock Value</string>
+    <string name="submittedOn">Submitted on</string>
+    <string name="ticketNameDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat felis id sem elemen tum, sit amet sollicitudin leo vestibulum.</string>
+    <string name="attachmentFiles">03 Files</string>
+    <string name="attachmentTitle">ATTACHMENTS</string>
+    <string name="activityTitle">ACTIVITY</string>
 </resources>

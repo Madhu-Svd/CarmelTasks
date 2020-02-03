@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,10 +16,12 @@ import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class AppAccessRequest extends AppCompatActivity {
     TextView emailErrorField,mobileNumberErrorField,invalidCredentials;
     TextInputEditText email,mobileNumber;
+    TextInputLayout registeredMobileNumberLayout;
     FloatingActionButton doneButton;
     String MobilePattern = "[0-9]{10}";
     String EMAIL_PATTERN = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
@@ -28,7 +32,7 @@ public class AppAccessRequest extends AppCompatActivity {
         setContentView(R.layout.activity_app_access_request);
         email=findViewById(R.id.registeredEmailEditBox);
         mobileNumber=findViewById(R.id.registeredMobileNumberEditBox);
-
+        registeredMobileNumberLayout=findViewById(R.id.registeredMobileNumberLayout);
         emailErrorField=findViewById(R.id.regesteredEmailErrorField);
         mobileNumberErrorField=findViewById(R.id.mobileNumberErrorField);
         invalidCredentials=findViewById(R.id.invalidCredentialsErrorField);
@@ -41,6 +45,7 @@ public class AppAccessRequest extends AppCompatActivity {
                 if(email.getText().toString().trim().length()==0 && mobileNumber.getText().toString().trim().length()==0){
                     emailErrorField.setVisibility(View.VISIBLE);
                     mobileNumberErrorField.setVisibility(View.VISIBLE);
+                    registeredMobileNumberLayout.setBoxStrokeColor(getColor(R.color.colorRoman));
 //                    email.setBackgroundResource(R.drawable.edit_red_textbox);
 //                    mobileNumber.setBackgroundResource(R.drawable.edit_red_textbox);
                 }else{
@@ -72,15 +77,18 @@ public class AppAccessRequest extends AppCompatActivity {
 
 
                         TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);
-                        alertDailogTitle.setText("APP ACCESS REQUEST");
+                        alertDailogTitle.setText(getText(R.string.app_access_request));
 
                         TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
-                        alertDailogMessage.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim felis et magna mattis finibus.");
+                        alertDailogMessage.setText(getText(R.string.app_access_request_dialog_description));
 
                         FloatingActionButton doneButton = (FloatingActionButton) dialog.findViewById(R.id.done_button);
+                        doneButton.setBackgroundTintList(ColorStateList.valueOf(Color
+                                .parseColor("#32BDD2")));
                         doneButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                dialog.dismiss();
                                 Intent intent = new Intent(getApplicationContext(), Login.class);
                                 startActivity(intent);
                             }

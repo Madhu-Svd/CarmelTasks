@@ -57,10 +57,10 @@ public class ForgotPassword extends AppCompatActivity {
                     dialog.setContentView(R.layout.alert_dailogbox);
 
                     TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);
-                    alertDailogTitle.setText("FORGOT PASSWORD");
+                    alertDailogTitle.setText(getText(R.string.otp_success_title));
 
                     TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
-                    alertDailogMessage.setText("A link has been sent to your email account to reset your password.");
+                    alertDailogMessage.setText(getText(R.string.forgot_password_dialog_description));
 
                     FloatingActionButton doneButton= (FloatingActionButton) dialog.findViewById(R.id.done_button);
                     doneButton.setBackgroundTintList(ColorStateList.valueOf(Color
@@ -68,13 +68,13 @@ public class ForgotPassword extends AppCompatActivity {
                     doneButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            dialog.dismiss();
                             Intent intent=new Intent(getApplicationContext(), ForgotPasswordOTPValidation.class);
                             startActivity(intent);
                         }
                     });
 
                     dialog.show();
-
 
                 }
             }

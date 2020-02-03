@@ -12,7 +12,10 @@
     <string name="reset_password">RESET PASSWORD</string>
     <string name="forgot_password_description">The link to reset your password will be sent to your registered email address and mobile number.</string>
     <string name="email_error_message">This email is not registered with GuestJini.</string>
+    <string name="forgot_password_dialog_description">A link has been sent to your email account to reset your password.</string>
     <string name="otpErrorMessage">You have entered wrong OTP.</string>
+    <string name="otp_success_description">New password has been sent to your registered mobile number.</string>
+    <string name="otp_success_title">FORGOT PASSWORD</string>
     <string name="verification_code">Verification Code</string>
     <string name="resend_otp">Resend OTP?</string>
     <string name="submit">SUBMIT</string>
@@ -23,6 +26,7 @@
     <string name="registered_email">REGISTERED EMAIL</string>
     <string name="email">Email</string>
     <string name="mobile_number">Mobile Number</string>
+    <string name="app_access_request_dialog_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim felis et magna mattis finibus.</string>
     <string name="app_access_request_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim felis et magna</string>
     <string name="my_profile">My Profile</string>
     <string name="change_password">Change Password</string>
@@ -139,4 +143,10 @@
     <string name="attachmentFiles">03 Files</string>
     <string name="attachmentTitle">ATTACHMENTS</string>
     <string name="activityTitle">ACTIVITY</string>
+    <string name="attachment_file1">C1-1495808082821_74993709_enc.pdf</string>
+    <string name="attachment_file1_size">307 KB</string>
+    <string name="attachment_file2">report-template-usability-test_0.docx</string>
+    <string name="attachment_file2_size">1.8 MB</string>
+    <string name="attachment_file3">Screen Shot 2019-05-01 at 2.26.15 PM.png</string>
+    <string name="attachment_file3_size">2.3 MB</string>
 </resources>

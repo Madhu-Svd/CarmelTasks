@@ -37,6 +37,13 @@ public class ForgotPasswordOTPValidation extends AppCompatActivity {
         thirdOtp=findViewById(R.id.thirdOtp);
         fourthOtp=findViewById(R.id.fourthOtp);
         getOneNow=findViewById(R.id.getOneNow);
+        getOneNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),AppAccessRequest.class);
+                startActivity(intent);
+            }
+        });
 
 
         final StringBuilder sb=new StringBuilder();
@@ -143,10 +150,10 @@ public class ForgotPasswordOTPValidation extends AppCompatActivity {
 
 
                     TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);
-                    alertDailogTitle.setText("FORGOT PASSWORD");
+                    alertDailogTitle.setText(getText(R.string.otp_success_title));
 
                     TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
-                    alertDailogMessage.setText("New password has been sent to your registered mobile number.");
+                    alertDailogMessage.setText(getText(R.string.otp_success_description));
 
                     FloatingActionButton doneButton = (FloatingActionButton) dialog.findViewById(R.id.done_button);
                     doneButton.setBackgroundTintList(ColorStateList.valueOf(Color

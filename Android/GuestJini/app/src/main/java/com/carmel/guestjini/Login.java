@@ -80,24 +80,6 @@ public class Login extends AppCompatActivity {
             }
         });
 
-
-//        passwordIcon.setOnClickListener(new View.OnClickListener() {
-//            private boolean flag=true;
-//            @Override
-//            public void onClick(View v) {
-//                if(flag){
-//                    flag=false;
-//                    passwordIcon.setImageResource(R.drawable.password_unmasking_icon);
-//                    password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-//                }else {
-//                    flag=true;
-//                    passwordIcon.setImageResource(R.drawable.password_masking_icon);
-//                    password.setTransformationMethod(PasswordTransformationMethod.getInstance());
-//                }
-//
-//            }
-//        });
-
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

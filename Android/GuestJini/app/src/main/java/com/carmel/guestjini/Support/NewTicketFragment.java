@@ -4,6 +4,7 @@ package com.carmel.guestjini.Support;
 import android.app.Dialog;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.carmel.guestjini.R;
@@ -27,6 +29,7 @@ public class NewTicketFragment extends Fragment {
     TextInputEditText subjectEditText;
     TextView subjectErrorField;
     MaterialCardView attachmentsCardView;
+    ImageView leftArrow;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,7 +41,7 @@ public class NewTicketFragment extends Fragment {
         subjectEditText=rootView.findViewById(R.id.subjectEditText);
         subjectErrorField=rootView.findViewById(R.id.subjectErrorField);
         attachmentsCardView=rootView.findViewById(R.id.attchmentCardView);
-
+        leftArrow=rootView.findViewById(R.id.leftArrowMark);
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,9 +51,10 @@ public class NewTicketFragment extends Fragment {
                 }else{
                     final Dialog dialog=new Dialog(getContext());
                     dialog.setContentView(R.layout.alert_dailogbox);
+                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
                     TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);
-                    alertDailogTitle.setText("FAILED");
+                    alertDailogTitle.setText(getText(R.string.failed));
                     alertDailogTitle.setTextColor(Color.parseColor("#E65959"));
 
                     TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
@@ -67,9 +71,10 @@ public class NewTicketFragment extends Fragment {
 
                             final Dialog dialog=new Dialog(getContext());
                             dialog.setContentView(R.layout.alert_dailogbox);
+                            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
                             TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);
-                            alertDailogTitle.setText("SUCCESS");
+                            alertDailogTitle.setText(getText(R.string.success));
 
                             TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
                             alertDailogMessage.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies quis sagittis ut, posuere eu eros.");

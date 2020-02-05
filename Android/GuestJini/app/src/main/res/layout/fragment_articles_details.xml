@@ -7,6 +7,26 @@
     android:layout_height="match_parent"
     tools:context=".Support.ArticlesDetailsFragment">
 
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/leftArrowMark"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:contentDescription="@string/back_arrow_icon"
+            android:src="@drawable/back_arrow_icon_xxhdpi"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="36dp"
+            />
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -14,7 +34,7 @@
         app:layout_constraintBottom_toTopOf="@+id/view8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/header">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,26 +49,13 @@
                 android:background="@color/colorWhite"
                 android:paddingBottom="30dp">
 
-                <ImageView
-                    android:id="@+id/leftArrowMark"
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
-                    android:layout_marginStart="36dp"
-                    android:layout_marginTop="36dp"
-                    android:contentDescription="@string/back_arrow_icon"
-                    android:src="@drawable/back_arrow_icon_xxhdpi"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout11"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="28dp"
-                    android:layout_marginBottom="30dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/leftArrowMark">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/profilePicture"
@@ -89,20 +96,22 @@
                         app:fontFamily="@font/roboto"
                         app:layout_constraintStart_toEndOf="@+id/profilePicture"
                         app:layout_constraintTop_toBottomOf="@+id/ticketAuthorName" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/ticketName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="34dp"
-                        android:layout_marginTop="40dp"
-                        android:fontFamily="@font/roboto_medium"
-                        android:letterSpacing="0.05"
-                        android:text="@string/ticket_name"
-                        android:textColor="@color/colorZambezi1"
-                        android:textSize="14sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/profilePicture" />
+
+                <TextView
+                    android:id="@+id/ticketName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:letterSpacing="0.05"
+                    android:text="@string/ticket_name"
+                    android:textColor="@color/colorZambezi1"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout11" />
 
                     <TextView
                         android:id="@+id/textView7"
@@ -149,25 +158,36 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/videoView" />
 
-                    <ImageView
-                        android:id="@+id/imageView"
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
                         android:layout_width="match_parent"
-                        android:layout_height="270dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
-                        android:layout_marginTop="37dp"
+                        android:layout_marginTop="24dp"
                         android:layout_marginEnd="32dp"
                         android:background="@drawable/bottom_navigation"
-                        android:src="@drawable/elevator_image"
+                        android:gravity="center"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                        app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+                        <ImageView
+                            android:id="@+id/elevatorImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="270dp"
+
+                            android:src="@drawable/elevator1"
+                            tools:layout_editor_absoluteX="56dp"
+                            tools:layout_editor_absoluteY="654dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/textView9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
-                        android:layout_marginTop="23dp"
+                        android:layout_marginTop="36dp"
                         android:layout_marginEnd="32dp"
                         android:lineSpacingExtra="3dp"
                         android:text="@string/ticketDetailsDescription1"
@@ -176,7 +196,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
                     <RelativeLayout
                         android:id="@+id/pdfLayout"
@@ -356,9 +376,9 @@
                                 app:boxCornerRadiusBottomStart="@dimen/editfileds_corners_radius"
                                 app:boxCornerRadiusTopEnd="@dimen/editfileds_corners_radius"
                                 app:boxCornerRadiusTopStart="@dimen/editfileds_corners_radius"
+                                app:boxStrokeColor="@color/colorDimGray"
                                 app:boxStrokeWidth="1dp"
                                 app:errorEnabled="true"
-                                app:boxStrokeColor="@color/colorDimGray"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/writeAReview"
@@ -412,8 +432,6 @@
                             app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

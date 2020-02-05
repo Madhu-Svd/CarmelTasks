@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout4"
+            android:id="@+id/contentLayout"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@+id/bottomDivider"
@@ -27,65 +27,89 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/leftArrowMark"
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="36dp"
-                android:src="@drawable/back_arrow_icon_xxhdpi"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/newTicketHeaderLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/NewTicketTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
-                android:letterSpacing="0.1"
-                android:text="@string/new_ticket"
-                android:textColor="@color/colorZambezi"
-                android:textSize="14sp"
-                app:fontFamily="@font/roboto_bold"
-                app:layout_constraintStart_toEndOf="@+id/leftArrowMark"
-                app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/leftArrowMark"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="36dp"
+                    android:src="@drawable/back_arrow_icon_xxhdpi"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/subjectTitle"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/NewTicketTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="8dp"
+                    android:letterSpacing="0.1"
+                    android:text="@string/new_ticket"
+                    android:textColor="@color/colorZambezi"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/roboto_bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/leftArrowMark"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/subjectTitleLayout"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="46dp"
-                android:fontFamily="@font/roboto_bold"
-                android:letterSpacing="0.04"
-                android:text="@string/subject"
-                android:textColor="@color/colorZambezi"
-                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/NewTicketTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/newTicketHeaderLayout">
 
-            <TextView
-                android:id="@+id/redStar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="42dp"
-                android:fontFamily="@font/roboto_medium"
-                android:text="@string/red_star"
-                android:textColor="@color/colorRoman"
-                android:textSize="10sp"
-                app:layout_constraintStart_toEndOf="@+id/subjectTitle"
-                app:layout_constraintTop_toBottomOf="@+id/NewTicketTitle" />
+                <TextView
+                    android:id="@+id/subjectTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="36dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:letterSpacing="0.04"
+                    android:text="@string/subject"
+                    android:textColor="@color/colorZambezi"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="97dp" />
+
+                <TextView
+                    android:id="@+id/redStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="31dp"
+                    android:layout_toEndOf="@+id/subjectTitle"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/red_star"
+                    android:textColor="@color/colorRoman"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@+id/subjectTitle"
+                    tools:layout_editor_absoluteY="93dp" />
+            </RelativeLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/subjectInputLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="20dp"
                 android:backgroundTint="@color/colorWhite"
                 app:boxCornerRadiusBottomEnd="@dimen/submit_button_radius"
                 app:boxCornerRadiusBottomStart="@dimen/submit_button_radius"
@@ -96,10 +120,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/subjectTitle"
+                app:layout_constraintTop_toBottomOf="@+id/subjectTitleLayout"
                 app:placeholderText="@string/subject_hint"
-                app:placeholderTextColor="@color/colorSuvaGray"
-                app:placeholderTextAppearance="@dimen/change_password_radius">
+                app:placeholderTextAppearance="@dimen/change_password_radius"
+                app:placeholderTextColor="@color/colorSuvaGray">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/subjectEditText"
@@ -110,8 +134,7 @@
                     android:gravity="center_vertical"
                     android:inputType="textMultiLine"
                     android:paddingTop="2dp"
-                    android:paddingBottom="2dp"
-                    />
+                    android:paddingBottom="2dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -147,9 +170,9 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="20dp"
                 android:backgroundTint="@color/colorWhite"
                 app:boxCornerRadiusBottomEnd="@dimen/submit_button_radius"
                 app:boxCornerRadiusBottomStart="@dimen/submit_button_radius"
@@ -281,6 +304,7 @@
 
                 </com.google.android.material.button.MaterialButton>
             </LinearLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View

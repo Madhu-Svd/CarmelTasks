@@ -15,6 +15,8 @@
     <string name="forgot_password_dialog_description">A link has been sent to your email account to reset your password.</string>
     <string name="otpErrorMessage">You have entered wrong OTP.</string>
     <string name="otp_success_description">New password has been sent to your registered mobile number.</string>
+    <string name="success">SUCCESS</string>
+    <string name="failed">FAILED</string>
     <string name="otp_success_title">FORGOT PASSWORD</string>
     <string name="verification_code">Verification Code</string>
     <string name="resend_otp">Resend OTP?</string>

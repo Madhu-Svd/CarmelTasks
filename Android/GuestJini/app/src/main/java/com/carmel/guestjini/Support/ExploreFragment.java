@@ -93,13 +93,6 @@ public class ExploreFragment extends Fragment implements ExploreTicketsAdapter.O
                 wmlp.x = 50;   //x position
                 wmlp.y = 320;   //y position
 
-//                ConstraintLayout constraintLayout=(ConstraintLayout) dialog.findViewById(R.id.selectedInterestListDailogBox);
-//                constraintLayout.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        dialog.dismiss();
-//                    }
-//                });
                 dialog.show();
             }
         });

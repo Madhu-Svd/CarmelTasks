@@ -4,7 +4,6 @@ package com.carmel.guestjini.Support;
 import android.app.Dialog;
 import android.os.Bundle;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -24,6 +23,7 @@ import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 
+import Adapter.ExploreTicketsAdapter;
 import Model.TicketsModel;
 
 
@@ -46,6 +46,7 @@ public class ExploreFragment extends Fragment implements ExploreTicketsAdapter.O
         recyclerView.setLayoutManager(linearLayoutManager);
         ExploreTicketsAdapter exploreTicketsAdapter=new ExploreTicketsAdapter(rootView.getContext(),ticketsModelsList,this);
         recyclerView.setAdapter(exploreTicketsAdapter);
+        recyclerView.setHasFixedSize(true);
 
         TicketsModel ticketsModel=new TicketsModel();
         ticketsModel.setTicketsName("Elevator is not working?");

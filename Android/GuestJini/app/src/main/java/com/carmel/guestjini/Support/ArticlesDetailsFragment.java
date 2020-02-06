@@ -1,9 +1,14 @@
 package com.carmel.guestjini.Support;
 
 
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,15 +18,19 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.carmel.guestjini.R;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 
+import Adapter.ReviewAdapter;
 import Model.ReviewModel;
 
 
 public class ArticlesDetailsFragment extends Fragment {
-    RecyclerView reviewRecyclerView;
-    ImageView backArrow;
+  private RecyclerView reviewRecyclerView;
+  private ImageView backArrow;
+  private MaterialButton submitButton;
+
     ArrayList<ReviewModel> reviewModelArrayList=new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,6 +39,18 @@ public class ArticlesDetailsFragment extends Fragment {
         View rootView= inflater.inflate(R.layout.fragment_articles_details, container, false);
         reviewRecyclerView=rootView.findViewById(R.id.reviewerRecyclerView);
         backArrow=rootView.findViewById(R.id.leftArrowMark);
+        submitButton=rootView.findViewById(R.id.writeReviewSubmitButton);
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(getContext());
+                dialog.setContentView(R.layout.feedback_loader_dialog);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+
 
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         reviewRecyclerView.setLayoutManager(linearLayoutManager);
@@ -52,7 +73,12 @@ public class ArticlesDetailsFragment extends Fragment {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                ExploreFragment exploreFragment=new ExploreFragment();
+                FragmentManager fragmentManager=getFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.SuppotPlaceHolder,exploreFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
         return rootView;

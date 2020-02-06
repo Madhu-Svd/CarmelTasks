@@ -1,4 +1,4 @@
-package com.carmel.guestjini.Support;
+package Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.carmel.guestjini.R;
@@ -21,7 +19,7 @@ import java.util.ArrayList;
 import Model.TicketsModel;
 
 
-class ExploreTicketsAdapter extends RecyclerView.Adapter<ExploreTicketsAdapter.ViewHolder> {
+public class ExploreTicketsAdapter extends RecyclerView.Adapter<ExploreTicketsAdapter.ViewHolder> {
     private Context context;
    private ArrayList<TicketsModel> ticketsModelArrayList;
     private OnItemClickListener onItemClickListener;

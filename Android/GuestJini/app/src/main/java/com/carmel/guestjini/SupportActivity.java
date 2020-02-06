@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import com.carmel.guestjini.Support.ArticlesDetailsFragment;
+import com.carmel.guestjini.R;
 import com.carmel.guestjini.Support.SupportLandingFragment;
 
 public class SupportActivity extends AppCompatActivity {

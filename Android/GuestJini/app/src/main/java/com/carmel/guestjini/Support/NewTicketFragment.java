@@ -43,6 +43,18 @@ public class NewTicketFragment extends Fragment {
         attachmentsCardView=rootView.findViewById(R.id.attchmentCardView);
         leftArrow=rootView.findViewById(R.id.leftArrowMark);
 
+        leftArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SupportLandingFragment supportLandingFragment=new SupportLandingFragment();
+                FragmentManager fragmentManager=getFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.SuppotPlaceHolder,supportLandingFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

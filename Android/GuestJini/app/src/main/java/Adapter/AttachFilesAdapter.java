@@ -1,7 +1,6 @@
-package com.carmel.guestjini.Support;
+package Adapter;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +16,7 @@ import java.util.ArrayList;
 
 import Model.AttachFilesModel;
 
-class AttachFilesAdapter extends RecyclerView.Adapter<AttachFilesAdapter.ViewHolder> {
+public class AttachFilesAdapter extends RecyclerView.Adapter<AttachFilesAdapter.ViewHolder> {
     ArrayList<AttachFilesModel> attachFilesModels;
     private Context context;
     public AttachFilesAdapter(Context context, ArrayList<AttachFilesModel> attachFilesModelArrayList) {

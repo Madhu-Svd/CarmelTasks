@@ -1,4 +1,4 @@
-package com.carmel.guestjini.Support;
+package Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 import Model.ReviewModel;
 
-class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder> {
+public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder> {
     private Context context;
     ArrayList<ReviewModel> reviewModels;
     public ReviewAdapter(Context context, ArrayList<ReviewModel> reviewModelArrayList) {

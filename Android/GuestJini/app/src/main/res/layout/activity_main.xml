@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -18,19 +19,22 @@
         <com.synnapps.carouselview.CarouselView
             android:id="@+id/carouselView"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            android:layout_height="415dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:fillColor="#FFFFFFFF"
+            app:radius="6dp"
+            app:slideInterval="3000"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="2dp">
 
         </com.synnapps.carouselview.CarouselView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="0dp"
-            android:layout_height="231dp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            android:layout_height="225dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,8 +42,8 @@
 
             <ImageView
                 android:id="@+id/applicationLogo"
-                android:layout_width="145dp"
-                android:layout_height="58dp"
+                android:layout_width="158dp"
+                android:layout_height="74dp"
                 android:layout_marginTop="32dp"
                 android:src="@drawable/guesture_logo"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -51,12 +55,11 @@
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginLeft="24dp"
                 android:layout_marginTop="8dp"
-                android:letterSpacing="0.02"
+                android:letterSpacing="0.03"
                 android:text="@string/guesture_description"
                 android:textColor="@color/colorZambezi1"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 app:fontFamily="@font/roboto"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -64,24 +67,25 @@
 
             </TextView>
 
-            <ImageView
-                android:layout_width="74dp"
-                android:layout_height="34dp"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/landingButton"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="70dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="17dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/landing_button"
-                android:src="@drawable/front_arrow_xxxhdpi"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:backgroundTint="@color/colorSummerSky"
+                app:cornerRadius="@dimen/login_button_corners_radius"
+                app:icon="@drawable/arrow_forward_xxhdpi"
+                app:iconGravity="textEnd"
+                app:iconSize="28dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView">
-
-            </ImageView>
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

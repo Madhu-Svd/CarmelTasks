@@ -1,4 +1,4 @@
-package com.carmel.guestjini.Support;
+package Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,9 +15,8 @@ import com.carmel.guestjini.R;
 import java.util.ArrayList;
 
 import Model.MyTicketsModel;
-import Model.TicketsModel;
 
-class MyTicktesAdapter extends RecyclerView.Adapter<MyTicktesAdapter.ViewHolder> {
+public class MyTicktesAdapter extends RecyclerView.Adapter<MyTicktesAdapter.ViewHolder> {
     private Context context;
     ArrayList<MyTicketsModel> myTicketsModelArrayList;
     public MyTicktesAdapter(Context context, ArrayList<MyTicketsModel> myTicketsModelsList) {

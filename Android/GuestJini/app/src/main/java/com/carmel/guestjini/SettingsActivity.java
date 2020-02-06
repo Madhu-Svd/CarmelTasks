@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import com.carmel.guestjini.Settings.ChangePasswordFragment;
+import com.carmel.guestjini.R;
 import com.carmel.guestjini.Settings.SettingsLandingFragment;
 
 public class SettingsActivity extends AppCompatActivity {

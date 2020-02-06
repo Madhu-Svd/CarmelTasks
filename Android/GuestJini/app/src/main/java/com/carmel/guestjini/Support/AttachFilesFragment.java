@@ -26,6 +26,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
+import Adapter.AttachFilesAdapter;
 import Model.AttachFilesModel;
 
 public class AttachFilesFragment extends Fragment {
@@ -94,7 +95,7 @@ public class AttachFilesFragment extends Fragment {
                 dialog.setContentView(R.layout.alert_dailogbox);
 
                 TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);
-                alertDailogTitle.setText("FAILED");
+                alertDailogTitle.setText(getText(R.string.failed));
                 alertDailogTitle.setTextColor(Color.parseColor("#E65959"));
 
                 TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);

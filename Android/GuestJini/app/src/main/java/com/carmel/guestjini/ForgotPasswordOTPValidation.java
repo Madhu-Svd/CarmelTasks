@@ -7,12 +7,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
@@ -24,6 +26,7 @@ public class ForgotPasswordOTPValidation extends AppCompatActivity {
     MaterialButton submitButton;
     TextInputEditText firstOtp,secondOtp,thirdOtp,fourthOtp;
     final Context context=this;
+    ImageView backArrow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +35,20 @@ public class ForgotPasswordOTPValidation extends AppCompatActivity {
         resendOtp=findViewById(R.id.resendOtp);
         otpErrorField=findViewById(R.id.otpErrorMessage);
         submitButton=findViewById(R.id.submitButton);
+        backArrow=findViewById(R.id.backArrow);
         firstOtp=findViewById(R.id.firstOtp);
         secondOtp=findViewById(R.id.secondOtp);
         thirdOtp=findViewById(R.id.thirdOtp);
         fourthOtp=findViewById(R.id.fourthOtp);
         getOneNow=findViewById(R.id.getOneNow);
+
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Login.class);
+                startActivity(intent);
+            }
+        });
         getOneNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,7 +56,6 @@ public class ForgotPasswordOTPValidation extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
         final StringBuilder sb=new StringBuilder();
 
@@ -147,6 +158,7 @@ public class ForgotPasswordOTPValidation extends AppCompatActivity {
                 }else {
                     final Dialog dialog = new Dialog(context);
                     dialog.setContentView(R.layout.alert_dailogbox);
+                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
 
                     TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);

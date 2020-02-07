@@ -14,7 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
 
 import com.carmel.guestjini.R;
 import com.google.android.material.button.MaterialButton;
@@ -33,6 +35,7 @@ public class MyTicketsRecyclerViewFragment extends Fragment {
     MaterialButton ticketsFilterIcon;
     FloatingActionButton addIcon;
     ImageView backArrow;
+    Spinner spinner;
     ArrayList<MyTicketsModel> myTicketsModelsList=new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,7 +47,12 @@ public class MyTicketsRecyclerViewFragment extends Fragment {
         ticketsFilterIcon=rootView.findViewById(R.id.filterIcon);
         addIcon=rootView.findViewById(R.id.addIcon);
         backArrow=rootView.findViewById(R.id.leftArrowMark);
-
+        spinner=rootView.findViewById(R.id.selectDateSpinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
+                R.array.planets_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        spinner.setAdapter(adapter);
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -70,7 +70,7 @@ public class NewTicketFragment extends Fragment {
                     alertDailogTitle.setTextColor(Color.parseColor("#E65959"));
 
                     TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
-                    alertDailogMessage.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies quis sagittis ut, posuere eu eros.");
+                    alertDailogMessage.setText(R.string.ticket_failed);
 
                     FloatingActionButton doneButton= (FloatingActionButton) dialog.findViewById(R.id.done_button);
                     doneButton.setBackgroundTintList(ColorStateList.valueOf(Color
@@ -89,7 +89,7 @@ public class NewTicketFragment extends Fragment {
                             alertDailogTitle.setText(getText(R.string.success));
 
                             TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
-                            alertDailogMessage.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies quis sagittis ut, posuere eu eros.");
+                            alertDailogMessage.setText(getText(R.string.ticket_success));
 
                             FloatingActionButton doneButton= (FloatingActionButton) dialog.findViewById(R.id.done_button);
                             doneButton.setBackgroundTintList(ColorStateList.valueOf(Color

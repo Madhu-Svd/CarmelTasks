@@ -4,6 +4,7 @@ package com.carmel.guestjini.Support;
 import android.app.Dialog;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.core.view.GravityCompat;
@@ -93,6 +94,7 @@ public class AttachFilesFragment extends Fragment {
             public void onClick(View v) {
                 final Dialog dialog=new Dialog(getContext());
                 dialog.setContentView(R.layout.alert_dailogbox);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
                 TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);
                 alertDailogTitle.setText(getText(R.string.failed));

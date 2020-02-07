@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -55,6 +56,7 @@ public class ForgotPassword extends AppCompatActivity {
                 else{
                     final Dialog dialog=new Dialog(context);
                     dialog.setContentView(R.layout.alert_dailogbox);
+                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
                     TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);
                     alertDailogTitle.setText(getText(R.string.otp_success_title));

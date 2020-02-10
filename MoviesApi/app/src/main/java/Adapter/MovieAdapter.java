@@ -40,13 +40,18 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             String movieTitle=listMovies.getMoviesTitle();
             String originalLanguage=listMovies.getOriginalLanguage();
             String overView=listMovies.getOverView();
+            String releasedate=listMovies.getReleaseDate();
 
-        Picasso.with(context).load(imageUrl).fit().centerInside().into(holder.moviesPoster);
+        Picasso.with(context).load("https://image.tmdb.org/t/p/w185"
+        + imageUrl)
+                .placeholder(R.drawable.movies_poster)
+                .into(holder.moviesPoster);
+
         holder.popularity.setText("popularity:"+popularity);
         holder.movieTitle.setText(movieTitle);
         holder.originalLaguage.setText(originalLanguage);
         holder.overView.setText(overView);
-//        holder.releaseDate.setText(re);
+        holder.releaseDate.setText(releasedate);
     }
 
     @Override

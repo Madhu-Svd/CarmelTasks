@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 
 import com.android.volley.Request;
@@ -38,17 +39,22 @@ public class MainActivity extends AppCompatActivity {
         parseJson();
     }
     private void parseJson(){
+        final ProgressDialog progressDialog=new ProgressDialog(this);
+        progressDialog.setMessage("Loading data");
+        progressDialog.show();
+
+
         StringRequest stringRequest=new StringRequest(Request.Method.GET, URL_DATA, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-
+                progressDialog.dismiss();
                 try {
                  JSONObject jsonObject = new JSONObject(response);
                     JSONArray jsonArray=jsonObject.getJSONArray("results");
                     for(int i=0;i<jsonArray.length();i++){
                         JSONObject object=jsonArray.getJSONObject(i);
                         ListMovies movies=new ListMovies(object.getString("poster_path"),object.getInt("popularity"),
-                                object.getString("original_title"),object.getString("original_language"),object.getString("overview"));
+                                object.getString("original_title"),object.getString("original_language"),object.getString("overview"),object.getString("release_date"));
                         listMovies.add(movies);
                     }
                     adapter=new MovieAdapter(getApplicationContext(),listMovies);

@@ -25,8 +25,7 @@ import Adapter.MoviesAdapter;
 import Model.MoviesList;
 
 public class MainActivity extends AppCompatActivity {
-//    private static final String URL_DATA="https://api.myjson.com/bins/ttdxu";
-        private static final String URL_DATA="https://api.themoviedb.org/3/movie/popular?api_key=65b0f0c1dca6b0957d34d1fceaf3107a&language=en-US&page=1";
+    private static final String URL_DATA="https://api.myjson.com/bins/ttdxu";
 
     private RecyclerView moviesRecyclerView;
     private RecyclerView.Adapter adapter;
@@ -41,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         moviesRecyclerView.setHasFixedSize(true);
         moviesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         moviesLists=new ArrayList<>();
-
         loadRecyclerViewMoviesData();
 
 
@@ -58,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
                     progressDialog.dismiss();
                     try {
                         JSONObject jsonObject=new JSONObject(response);
-                        JSONArray jsonArray=jsonObject.getJSONArray("results");
+                        JSONArray jsonArray=jsonObject.getJSONArray("movies");
 
                         for(int i=0;i<jsonArray.length();i++){
                             JSONObject object=jsonArray.getJSONObject(i);
                             MoviesList moviesList=new MoviesList(
-                                    object.getString("original_title"),
-                                    object.getString("title"),
-                                    object.getString("overview")
+                                    object.getString("movie_name"),
+                                    object.getString("theater_name"),
+                                    object.getString("address")
                             );
                             moviesLists.add(moviesList);
                         }

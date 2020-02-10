@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="balck">#BF000000</color>
     <color name="colorWhisper">#E5E5E5</color>
     <color name="colorWhisper1">#EEEEEE</color>
     <color name="colorWhisper2">#E4E4E4</color>
@@ -38,6 +39,8 @@
     <color name="colorAzure">#EAF2F4</color>
     <color name="colorTrinidad">#D05224</color>
     <color name="colorReviewEditBox">#EDEAEA</color>
+    <color name="colorGray44">#707070</color>
+
 
 
 </resources>

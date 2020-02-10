@@ -8,14 +8,16 @@ public class ListMovies {
     private String moviesTitle;
     private String originalLanguage;
     private String overView;
+    private String releaseDate;
 
 
-    public ListMovies(String imageUrl, int popularity, String moviesTitle, String originalLanguage, String overView) {
+    public ListMovies(String imageUrl, int popularity, String moviesTitle, String originalLanguage, String overView, String releaseDate) {
         this.imageUrl = imageUrl;
         this.popularity = popularity;
         this.moviesTitle = moviesTitle;
         this.originalLanguage = originalLanguage;
         this.overView = overView;
+        this.releaseDate = releaseDate;
     }
 
     public String getImageUrl() {
@@ -56,5 +58,13 @@ public class ListMovies {
 
     public void setOverView(String overView) {
         this.overView = overView;
+    }
+
+    public String getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
     }
 }

@@ -168,4 +168,10 @@
         <item>Date</item>
         <item>Date Range</item>
     </string-array>
+    <string name="sameer_description">Vestibulum nec feugiat justo. Ut dapibus et orci at gravida. Phasellus lacinia posuere nisi vel interdum. Morbi nec nisl a urna lacinia dapibus in in dui. Maecenas sit amet laoreet nulla.</string>
+    <string name="sameer_rawat">Sameer Rawat</string>
+    <string name="sameer_date_and_time">28th Jul 2018 08:28 PM</string>
+    <string name="assigned">ASSIGNED</string>
+    <string name="assignedDescription">Your ticket has been assigned to an executive.</string>
+
 </resources>

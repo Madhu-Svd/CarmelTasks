@@ -20,11 +20,10 @@
             android:id="@+id/leftArrowMark"
             android:layout_width="12dp"
             android:layout_height="12dp"
-            android:contentDescription="@string/back_arrow_icon"
-            android:src="@drawable/back_arrow_icon_xxhdpi"
-            android:layout_marginStart="36dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="36dp"
-            />
+            android:contentDescription="@string/back_arrow_icon"
+            android:src="@drawable/back_arrow_icon_xxhdpi" />
     </LinearLayout>
 
     <ScrollView
@@ -61,7 +60,7 @@
                         android:id="@+id/profilePicture"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_marginStart="34dp"
+                        android:layout_marginStart="32dp"
                         android:layout_marginTop="36dp"
                         android:src="@drawable/profile_image"
                         app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +102,7 @@
                     android:id="@+id/ticketName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="34dp"
+                    android:layout_marginStart="32dp"
                     android:layout_marginTop="40dp"
                     android:fontFamily="@font/roboto_medium"
                     android:letterSpacing="0.05"

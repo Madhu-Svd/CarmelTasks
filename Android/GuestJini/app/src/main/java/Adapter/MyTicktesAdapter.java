@@ -31,7 +31,6 @@ public class MyTicktesAdapter extends RecyclerView.Adapter<MyTicktesAdapter.View
         ViewHolder viewHolder=new ViewHolder(v);
         return viewHolder;
     }
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         MyTicketsModel myTicketsModel=this.myTicketsModelArrayList.get(position);

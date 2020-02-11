@@ -173,5 +173,10 @@
     <string name="sameer_date_and_time">28th Jul 2018 08:28 PM</string>
     <string name="assigned">ASSIGNED</string>
     <string name="assignedDescription">Your ticket has been assigned to an executive.</string>
+    <string name="closed_description1_feedback">Your ticket has been closed. Please rate your experience below and would be glad to receive your feedback.</string>
+    <string name="rate_your_experience">Rate Your Experience</string>
+    <string name="your_feedback">Your Feedback</string>
+    <string name="reopen_description">If you are not satisfied with the resolution, you may re-open the ticket by entering the reason in the box given below.</string>
+    <string name="reopen">Reopen</string>
 
 </resources>

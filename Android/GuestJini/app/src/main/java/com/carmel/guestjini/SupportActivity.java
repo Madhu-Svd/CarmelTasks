@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.carmel.guestjini.R;
+import com.carmel.guestjini.Support.MyTicketDetailsFragment;
 import com.carmel.guestjini.Support.SupportLandingFragment;
 
 public class SupportActivity extends AppCompatActivity {
@@ -16,6 +17,7 @@ public class SupportActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_support);
 //        ArticlesDetailsFragment articlesDetailsFragment=new ArticlesDetailsFragment();
+//        MyTicketDetailsFragment myTicketDetailsFragment=new MyTicketDetailsFragment();
         SupportLandingFragment supportLandingFragment=new SupportLandingFragment();
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();

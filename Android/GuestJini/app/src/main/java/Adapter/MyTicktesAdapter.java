@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.carmel.guestjini.R;
@@ -41,6 +42,7 @@ public class MyTicktesAdapter extends RecyclerView.Adapter<MyTicktesAdapter.View
         holder.ticketsValue.setText(String.valueOf(myTicketsModel.getTicketsValue()));
         holder.clock.setText(String.valueOf(myTicketsModel.getClock()));
         holder.ticketsTime.setText(String.valueOf(myTicketsModel.getTicketsTime()));
+
     }
 
     @Override
@@ -51,6 +53,7 @@ public class MyTicktesAdapter extends RecyclerView.Adapter<MyTicktesAdapter.View
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView notificationIcon;
         TextView ticketsStatus,ticketsDate,ticketsName,ticketsNo,ticketsValue,clock,ticketsTime;
+        CardView cardView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ticketsStatus=itemView.findViewById(R.id.ticketsStatus);
@@ -60,6 +63,7 @@ public class MyTicktesAdapter extends RecyclerView.Adapter<MyTicktesAdapter.View
             ticketsValue=itemView.findViewById(R.id.ticketsValue);
             clock=itemView.findViewById(R.id.clock);
             ticketsTime=itemView.findViewById(R.id.clockTime);
+            cardView=itemView.findViewById(R.id.OpenCardView);
         }
     }
 }

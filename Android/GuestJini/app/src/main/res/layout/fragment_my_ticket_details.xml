@@ -246,7 +246,7 @@
                         android:letterSpacing="0.06"
                         android:text="@string/attachmentTitle"
                         android:textColor="@color/colorZambezi"
-                        android:textSize="11sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/attachmentFiles"
@@ -260,7 +260,7 @@
                         android:letterSpacing="0.06"
                         android:text="@string/attachmentFiles"
                         android:textColor="@color/colorSuvaGray"
-                        android:textSize="11sp" />
+                        android:textSize="12sp" />
                 </RelativeLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -277,13 +277,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
-                        android:layout_marginTop="50dp"
+                        android:layout_marginTop="46dp"
                         android:layout_marginEnd="315dp"
                         android:fontFamily="@font/roboto_medium"
                         android:letterSpacing="0.06"
                         android:text="@string/activityTitle"
                         android:textColor="@color/colorZambezi1"
-                        android:textSize="12sp"
+                        android:textSize="13sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -296,7 +296,7 @@
                         android:layout_marginTop="36dp"
                         android:layout_marginEnd="32dp"
                         android:backgroundTint="@color/colorAzure"
-                        android:visibility="gone"
+                        android:visibility="visible"
                         app:cardCornerRadius="6dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -358,7 +358,7 @@
                                 android:background="@drawable/review_edit_box"
                                 android:inputType="textMultiLine"
                                 android:paddingStart="6dp"
-                                android:paddingTop="8dp"
+                                android:paddingTop="14dp"
                                 android:paddingEnd="6dp"
                                 android:paddingBottom="62dp"
                                 android:textColor="@color/colorSuvaGray"
@@ -371,11 +371,11 @@
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/writeReviewSubmitButton"
-                                android:layout_width="80dp"
-                                android:layout_height="38dp"
+                                android:layout_width="76dp"
+                                android:layout_height="36dp"
                                 android:layout_marginStart="26dp"
                                 android:layout_marginTop="8dp"
-                                android:layout_marginBottom="8dp"
+                                android:layout_marginBottom="10dp"
                                 android:backgroundTint="@color/colorSummerSky"
                                 android:fontFamily="@font/roboto_bold"
                                 android:letterSpacing="0.06"
@@ -395,6 +395,7 @@
                         android:id="@+id/activitySubLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/materialCardView">
@@ -403,7 +404,7 @@
                             android:id="@+id/sameerMainLayout"
                             android:layout_width="411dp"
                             android:layout_height="wrap_content"
-                            android:visibility="gone"
+                            android:visibility="visible"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
@@ -429,7 +430,7 @@
                                     android:layout_alignParentTop="true"
                                     android:layout_alignParentEnd="true"
                                     android:layout_marginStart="34dp"
-                                    android:layout_marginTop="0dp"
+                                    android:layout_marginTop="6dp"
                                     android:layout_marginEnd="32dp"
                                     android:foreground="@drawable/foreground">
 
@@ -440,7 +441,7 @@
                                         android:layout_alignParentStart="true"
                                         android:layout_alignParentTop="true"
                                         android:layout_marginStart="0dp"
-                                        android:layout_marginTop="6dp"
+                                        android:layout_marginTop="9dp"
                                         android:fontFamily="@font/roboto_bold"
                                         android:letterSpacing="0.05"
                                         android:text="@string/sameer_rawat"
@@ -464,10 +465,13 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_below="@id/dateAndTime"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginStart="0dp"
                                         android:layout_marginTop="13dp"
                                         android:fontFamily="@font/roboto"
                                         android:letterSpacing="0.05"
-                                        android:text="@string/sameer_description"
+                                        android:lineSpacingExtra="3dp"
+                                        android:text="@string/Sameer_description"
                                         android:textColor="@color/colorDimGray"
                                         android:textSize="12sp"></TextView>
 
@@ -481,7 +485,7 @@
                                     android:layout_alignParentStart="true"
                                     android:layout_alignParentEnd="true"
                                     android:layout_marginStart="34dp"
-                                    android:layout_marginTop="30dp"
+                                    android:layout_marginTop="27dp"
                                     android:layout_marginEnd="32dp"
                                     android:layout_marginBottom="0dp"
                                     android:background="@color/colorWhisper4"
@@ -493,11 +497,11 @@
 
                             <ImageView
                                 android:id="@+id/chatIcon"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:layout_marginStart="22dp"
+                                android:layout_marginStart="26dp"
                                 android:layout_marginTop="0dp"
                                 android:src="@drawable/circle_chat_icon"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -539,7 +543,6 @@
                                         android:layout_alignParentStart="true"
                                         android:layout_alignParentTop="true"
                                         android:layout_marginStart="0dp"
-                                        android:layout_marginTop="6dp"
                                         android:fontFamily="@font/roboto_bold"
                                         android:letterSpacing="0.05"
                                         android:text="@string/sameer_rawat"
@@ -566,6 +569,7 @@
                                         android:layout_marginTop="13dp"
                                         android:fontFamily="@font/roboto"
                                         android:letterSpacing="0.05"
+                                        android:lineSpacingExtra="3dp"
                                         android:text="@string/sameer_description"
                                         android:textColor="@color/colorDimGray"
                                         android:textSize="12sp"></TextView>
@@ -580,7 +584,7 @@
                                     android:layout_alignParentStart="true"
                                     android:layout_alignParentEnd="true"
                                     android:layout_marginStart="34dp"
-                                    android:layout_marginTop="30dp"
+                                    android:layout_marginTop="27dp"
                                     android:layout_marginEnd="32dp"
                                     android:layout_marginBottom="0dp"
                                     android:background="@color/colorWhisper4"
@@ -592,11 +596,11 @@
 
                             <ImageView
                                 android:id="@+id/imageView3"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
+                                android:layout_width="34dp"
+                                android:layout_height="34dp"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:layout_marginStart="22dp"
+                                android:layout_marginStart="26dp"
                                 android:layout_marginTop="0dp"
                                 android:src="@drawable/chat_icon"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -638,7 +642,6 @@
                                         android:layout_alignParentStart="true"
                                         android:layout_alignParentTop="true"
                                         android:layout_marginStart="0dp"
-                                        android:layout_marginTop="6dp"
                                         android:fontFamily="@font/roboto_bold"
                                         android:letterSpacing="0.05"
                                         android:text="@string/sameer_rawat"
@@ -665,7 +668,8 @@
                                         android:layout_marginTop="13dp"
                                         android:fontFamily="@font/roboto"
                                         android:letterSpacing="0.05"
-                                        android:text="@string/sameer_description"
+                                        android:lineSpacingExtra="3dp"
+                                        android:text="@string/Sameer_description"
                                         android:textColor="@color/colorDimGray"
                                         android:textSize="12sp"></TextView>
 
@@ -679,7 +683,7 @@
                                     android:layout_alignParentStart="true"
                                     android:layout_alignParentEnd="true"
                                     android:layout_marginStart="34dp"
-                                    android:layout_marginTop="30dp"
+                                    android:layout_marginTop="27dp"
                                     android:layout_marginEnd="32dp"
                                     android:layout_marginBottom="0dp"
                                     android:background="@color/colorWhisper4"
@@ -691,11 +695,11 @@
 
                             <ImageView
                                 android:id="@+id/imageView4"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
+                                android:layout_width="34dp"
+                                android:layout_height="34dp"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:layout_marginStart="22dp"
+                                android:layout_marginStart="26dp"
                                 android:layout_marginTop="0dp"
                                 android:src="@drawable/chat_icon_dimgrey"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -736,7 +740,6 @@
                                         android:layout_alignParentStart="true"
                                         android:layout_alignParentTop="true"
                                         android:layout_marginStart="0dp"
-                                        android:layout_marginTop="6dp"
                                         android:fontFamily="@font/roboto_bold"
                                         android:letterSpacing="0.05"
                                         android:text="Suresh Kumar Sharma"
@@ -784,11 +787,11 @@
 
                             <ImageView
                                 android:id="@+id/circleIcon"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
+                                android:layout_width="34dp"
+                                android:layout_height="34dp"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:layout_marginStart="22dp"
+                                android:layout_marginStart="26dp"
                                 android:layout_marginTop="0dp"
                                 android:src="@drawable/circle"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -800,8 +803,9 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/constraintLayout13"
                         android:layout_width="0dp"
-                        android:layout_height="800dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
+                        android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/activityTitle">
@@ -840,7 +844,7 @@
                                         android:layout_alignParentStart="true"
                                         android:layout_alignParentTop="true"
                                         android:layout_marginStart="0dp"
-                                        android:layout_marginTop="6dp"
+                                        android:layout_marginTop="0dp"
                                         android:fontFamily="@font/roboto_bold"
                                         android:letterSpacing="0.05"
                                         android:text="@string/sameer_rawat"
@@ -865,7 +869,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_below="@id/dateTime"
-                                        android:layout_marginTop="13dp"
+                                        android:layout_marginTop="26dp"
                                         android:fontFamily="@font/roboto_medium"
                                         android:letterSpacing="0.05"
                                         android:text="@string/closeed"
@@ -877,6 +881,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_below="@id/closed"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginStart="0dp"
                                         android:layout_marginTop="6dp"
                                         android:fontFamily="@font/roboto"
                                         android:letterSpacing="0.016"
@@ -894,7 +900,7 @@
                                     android:layout_alignParentStart="true"
                                     android:layout_alignParentEnd="true"
                                     android:layout_marginStart="32dp"
-                                    android:layout_marginTop="32dp"
+                                    android:layout_marginTop="40dp"
                                     android:layout_marginEnd="32dp"
                                     android:background="@drawable/rate_your_experience"
                                     app:layout_constraintEnd_toEndOf="parent"
@@ -1048,7 +1054,7 @@
                                             android:layout_marginEnd="26dp"
                                             android:fontFamily="@font/roboto"
                                             android:letterSpacing="0.04"
-                                            android:lineSpacingExtra="3dp"
+                                            android:lineSpacingExtra="4dp"
                                             android:text="@string/reopen_description"
                                             android:textColor="@color/colorDimGray"
                                             android:textSize="12sp"
@@ -1061,7 +1067,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_marginStart="26dp"
-                                            android:layout_marginTop="8dp"
+                                            android:layout_marginTop="16dp"
                                             android:layout_marginEnd="26dp"
                                             android:background="@drawable/review_edit_box"
                                             android:inputType="textMultiLine"
@@ -1082,8 +1088,8 @@
                                             android:layout_width="80dp"
                                             android:layout_height="38dp"
                                             android:layout_marginStart="26dp"
-                                            android:layout_marginTop="8dp"
-                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="12dp"
+                                            android:layout_marginBottom="16dp"
                                             android:backgroundTint="@color/colorRoman"
                                             android:fontFamily="@font/roboto_bold"
                                             android:letterSpacing="0.06"
@@ -1098,18 +1104,17 @@
                                         </com.google.android.material.button.MaterialButton>
 
 
-
                                     </androidx.constraintlayout.widget.ConstraintLayout>
                                 </com.google.android.material.card.MaterialCardView>
                             </RelativeLayout>
 
                             <ImageView
                                 android:id="@+id/triangleIcon"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
+                                android:layout_width="34dp"
+                                android:layout_height="34dp"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:layout_marginStart="22dp"
+                                android:layout_marginStart="26dp"
                                 android:layout_marginTop="0dp"
                                 android:src="@drawable/triangle_icon"
                                 app:layout_constraintBottom_toBottomOf="parent"

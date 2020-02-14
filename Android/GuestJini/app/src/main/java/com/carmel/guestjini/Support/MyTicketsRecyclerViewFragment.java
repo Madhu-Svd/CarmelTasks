@@ -25,6 +25,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 
 import Adapter.MyTicktesAdapter;
+import Adapter.TicketAdapter;
 import Model.MyTicketsModel;
 
 
@@ -47,12 +48,12 @@ public class MyTicketsRecyclerViewFragment extends Fragment {
         ticketsFilterIcon=rootView.findViewById(R.id.filterIcon);
         addIcon=rootView.findViewById(R.id.addIcon);
         backArrow=rootView.findViewById(R.id.leftArrowMark);
-        spinner=rootView.findViewById(R.id.selectDateSpinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
-                R.array.planets_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-// Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
+//        spinner=rootView.findViewById(R.id.selectDateSpinner);
+//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
+//                R.array.planets_array, android.R.layout.simple_spinner_item);
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//// Apply the adapter to the spinner
+//        spinner.setAdapter(adapter);
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,38 +87,93 @@ public class MyTicketsRecyclerViewFragment extends Fragment {
 
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         ticketsRecyclerView.setLayoutManager(linearLayoutManager);
-        MyTicktesAdapter myTicktesAdapter=new MyTicktesAdapter(rootView.getContext(),myTicketsModelsList);
-        ticketsRecyclerView.setAdapter(myTicktesAdapter);
+        ticketsRecyclerView.setHasFixedSize(true);
+        TicketAdapter ticketAdapter=new TicketAdapter(myTicketsModelsList);
+        ticketsRecyclerView.setAdapter(ticketAdapter);
 
-        MyTicketsModel myTicketsModel=new MyTicketsModel();
-        myTicketsModel.setTicketsStatus("OPEN");
-        myTicketsModel.setTicketsDateAndTime("09:15 AM");
-        myTicketsModel.setTicketsName("Elevator is not working most of the time.");
-        myTicketsModel.setTicketsNo("Ticket #");
-        myTicketsModel.setTicketsValue("TT/AV/004/2016");
-        myTicketsModel.setClock("Clock");
-        myTicketsModel.setTicketsTime("05:48");
-        myTicketsModelsList.add(myTicketsModel);
+        myTicketsModelsList.add(new MyTicketsModel(
+                "OPEN",
+                "09:15 AM",
+                "Elevator is not working most of the time.",
+                "Ticket #",
+                "TT/AV/004/2016",
+                "Clock",
+                "05:48",
+                "delete",
+                MyTicketsModel.ONE_TYPE
 
-        myTicketsModel=new MyTicketsModel();
-        myTicketsModel.setTicketsStatus("CLOSED");
-        myTicketsModel.setTicketsDateAndTime("25 July 2019 11:47 AM");
-        myTicketsModel.setTicketsName("Lorem ipsum dolor sit amet, consectetur.");
-        myTicketsModel.setTicketsNo("Ticket #");
-        myTicketsModel.setTicketsValue("TT/AV/003/2016");
-        myTicketsModel.setClock("Clock");
-        myTicketsModel.setTicketsTime("2 Days 05:48");
-        myTicketsModelsList.add(myTicketsModel);
+                ));
 
-        myTicketsModel=new MyTicketsModel();
-        myTicketsModel.setTicketsStatus("OPEN");
-        myTicketsModel.setTicketsDateAndTime("24 July 2019 11:47 AM");
-        myTicketsModel.setTicketsName("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        myTicketsModel.setTicketsNo("Ticket #");
-        myTicketsModel.setTicketsValue("TT/AV/002/2016");
-        myTicketsModel.setClock("Clock");
-        myTicketsModel.setTicketsTime("3 Days 05:48");
-        myTicketsModelsList.add(myTicketsModel);
+        myTicketsModelsList.add(new MyTicketsModel(
+                "DRAFT",
+                "25 July 2019 11:47 AM",
+                "Lorem ipsum dolor sit amet, consectetur.",
+                "Ticket #",
+                "TT/AV/004/2016",
+                "Clock",
+                "05:48",
+                "delete",
+                MyTicketsModel.TWO_TYPE
+
+        ));
+        myTicketsModelsList.add(new MyTicketsModel(
+                "CLOSED",
+                "25 July 2019 11:47 AM",
+                "Lorem ipsum dolor sit amet, consectetur.",
+                "Ticket #",
+                "TT/AV/003/2016",
+                "Clock",
+                "2 Days 05:48",
+                "delete",
+                MyTicketsModel.ONE_TYPE
+
+        ));
+        myTicketsModelsList.add(new MyTicketsModel(
+                "OPEN",
+                "24 July 2019 11:47 AM",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Ticket #",
+                "TT/AV/002/2016",
+                "Clock",
+                "3 Days 05:48",
+                "delete",
+                MyTicketsModel.ONE_TYPE
+
+        ));
+
+
+//        MyTicktesAdapter myTicktesAdapter=new MyTicktesAdapter(rootView.getContext(),myTicketsModelsList);
+//        ticketsRecyclerView.setAdapter(myTicktesAdapter);
+
+//        MyTicketsModel myTicketsModel=new MyTicketsModel();
+//        myTicketsModel.setTicketsStatus("OPEN");
+//        myTicketsModel.setTicketsDateAndTime("09:15 AM");
+//        myTicketsModel.setTicketsName("Elevator is not working most of the time.");
+//        myTicketsModel.setTicketsNo("Ticket #");
+//        myTicketsModel.setTicketsValue("TT/AV/004/2016");
+//        myTicketsModel.setClock("Clock");
+//        myTicketsModel.setTicketsTime("05:48");
+//        myTicketsModelsList.add(myTicketsModel);
+
+//        myTicketsModel=new MyTicketsModel();
+//        myTicketsModel.setTicketsStatus("CLOSED");
+//        myTicketsModel.setTicketsDateAndTime("25 July 2019 11:47 AM");
+//        myTicketsModel.setTicketsName("Lorem ipsum dolor sit amet, consectetur.");
+//        myTicketsModel.setTicketsNo("Ticket #");
+//        myTicketsModel.setTicketsValue("TT/AV/003/2016");
+//        myTicketsModel.setClock("Clock");
+//        myTicketsModel.setTicketsTime("2 Days 05:48");
+//        myTicketsModelsList.add(myTicketsModel);
+//
+//        myTicketsModel=new MyTicketsModel();
+//        myTicketsModel.setTicketsStatus("OPEN");
+//        myTicketsModel.setTicketsDateAndTime("24 July 2019 11:47 AM");
+//        myTicketsModel.setTicketsName("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+//        myTicketsModel.setTicketsNo("Ticket #");
+//        myTicketsModel.setTicketsValue("TT/AV/002/2016");
+//        myTicketsModel.setClock("Clock");
+//        myTicketsModel.setTicketsTime("3 Days 05:48");
+//        myTicketsModelsList.add(myTicketsModel);
 
         return rootView;
 

@@ -9,6 +9,58 @@ public class MyTicketsModel {
     private String clock;
     private String ticketsTime;
     private int notificationIcon;
+    private String button;
+
+    public MyTicketsModel(String ticketsStatus, String ticketsDateAndTime, String ticketsName, String ticketsNo, String ticketsValue, String clock, String ticketsTime, String delete, int viewType) {
+        this.ticketsStatus = ticketsStatus;
+        this.ticketsDateAndTime = ticketsDateAndTime;
+        this.ticketsName = ticketsName;
+        this.ticketsNo = ticketsNo;
+        this.ticketsValue = ticketsValue;
+        this.clock = clock;
+        this.ticketsTime = ticketsTime;
+        this.delete = delete;
+        this.viewType = viewType;
+    }
+
+//    public MyTicketsModel(String ticketsStatus, String ticketsDateAndTime, String ticketsName, String delete) {
+//        this.ticketsStatus = ticketsStatus;
+//        this.ticketsDateAndTime = ticketsDateAndTime;
+//        this.ticketsName = ticketsName;
+//        this.delete = delete;
+//    }
+
+
+    public String getButton() {
+        return button;
+    }
+
+    public void setButton(String button) {
+        this.button = button;
+    }
+
+    public String getDelete() {
+        return delete;
+    }
+
+    public void setDelete(String delete) {
+        this.delete = delete;
+    }
+
+    private String delete;
+    public static final int ONE_TYPE = 1;
+    public static final int TWO_TYPE = 2;
+
+
+    public int getViewType() {
+        return viewType;
+    }
+
+    public void setViewType(int viewType) {
+        this.viewType = viewType;
+    }
+
+    private int viewType;
 
     public String getTicketsStatus() {
         return ticketsStatus;

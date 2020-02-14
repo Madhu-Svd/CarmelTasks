@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content"
+    android:paddingBottom="26dp">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/draftCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         app:cardBackgroundColor="#EEEEEE"
@@ -26,7 +31,7 @@
             android:paddingBottom="16dp">
 
             <TextView
-                android:id="@+id/draftTitle"
+                android:id="@+id/ticketsStatus"
                 android:layout_width="54dp"
                 android:layout_height="22dp"
                 android:layout_marginStart="24dp"
@@ -45,7 +50,7 @@
             </TextView>
 
             <TextView
-                android:id="@+id/draftTime"
+                android:id="@+id/tickestsDateAndTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -57,10 +62,10 @@
                 android:textSize="10dp"
                 app:fontFamily="@font/roboto_medium"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/draftTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/ticketsStatus" />
 
             <TextView
-                android:id="@+id/draftDescription"
+                android:id="@+id/ticketsName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -72,7 +77,7 @@
                 android:textSize="12dp"
                 app:fontFamily="@font/roboto"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/draftTime" />
+                app:layout_constraintTop_toBottomOf="@+id/tickestsDateAndTime" />
 
             <View
                 android:id="@+id/draftDivider"
@@ -82,7 +87,7 @@
                 android:background="#CCCCCC"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/draftDescription" />
+                app:layout_constraintTop_toBottomOf="@+id/ticketsName" />
 
             <ImageView
                 android:id="@+id/deleteIcon"

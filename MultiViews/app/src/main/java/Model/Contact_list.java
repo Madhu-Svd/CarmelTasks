@@ -1,21 +1,16 @@
 package Model;
 
 public class Contact_list {
-    public static final int TEXT_TYPE = 0;
-    public static final int IMAGE_TYPE = 0;
+    public static final int ONE_TYPE = 1;
+    public static final int TWO_TYPE = 2;
+
 
     private int viewType;
     private String name;
-    private String number;
 
-    public Contact_list(int viewType, String name, String number) {
-        this.viewType = viewType;
+    public Contact_list(String name,int viewType) {
         this.name = name;
-        this.number = number;
-    }
-
-    public int getViewType() {
-        return viewType;
+        this.viewType = viewType;
     }
 
     public String getName() {
@@ -26,15 +21,12 @@ public class Contact_list {
         this.name = name;
     }
 
-    public String getNumber() {
-        return number;
+    public int getViewType() {
+        return viewType;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setViewType(int viewType) {
+        this.viewType = viewType;
     }
-
-
-
 
 }

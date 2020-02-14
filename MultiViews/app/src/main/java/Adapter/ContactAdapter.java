@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,57 +16,79 @@ import java.util.ArrayList;
 
 import Model.Contact_list;
 
-public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHolder> {
-    private ArrayList<Contact_list> contactsList;
-    private Context mContext;
-    private ContactAdapter(Context context, ArrayList<Contact_list> contactList){
-        this.contactsList=contactList;
-        this.mContext=context;
+import static Model.Contact_list.ONE_TYPE;
+import static Model.Contact_list.TWO_TYPE;
+
+
+
+
+public class ContactAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+private ArrayList<Contact_list> contact_lists;
+    public ContactAdapter(ArrayList<Contact_list> contact_lists) {
+        this.contact_lists=contact_lists;
 
     }
-    @NonNull
-    @Override
-    public ContactAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        switch (viewType){
-            case Contact_list.TEXT_TYPE:
-                View view=layoutInflater.inflate(R.layout.list_item1,parent,false);
-                return new ViewHolder1(view);
-
-            case Contact_list.TEXT_TYPE:
-                View view=layoutInflater.inflate(R.layout.list_item2,parent,false);
-                return new ViewHolder2(view);
-
+        @Override
+    public int getItemViewType(int position) {
+        Contact_list contact_list=contact_lists.get(position);
+        if(contact_list!=null){
+           return contact_list.getViewType();
         }
-        View view=layoutInflater.inflate(R.layout.list_item,parent,false);
-        return new ViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull ContactAdapter.ViewHolder holder, int position) {
-
-    }
-
-    @Override
-    public int getItemCount() {
         return 0;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public ViewHolder(@NonNull View itemView) {
+
+    @NonNull
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view;
+        switch (viewType){
+            case ONE_TYPE:
+                view=LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item,parent,false);
+                return new OneViewHolder(view);
+
+            case TWO_TYPE:
+                view=LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item1,parent,false);
+                return new TwoViewHolder(view);
+        }
+        return null;
+    }
+
+
+    @Override
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+        Contact_list contact_list=contact_lists.get(position);
+        switch (contact_list.getViewType()){
+            case ONE_TYPE:
+                ((OneViewHolder)holder).name.setText(contact_list.getName());
+                break;
+            case TWO_TYPE:
+                ((TwoViewHolder)holder).name.setText(contact_list.getName());
+            break;
+        }
+
+    }
+
+
+    @Override
+    public int getItemCount() {
+        return contact_lists.size();
+    }
+
+    class OneViewHolder extends RecyclerView.ViewHolder {
+        private TextView name;
+        public OneViewHolder(@NonNull View itemView) {
             super(itemView);
+            name=itemView.findViewById(R.id.txt_name);
         }
     }
-
-    private class ViewHolder2 extends ViewHolder {
-        public ViewHolder2(View view) {
-            super(view);
-        }
-    }
-
-    private class ViewHolder1 extends ViewHolder {
-        public ViewHolder1(View view) {
-            super(view);
+    class TwoViewHolder extends RecyclerView.ViewHolder {
+        private TextView name;
+        public TwoViewHolder(@NonNull View itemView) {
+            super(itemView);
+            name=itemView.findViewById(R.id.txt_name);
         }
     }
 }
+
+

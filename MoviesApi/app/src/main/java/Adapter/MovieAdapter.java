@@ -1,6 +1,7 @@
 package Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,13 +9,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.carmel.moviesapi.MovieDetails;
 import com.carmel.moviesapi.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import java.util.Date;
+
 
 import Model.ListMovies;
 
@@ -29,29 +32,38 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     @Override
     public MovieAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.movies_list,parent,false);
-        return new ViewHolder(view);
+        final ViewHolder viewHolder=new ViewHolder(view);
+        viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context, MovieDetails.class);
+                intent.putExtra("movie_name",moviesArrayList.get(viewHolder.getAdapterPosition()).getMoviesTitle());
+                intent.putExtra("originalLaguage",moviesArrayList.get(viewHolder.getAdapterPosition()).getOriginalLanguage());
+                intent.putExtra("popularity",moviesArrayList.get(viewHolder.getAdapterPosition()).getPopularity());
+                intent.putExtra("overView",moviesArrayList.get(viewHolder.getAdapterPosition()).getOverView());
+                intent.putExtra("releaseDate",moviesArrayList.get(viewHolder.getAdapterPosition()).getReleaseDate());
+                intent.putExtra("moviesPoster",moviesArrayList.get(viewHolder.getAdapterPosition()).getImageUrl());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+
+            }
+        });
+        return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
             ListMovies listMovies=moviesArrayList.get(position);
             String imageUrl=listMovies.getImageUrl();
-            int popularity=listMovies.getPopularity();
             String movieTitle=listMovies.getMoviesTitle();
-            String originalLanguage=listMovies.getOriginalLanguage();
-            String overView=listMovies.getOverView();
-            String releasedate=listMovies.getReleaseDate();
 
-        Picasso.with(context).load("https://image.tmdb.org/t/p/w185"
-        + imageUrl)
+            holder.movieTitle.setText(movieTitle);
+
+            Picasso.with(context).load("https://image.tmdb.org/t/p/w185"
+            + imageUrl)
                 .placeholder(R.drawable.movies_poster)
                 .into(holder.moviesPoster);
 
-        holder.popularity.setText("popularity:"+popularity);
-        holder.movieTitle.setText(movieTitle);
-        holder.originalLaguage.setText(originalLanguage);
-        holder.overView.setText(overView);
-        holder.releaseDate.setText(releasedate);
     }
 
     @Override
@@ -61,16 +73,14 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView moviesPoster;
-        private TextView movieTitle,originalLaguage,popularity,overView,releaseDate;
+        CardView cardView;
+        private TextView movieTitle;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            popularity=itemView.findViewById(R.id.popularity);
             moviesPoster=itemView.findViewById(R.id.moviesImage);
             movieTitle=itemView.findViewById(R.id.movieTitle);
-            originalLaguage=itemView.findViewById(R.id.originalLanguage);
-            overView=itemView.findViewById(R.id.OverView);
-            releaseDate=itemView.findViewById(R.id.releaseDate);
             moviesPoster.setImageResource(R.drawable.movies_poster);
+            cardView=itemView.findViewById(R.id.movieCardView);
         }
     }
 }

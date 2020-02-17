@@ -24,12 +24,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
-import Adapter.MyTicktesAdapter;
 import Adapter.TicketAdapter;
 import Model.MyTicketsModel;
 
 
-public class MyTicketsRecyclerViewFragment extends Fragment {
+public class MyTicketsRecyclerViewFragment extends Fragment implements TicketAdapter.OnItemClickListener {
 
     RecyclerView ticketsRecyclerView;
     DrawerLayout drawerLayout;
@@ -48,12 +47,16 @@ public class MyTicketsRecyclerViewFragment extends Fragment {
         ticketsFilterIcon=rootView.findViewById(R.id.filterIcon);
         addIcon=rootView.findViewById(R.id.addIcon);
         backArrow=rootView.findViewById(R.id.leftArrowMark);
-//        spinner=rootView.findViewById(R.id.selectDateSpinner);
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
-//                R.array.planets_array, android.R.layout.simple_spinner_item);
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//// Apply the adapter to the spinner
-//        spinner.setAdapter(adapter);
+
+
+        spinner=rootView.findViewById(R.id.selectDateSpinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
+                R.array.planets_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        spinner.setAdapter(adapter);
+
+
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,7 +91,8 @@ public class MyTicketsRecyclerViewFragment extends Fragment {
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         ticketsRecyclerView.setLayoutManager(linearLayoutManager);
         ticketsRecyclerView.setHasFixedSize(true);
-        TicketAdapter ticketAdapter=new TicketAdapter(myTicketsModelsList);
+        TicketAdapter ticketAdapter=new TicketAdapter(myTicketsModelsList,this);
+        ticketAdapter.setHasStableIds(true);
         ticketsRecyclerView.setAdapter(ticketAdapter);
 
         myTicketsModelsList.add(new MyTicketsModel(
@@ -141,42 +145,18 @@ public class MyTicketsRecyclerViewFragment extends Fragment {
 
         ));
 
-
-//        MyTicktesAdapter myTicktesAdapter=new MyTicktesAdapter(rootView.getContext(),myTicketsModelsList);
-//        ticketsRecyclerView.setAdapter(myTicktesAdapter);
-
-//        MyTicketsModel myTicketsModel=new MyTicketsModel();
-//        myTicketsModel.setTicketsStatus("OPEN");
-//        myTicketsModel.setTicketsDateAndTime("09:15 AM");
-//        myTicketsModel.setTicketsName("Elevator is not working most of the time.");
-//        myTicketsModel.setTicketsNo("Ticket #");
-//        myTicketsModel.setTicketsValue("TT/AV/004/2016");
-//        myTicketsModel.setClock("Clock");
-//        myTicketsModel.setTicketsTime("05:48");
-//        myTicketsModelsList.add(myTicketsModel);
-
-//        myTicketsModel=new MyTicketsModel();
-//        myTicketsModel.setTicketsStatus("CLOSED");
-//        myTicketsModel.setTicketsDateAndTime("25 July 2019 11:47 AM");
-//        myTicketsModel.setTicketsName("Lorem ipsum dolor sit amet, consectetur.");
-//        myTicketsModel.setTicketsNo("Ticket #");
-//        myTicketsModel.setTicketsValue("TT/AV/003/2016");
-//        myTicketsModel.setClock("Clock");
-//        myTicketsModel.setTicketsTime("2 Days 05:48");
-//        myTicketsModelsList.add(myTicketsModel);
-//
-//        myTicketsModel=new MyTicketsModel();
-//        myTicketsModel.setTicketsStatus("OPEN");
-//        myTicketsModel.setTicketsDateAndTime("24 July 2019 11:47 AM");
-//        myTicketsModel.setTicketsName("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-//        myTicketsModel.setTicketsNo("Ticket #");
-//        myTicketsModel.setTicketsValue("TT/AV/002/2016");
-//        myTicketsModel.setClock("Clock");
-//        myTicketsModel.setTicketsTime("3 Days 05:48");
-//        myTicketsModelsList.add(myTicketsModel);
-
         return rootView;
 
     }
 
+    @Override
+    public void onItemClick(int position) {
+        myTicketsModelsList.get(position);
+        MyTicketDetailsFragment myTicketDetailsFragment=new MyTicketDetailsFragment();
+        FragmentManager fragmentManager=getFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.SuppotPlaceHolder,myTicketDetailsFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
 }

@@ -22,11 +22,13 @@ import static Model.MyTicketsModel.ONE_TYPE;
 import static Model.MyTicketsModel.TWO_TYPE;
 
 public class TicketAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-private ArrayList<MyTicketsModel> myTicketsModels;
-private Context context;
+    private ArrayList<MyTicketsModel> myTicketsModels;
+    private Context context;
+    private TicketAdapter.OnItemClickListener onItemClickListener;
 
-    public TicketAdapter(ArrayList<MyTicketsModel> myTicketsModelsList) {
+    public TicketAdapter(ArrayList<MyTicketsModel> myTicketsModelsList,OnItemClickListener onItemClickListener) {
         this.myTicketsModels = myTicketsModelsList;
+        this.onItemClickListener=onItemClickListener;
     }
     @Override
     public int getItemViewType(int position) {
@@ -43,11 +45,11 @@ private Context context;
         switch (viewType){
             case ONE_TYPE:
                 view= LayoutInflater.from(parent.getContext()).inflate(R.layout.my_tickets_list,parent,false);
-                return new OneViewHolder(view);
+                return new OneViewHolder(view,onItemClickListener);
 
             case TWO_TYPE:
                 view=LayoutInflater.from(parent.getContext()).inflate(R.layout.draft_list,parent,false);
-                return new TwoViewHolder(view);
+                return new TwoViewHolder(view,onItemClickListener);
         }
         return null;
     }
@@ -80,10 +82,11 @@ private Context context;
         return myTicketsModels.size();
     }
 
-    class OneViewHolder extends RecyclerView.ViewHolder {
+    class OneViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView ticketsStatus,ticketsDate,ticketsName,ticketsNo,ticketsValue,clock,ticketsTime;
         CardView cardView;
-        public OneViewHolder(@NonNull View itemView) {
+        OnItemClickListener onItemClickListener;
+        public OneViewHolder(@NonNull View itemView, OnItemClickListener onItemClickListener) {
             super(itemView);
             ticketsStatus=itemView.findViewById(R.id.ticketsStatus);
             ticketsDate=itemView.findViewById(R.id.tickestsDateAndTime);
@@ -92,14 +95,21 @@ private Context context;
             ticketsValue=itemView.findViewById(R.id.ticketsValue);
             clock=itemView.findViewById(R.id.clock);
             ticketsTime=itemView.findViewById(R.id.clockTime);
+            this.onItemClickListener=onItemClickListener;
+            itemView.setOnClickListener(this);
 //            cardView=itemView.findViewById(R.id.OpenCardView);
         }
+
+        @Override
+        public void onClick(View v) {
+            onItemClickListener.onItemClick(getAdapterPosition());
+        }
     }
-    class TwoViewHolder extends RecyclerView.ViewHolder {
+    class TwoViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView ticketsStatus,ticketsDate,ticketsName,ticketDelete;
-//        CardView cardView;
         ImageView deleteIcon;
-        public TwoViewHolder(@NonNull View itemView) {
+        OnItemClickListener onItemClickListener;
+        public TwoViewHolder(@NonNull View itemView,OnItemClickListener onItemClickListener) {
             super(itemView);
             ticketsStatus=itemView.findViewById(R.id.ticketsStatus);
             ticketsDate=itemView.findViewById(R.id.tickestsDateAndTime);
@@ -107,6 +117,17 @@ private Context context;
 //            cardView=itemView.findViewById(R.id.OpenCardView);
             ticketDelete=itemView.findViewById(R.id.deleteText);
             deleteIcon=itemView.findViewById(R.id.deleteIcon);
+            this.onItemClickListener=onItemClickListener;
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View v) {
+            onItemClickListener.onItemClick(getAdapterPosition());
+
+        }
+    }
+    public interface OnItemClickListener {
+        void onItemClick(int position);
     }
 }

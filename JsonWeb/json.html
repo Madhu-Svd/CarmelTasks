@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Random AJAX Welcome</title>
+
+	
+</head>
+
+<body onload="getWelcome()">
+	<div>
+		<div id="date"></div>
+		<div id="cost"></div>
+		<div id="items_no"></div>
+		<div>items_description:<span id="items_description" style="width: 30%"></span></div>
+
+		<div id="imageDiv">
+			<img src="" alt="image" id="image"></div>
+
+	</div>
+	<div style="clear: both"></div>
+	
+	<script>
+			function getWelcome() {
+	
+				var ajaxRequest = new XMLHttpRequest();
+				ajaxRequest.onreadystatechange = function () {
+	
+					if (ajaxRequest.readyState == 4 && ajaxRequest.status == 200) {
+						//the request is completed, now check its status
+					
+							//turn JSON into object
+							var jsonObj = JSON.parse(ajaxRequest.responseText);
+	
+							//get random object from array
+						
+							var randomMessagesArray = jsonObj.results;
+							var randomIndex = Math.floor(Math.random() * randomMessagesArray.length);
+							var messageObj = randomMessagesArray[randomIndex];
+
+							// var messageObj = jsonObj.results;
+							// for(var i=0;i< messageObj.length;i++)
+							// {
+	
+							//use that object to set content and color
+							document.getElementById("items_description").innerHTML = messageObj.overview;
+							document.getElementById("items_no").innerHTML = messageObj.original_language;
+							document.getElementById("date").innerHTML = messageObj.original_title;
+							document.getElementById("cost").innerHTML = messageObj.popularity;
+							document.getElementById("image").src = "https://image.tmdb.org/t/p/w185" + messageObj.poster_path + "?api_key=65b0f0c1dca6b0957d34d1fceaf3107a&language=en-US&page=1";
+							console.log("https://image.tmdb.org/t/p/w500" + messageObj.poster_path + "?api_key=65b0f0c1dca6b0957d34d1fceaf3107a&language=en-US&page=1");
+	
+							// }
+	
+					
+					}
+	
+				}
+				ajaxRequest.open('GET', 'https://api.themoviedb.org/3/movie/popular?api_key=65b0f0c1dca6b0957d34d1fceaf3107a&language=en-US&page=1', true);
+				ajaxRequest.send();
+			}
+	
+		</script>
+</body>
+
+</html>

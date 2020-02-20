@@ -45,6 +45,7 @@ public class ExploreTicketsAdapter extends RecyclerView.Adapter<ExploreTicketsAd
         holder.ticketsDate.setText(String.valueOf(ticketsModel.getTicketsDate()));
         holder.ticketsAuthorName.setText(String.valueOf(ticketsModel.getTicketsAuthorName()));
         holder.ticketsDescription.setText(String.valueOf(ticketsModel.getTicketsDescription()));
+        holder.navigationIcon.setImageResource(ticketsModel.getNavigationIcon());
     }
 
 

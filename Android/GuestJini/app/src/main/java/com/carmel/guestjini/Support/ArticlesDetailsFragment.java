@@ -34,9 +34,10 @@ public class ArticlesDetailsFragment extends Fragment {
   private RecyclerView reviewRecyclerView;
   private ImageView backArrow;
   private MaterialButton submitButton;
-
+  private TextView ticketAuthorName,ticketName,ticketDate;
 
     ArrayList<ReviewModel> reviewModelArrayList=new ArrayList<>();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -45,6 +46,22 @@ public class ArticlesDetailsFragment extends Fragment {
         reviewRecyclerView=rootView.findViewById(R.id.reviewerRecyclerView);
         backArrow=rootView.findViewById(R.id.leftArrowMark);
         submitButton=rootView.findViewById(R.id.writeReviewSubmitButton);
+        ticketAuthorName=rootView.findViewById(R.id.ticketAuthorName);
+        ticketName=rootView.findViewById(R.id.ticketName);
+        ticketDate=rootView.findViewById(R.id.ticketDate);
+
+        final Bundle bundle = this.getArguments();
+        if (bundle != null) {
+         String   ticket_author_name  = bundle.getString("ticket_author_name");
+         String   ticket_name  = bundle.getString("ticket_name");
+         String   ticket_date  = bundle.getString("ticket_date");
+//            ticket_value  = bundle.getString("ticket_value");
+
+            ticketAuthorName.setText(ticket_author_name);
+            ticketName.setText(ticket_name);
+            ticketDate.setText(ticket_date);
+//            ticketValue.setText(ticket_value);
+        }
 
 
         submitButton.setOnClickListener(new View.OnClickListener() {

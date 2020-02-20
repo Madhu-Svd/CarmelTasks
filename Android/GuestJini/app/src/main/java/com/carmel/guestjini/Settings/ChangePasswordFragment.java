@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -66,6 +67,7 @@ MaterialButton changePasswordButton;
                 }else {
                     final Dialog dialog=new Dialog(getContext());
                     dialog.setContentView(R.layout.alert_dailogbox);
+                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
                     TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);
                     alertDailogTitle.setText("FAILED");
@@ -85,6 +87,7 @@ MaterialButton changePasswordButton;
 
                             final Dialog dialog=new Dialog(getContext());
                             dialog.setContentView(R.layout.alert_dailogbox);
+                            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
                             TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);
                             alertDailogTitle.setText("SUCCESS");

@@ -153,10 +153,17 @@ public class MyTicketsRecyclerViewFragment extends Fragment implements TicketAda
     public void onItemClick(int position) {
         myTicketsModelsList.get(position);
         MyTicketDetailsFragment myTicketDetailsFragment=new MyTicketDetailsFragment();
-        FragmentManager fragmentManager=getFragmentManager();
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.SuppotPlaceHolder,myTicketDetailsFragment);
-        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.replace(R.id.SuppotPlaceHolder, myTicketDetailsFragment);
         fragmentTransaction.commit();
+
+        Bundle bundle = new Bundle();
+        bundle.putString("ticket_name", myTicketsModelsList.get(position).getTicketsName());
+        bundle.putString("ticket_status",myTicketsModelsList.get(position).getTicketsStatus());
+        bundle.putString("ticket_dateAndTime",myTicketsModelsList.get(position).getTicketsDateAndTime());
+        bundle.putString("ticket_value",myTicketsModelsList.get(position).getTicketsValue());
+        myTicketDetailsFragment.setArguments(bundle);
+
     }
 }

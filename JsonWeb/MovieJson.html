@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random AJAX Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body onload="getWelcome()">
+    <div id="parent"></div>
+    <script>
+        function getWelcome() {
+
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = function () {
+
+                if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                    //the request is completed, now check its status
+
+                    //turn JSON into object
+                    var jsonObj = JSON.parse(httpRequest.responseText);
+                    var JsonResponse = jsonObj.results;
+
+                    for (let i = 0; JsonResponse.length; i++) {
+                        var imagePath = "https://image.tmdb.org/t/p/w185" + JsonResponse[i].poster_path;
+
+                        var parentDiv = document.getElementById("parent");
+                        var mainContainer = document.createElement("div");
+                        parentDiv.appendChild(mainContainer);
+
+                        var card = document.createElement("div");
+                        mainContainer.appendChild(card);
+                        card.style = "background-color:#32bDD2;margin:12px";
+
+                        var imageDiv = document.createElement("div");
+                        card.appendChild(imageDiv);
+                        imageDiv.style = "float:left;width:30%;background-color:#F7941D;padding:4%";
+
+
+                        var textDetailsDiv = document.createElement("div");
+                        card.appendChild(textDetailsDiv);
+                        textDetailsDiv.style = "float:right;width:70%;background-color:#000040;padding:5%";
+
+                        var clear = document.createElement("div");
+                        card.appendChild(clear);
+                        clear.style = "clear:both";
+
+                        var image = document.createElement("img");
+                        imageDiv.appendChild(image);
+                        image.src = imagePath;
+                        image.style = "width:100%;border-radius:2vw";
+
+                        var movieTitle = document.createElement("span");
+                        textDetailsDiv.appendChild(movieTitle);
+                        movieTitle.innerHTML = JsonResponse[i].original_title;
+                        movieTitle.style = "font-size:12px;font-family:bold;color:#FFFFFF";
+
+                        var movieOverview = document.createElement("p");
+                        textDetailsDiv.appendChild(movieOverview);
+                        movieOverview.innerHTML = JsonResponse[i].overview;
+                        movieOverview.style = "font-size:12px;font-family:bold;color:#FFFFFF";
+
+                    }
+
+                }
+
+            }
+            httpRequest.open('GET', 'https://api.themoviedb.org/3/movie/popular?api_key=65b0f0c1dca6b0957d34d1fceaf3107a&language=en-US&page=1', true);
+            httpRequest.send();
+        }
+
+    </script>
+</body>
+
+</html>

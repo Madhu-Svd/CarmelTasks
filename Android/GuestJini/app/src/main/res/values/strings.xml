@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">GuestJini</string>
-<!--    Login Screens-->
+    <!--    Login Screens-->
     <string name="guesture_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies.</string>
     <string name="page_title">Login</string>
     <string name="email_or_mobilenumber">Email or Mobile Number</string>
@@ -32,7 +32,7 @@
     <string name="app_access_request_dialog_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim felis et magna mattis finibus.</string>
     <string name="app_access_request_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim felis et magna</string>
 
-<!--    Settings Screens-->
+    <!--    Settings Screens-->
     <string name="my_profile">My Profile</string>
     <string name="change_password">Change Password</string>
     <string name="privacy_policy">Privacy Policy</string>
@@ -64,7 +64,7 @@
     <string name="alert_message">Alert Dailog Message</string>
     <string name="alert_title">Alert Dailog Title</string>
 
-<!--    Support Screens-->
+    <!--    Support Screens-->
     <string name="help_title">We’re here to help you</string>
     <string name="find_help">FIND HELP</string>
     <string name="search">Search</string>
@@ -179,5 +179,8 @@
     <string name="your_feedback">Your Feedback</string>
     <string name="reopen_description">If you are not satisfied with the resolution, you may re-open the ticket by entering the reason in the box given below.</string>
     <string name="reopen">Reopen</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

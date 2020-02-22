@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -17,8 +18,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import com.carmel.guestjini.R;
 import com.google.android.material.button.MaterialButton;
@@ -35,6 +38,7 @@ public class ArticlesDetailsFragment extends Fragment {
   private ImageView backArrow;
   private MaterialButton submitButton;
   private TextView ticketAuthorName,ticketName,ticketDate;
+  MediaController mediaController;
 
     ArrayList<ReviewModel> reviewModelArrayList=new ArrayList<>();
 
@@ -49,6 +53,15 @@ public class ArticlesDetailsFragment extends Fragment {
         ticketAuthorName=rootView.findViewById(R.id.ticketAuthorName);
         ticketName=rootView.findViewById(R.id.ticketName);
         ticketDate=rootView.findViewById(R.id.ticketDate);
+        mediaController=new MediaController(getContext());
+
+        VideoView videoView=rootView.findViewById(R.id.videoView);
+        String videoPath="android.resource://com.carmel.guestjini/" +R.raw.video;
+        Uri uri=Uri.parse(videoPath);
+        videoView.setVideoURI(uri);
+        videoView.setMediaController(mediaController);
+        mediaController.setAnchorView(videoView);
+        videoView.start();
 
         final Bundle bundle = this.getArguments();
         if (bundle != null) {

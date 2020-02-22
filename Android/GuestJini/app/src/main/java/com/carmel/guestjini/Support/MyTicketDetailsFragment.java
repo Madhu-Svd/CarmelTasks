@@ -1,23 +1,31 @@
 package com.carmel.guestjini.Support;
 
 
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.carmel.guestjini.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MyTicketDetailsFragment extends Fragment {
 
     private ImageView backArrow;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -31,6 +39,22 @@ public class MyTicketDetailsFragment extends Fragment {
         ticketDateAndTime=rootView.findViewById(R.id.tickestsDateAndTime);
         ticketValue=rootView.findViewById(R.id.ticketsValue);
 
+        FloatingActionButton attachFilesIcon=(FloatingActionButton)rootView.findViewById(R.id.attachFilesIcon);
+        final ConstraintLayout attachFiles=rootView.findViewById(R.id.attachfilesLayout);
+
+        attachFilesIcon.setOnClickListener(new View.OnClickListener() {
+            private boolean flag = true;
+            @Override
+            public void onClick(View v) {
+                if(flag) {
+                    flag=false;
+                    attachFiles.setVisibility(View.VISIBLE);
+                }else {
+                    flag=true;
+                    attachFiles.setVisibility(View.GONE);
+                }
+            }
+        });
         final Bundle bundle = this.getArguments();
         if (bundle != null) {
             ticket_status  = bundle.getString("ticket_status");

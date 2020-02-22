@@ -8,7 +8,7 @@
     android:layout_gravity="center">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="320dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:background="@drawable/dailogbox"
         app:layout_constraintBottom_toBottomOf="parent"

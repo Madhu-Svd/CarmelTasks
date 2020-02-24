@@ -140,56 +140,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/invalidCredentialsErrorField" />
 
-            <!--            <EditText-->
-            <!--                android:id="@+id/registeredEmailEditbox"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:background="@drawable/edit_textbox"-->
-            <!--                android:elevation="2dp"-->
-            <!--                android:hint="@string/email"-->
-            <!--                android:inputType="textEmailAddress"-->
-            <!--                android:letterSpacing="0.05"-->
-            <!--                android:paddingLeft="16dp"-->
-            <!--                android:paddingTop="16dp"-->
-            <!--                android:paddingBottom="16dp"-->
-            <!--                android:shadowColor="@color/colorBlackRussian"-->
-            <!--                android:textColorHint="@color/colorSuvaGray"-->
-            <!--                android:textSize="14dp"-->
-            <!--                app:fontFamily="@font/roboto"-->
-            <!--                tools:layout_editor_absoluteX="64dp"-->
-            <!--                tools:layout_editor_absoluteY="232dp" />-->
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/registeredEmailLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <EditText
+                android:id="@+id/registeredEmailEditbox"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginStart="54dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="54dp"
-                app:boxCornerRadiusBottomEnd="@dimen/editfileds_corners_radius"
-                app:boxCornerRadiusBottomStart="@dimen/editfileds_corners_radius"
-                app:boxCornerRadiusTopEnd="@dimen/editfileds_corners_radius"
-                app:boxCornerRadiusTopStart="@dimen/editfileds_corners_radius"
-                app:boxStrokeColor="@color/colorWhiteSmoke"
-                app:boxStrokeErrorColor="@color/colorRoman"
-                app:errorEnabled="true"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="65dp"
+                android:background="@drawable/edit_textbox"
+                android:elevation="2dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:letterSpacing="0.05"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:shadowColor="@color/colorBlackRussian"
+                android:textColorHint="@color/colorSuvaGray"
+                android:textSize="14dp"
+                app:fontFamily="@font/roboto"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registeredEmail"
-                app:placeholderText="@string/email"
-                app:placeholderTextColor="@color/colorSuvaGray">
+                app:layout_constraintTop_toBottomOf="@+id/registeredEmail" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/registeredEmailEditBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_margin="@dimen/margin"
-                    android:backgroundTint="@color/colorWhite"
-                    android:inputType="textEmailAddress" />
-            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/regesteredEmailErrorField"
@@ -204,7 +177,7 @@
                 android:textSize="12sp"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registeredEmailLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/registeredEmailEditbox" />
 
             <TextView
                 android:id="@+id/registeredMobileNumber"
@@ -220,62 +193,36 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/regesteredEmailErrorField" />
 
-            <!--            <EditText-->
-            <!--                android:id="@+id/registeredMobileNumberEditbox"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:background="@drawable/edit_textbox"-->
-            <!--                android:elevation="2dp"-->
-            <!--                android:hint="@string/mobile_number"-->
-            <!--                android:inputType="phone"-->
-            <!--                android:letterSpacing="0.05"-->
-            <!--                android:paddingLeft="16dp"-->
-            <!--                android:paddingTop="16dp"-->
-            <!--                android:paddingBottom="16dp"-->
-            <!--                android:shadowColor="@color/colorBlackRussian"-->
-            <!--                android:textColorHint="@color/colorSuvaGray"-->
-            <!--                android:textSize="14dp"-->
-            <!--                app:fontFamily="@font/roboto"-->
-            <!--                tools:layout_editor_absoluteX="64dp"-->
-            <!--                tools:layout_editor_absoluteY="344dp" />-->
 
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/registeredMobileNumberLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <EditText
+                android:id="@+id/registeredMobileNumberEditbox"
                 android:layout_width="match_parent"
-                android:layout_height="58dp"
-                android:layout_marginStart="54dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="54dp"
-                app:boxCornerRadiusBottomEnd="@dimen/editfileds_corners_radius"
-                app:boxCornerRadiusBottomStart="@dimen/editfileds_corners_radius"
-                app:boxCornerRadiusTopEnd="@dimen/editfileds_corners_radius"
-                app:boxCornerRadiusTopStart="@dimen/editfileds_corners_radius"
-                app:boxStrokeColor="@color/colorWhiteSmoke"
-                app:boxStrokeErrorColor="@color/colorRoman"
-                app:errorEnabled="true"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="65dp"
+                android:background="@drawable/edit_textbox"
+                android:elevation="2dp"
+                android:hint="@string/mobile_number"
+                android:inputType="phone"
+                android:letterSpacing="0.05"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:shadowColor="@color/colorBlackRussian"
+                android:textColorHint="@color/colorSuvaGray"
+                android:textSize="14dp"
+                app:fontFamily="@font/roboto"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registeredMobileNumber"
-                app:placeholderText="@string/mobile_number"
-                app:placeholderTextColor="@color/colorSuvaGray">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/registeredMobileNumberEditBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_margin="@dimen/margin"
-                    android:backgroundTint="@color/colorWhite"
-                    android:inputType="phone" />
-            </com.google.android.material.textfield.TextInputLayout>
+                app:layout_constraintTop_toBottomOf="@+id/registeredMobileNumber" />
 
             <TextView
                 android:id="@+id/mobileNumberErrorField"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="80dp"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="5dp"
                 android:fontFamily="@font/roboto"
                 android:letterSpacing="0.05"
                 android:text="@string/error_field"
@@ -283,7 +230,7 @@
                 android:textSize="12sp"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registeredMobileNumberLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/registeredMobileNumberEditbox" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/appAccessDoneButton"

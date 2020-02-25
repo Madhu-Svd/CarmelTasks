@@ -8,13 +8,13 @@
             <padding android:top="0.5dp" android:right="0.5dp"
                 android:bottom="0.5dp" android:left="0.5dp" />
             <corners android:radius="12dp" />
-            <solid android:color="#50ECECEC" />
+            <solid android:color="#50FFFFFF" />
         </shape>
     </item>
     <item>
         <shape>
-            <padding android:top="0.5dp" android:right="0.9dp"
-                android:bottom="0.9dp" android:left="0.9dp" />
+            <padding android:top="0.5dp" android:right="0.5dp"
+                android:bottom="0.5dp" android:left="0.5dp" />
             <corners android:radius="12dp" />
             <solid android:color="#0000002E" />
         </shape>

@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,7 +27,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class NewTicketFragment extends Fragment {
     MaterialButton submitButton;
-    TextInputEditText subjectEditText;
+    EditText subjectEditText;
     TextView subjectErrorField;
     MaterialCardView attachmentsCardView;
     ImageView leftArrow;
@@ -60,6 +61,7 @@ public class NewTicketFragment extends Fragment {
             public void onClick(View v) {
                 if(subjectEditText.getText().toString().trim().length()==0){
                     subjectErrorField.setVisibility(View.VISIBLE);
+                    subjectEditText.setBackgroundResource(R.drawable.subject_red_editbox);
                 }else{
                     final Dialog dialog=new Dialog(getContext());
                     dialog.setContentView(R.layout.alert_dailogbox);

@@ -426,7 +426,7 @@
                             android:layout_height="match_parent">
 
                             <TextView
-                                android:id="@+id/writeAReview"
+                                android:id="@+id/youText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="26dp"
@@ -484,7 +484,7 @@
                                 android:textSize="12sp"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/writeAReview">
+                                app:layout_constraintTop_toBottomOf="@id/youText">
 
                             </EditText>
 
@@ -540,6 +540,47 @@
                                 android:background="@drawable/dashed_line"
                                 android:paddingBottom="35dp">
 
+                                <LinearLayout
+                                    android:id="@+id/foreground"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="159dp"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginStart="34dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginEnd="32dp"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:background="@drawable/foreground">
+                                    <View
+                                        android:id="@+id/red"
+                                        android:layout_width="30dp"
+                                        android:layout_height="3dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_marginStart="34dp"
+                                        android:layout_marginBottom="0dp"
+                                        android:layout_gravity="left"
+                                        android:layout_marginTop="8dp"
+                                        android:background="@color/colorRed"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.0"
+                                        app:layout_constraintStart_toStartOf="parent"></View>
+                                    <TextView
+                                        android:id="@+id/visibleToast"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="34dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_gravity="left"
+                                        android:letterSpacing="0.2"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:text="Unread Message, click here to read."
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="10sp" />
+                                </LinearLayout>
+
 
                                 <RelativeLayout
                                     android:id="@+id/sameerLayout"
@@ -551,7 +592,7 @@
                                     android:layout_marginStart="34dp"
                                     android:layout_marginTop="6dp"
                                     android:layout_marginEnd="32dp"
-                                    android:foreground="@drawable/foreground">
+                                    >
 
                                     <TextView
                                         android:id="@+id/name"

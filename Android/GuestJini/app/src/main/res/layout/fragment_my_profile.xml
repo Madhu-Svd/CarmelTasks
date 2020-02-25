@@ -77,6 +77,7 @@
                       android:layout_height="wrap_content"
                       android:orientation="vertical"
                       android:paddingBottom="40dp">
+
                       <androidx.constraintlayout.widget.ConstraintLayout
                           android:layout_width="match_parent"
                           android:layout_height="match_parent">
@@ -112,21 +113,17 @@
 
                           </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-                          <com.google.android.material.switchmaterial.SwitchMaterial
+                          <ImageView
+                              android:id="@+id/profileToggleButton"
                               android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
-                              android:layout_marginStart="8dp"
-                              android:layout_marginTop="13dp"
-                              android:layout_marginEnd="8dp"
-                              android:checked="true"
+                              android:layout_marginTop="8dp"
+                              android:layout_marginEnd="180dp"
+                              android:layout_marginRight="180dp"
+                              android:src="@drawable/toggle_icon_off_xxhdpi"
+                              android:visibility="visible"
                               app:layout_constraintEnd_toEndOf="parent"
-                              app:layout_constraintStart_toStartOf="parent"
-                              app:layout_constraintTop_toBottomOf="@+id/profileIcon"
-                              app:switchMinWidth="60dp"
-                              app:thumbTint="@color/colorSwitchMaterial"
-                              app:trackTint="@color/colorSwitchMaterialTrackTint">
-
-                          </com.google.android.material.switchmaterial.SwitchMaterial>
+                              app:layout_constraintTop_toBottomOf="@+id/profileIcon" />
                       </androidx.constraintlayout.widget.ConstraintLayout>
                       <androidx.constraintlayout.widget.ConstraintLayout
                           android:layout_width="match_parent"
@@ -174,6 +171,7 @@
                               app:layout_constraintTop_toBottomOf="@+id/johnDeoText" />
 
                       </androidx.constraintlayout.widget.ConstraintLayout>
+
                       <androidx.constraintlayout.widget.ConstraintLayout
                           android:layout_width="match_parent"
                           android:layout_height="match_parent">
@@ -207,18 +205,16 @@
                               app:layout_constraintStart_toStartOf="parent"
                               app:layout_constraintTop_toBottomOf="@+id/genderText" />
 
-                          <com.google.android.material.switchmaterial.SwitchMaterial
+                          <ImageView
                               android:id="@+id/genderToggleIcon"
                               android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:layout_marginEnd="32dp"
+                              android:layout_marginRight="32dp"
                               android:layout_marginBottom="12dp"
-                              android:checked="true"
+                              android:src="@drawable/toggle_icon_off_xxhdpi"
                               app:layout_constraintBottom_toTopOf="@+id/genderDivider"
-                              app:layout_constraintEnd_toEndOf="parent"
-                              app:switchMinWidth="60dp"
-                              app:thumbTint="@color/colorSwitchMaterial"
-                              app:trackTint="@color/colorSwitchMaterialTrackTint" />
+                              app:layout_constraintEnd_toEndOf="parent" />
 
                           <View
                               android:id="@+id/genderDivider"
@@ -234,6 +230,7 @@
                               app:layout_constraintStart_toStartOf="parent"
                               app:layout_constraintTop_toBottomOf="@+id/maleText" />
                       </androidx.constraintlayout.widget.ConstraintLayout>
+
                       <androidx.constraintlayout.widget.ConstraintLayout
                           android:layout_width="match_parent"
                           android:layout_height="match_parent">
@@ -281,20 +278,19 @@
                               app:layout_constraintStart_toStartOf="parent"
                               app:layout_constraintTop_toBottomOf="@+id/AgeEditText" />
 
-                          <com.google.android.material.switchmaterial.SwitchMaterial
+                          <ImageView
                               android:id="@+id/ageToggleIcon"
                               android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:layout_marginEnd="32dp"
+                              android:layout_marginRight="32dp"
                               android:layout_marginBottom="12dp"
-                              android:checked="true"
+                              android:src="@drawable/toggle_icon_off_xxhdpi"
                               app:layout_constraintBottom_toTopOf="@+id/ageDivider"
-                              app:layout_constraintEnd_toEndOf="parent"
-                              app:switchMinWidth="60dp"
-                              app:thumbTint="@color/colorSwitchMaterial"
-                              app:trackTint="@color/colorSwitchMaterialTrackTint" />
+                              app:layout_constraintEnd_toEndOf="parent" />
 
                       </androidx.constraintlayout.widget.ConstraintLayout>
+
                       <androidx.constraintlayout.widget.ConstraintLayout
                           android:layout_width="match_parent"
                           android:layout_height="match_parent">
@@ -329,17 +325,17 @@
                               app:layout_constraintTop_toBottomOf="@+id/phonenoText" />
 
 
-                          <com.google.android.material.switchmaterial.SwitchMaterial
+                          <ImageView
                               android:id="@+id/mobileNoToggleIcon"
                               android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:layout_marginEnd="32dp"
+                              android:layout_marginRight="32dp"
                               android:layout_marginBottom="12dp"
-                              android:checked="false"
+                              android:src="@drawable/toggle_icon_off_xxhdpi"
                               app:layout_constraintBottom_toTopOf="@+id/phonenoDivider"
-                              app:layout_constraintEnd_toEndOf="parent"
-                              app:switchMinWidth="60dp"
-                              app:thumbTint="@color/colorSwitchMaterial" />
+                              app:layout_constraintEnd_toEndOf="parent" />
+
 
                           <View
                               android:id="@+id/phonenoDivider"
@@ -355,6 +351,7 @@
 
 
                       </androidx.constraintlayout.widget.ConstraintLayout>
+
                       <androidx.constraintlayout.widget.ConstraintLayout
                           android:layout_width="match_parent"
                           android:layout_height="match_parent">
@@ -388,18 +385,16 @@
                               app:layout_constraintStart_toStartOf="parent"
                               app:layout_constraintTop_toBottomOf="@+id/emailText" />
 
-                          <com.google.android.material.switchmaterial.SwitchMaterial
+                          <ImageView
                               android:id="@+id/emailToggleIcon"
                               android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:layout_marginEnd="32dp"
+                              android:layout_marginRight="32dp"
                               android:layout_marginBottom="4dp"
-                              android:checked="true"
+                              android:src="@drawable/toggle_icon_off_xxhdpi"
                               app:layout_constraintBottom_toTopOf="@+id/emailDivider"
-                              app:layout_constraintEnd_toEndOf="parent"
-                              app:switchMinWidth="60dp"
-                              app:thumbTint="@color/colorSwitchMaterial"
-                              app:trackTint="@color/colorSwitchMaterialTrackTint" />
+                              app:layout_constraintEnd_toEndOf="parent" />
 
                           <View
                               android:id="@+id/emailDivider"
@@ -413,6 +408,7 @@
                               app:layout_constraintStart_toStartOf="parent"
                               app:layout_constraintTop_toBottomOf="@+id/EmailText" />
                       </androidx.constraintlayout.widget.ConstraintLayout>
+
                       <androidx.constraintlayout.widget.ConstraintLayout
                           android:layout_width="match_parent"
                           android:layout_height="match_parent">
@@ -453,17 +449,16 @@
                               app:layout_constraintStart_toStartOf="parent"
                               app:layout_constraintTop_toBottomOf="@+id/editIcon" />
 
-                          <com.google.android.material.switchmaterial.SwitchMaterial
+                          <ImageView
                               android:id="@+id/yourPlaceToggleIcon"
                               android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:layout_marginEnd="32dp"
+                              android:layout_marginRight="32dp"
                               android:layout_marginBottom="16dp"
-                              android:checked="false"
+                              android:src="@drawable/toggle_icon_off_xxhdpi"
                               app:layout_constraintBottom_toTopOf="@+id/yourPlaceOfOriginDivider"
-                              app:layout_constraintEnd_toEndOf="parent"
-                              app:switchMinWidth="60dp"
-                              app:thumbTint="@color/colorSwitchMaterial" />
+                              app:layout_constraintEnd_toEndOf="parent" />
 
                       </androidx.constraintlayout.widget.ConstraintLayout>
                       <androidx.constraintlayout.widget.ConstraintLayout

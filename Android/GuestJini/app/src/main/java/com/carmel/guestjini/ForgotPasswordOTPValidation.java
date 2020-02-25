@@ -24,7 +24,7 @@ import com.google.android.material.textfield.TextInputEditText;
 public class ForgotPasswordOTPValidation extends AppCompatActivity {
     TextView resendOtp,otpErrorField,getOneNow;
     MaterialButton submitButton;
-    TextInputEditText firstOtp,secondOtp,thirdOtp,fourthOtp;
+    EditText firstOtp,secondOtp,thirdOtp,fourthOtp;
     final Context context=this;
     ImageView backArrow;
 
@@ -36,10 +36,10 @@ public class ForgotPasswordOTPValidation extends AppCompatActivity {
         otpErrorField=findViewById(R.id.otpErrorMessage);
         submitButton=findViewById(R.id.submitButton);
         backArrow=findViewById(R.id.backArrow);
-        firstOtp=findViewById(R.id.firstOtp);
-        secondOtp=findViewById(R.id.secondOtp);
-        thirdOtp=findViewById(R.id.thirdOtp);
-        fourthOtp=findViewById(R.id.fourthOtp);
+        firstOtp=findViewById(R.id.firstOTPBox);
+        secondOtp=findViewById(R.id.secondOTPBox);
+        thirdOtp=findViewById(R.id.thirdOTPBox);
+        fourthOtp=findViewById(R.id.fourthOTPBox);
         getOneNow=findViewById(R.id.getOneNow);
 
         backArrow.setOnClickListener(new View.OnClickListener() {
@@ -142,16 +142,16 @@ public class ForgotPasswordOTPValidation extends AppCompatActivity {
 
                 if((firstOtpBox.length()==0) && (secondOtpBox.length()==0) && (thirdOtpBox.length()==0) && (fourthOtpBox.length()==0)){
                     otpErrorField.setVisibility(View.VISIBLE);
-//                    firstOtp.setBackgroundResource(R.drawable.otp_error_box);
-//                    secondOtp.setBackgroundResource(R.drawable.otp_error_box);
-//                    thirdOtp.setBackgroundResource(R.drawable.otp_error_box);
-//                    fourthOtp.setBackgroundResource(R.drawable.otp_error_box);
+                    firstOtp.setBackgroundResource(R.drawable.otp_error_box);
+                    secondOtp.setBackgroundResource(R.drawable.otp_error_box);
+                    thirdOtp.setBackgroundResource(R.drawable.otp_error_box);
+                    fourthOtp.setBackgroundResource(R.drawable.otp_error_box);
                 }else {
                     otpErrorField.setVisibility(View.GONE);
-//                    firstOtp.setBackgroundResource(R.drawable.otp_box);
-//                    secondOtp.setBackgroundResource(R.drawable.otp_box);
-//                    thirdOtp.setBackgroundResource(R.drawable.otp_box);
-//                    fourthOtp.setBackgroundResource(R.drawable.otp_box);
+                    firstOtp.setBackgroundResource(R.drawable.otp_box);
+                    secondOtp.setBackgroundResource(R.drawable.otp_box);
+                    thirdOtp.setBackgroundResource(R.drawable.otp_box);
+                    fourthOtp.setBackgroundResource(R.drawable.otp_box);
                 }
                 if(!(firstOtpBox.length()==1) || !(secondOtpBox.length()==1) || !(thirdOtpBox.length()==1) || !(fourthOtpBox.length()==1)){
                     otpErrorField.setVisibility(View.VISIBLE);

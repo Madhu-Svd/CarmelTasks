@@ -62,248 +62,246 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <RelativeLayout
-                android:id="@+id/subjectTitleLayout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="541dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/newTicketHeaderLayout">
 
-                <TextView
-                    android:id="@+id/subjectTitle"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="36dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:letterSpacing="0.04"
-                    android:text="@string/subject"
-                    android:textColor="@color/colorZambezi"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="97dp" />
-
-                <TextView
-                    android:id="@+id/redStar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="31dp"
-                    android:layout_toEndOf="@+id/subjectTitle"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="@string/red_star"
-                    android:textColor="@color/colorRoman"
-                    android:textSize="10sp"
-                    app:layout_constraintStart_toEndOf="@+id/subjectTitle"
-                    tools:layout_editor_absoluteY="93dp" />
-            </RelativeLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/subjectInputLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="20dp"
-                android:backgroundTint="@color/colorWhite"
-                app:boxCornerRadiusBottomEnd="@dimen/submit_button_radius"
-                app:boxCornerRadiusBottomStart="@dimen/submit_button_radius"
-                app:boxCornerRadiusTopEnd="@dimen/submit_button_radius"
-                app:boxCornerRadiusTopStart="@dimen/submit_button_radius"
-                app:boxStrokeWidth="1dp"
-                app:errorEnabled="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/subjectTitleLayout"
-                app:placeholderText="@string/subject_hint"
-                app:placeholderTextAppearance="@dimen/change_password_radius"
-                app:placeholderTextColor="@color/colorSuvaGray">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/subjectEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_margin="@dimen/margin"
-                    android:backgroundTint="@color/colorWhite"
-                    android:gravity="center_vertical"
-                    android:inputType="textMultiLine"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                android:id="@+id/subjectErrorField"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:fontFamily="@font/roboto_medium"
-                android:letterSpacing="0.06"
-                android:text="@string/error_field"
-                android:textColor="@color/colorMabel"
-                android:textSize="10sp"
-                android:visibility="gone"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/subjectInputLayout" />
-
-            <TextView
-                android:id="@+id/complaintTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="38dp"
-                android:fontFamily="@font/roboto_bold"
-                android:letterSpacing="0.05"
-                android:text="@string/complaint"
-                android:textColor="@color/colorZambezi"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/subjectInputLayout"></TextView>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/complaintInputLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
-                android:backgroundTint="@color/colorWhite"
-                app:boxCornerRadiusBottomEnd="@dimen/submit_button_radius"
-                app:boxCornerRadiusBottomStart="@dimen/submit_button_radius"
-                app:boxCornerRadiusTopEnd="@dimen/submit_button_radius"
-                app:boxCornerRadiusTopStart="@dimen/submit_button_radius"
-                app:boxStrokeWidth="1dp"
-                app:errorEnabled="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/complaintTitle"
-                app:placeholderText="@string/subject_hint"
-                app:placeholderTextAppearance="@dimen/change_password_radius">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/complaintEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="106dp"
-                    android:layout_margin="@dimen/margin"
-                    android:backgroundTint="@color/colorWhite"
-                    android:gravity="center_vertical"
-                    android:inputType="textMultiLine"
-                    android:textColor="@color/colorDimGray" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/attchmentCardView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="56dp"
-                android:layout_marginEnd="32dp"
-                android:backgroundTint="@color/colorWhisper1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/complaintInputLayout">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/attachments"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/roboto_medium"
-                        android:letterSpacing="0.05"
-                        android:text="@string/attachment"
-                        android:textColor="@color/colorDimGray"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"></TextView>
-
-                    <TextView
-                        android:id="@+id/attachmentsDescription"
+                    android:paddingBottom="30dp"
+                    android:orientation="vertical" >
+                    <RelativeLayout
+                        android:id="@+id/subjectTitleLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginTop="6dp"
-                        android:layout_marginEnd="120dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/roboto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/newTicketHeaderLayout">
+
+                        <TextView
+                            android:id="@+id/subjectTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="36dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:letterSpacing="0.04"
+                            android:text="@string/subject"
+                            android:textColor="@color/colorZambezi"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:layout_editor_absoluteY="97dp" />
+
+                        <TextView
+                            android:id="@+id/redStar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="31dp"
+                            android:layout_toEndOf="@+id/subjectTitle"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/red_star"
+                            android:textColor="@color/colorRoman"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toEndOf="@+id/subjectTitle"
+                            tools:layout_editor_absoluteY="93dp" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/subjectEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/subject_editbox"
+                        android:elevation="3dp"
+                        android:hint="@string/subject_hint"
+                        android:inputType="textEmailAddress"
                         android:letterSpacing="0.05"
-                        android:lineSpacingExtra="3dp"
-                        android:text="@string/attachment_description"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:shadowColor="@color/colorBlackRussian"
                         android:textColor="@color/colorSuvaGray"
                         android:textSize="10sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:fontFamily="@font/roboto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/subjectTitleLayout" />
+
+                    <TextView
+                        android:id="@+id/subjectErrorField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:letterSpacing="0.06"
+                        android:text="@string/error_field"
+                        android:textColor="@color/colorMabel"
+                        android:textSize="10sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/subjectEditText" />
+
+                    <TextView
+                        android:id="@+id/complaintTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="44dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:letterSpacing="0.05"
+                        android:text="@string/complaint"
+                        android:textColor="@color/colorZambezi"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/subjectEditText"></TextView>
+
+
+                    <EditText
+                        android:id="@+id/complaintEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/subject_editbox"
+                        android:elevation="3dp"
+                        android:hint="@string/subject_hint"
+                        android:inputType="textMultiLine"
+                        android:letterSpacing="0.05"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="100dp"
+                        android:shadowColor="@color/colorBlackRussian"
+                        android:textColor="@color/colorSuvaGray"
+                        android:textSize="10sp"
+                        app:fontFamily="@font/roboto"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/attachments"></TextView>
+                        app:layout_constraintTop_toBottomOf="@+id/complaintTitle" />
 
-                    <ImageView
-                        android:id="@+id/navigationNextIcon"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="24dp"
-                        android:layout_marginBottom="16dp"
-                        android:src="@drawable/ic_navigate_next_black_24dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/attchmentCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginEnd="32dp"
+                        android:backgroundTint="@color/colorWhisper1"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"></ImageView>
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/complaintEditText">
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="56dp"
-                android:layout_marginEnd="32dp"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/attchmentCardView">
+                            <TextView
+                                android:id="@+id/attachments"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:letterSpacing="0.05"
+                                android:text="@string/attachment"
+                                android:textColor="@color/colorDimGray"
+                                android:textSize="12sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"></TextView>
 
-                <TextView
-                    android:id="@+id/saveDraft"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/underline_black"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="@string/save_draft"
-                    android:letterSpacing="0.06"
-                    android:textSize="11sp">
+                            <TextView
+                                android:id="@+id/attachmentsDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginEnd="120dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/roboto"
+                                android:letterSpacing="0.05"
+                                android:lineSpacingExtra="3dp"
+                                android:text="@string/attachment_description"
+                                android:textColor="@color/colorSuvaGray"
+                                android:textSize="10sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/attachments"></TextView>
 
-                </TextView>
+                            <ImageView
+                                android:id="@+id/navigationNextIcon"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginBottom="16dp"
+                                android:src="@drawable/ic_navigate_next_black_24dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"></ImageView>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/newTicketSubmitButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="38dp"
-                    android:backgroundTint="@color/colorSummerSky"
-                    android:fontFamily="@font/roboto_bold"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:text="@string/submit"
-                    android:textSize="10sp"
-                    android:letterSpacing="0.06"
-                    android:layout_marginStart="170dp"
-                    app:cornerRadius="@dimen/submit_button_radius">
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
 
-                </com.google.android.material.button.MaterialButton>
-            </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="56dp"
+                        android:layout_marginEnd="32dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/attchmentCardView">
+
+                        <TextView
+                            android:id="@+id/saveDraft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/underline_black"
+                            android:fontFamily="@font/roboto_bold"
+                            android:letterSpacing="0.06"
+                            android:text="@string/save_draft"
+                            android:textSize="11sp">
+
+                        </TextView>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/newTicketSubmitButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:layout_marginStart="170dp"
+                            android:backgroundTint="@color/colorSummerSky"
+                            android:fontFamily="@font/roboto_bold"
+                            android:letterSpacing="0.06"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="15dp"
+                            android:text="@string/submit"
+                            android:textSize="10sp"
+                            app:cornerRadius="@dimen/submit_button_radius">
+
+                        </com.google.android.material.button.MaterialButton>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -314,7 +312,8 @@
             android:background="@drawable/horizontal_line"
             app:layout_constraintBottom_toTopOf="@id/bottomNavigationViewLayout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"></View>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contentLayout"></View>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/bottomNavigationViewLayout"
@@ -322,7 +321,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contentLayout">
 
 
             <com.google.android.material.bottomnavigation.BottomNavigationView

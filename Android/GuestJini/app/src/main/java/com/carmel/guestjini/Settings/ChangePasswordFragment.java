@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -14,11 +15,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.carmel.guestjini.ForgotPasswordOTPValidation;
@@ -30,30 +34,84 @@ import com.google.android.material.textfield.TextInputLayout;
 
 
 public class ChangePasswordFragment extends Fragment {
-TextInputLayout currentPasswordLayout,newPasswordLayout,confirmPasswordLayout;
-TextInputEditText currentPasswordEditText,newPasswordEditText,confirmPasswordEditText;
+ConstraintLayout currentPasswordLayout,newPasswordLayout,confirmPasswordLayout;
+EditText currentPasswordEditText,newPasswordEditText,confirmPasswordEditText;
 TextView currentPaswordErrorField,newPaswordErrorField,confirmPaswordErrorField;
 MaterialButton changePasswordButton;
+ImageView currentPassword,newPassword,confirmPassword;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View rootview=inflater.inflate(R.layout.fragment_change_password, container, false);
-//        currentPasswordLayout=rootview.findViewById(R.id.);
-        currentPasswordEditText=rootview.findViewById(R.id.currentPasswordEditText);
+        currentPasswordLayout=rootview.findViewById(R.id.currentPasswordLayout);
+        currentPasswordEditText=rootview.findViewById(R.id.currentPasswordEdit);
         currentPaswordErrorField=rootview.findViewById(R.id.currentPasswordErrorField);
-//        currentPasswordLayout.setBoxStrokeColorStateList(ColorStateList.valueOf(Color
-//                .parseColor("#E65959")));
 
-//        newPasswordLayout=rootview.findViewById(R.id.newPasswordLayout);
-        newPasswordEditText=rootview.findViewById(R.id.newPasswordEditText);
+        newPasswordLayout=rootview.findViewById(R.id.newPasswordLayout);
+        newPasswordEditText=rootview.findViewById(R.id.newPasswordEdit);
         newPaswordErrorField=rootview.findViewById(R.id.newPasswordErrorField);
-
-//        confirmPasswordLayout=rootview.findViewById(R.id.confirmPasswordLayout);
-        confirmPasswordEditText=rootview.findViewById(R.id.confirmPasswordEditText);
+        confirmPasswordLayout=rootview.findViewById(R.id.confirmPasswordLayout);
+        confirmPasswordEditText=rootview.findViewById(R.id.confirmPasswordEdit);
         confirmPaswordErrorField=rootview.findViewById(R.id.confirmPasswordErrorField);
-
         changePasswordButton=rootview.findViewById(R.id.changePasswordButton);
+
+        currentPassword=rootview.findViewById(R.id.currentPasswordMaskingIcon);
+        newPassword=rootview.findViewById(R.id.newPasswordMaskingIcon);
+        confirmPassword=rootview.findViewById(R.id.confirmPasswordMaskingIcon);
+
+
+
+        currentPassword.setOnClickListener(new View.OnClickListener() {
+            private boolean flag = true;
+            @Override
+            public void onClick(View v) {
+                if(flag) {
+                    flag=false;
+                    currentPassword.setImageResource(R.drawable.password_unmasking_icon);
+                    currentPasswordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+
+                }else{
+                    flag=true;
+                    currentPassword.setImageResource(R.drawable.password_masking_icon);
+                    currentPasswordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
+        });
+
+        newPassword.setOnClickListener(new View.OnClickListener() {
+            private boolean flag = true;
+            @Override
+            public void onClick(View v) {
+                if(flag) {
+                    flag=false;
+                    newPassword.setImageResource(R.drawable.password_unmasking_icon);
+                    newPasswordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+
+                }else{
+                    flag=true;
+                    newPassword.setImageResource(R.drawable.password_masking_icon);
+                    newPasswordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
+        });
+
+        confirmPassword.setOnClickListener(new View.OnClickListener() {
+            private boolean flag = true;
+            @Override
+            public void onClick(View v) {
+                if(flag) {
+                    flag=false;
+                    confirmPassword.setImageResource(R.drawable.password_unmasking_icon);
+                    confirmPasswordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+
+                }else{
+                    flag=true;
+                    confirmPassword.setImageResource(R.drawable.password_masking_icon);
+                    confirmPasswordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
+        });
         changePasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,9 +119,9 @@ MaterialButton changePasswordButton;
                     currentPaswordErrorField.setVisibility(View.VISIBLE);
                     newPaswordErrorField.setVisibility(View.VISIBLE);
                     confirmPaswordErrorField.setVisibility(View.VISIBLE);
-//                    currentPasswordLayout.setBackgroundResource(R.drawable.edit_red_textbox);
-//                    newPasswordLayout.setBackgroundResource(R.drawable.edit_red_textbox);
-//                    confirmPasswordLayout.setBackgroundResource(R.drawable.edit_red_textbox);
+                    currentPasswordLayout.setBackgroundResource(R.drawable.edit_red_textbox);
+                    newPasswordLayout.setBackgroundResource(R.drawable.edit_red_textbox);
+                    confirmPasswordLayout.setBackgroundResource(R.drawable.edit_red_textbox);
                 }else {
                     final Dialog dialog=new Dialog(getContext());
                     dialog.setContentView(R.layout.alert_dailogbox);
@@ -114,12 +172,9 @@ MaterialButton changePasswordButton;
                     });
 
                     dialog.show();
-
                 }
             }
         });
-
-
         return rootview;
     }
 

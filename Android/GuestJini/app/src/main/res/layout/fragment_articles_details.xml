@@ -363,40 +363,32 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"></TextView>
 
-                            <com.google.android.material.textfield.TextInputLayout
-                                android:id="@+id/writeReviewInputLayout"
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            <EditText
+                                android:id="@+id/reviewEditText"
                                 android:layout_width="match_parent"
-                                android:layout_height="100dp"
-                                android:layout_marginStart="16dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="26dp"
                                 android:layout_marginTop="8dp"
-                                android:layout_marginEnd="16dp"
-                                app:boxCornerRadiusBottomEnd="@dimen/editfileds_corners_radius"
-                                app:boxCornerRadiusBottomStart="@dimen/editfileds_corners_radius"
-                                app:boxCornerRadiusTopEnd="@dimen/editfileds_corners_radius"
-                                app:boxCornerRadiusTopStart="@dimen/editfileds_corners_radius"
-                                app:boxStrokeColor="@color/colorDimGray"
-                                app:boxStrokeWidth="1dp"
-                                app:errorEnabled="true"
+                                android:layout_marginEnd="26dp"
+                                android:background="@drawable/review_edit_box"
+                                android:inputType="textMultiLine"
+                                android:paddingStart="6dp"
+                                android:paddingTop="14dp"
+                                android:paddingEnd="6dp"
+                                android:paddingBottom="62dp"
+                                android:textColor="@color/colorSuvaGray"
+                                android:textSize="12sp"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/writeAReview"
-                                app:placeholderTextColor="@color/colorDimGray">
-
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:id="@+id/writeReview"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="86dp"
-                                    android:layout_margin="@dimen/margin"
-                                    android:backgroundTint="@color/colorWhite"
-                                    android:inputType="textMultiLine" />
-                            </com.google.android.material.textfield.TextInputLayout>
+                                app:layout_constraintTop_toBottomOf="@id/writeAReview">
+                            </EditText>
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/writeReviewSubmitButton"
                                 android:layout_width="80dp"
                                 android:layout_height="38dp"
                                 android:layout_marginStart="26dp"
+                                android:layout_marginTop="8dp"
                                 android:layout_marginBottom="8dp"
                                 android:backgroundTint="@color/colorSummerSky"
                                 android:fontFamily="@font/roboto_bold"
@@ -406,7 +398,7 @@
                                 app:cornerRadius="@dimen/submit_button_radius"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/writeReviewInputLayout">
+                                app:layout_constraintTop_toBottomOf="@+id/reviewEditText">
 
                             </com.google.android.material.button.MaterialButton>
 

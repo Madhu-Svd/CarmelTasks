@@ -72,7 +72,6 @@ public class TicketAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                ((TwoViewHolder)holder).ticketsDate.setText(myTicketsModel.getTicketsDateAndTime());
                ((TwoViewHolder)holder).ticketsName.setText(myTicketsModel.getTicketsName());
                ((TwoViewHolder)holder).ticketDelete.setText(myTicketsModel.getDelete());
-
                 break;
        }
     }

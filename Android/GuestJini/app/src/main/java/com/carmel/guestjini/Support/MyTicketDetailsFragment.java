@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.carmel.guestjini.R;
@@ -25,6 +26,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class MyTicketDetailsFragment extends Fragment {
 
     private ImageView backArrow;
+    private LinearLayout foreground;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,6 +40,7 @@ public class MyTicketDetailsFragment extends Fragment {
         ticketStatus=rootView.findViewById(R.id.ticketsName);
         ticketDateAndTime=rootView.findViewById(R.id.tickestsDateAndTime);
         ticketValue=rootView.findViewById(R.id.ticketsValue);
+        foreground=rootView.findViewById(R.id.foreground);
 
         FloatingActionButton attachFilesIcon=(FloatingActionButton)rootView.findViewById(R.id.attachFilesIcon);
         final ConstraintLayout attachFiles=rootView.findViewById(R.id.attachfilesLayout);
@@ -53,6 +56,13 @@ public class MyTicketDetailsFragment extends Fragment {
                     flag=true;
                     attachFiles.setVisibility(View.GONE);
                 }
+            }
+        });
+
+        foreground.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                foreground.setVisibility(View.GONE);
             }
         });
         final Bundle bundle = this.getArguments();

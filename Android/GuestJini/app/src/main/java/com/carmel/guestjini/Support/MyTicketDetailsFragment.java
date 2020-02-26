@@ -18,15 +18,18 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.carmel.guestjini.R;
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MyTicketDetailsFragment extends Fragment {
 
     private ImageView backArrow;
     private LinearLayout foreground;
+    private String ticket_status;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,12 +38,14 @@ public class MyTicketDetailsFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView=inflater.inflate(R.layout.fragment_my_ticket_details, container, false);
         backArrow=rootView.findViewById(R.id.leftArrowMark);
-        String ticket_name, ticket_status ,ticket_dateAndTime,ticket_value;
-        ticketName=rootView.findViewById(R.id.ticketsStatus);
-        ticketStatus=rootView.findViewById(R.id.ticketsName);
+        String ticket_name,ticket_dateAndTime,ticket_value;
+        ticketStatus=rootView.findViewById(R.id.ticketsStatus);
+        ticketName =rootView.findViewById(R.id.ticketsName);
         ticketDateAndTime=rootView.findViewById(R.id.tickestsDateAndTime);
         ticketValue=rootView.findViewById(R.id.ticketsValue);
         foreground=rootView.findViewById(R.id.foreground);
+        RelativeLayout attchFile=rootView.findViewById(R.id.materialCardViewLayout);
+        ConstraintLayout closed=rootView.findViewById(R.id.closedLayout);
 
         FloatingActionButton attachFilesIcon=(FloatingActionButton)rootView.findViewById(R.id.attachFilesIcon);
         final ConstraintLayout attachFiles=rootView.findViewById(R.id.attachfilesLayout);
@@ -72,10 +77,19 @@ public class MyTicketDetailsFragment extends Fragment {
             ticket_dateAndTime  = bundle.getString("ticket_dateAndTime");
             ticket_value  = bundle.getString("ticket_value");
 
-            ticketName.setText(ticket_status);
-            ticketStatus.setText(ticket_name);
+            ticketName.setText(ticket_name);
+            ticketStatus.setText(ticket_status);
             ticketDateAndTime.setText(ticket_dateAndTime);
             ticketValue.setText(ticket_value);
+        }
+        if(ticket_status.equals("OPEN")){
+            attchFile.setVisibility(View.VISIBLE);
+            closed.setVisibility(View.GONE);
+        }
+        else {
+            closed.setVisibility(View.VISIBLE);
+            attchFile.setVisibility(View.GONE);
+            foreground.setVisibility(View.GONE);
         }
 
         backArrow.setOnClickListener(new View.OnClickListener() {

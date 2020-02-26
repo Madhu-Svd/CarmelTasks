@@ -32,189 +32,232 @@
 <!--                    android:layout_height="wrap_content"-->
 <!--                    android:orientation="vertical">-->
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/leftArrowMark"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="36dp"
+                        android:contentDescription="@string/back_arrow_icon"
+                        android:src="@drawable/back_arrow_icon_xxhdpi"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/NewTicketTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="32dp"
+                        android:letterSpacing="0.1"
+                        android:text="@string/find_help"
+                        android:textColor="@color/colorZambezi"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toEndOf="@+id/leftArrowMark"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/burgerMenu"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="4dp"
+                        android:src="@drawable/burgermenu_icon_xxhdpi"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/findHelpSearchLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/search"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
+
+                    <EditText
+                        android:id="@+id/search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:background="@color/colorWhite"
+                        android:ems="18"
+                        android:text="@string/wifi"
+                        android:inputType="text"
+                        android:letterSpacing="0.07"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/colorSuvaGray"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/searchIcon"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="9dp"
+                        android:src="@drawable/search_icon_xxhdpi"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/popularSearches"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="36dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/findHelpSearchLayout">
+
+                    <TextView
+                        android:id="@+id/popularSearchTilte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:letterSpacing="0.03"
+                        android:text="@string/Popular_Searches"
+                        android:textColor="@color/colorSuvaGray"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toStartOf="@+id/populerSearchDropDown"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/populerSearchDropDown"
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/drop_down_icon_xhdpi"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/resultFoundLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="32dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/popularSearches">
+
+                    <TextView
+                        android:id="@+id/showing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:letterSpacing="0.04"
+                        android:text="@string/resultFound"
+                        android:textColor="@color/colorZambezi1"
+                        android:textSize="10sp"
+                        app:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/findHelpRecyclerView"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:paddingBottom="50dp">
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/showing"
+                        app:layout_constraintVertical_bias="0.0">
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/constraintLayout9"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
+                    </androidx.recyclerview.widget.RecyclerView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                            <ImageView
-                                android:id="@+id/leftArrowMark"
-                                android:layout_width="12dp"
-                                android:layout_height="12dp"
-                                android:layout_marginStart="32dp"
-                                android:layout_marginTop="36dp"
-                                android:contentDescription="@string/back_arrow_icon"
-                                android:src="@drawable/back_arrow_icon_xxhdpi"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/noResultFoundLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/popularSearches">
 
-                            <TextView
-                                android:id="@+id/NewTicketTitle"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="24dp"
-                                android:layout_marginTop="32dp"
-                                android:letterSpacing="0.1"
-                                android:text="@string/find_help"
-                                android:textColor="@color/colorZambezi"
-                                android:textSize="14sp"
-                                app:fontFamily="@font/roboto_bold"
-                                app:layout_constraintStart_toEndOf="@+id/leftArrowMark"
-                                app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/noResultFoundIcon"
+                        android:layout_width="64dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="99dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/no_result_found_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                            <ImageView
-                                android:id="@+id/burgerMenu"
-                                android:layout_width="28dp"
-                                android:layout_height="28dp"
-                                android:layout_marginTop="28dp"
-                                android:layout_marginEnd="32dp"
-                                android:layout_marginBottom="4dp"
-                                android:src="@drawable/burgermenu_icon_xxhdpi"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/noResultsFoundTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="@string/no_result_found"
+                        android:textColor="@color/colorDimGray"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/noResultFoundIcon" />
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/searchLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="32dp"
-                            android:layout_marginTop="50dp"
-                            android:layout_marginEnd="32dp"
-                            android:background="@drawable/search"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
+                    <TextView
+                        android:id="@+id/noResultFoundDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="85dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="85dp"
+                        android:gravity="center"
+                        android:text="@string/no_result_found_description"
+                        android:textColor="@color/colorSuvaGray"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/noResultsFoundTitle" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                            <EditText
-                                android:id="@+id/search"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
-                                android:background="@color/colorWhite"
-                                android:ems="18"
-                                android:hint="@string/wifi"
-                                android:inputType="textPassword"
-                                android:letterSpacing="0.07"
-                                android:paddingTop="2dp"
-                                android:paddingBottom="2dp"
-                                android:textColorHint="@color/colorSuvaGray"
-                                android:textSize="10sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/searchIcon"
-                                android:layout_width="17dp"
-                                android:layout_height="17dp"
-                                android:layout_marginTop="9dp"
-                                android:layout_marginEnd="12dp"
-                                android:layout_marginBottom="9dp"
-                                android:src="@drawable/search_icon_xxhdpi"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/populrSearchLayout"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:layout_marginEnd="36dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/searchLayout">
-
-                            <TextView
-                                android:id="@+id/popularSearchTilte"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="8dp"
-                                android:letterSpacing="0.03"
-                                android:text="@string/Popular_Searches"
-                                android:textColor="@color/colorSuvaGray"
-                                android:textSize="10sp"
-                                app:layout_constraintEnd_toStartOf="@+id/populerSearchDropDown"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/populerSearchDropDown"
-                                android:layout_width="9dp"
-                                android:layout_height="9dp"
-                                android:layout_marginEnd="10dp"
-                                android:src="@drawable/drop_down_icon_xhdpi"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/populrSearchLayout">
-                            <ImageView
-                                android:id="@+id/noResultFoundIcon"
-                                android:layout_width="64dp"
-                                android:layout_height="65dp"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentTop="true"
-                                android:layout_alignParentEnd="true"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginTop="99dp"
-                                android:layout_marginEnd="8dp"
-                                android:src="@drawable/no_result_found_icon"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:id="@+id/noResultsFoundTitle"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginTop="24dp"
-                                android:layout_marginEnd="8dp"
-                                android:fontFamily="@font/lato_bold"
-                                android:text="@string/no_result_found"
-                                android:textColor="@color/colorDimGray"
-                                android:textSize="12sp"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/noResultFoundIcon" />
-
-                            <TextView
-                                android:id="@+id/noResultFoundDescription"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="85dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginEnd="85dp"
-                                android:gravity="center"
-                                android:text="@string/no_result_found_description"
-                                android:textColor="@color/colorSuvaGray"
-                                android:textSize="10sp"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/noResultsFoundTitle" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 <!--                </LinearLayout>-->
 
 <!--            </ScrollView>-->
@@ -511,7 +554,6 @@
         </androidx.drawerlayout.widget.DrawerLayout>
 
 
-
         <View
             android:id="@+id/view8"
             android:layout_width="match_parent"
@@ -519,7 +561,8 @@
             android:background="@drawable/horizontal_line"
             app:layout_constraintBottom_toTopOf="@id/bottomNavigationViewLayout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"></View>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/findHelpDrawerLayout"></View>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/bottomNavigationViewLayout"

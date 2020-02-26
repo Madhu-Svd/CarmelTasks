@@ -78,7 +78,7 @@ public class ExploreFragment extends Fragment implements ExploreTicketsAdapter.O
 
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 SupportLandingFragment supportLandingFragment=new SupportLandingFragment();
                 FragmentManager fragmentManager=getFragmentManager();
                 FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();

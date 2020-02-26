@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -31,13 +32,13 @@ import Adapter.AttachFilesAdapter;
 import Model.AttachFilesModel;
 
 public class AttachFilesFragment extends Fragment {
-    MaterialButton attachFiles;
-    DrawerLayout attachDrawerLayout;
-    RecyclerView attachFilesRecyclerView;
-    ArrayList<AttachFilesModel> attachFilesModelArrayList=new ArrayList<>();
-    MaterialButton doneButoon;
-    ImageView backArrow;
-
+    private MaterialButton attachFiles;
+    private DrawerLayout attachDrawerLayout;
+    private RecyclerView attachFilesRecyclerView;
+    private ArrayList<AttachFilesModel> attachFilesModelArrayList=new ArrayList<>();
+    private MaterialButton doneButoon;
+    private ImageView backArrow;
+    private ConstraintLayout recyclerViewLayout;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -47,12 +48,13 @@ public class AttachFilesFragment extends Fragment {
         attachDrawerLayout=rootView.findViewById(R.id.attachFilesDrawerLayout);
         attachFilesRecyclerView=rootView.findViewById(R.id.attachFilesRecyclerView);
         backArrow=rootView.findViewById(R.id.leftArrowMark);
+        recyclerViewLayout=rootView.findViewById(R.id.recyclerViewLayout);
         doneButoon=rootView.findViewById(R.id.done);
         attachFiles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 attachDrawerLayout.openDrawer(GravityCompat.START);
+                recyclerViewLayout.setVisibility(View.VISIBLE);
             }
         });
 

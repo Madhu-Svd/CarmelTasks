@@ -120,7 +120,7 @@
                                         android:background="@color/colorWhite"
                                         android:ems="18"
                                         android:hint="@string/search"
-                                        android:inputType="textPassword"
+                                        android:inputType="text"
                                         android:letterSpacing="0.07"
                                         android:paddingTop="2dp"
                                         android:paddingBottom="2dp"
@@ -147,6 +147,7 @@
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                                 <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/popularSearches"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
@@ -473,14 +474,17 @@
             android:background="@drawable/horizontal_line"
             app:layout_constraintBottom_toTopOf="@id/constraintLayout10"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"></View>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bodyContent"></View>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout10"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bodyContent">
 
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -496,6 +500,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:menu="@menu/bottom_navigation_menu" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

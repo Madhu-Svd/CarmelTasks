@@ -72,7 +72,7 @@ public class MyTicketsRecyclerViewFragment extends Fragment implements TicketAda
         addIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               NewTicketFragment newTicketFragment=new NewTicketFragment();
+                NewTicketFragment newTicketFragment=new NewTicketFragment();
                 FragmentManager fragmentManager=getFragmentManager();
                 FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.SuppotPlaceHolder,newTicketFragment);
@@ -164,6 +164,35 @@ public class MyTicketsRecyclerViewFragment extends Fragment implements TicketAda
         bundle.putString("ticket_dateAndTime",myTicketsModelsList.get(position).getTicketsDateAndTime());
         bundle.putString("ticket_value",myTicketsModelsList.get(position).getTicketsValue());
         myTicketDetailsFragment.setArguments(bundle);
+
+    }
+
+    @Override
+    public void onClick(int position, String name) {
+        myTicketsModelsList.get(position);
+        MyTicketDetailsFragment myTicketDetailsFragment=new MyTicketDetailsFragment();
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.SuppotPlaceHolder, myTicketDetailsFragment);
+        fragmentTransaction.commit();
+
+        Bundle bundle = new Bundle();
+        bundle.putString("ticket_status",myTicketsModelsList.get(position).getTicketsStatus());
+        bundle.putString("ticket_name", myTicketsModelsList.get(position).getTicketsName());
+        bundle.putString("ticket_status",myTicketsModelsList.get(position).getTicketsStatus());
+        bundle.putString("ticket_dateAndTime",myTicketsModelsList.get(position).getTicketsDateAndTime());
+        bundle.putString("ticket_value",myTicketsModelsList.get(position).getTicketsValue());
+        myTicketDetailsFragment.setArguments(bundle);
+
+    }
+
+    @Override
+    public void onclickDraft(int position) {
+        DraftViewFragment draftViewFragment=new DraftViewFragment();
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.SuppotPlaceHolder, draftViewFragment);
+        fragmentTransaction.commit();
 
     }
 }

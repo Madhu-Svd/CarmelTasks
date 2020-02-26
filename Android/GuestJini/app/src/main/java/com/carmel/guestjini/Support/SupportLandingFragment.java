@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.carmel.guestjini.R;
 import com.google.android.material.button.MaterialButton;
@@ -19,10 +20,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class SupportLandingFragment extends Fragment {
 
-     FloatingActionButton gotoTicketsIcon,exploreNavigationIcon;
-     MaterialButton createTicket;
-    ConstraintLayout searchLayout;
-    DrawerLayout drawerLayout;
+    private FloatingActionButton gotoTicketsIcon,exploreNavigationIcon;
+    private MaterialButton createTicket;
+    private ConstraintLayout searchLayout,popularSearches;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,17 +31,38 @@ public class SupportLandingFragment extends Fragment {
         final View rootView=inflater.inflate(R.layout.fragment_support_landing, container, false);
         gotoTicketsIcon=rootView.findViewById(R.id.gotoTicketsIcon);
         exploreNavigationIcon=rootView.findViewById(R.id.exploreNavigationIcon);
+        popularSearches=rootView.findViewById(R.id.popularSearches);
         createTicket=rootView.findViewById(R.id.createTicket);
         searchLayout=rootView.findViewById(R.id.searchLayout);
+
+
         searchLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 FindHelpFragment findHelpFragment=new FindHelpFragment();
                 FragmentManager fragmentManager=getFragmentManager();
                 FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.SuppotPlaceHolder,findHelpFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+
+            }
+        });
+
+        popularSearches.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle=new Bundle();
+                bundle.putString("popular Search", String.valueOf(popularSearches));
+                FindHelpFragment findHelpFragment=new FindHelpFragment();
+                FragmentManager fragmentManager=getFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.SuppotPlaceHolder,findHelpFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+                findHelpFragment.setArguments(bundle);
             }
         });
 
@@ -55,6 +77,7 @@ public class SupportLandingFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+
         createTicket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

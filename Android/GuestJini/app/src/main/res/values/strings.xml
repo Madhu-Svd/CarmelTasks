@@ -69,6 +69,7 @@
     <string name="find_help">FIND HELP</string>
     <string name="search">Search</string>
     <string name="Popular_Searches">Popular Searches</string>
+    <string name="resultFound">03 Results found.</string>
     <string name="Explore">Explore</string>
     <string name="explore_description">Lorem ipsum dolor sit amet consectetur adipiscing elit sodales primis, mollis viverra.</string>
     <string name="tickets">TICKETS</string>
@@ -179,8 +180,6 @@
     <string name="your_feedback">Your Feedback</string>
     <string name="reopen_description">If you are not satisfied with the resolution, you may re-open the ticket by entering the reason in the box given below.</string>
     <string name="reopen">Reopen</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="complaintDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat felis id sem elemen tum, sit amet sollicitudin leo vestibulum. Phasellus lacinia posuere nisi vel interdum. Morbi nec nisl a urna lacinia dapibus in in dui. Maecenas sit amet laoreet nulla.</string>
 
 </resources>

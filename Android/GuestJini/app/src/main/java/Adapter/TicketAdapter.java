@@ -55,7 +55,7 @@ public class TicketAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final RecyclerView.ViewHolder holder, final int position) {
         MyTicketsModel myTicketsModel =myTicketsModels.get(position);
        switch (myTicketsModel.getViewType()){
            case ONE_TYPE:
@@ -66,6 +66,13 @@ public class TicketAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                ((OneViewHolder)holder).ticketsValue.setText(myTicketsModel.getTicketsValue());
                ((OneViewHolder)holder).clock.setText(myTicketsModel.getClock());
                ((OneViewHolder)holder).ticketsTime.setText(myTicketsModel.getTicketsTime());
+//               ((OneViewHolder) holder).ticketsStatus.setOnClickListener(new View.OnClickListener() {
+//                   @Override
+//                   public void onClick(View v) {
+//                       String btnName=((OneViewHolder) holder).ticketsStatus.getText().toString();
+//                       onItemClickListener.onClick(position,btnName);
+//                   }
+//               });
                 break;
            case TWO_TYPE:
                ((TwoViewHolder)holder).ticketsStatus.setText(myTicketsModel.getTicketsStatus());
@@ -122,11 +129,12 @@ public class TicketAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
         @Override
         public void onClick(View v) {
-            onItemClickListener.onItemClick(getAdapterPosition());
-
+            onItemClickListener.onclickDraft(getAdapterPosition());
         }
     }
     public interface OnItemClickListener {
         void onItemClick(int position);
+        void onClick(int position,String name);
+        void onclickDraft(int position);
     }
 }

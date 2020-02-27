@@ -31,6 +31,7 @@ import java.util.ArrayList;
 
 import Adapter.ReviewAdapter;
 import Model.ReviewModel;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class ArticlesDetailsFragment extends Fragment {
@@ -38,9 +39,9 @@ public class ArticlesDetailsFragment extends Fragment {
   private ImageView backArrow;
   private MaterialButton submitButton;
   private TextView ticketAuthorName,ticketName,ticketDate;
+  CircleImageView likeIcon,unlikeIcon;
   MediaController mediaController;
-
-    ArrayList<ReviewModel> reviewModelArrayList=new ArrayList<>();
+  ArrayList<ReviewModel> reviewModelArrayList=new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,6 +53,8 @@ public class ArticlesDetailsFragment extends Fragment {
         submitButton=rootView.findViewById(R.id.writeReviewSubmitButton);
         ticketAuthorName=rootView.findViewById(R.id.ticketAuthorName);
         ticketName=rootView.findViewById(R.id.ticketName);
+        likeIcon=rootView.findViewById(R.id.likeIcon);
+        unlikeIcon=rootView.findViewById(R.id.unlikeIcon);
         ticketDate=rootView.findViewById(R.id.ticketDate);
         mediaController=new MediaController(getContext());
 
@@ -76,6 +79,35 @@ public class ArticlesDetailsFragment extends Fragment {
 //            ticketValue.setText(ticket_value);
         }
 
+        likeIcon.setOnClickListener(new View.OnClickListener() {
+            private boolean flag = true;
+            @Override
+            public void onClick(View v) {
+                if(flag){
+                    flag=false;
+                    likeIcon.setImageResource(R.drawable.like_icon_black_xxhdpi);
+                }else{
+                    flag=true;
+                    likeIcon.setImageResource(R.drawable.like_icon_xxhdpi);
+                }
+
+            }
+        });
+
+        unlikeIcon.setOnClickListener(new View.OnClickListener() {
+            private boolean flag = true;
+            @Override
+            public void onClick(View v) {
+                if(flag){
+                    flag=false;
+                    unlikeIcon.setImageResource(R.drawable.unlike_icon_black_xxhdpi);
+                }else{
+                    flag=true;
+                    unlikeIcon.setImageResource(R.drawable.unlike_icon_xxhdpi);
+                }
+
+            }
+        });
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -86,8 +86,8 @@
     <string name="filer_description">86 articles found in 07 categories.</string>
     <string name="show_categories">Showing all categories.</string>
     <string name="show">Showing 03 of 86</string>
-    <string name="clear_filter">CLEAR FILTER</string>
-    <string name="elevateors">ELEVATORS</string>
+    <string name="clear_filter">Clear Filter</string>
+    <string name="elevators">Elevators</string>
     <string name="security">SECURITY</string>
     <string name="house_rules">HOUSE RULES</string>
     <string name="wifi">Wifi</string>
@@ -180,6 +180,7 @@
     <string name="your_feedback">Your Feedback</string>
     <string name="reopen_description">If you are not satisfied with the resolution, you may re-open the ticket by entering the reason in the box given below.</string>
     <string name="reopen">Reopen</string>
+    <string name="reopened">RE OPENED</string>
     <string name="complaintDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat felis id sem elemen tum, sit amet sollicitudin leo vestibulum. Phasellus lacinia posuere nisi vel interdum. Morbi nec nisl a urna lacinia dapibus in in dui. Maecenas sit amet laoreet nulla.</string>
 
 </resources>

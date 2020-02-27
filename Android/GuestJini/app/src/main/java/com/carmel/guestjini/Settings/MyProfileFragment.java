@@ -71,75 +71,75 @@ public class MyProfileFragment extends Fragment {
         });
 
         profileToggleButton.setOnClickListener(new View.OnClickListener() {
-            private boolean flag = false;
+            private boolean flag = true;
             @Override
             public void onClick(View v) {
                 if(flag){
                     flag=false;
-                    profileToggleButton.setImageResource(R.drawable.toggle_icon_off_xxhdpi);
+                    profileToggleButton.setImageResource(R.drawable.toggle_icon_on_xxhdpi);
                 }else{
                     flag=true;
-                    profileToggleButton.setImageResource(R.drawable.toggle_icon_on_xxhdpi);
+                    profileToggleButton.setImageResource(R.drawable.toggle_icon_off_xxhdpi);
                 }
 
             }
         });
 
         gender.setOnClickListener(new View.OnClickListener() {
-            private boolean flag = false;
+            private boolean flag = true;
             @Override
             public void onClick(View v) {
                 if(flag){
                     flag=false;
-                    gender.setImageResource(R.drawable.toggle_icon_off_xxhdpi);
+                    gender.setImageResource(R.drawable.toggle_icon_on_xxhdpi);
                 }else{
                     flag=true;
-                    gender.setImageResource(R.drawable.toggle_icon_on_xxhdpi);
+                    gender.setImageResource(R.drawable.toggle_icon_off_xxhdpi);
                 }
 
             }
         });
 
         mobileNo.setOnClickListener(new View.OnClickListener() {
-            private boolean flag = false;
+            private boolean flag = true;
             @Override
             public void onClick(View v) {
                 if(flag){
                     flag=false;
-                    mobileNo.setImageResource(R.drawable.toggle_icon_on_xxhdpi);
+                    mobileNo.setImageResource(R.drawable.toggle_icon_off_xxhdpi);
                 }else{
                     flag=true;
-                    mobileNo.setImageResource(R.drawable.toggle_icon_off_xxhdpi);
+                    mobileNo.setImageResource(R.drawable.toggle_icon_on_xxhdpi);
                 }
 
             }
         });
 
         age.setOnClickListener(new View.OnClickListener() {
-            private boolean flag = false;
+            private boolean flag = true;
             @Override
             public void onClick(View v) {
                 if(flag){
                     flag=false;
-                    age.setImageResource(R.drawable.toggle_icon_off_xxhdpi);
+                    age.setImageResource(R.drawable.toggle_icon_on_xxhdpi);
                 }else{
                     flag=true;
-                    age.setImageResource(R.drawable.toggle_icon_on_xxhdpi);
+                    age.setImageResource(R.drawable.toggle_icon_off_xxhdpi);
                 }
 
             }
         });
 
         place.setOnClickListener(new View.OnClickListener() {
-            private boolean flag = false;
+            private boolean flag = true;
             @Override
             public void onClick(View v) {
                 if(flag){
                     flag=false;
-                    place.setImageResource(R.drawable.toggle_icon_on_xxhdpi);
+                    place.setImageResource(R.drawable.toggle_icon_off_xxhdpi);
                 }else{
                     flag=true;
-                    place.setImageResource(R.drawable.toggle_icon_off_xxhdpi);
+                    place.setImageResource(R.drawable.toggle_icon_on_xxhdpi);
                 }
 
             }
@@ -147,15 +147,15 @@ public class MyProfileFragment extends Fragment {
 
 
         email.setOnClickListener(new View.OnClickListener() {
-            private boolean flag = false;
+            private boolean flag = true;
             @Override
             public void onClick(View v) {
                 if(flag){
                     flag=false;
-                    email.setImageResource(R.drawable.toggle_icon_off_xxhdpi);
+                    email.setImageResource(R.drawable.toggle_icon_on_xxhdpi);
                 }else{
                     flag=true;
-                    email.setImageResource(R.drawable.toggle_icon_on_xxhdpi);
+                    email.setImageResource(R.drawable.toggle_icon_off_xxhdpi);
                 }
 
             }

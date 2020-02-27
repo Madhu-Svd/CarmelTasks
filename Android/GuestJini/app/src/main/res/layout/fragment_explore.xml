@@ -67,7 +67,6 @@
                 android:id="@+id/filterIconLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/myTicketsLayout">
@@ -120,17 +119,167 @@
                     app:layout_constraintStart_toEndOf="@+id/exploreFilterIcon"
                     app:layout_constraintTop_toBottomOf="@+id/articlesDetails" />
 
+                <TextView
+                    android:id="@+id/clearFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/underline"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/clear_filter"
+                    android:textColor="@color/colorSummerSky"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toEndOf="@+id/exploreFilterIcon"
+                    app:layout_constraintTop_toBottomOf="@+id/articlesDetails" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/filterPopup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/explore_filter_menu"
+                android:elevation="15dp"
+                android:paddingTop="40dp"
+                android:paddingBottom="50dp"
+                android:visibility="gone"
+                android:shadowColor="@color/colorBlackRussian"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/filterIconLayout">
+
+                <TextView
+                    android:id="@+id/clearFilterId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="70dp"
+                    android:letterSpacing="0.06"
+                    android:text="@string/clear_filter"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPinkSwan"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/roboto_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/elevators"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="83dp"
+                    android:letterSpacing="0.06"
+                    android:text="@string/elevators"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorZambezi1"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/roboto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clearFilterId" />
+
+                <TextView
+                    android:id="@+id/security"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="93dp"
+                    android:letterSpacing="0.06"
+                    android:text="@string/security"
+                    android:textColor="@color/colorZambezi1"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/roboto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/elevators" />
+
+                <TextView
+                    android:id="@+id/houseRules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="71dp"
+                    android:letterSpacing="0.06"
+                    android:text="@string/house_rules"
+                    android:textColor="@color/colorZambezi1"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/roboto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/security" />
+
+                <TextView
+                    android:id="@+id/wifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="125dp"
+                    android:letterSpacing="0.06"
+                    android:text="@string/wifi"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorZambezi1"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/roboto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/houseRules" />
+
+                <TextView
+                    android:id="@+id/plumbing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="88dp"
+                    android:letterSpacing="0.06"
+                    android:text="@string/plumbing"
+                    android:textColor="@color/colorZambezi1"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/roboto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wifi" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:id="@+id/elevatorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/filterIconLayout">
+
+                <TextView
+                    android:id="@+id/elavators"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingStart="32dp"
+                    android:text="@string/elevators"
+                    android:textColor="@color/colorZambezi1"
+                    android:textSize="18sp" />
+            </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/searchMainLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/filterIconLayout">
+                app:layout_constraintTop_toBottomOf="@+id/elevatorLayout">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/searchLayout"

@@ -18,9 +18,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.carmel.guestjini.R;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -35,8 +38,11 @@ public class FindHelpFragment extends Fragment implements ExploreTicketsAdapter.
     private ArrayList<TicketsModel> ticketsModelsList=new ArrayList<>();
     private ConstraintLayout findHelpSearchLayout,resultFoundLayout,noResultFoundLayout,popularSearchesLayout;
     private EditText search;
-    private TextView popularSerachText,popularSearchTilte;
-    private String popularSearch;
+    private TextView popularSerachText;
+    private RelativeLayout drawerExploreLayout;
+    private MaterialButton createTicket;
+    private FloatingActionButton gotoTicketsIcon;
+    String popularSearch;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -48,11 +54,13 @@ public class FindHelpFragment extends Fragment implements ExploreTicketsAdapter.
         findHelpSearchLayout=rootView.findViewById(R.id.findHelpSearchLayout);
         noResultFoundLayout=rootView.findViewById(R.id.noResultFoundLayout);
         search=rootView.findViewById(R.id.search);
-        popularSearchTilte=rootView.findViewById(R.id.popularSearchTilte);
         popularSerachText=rootView.findViewById(R.id.showing);
         popularSearchesLayout=rootView.findViewById(R.id.popularSearches);
         resultFoundLayout=rootView.findViewById(R.id.resultFoundLayout);
+        drawerExploreLayout=rootView.findViewById(R.id.exploreSubLayout);
+        gotoTicketsIcon=rootView.findViewById(R.id.gotoTicketsIcon);
         findHelpRecyclerView=rootView.findViewById(R.id.findHelpRecyclerView);
+        createTicket=rootView.findViewById(R.id.createTicket);
         findHelpRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
 
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
@@ -86,6 +94,7 @@ public class FindHelpFragment extends Fragment implements ExploreTicketsAdapter.
         ticketsModel.setTicketsDescription("Lorem ipsum dolor sit amet consectetur adipiscing elit sodales.");
         ticketsModel.setNavigationIcon(R.drawable.ic_navigate_next_black_24dp);
         ticketsModelsList.add(ticketsModel);
+
 
         final Bundle bundle = this.getArguments();
         if (bundle != null) {
@@ -129,6 +138,39 @@ public class FindHelpFragment extends Fragment implements ExploreTicketsAdapter.
                 FragmentManager fragmentManager=getFragmentManager();
                 FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.SuppotPlaceHolder,supportLandingFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+        drawerExploreLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ExploreFragment exploreFragment=new ExploreFragment();
+                FragmentManager fragmentManager=getFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.SuppotPlaceHolder,exploreFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+        createTicket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NewTicketFragment newTicketFragment=new NewTicketFragment();
+                FragmentManager fragmentManager=getFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.SuppotPlaceHolder,newTicketFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+        gotoTicketsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyTicketsRecyclerViewFragment MyTicketsRecyclerViewFragment=new MyTicketsRecyclerViewFragment();
+                FragmentManager fragmentManager=getFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.SuppotPlaceHolder,MyTicketsRecyclerViewFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

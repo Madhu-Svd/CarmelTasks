@@ -265,67 +265,57 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"></TextView>
 
-                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            <de.hdodenhof.circleimageview.CircleImageView
                                 android:id="@+id/likeIcon"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentStart="true"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_marginStart="192dp"
                                 android:layout_marginTop="16dp"
-                                android:layout_marginEnd="32dp"
-                                app:backgroundTint="@color/colorDimGray"
-                                app:fabCustomSize="50dp"
-                                app:layout_constraintEnd_toStartOf="@+id/dislikeIcon"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:maxImageSize="20dp"
-                                app:srcCompat="@drawable/ic_thumb_up_black_24dp"
-                                app:tint="@color/colorWhite">
+                                android:src="@drawable/like_icon_xxhdpi"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
-                            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+                            </de.hdodenhof.circleimageview.CircleImageView>
 
                             <TextView
                                 android:id="@+id/likeIconPercentage"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginEnd="64dp"
+                                android:layout_marginStart="206dp"
+                                android:layout_marginTop="6dp"
                                 android:layout_marginBottom="16dp"
                                 android:text="90%"
                                 android:textSize="10sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toStartOf="@+id/dislikeIconPercentage"
+                                app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/likeIcon">
 
                             </TextView>
 
-                            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                                android:id="@+id/dislikeIcon"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentStart="true"
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/unlikeIcon"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_marginLeft="38dp"
                                 android:layout_marginTop="16dp"
-                                android:layout_marginEnd="26dp"
-                                app:backgroundTint="@color/colorWhite"
-                                app:fabCustomSize="50dp"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:maxImageSize="20dp"
-                                app:srcCompat="@drawable/ic_thumb_down_black_24dp"
-                                app:tint="@color/colorWhite">
+                                android:src="@drawable/unlike_icon_xxhdpi"
+                                app:layout_constraintStart_toEndOf="@+id/likeIcon"
+                                app:layout_constraintTop_toTopOf="parent">
 
-                            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+                            </de.hdodenhof.circleimageview.CircleImageView>
 
                             <TextView
                                 android:id="@+id/dislikeIconPercentage"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginEnd="40dp"
+                                android:layout_marginStart="64dp"
+                                android:layout_marginTop="6dp"
                                 android:layout_marginBottom="16dp"
                                 android:text="10%"
                                 android:textSize="10sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/dislikeIcon">
+                                app:layout_constraintStart_toEndOf="@+id/likeIconPercentage"
+                                app:layout_constraintTop_toBottomOf="@+id/unlikeIcon">
 
                             </TextView>
 

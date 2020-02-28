@@ -10,8 +10,12 @@ public class MyTicketsModel {
     private String ticketsTime;
     private int notificationIcon;
     private String button;
+    private String delete;
+    private int viewType;
+    public static final int ONE_TYPE = 1;
+    public static final int TWO_TYPE = 2;
 
-    public MyTicketsModel(String ticketsStatus, String ticketsDateAndTime, String ticketsName, String ticketsNo, String ticketsValue, String clock, String ticketsTime, String delete, int viewType) {
+    public MyTicketsModel(String ticketsStatus, String ticketsDateAndTime, String ticketsName, String ticketsNo, String ticketsValue, String clock, String ticketsTime,int notificationIcon, String delete, int viewType) {
         this.ticketsStatus = ticketsStatus;
         this.ticketsDateAndTime = ticketsDateAndTime;
         this.ticketsName = ticketsName;
@@ -19,17 +23,11 @@ public class MyTicketsModel {
         this.ticketsValue = ticketsValue;
         this.clock = clock;
         this.ticketsTime = ticketsTime;
+        this.notificationIcon=notificationIcon;
         this.delete = delete;
         this.viewType = viewType;
+
     }
-
-//    public MyTicketsModel(String ticketsStatus, String ticketsDateAndTime, String ticketsName, String delete) {
-//        this.ticketsStatus = ticketsStatus;
-//        this.ticketsDateAndTime = ticketsDateAndTime;
-//        this.ticketsName = ticketsName;
-//        this.delete = delete;
-//    }
-
 
     public String getButton() {
         return button;
@@ -47,11 +45,6 @@ public class MyTicketsModel {
         this.delete = delete;
     }
 
-    private String delete;
-    public static final int ONE_TYPE = 1;
-    public static final int TWO_TYPE = 2;
-
-
     public int getViewType() {
         return viewType;
     }
@@ -59,8 +52,6 @@ public class MyTicketsModel {
     public void setViewType(int viewType) {
         this.viewType = viewType;
     }
-
-    private int viewType;
 
     public String getTicketsStatus() {
         return ticketsStatus;

@@ -161,14 +161,21 @@
     <string name="feedback_success">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim felis et magna mattis finibus. Nulla elit ligula, placerat tincidunt ipsum eu, ornare semper felis. Duis arcu massa, venenatis eget ante sodales, posuere volutpat risus.</string>
     <string name="ticket_failed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies quis sagittis ut, posuere eu eros.</string>
     <string name="ticket_success">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies quis sagittis ut, posuere eu eros.</string>
-    <string-array name="planets_array">
-        <item>Today</item>
-        <item>Yesterday</item>
-        <item>Last Week</item>
-        <item>Last Month</item>
-        <item>Date</item>
-        <item>Date Range</item>
-    </string-array>
+<!--    <string-array name="planets_array">-->
+<!--        <item>Today</item>-->
+<!--        <item>Yesterday</item>-->
+<!--        <item>Last Week</item>-->
+<!--        <item>Last Month</item>-->
+<!--        <item>Date</item>-->
+<!--        <item>Date Range</item>-->
+<!--    </string-array>-->
+    <string name="Today">Today</string>
+    <string name="Yesterday">Yesterday</string>
+    <string name="last_week">Last Week</string>
+    <string name="last_month">Last Month</string>
+    <string name="Date">Date</string>
+    <string name="date_range">Date Range</string>
+
     <string name="Sameer_description">Vestibulum nec feugiat justo. Ut dapibus et orci at gravida. Phasellus lacinia posuere nisi vel interdum. Morbi nec nisl a urna lacinia dapibus in in dui. Maecenas sit amet laoreet nulla. Donec dignissim magna odio, vitae eleifend turpis accumsan eget. Donec aliquet pretium finibus.</string>
     <string name="sameer_description">Vestibulum nec feugiat justo. Ut dapibus et orci at gravida. Phasellus lacinia posuere nisi vel interdum. Morbi nec nisl a urna lacinia dapibus in in dui. Maecenas sit amet laoreet nulla.</string>
     <string name="sameer_rawat">Sameer Rawat</string>
@@ -180,6 +187,7 @@
     <string name="your_feedback">Your Feedback</string>
     <string name="reopen_description">If you are not satisfied with the resolution, you may re-open the ticket by entering the reason in the box given below.</string>
     <string name="reopen">Reopen</string>
+    <string name="descending">DESCENDING</string>
     <string name="reopened">RE OPENED</string>
     <string name="complaintDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat felis id sem elemen tum, sit amet sollicitudin leo vestibulum. Phasellus lacinia posuere nisi vel interdum. Morbi nec nisl a urna lacinia dapibus in in dui. Maecenas sit amet laoreet nulla.</string>
 

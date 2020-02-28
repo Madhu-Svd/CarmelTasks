@@ -66,6 +66,7 @@ public class TicketAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                ((OneViewHolder)holder).ticketsValue.setText(myTicketsModel.getTicketsValue());
                ((OneViewHolder)holder).clock.setText(myTicketsModel.getClock());
                ((OneViewHolder)holder).ticketsTime.setText(myTicketsModel.getTicketsTime());
+               ((OneViewHolder)holder).notification.setImageResource(myTicketsModel.getNotificationIcon());
 //               ((OneViewHolder) holder).ticketsStatus.setOnClickListener(new View.OnClickListener() {
 //                   @Override
 //                   public void onClick(View v) {
@@ -90,6 +91,7 @@ public class TicketAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     class OneViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView ticketsStatus,ticketsDate,ticketsName,ticketsNo,ticketsValue,clock,ticketsTime;
+        ImageView notification;
         CardView cardView;
         OnItemClickListener onItemClickListener;
         public OneViewHolder(@NonNull View itemView, OnItemClickListener onItemClickListener) {
@@ -102,6 +104,7 @@ public class TicketAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             clock=itemView.findViewById(R.id.clock);
             ticketsTime=itemView.findViewById(R.id.clockTime);
             this.onItemClickListener=onItemClickListener;
+            notification=itemView.findViewById(R.id.notification);
             itemView.setOnClickListener(this);
 //            cardView=itemView.findViewById(R.id.OpenCardView);
         }

@@ -6,21 +6,21 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import com.carmel.guestjini.R;
-import com.carmel.guestjini.Support.MyTicketDetailsFragment;
+import com.carmel.guestjini.Community.CommunityLandingFragment;
+import com.carmel.guestjini.Community.InterestGroupsFragment;
 import com.carmel.guestjini.Support.SupportLandingFragment;
 
-public class SupportActivity extends AppCompatActivity {
+public class CommunityActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_support);
-        SupportLandingFragment supportLandingFragment=new SupportLandingFragment();
+        setContentView(R.layout.activity_community);
+        InterestGroupsFragment interestGroupsFragment=new InterestGroupsFragment();
+//        CommunityLandingFragment communityLandingFragment=new CommunityLandingFragment();
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.SuppotPlaceHolder,supportLandingFragment);
+        fragmentTransaction.replace(R.id.CommunityPlaceHolder,interestGroupsFragment);
         fragmentTransaction.commit();
-
     }
 }

@@ -67,13 +67,7 @@ public class TicketAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                ((OneViewHolder)holder).clock.setText(myTicketsModel.getClock());
                ((OneViewHolder)holder).ticketsTime.setText(myTicketsModel.getTicketsTime());
                ((OneViewHolder)holder).notification.setImageResource(myTicketsModel.getNotificationIcon());
-//               ((OneViewHolder) holder).ticketsStatus.setOnClickListener(new View.OnClickListener() {
-//                   @Override
-//                   public void onClick(View v) {
-//                       String btnName=((OneViewHolder) holder).ticketsStatus.getText().toString();
-//                       onItemClickListener.onClick(position,btnName);
-//                   }
-//               });
+
                 break;
            case TWO_TYPE:
                ((TwoViewHolder)holder).ticketsStatus.setText(myTicketsModel.getTicketsStatus());

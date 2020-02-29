@@ -161,14 +161,14 @@
     <string name="feedback_success">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim felis et magna mattis finibus. Nulla elit ligula, placerat tincidunt ipsum eu, ornare semper felis. Duis arcu massa, venenatis eget ante sodales, posuere volutpat risus.</string>
     <string name="ticket_failed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies quis sagittis ut, posuere eu eros.</string>
     <string name="ticket_success">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies quis sagittis ut, posuere eu eros.</string>
-<!--    <string-array name="planets_array">-->
-<!--        <item>Today</item>-->
-<!--        <item>Yesterday</item>-->
-<!--        <item>Last Week</item>-->
-<!--        <item>Last Month</item>-->
-<!--        <item>Date</item>-->
-<!--        <item>Date Range</item>-->
-<!--    </string-array>-->
+    <!--    <string-array name="planets_array">-->
+    <!--        <item>Today</item>-->
+    <!--        <item>Yesterday</item>-->
+    <!--        <item>Last Week</item>-->
+    <!--        <item>Last Month</item>-->
+    <!--        <item>Date</item>-->
+    <!--        <item>Date Range</item>-->
+    <!--    </string-array>-->
     <string name="Today">Today</string>
     <string name="Yesterday">Yesterday</string>
     <string name="last_week">Last Week</string>
@@ -190,5 +190,12 @@
     <string name="descending">DESCENDING</string>
     <string name="reopened">RE OPENED</string>
     <string name="complaintDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat felis id sem elemen tum, sit amet sollicitudin leo vestibulum. Phasellus lacinia posuere nisi vel interdum. Morbi nec nisl a urna lacinia dapibus in in dui. Maecenas sit amet laoreet nulla.</string>
+
+    <!--    Community Groups-->
+    <string name="myProfile_description">Based on your profile, you will be able to connect with the best matches who share your interests. Go ahead and setup your profile.</string>
+    <string name="groups">GROUPS</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

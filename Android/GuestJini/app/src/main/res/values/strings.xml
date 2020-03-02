@@ -67,7 +67,7 @@
     <!--    Support Screens-->
     <string name="help_title">We’re here to help you</string>
     <string name="find_help">FIND HELP</string>
-    <string name="search">Search</string>
+    <string name="search">Search..</string>
     <string name="Popular_Searches">Popular Searches</string>
     <string name="resultFound">03 Results found.</string>
     <string name="Explore">Explore</string>
@@ -194,8 +194,8 @@
     <!--    Community Groups-->
     <string name="myProfile_description">Based on your profile, you will be able to connect with the best matches who share your interests. Go ahead and setup your profile.</string>
     <string name="groups">GROUPS</string>
+    <string name="people_title">PEOPLE</string>
+    <string name="interest_groups">INTEREST GROUPS</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

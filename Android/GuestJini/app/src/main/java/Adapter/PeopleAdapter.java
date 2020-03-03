@@ -39,7 +39,7 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
         holder.addPeopleGender.setText(String.valueOf(peopleModel.getAddPeopleGender()));
         holder.peopleProfileImage.setImageResource(peopleModel.getProfilePicture());
         holder.favouritesIcon.setImageResource(peopleModel.getFavouritesIcon());
-        holder.addPeopleDate.setText(peopleModel.getAddDate());
+        holder.compatibilityCount.setText(peopleModel.getCompatibilityCount());
         holder.notificationIndicator.setBackgroundResource(peopleModel.getNotificationIndicator());
 
 
@@ -56,7 +56,7 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        TextView addPeopleName,addPeopleGender,addPeopleDate,notificationIndicator;
+        TextView addPeopleName,addPeopleGender,compatibilityCount,notificationIndicator;
         ImageView favouritesIcon;
         CircleImageView peopleProfileImage;
         private OnItemClickListener onClickListener;
@@ -64,7 +64,7 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
             super(itemView);
             addPeopleName=itemView.findViewById(R.id.peopleName);
             addPeopleGender=itemView.findViewById(R.id.peopleGender);
-            addPeopleDate=itemView.findViewById(R.id.peopleDate);
+            compatibilityCount=itemView.findViewById(R.id.compatibilityCount);
             peopleProfileImage=itemView.findViewById(R.id.peopleProfileImage);
             favouritesIcon=itemView.findViewById(R.id.unlike_blue_image);
             notificationIndicator=itemView.findViewById(R.id.notificationIndicator);

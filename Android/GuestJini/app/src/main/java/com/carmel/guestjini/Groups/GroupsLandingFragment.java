@@ -1,4 +1,4 @@
-package com.carmel.guestjini.Community;
+package com.carmel.guestjini.Groups;
 
 
 import android.media.Image;
@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.carmel.guestjini.Community.CommunityLandingFragment;
 import com.carmel.guestjini.R;
 
 import java.util.ArrayList;

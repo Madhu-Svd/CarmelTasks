@@ -196,6 +196,10 @@
     <string name="groups">GROUPS</string>
     <string name="people_title">PEOPLE</string>
     <string name="interest_groups">INTEREST GROUPS</string>
-
-
+    <string name="origin_large_text"> If you have a profile picture, your chances of\n making more friends will be higher. However\n you can turn on or turn off the visibility of\n your photo anytime. </string>
+<!--    People -->
+    <string name="people_name">People Name</string>
+    <string name="people_gender">People Gender</string>
+    <string name="Common_interests">Common Interests</string>
+    <string name="compatibility_count">Compatibility Count</string>
 </resources>

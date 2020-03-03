@@ -6,19 +6,20 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import com.carmel.guestjini.Community.CommunityLandingFragment;
+import com.carmel.guestjini.Groups.GroupsLandingFragment;
+import com.carmel.guestjini.People.PeopleLandingFragment;
 
-public class CommunityActivity extends AppCompatActivity {
+public class GroupsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_community);
-//        InterestGroupsFragment interestGroupsFragment=new InterestGroupsFragment();
-        CommunityLandingFragment communityLandingFragment=new CommunityLandingFragment();
+        setContentView(R.layout.activity_groups);
+        GroupsLandingFragment groupsLandingFragment=new GroupsLandingFragment();
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.CommunityPlaceHolder,communityLandingFragment);
+        fragmentTransaction.replace(R.id.groupsPlaceHolder,groupsLandingFragment);
         fragmentTransaction.commit();
+
     }
 }

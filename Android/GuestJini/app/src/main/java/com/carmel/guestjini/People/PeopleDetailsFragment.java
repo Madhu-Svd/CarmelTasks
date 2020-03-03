@@ -1,4 +1,4 @@
-package com.carmel.guestjini.Community;
+package com.carmel.guestjini.People;
 
 
 import android.os.Bundle;
@@ -14,11 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.carmel.guestjini.People.PeopleLandingFragment;
 import com.carmel.guestjini.R;
-
-import java.util.ArrayList;
-
-import Model.PeopleModel;
 
 
 public class PeopleDetailsFragment extends Fragment {
@@ -76,7 +73,7 @@ public class PeopleDetailsFragment extends Fragment {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PeopleLandingFragment  peopleLandingFragment=new PeopleLandingFragment();
+                PeopleLandingFragment peopleLandingFragment=new PeopleLandingFragment();
                 FragmentManager fragmentManager=getFragmentManager();
                 FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.CommunityPlaceHolder,peopleLandingFragment);

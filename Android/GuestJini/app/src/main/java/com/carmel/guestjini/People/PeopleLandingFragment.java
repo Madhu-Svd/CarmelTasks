@@ -1,9 +1,9 @@
-package com.carmel.guestjini.Community;
+package com.carmel.guestjini.People;
 
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -23,6 +23,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.carmel.guestjini.Community.CommunityLandingFragment;
+import com.carmel.guestjini.CommunityActivity;
 import com.carmel.guestjini.R;
 
 import java.util.ArrayList;
@@ -67,7 +69,7 @@ public class PeopleLandingFragment extends Fragment implements PeopleAdapter.OnI
         PeopleModel peopleModel=new PeopleModel();
         peopleModel.setAddPeopleName("John Doe");
         peopleModel.setAddPeopleGender("Male");
-        peopleModel.setAddDate("12/12");
+        peopleModel.setCompatibilityCount("12/12");
         peopleModel.setNotificationIndicator(R.drawable.red_small_circle);
         peopleModel.setProfilePicture(R.drawable.profile_image);
         peopleModelArrayList.add(peopleModel);
@@ -75,34 +77,34 @@ public class PeopleLandingFragment extends Fragment implements PeopleAdapter.OnI
         peopleModel=new PeopleModel();
         peopleModel.setAddPeopleName("Peter Law");
         peopleModel.setAddPeopleGender("Male");
-        peopleModel.setAddDate("08/12");
+        peopleModel.setCompatibilityCount("08/12");
         peopleModel.setProfilePicture(R.drawable.profile_image);
         peopleModelArrayList.add(peopleModel);
 
         peopleModel=new PeopleModel();
         peopleModel.setAddPeopleName("Luke Ray");
-        peopleModel.setAddDate("05/12");
+        peopleModel.setCompatibilityCount("05/12");
         peopleModel.setProfilePicture(R.drawable.profile_image);
         peopleModelArrayList.add(peopleModel);
 
         peopleModel=new PeopleModel();
         peopleModel.setAddPeopleName("Daisy Lake");
         peopleModel.setAddPeopleGender("Female");
-        peopleModel.setAddDate("02/12");
+        peopleModel.setCompatibilityCount("02/12");
         peopleModel.setProfilePicture(R.drawable.profile_image);
         peopleModelArrayList.add(peopleModel);
 
         peopleModel=new PeopleModel();
         peopleModel.setAddPeopleName("Jeret Quartz");
         peopleModel.setAddPeopleGender("Female");
-        peopleModel.setAddDate("01/12");
+        peopleModel.setCompatibilityCount("01/12");
         peopleModel.setProfilePicture(R.drawable.profile_image);
         peopleModelArrayList.add(peopleModel);
 
         peopleModel=new PeopleModel();
         peopleModel.setAddPeopleName("Dan Quartz");
         peopleModel.setAddPeopleGender("Male");
-        peopleModel.setAddDate("00/12");
+        peopleModel.setCompatibilityCount("00/12");
         peopleModel.setProfilePicture(R.drawable.profile_image);
         peopleModelArrayList.add(peopleModel);
 
@@ -185,12 +187,8 @@ public class PeopleLandingFragment extends Fragment implements PeopleAdapter.OnI
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CommunityLandingFragment communityLandingFragment=new CommunityLandingFragment();
-                FragmentManager fragmentManager=getFragmentManager();
-                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.CommunityPlaceHolder,communityLandingFragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                Intent intent=new Intent(getContext(), CommunityActivity.class);
+                startActivity(intent);
             }
         });
         return rootView;

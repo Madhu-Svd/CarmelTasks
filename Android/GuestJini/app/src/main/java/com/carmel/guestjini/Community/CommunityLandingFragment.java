@@ -1,7 +1,6 @@
 package com.carmel.guestjini.Community;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -14,12 +13,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.carmel.guestjini.Login;
+import com.carmel.guestjini.Groups.GroupsLandingFragment;
 import com.carmel.guestjini.R;
-import com.carmel.guestjini.SettingsActivity;
-import com.carmel.guestjini.Support.DraftViewFragment;
-import com.carmel.guestjini.Support.SupportLandingFragment;
-import com.carmel.guestjini.SupportActivity;
 
 import java.util.ArrayList;
 

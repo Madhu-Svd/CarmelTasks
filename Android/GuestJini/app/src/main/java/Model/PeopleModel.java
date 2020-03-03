@@ -6,7 +6,7 @@ public class PeopleModel {
     private String addPeopleGender;
     private int notificationIndicator;
     private int favouritesIcon;
-    private String addDate;
+    private String compatibilityCount;
 
 
     public int getProfilePicture() {
@@ -49,11 +49,11 @@ public class PeopleModel {
         this.favouritesIcon = favouritesIcon;
     }
 
-    public String getAddDate() {
-        return addDate;
+    public String getCompatibilityCount() {
+        return compatibilityCount;
     }
 
-    public void setAddDate(String addDate) {
-        this.addDate = addDate;
+    public void setCompatibilityCount(String  compatibilityCount) {
+        this.compatibilityCount = compatibilityCount;
     }
 }

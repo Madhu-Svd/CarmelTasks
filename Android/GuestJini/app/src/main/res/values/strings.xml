@@ -197,9 +197,24 @@
     <string name="people_title">PEOPLE</string>
     <string name="interest_groups">INTEREST GROUPS</string>
     <string name="origin_large_text"> If you have a profile picture, your chances of\n making more friends will be higher. However\n you can turn on or turn off the visibility of\n your photo anytime. </string>
-<!--    People -->
+    <!--    People -->
     <string name="people_name">People Name</string>
     <string name="people_gender">People Gender</string>
     <string name="Common_interests">Common Interests</string>
     <string name="compatibility_count">Compatibility Count</string>
+<!--   interest groups -->
+    <string name="dateTime">Message Date and Time</string>
+    <string name="member_name">Member Name</string>
+    <string name="message">Message content posted by other users</string>
+    <string name="interestGroupType">Interest Group Type</string>
+    <string name="interestGroupName">Interest Group Name</string>
+    <string name="send">SEND</string>
+    <string name="interestGroupDescription">Lorem ipsum dolor sit amet, consectetur adip elit.In tempor suscipit augue sit amet egestas</string>
+    <string name="writeHere">Write here…</string>
+    <string name="userName">User name</string>
+    <string name="userMassage">Message content posted by the user</string>
+    <string name="subscribe">SUBSCRIBE</string>
+    <string name="clear">CLEAR</string>
+    <string name="subscribed">SUBSCRIBED</string>
+    <string name="New">NEW</string>
 </resources>

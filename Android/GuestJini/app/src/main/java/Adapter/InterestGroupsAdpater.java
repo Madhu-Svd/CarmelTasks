@@ -13,8 +13,8 @@ import com.carmel.guestjini.R;
 
 import java.util.ArrayList;
 
+import Model.GroupChatModel;
 import Model.InterestGroupsModel;
-import Model.MyTicketsModel;
 
 import static Model.InterestGroupsModel.FOURTH_TYPE;
 import static Model.InterestGroupsModel.THIRD_TYPE;
@@ -23,9 +23,10 @@ import static Model.MyTicketsModel.TWO_TYPE;
 
 public class InterestGroupsAdpater extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private ArrayList<InterestGroupsModel> modelArrayList;
-
-    public InterestGroupsAdpater(ArrayList<InterestGroupsModel> interestGroupsList) {
+    private OnItemClickListener onItemClickListener;
+    public InterestGroupsAdpater(ArrayList<InterestGroupsModel> interestGroupsList,OnItemClickListener onItemClickListener) {
         this.modelArrayList=interestGroupsList;
+        this.onItemClickListener=onItemClickListener;
     }
     @Override
     public int getItemViewType(int position) {
@@ -43,14 +44,14 @@ public class InterestGroupsAdpater extends RecyclerView.Adapter<RecyclerView.Vie
         switch (viewType){
             case ONE_TYPE:
                 view= LayoutInflater.from(parent.getContext()).inflate(R.layout.subscribed_interest_group_container,parent,false);
-                return new InterestGroupsAdpater.OneViewHolder(view);
+                return new InterestGroupsAdpater.OneViewHolder(view,onItemClickListener);
 
             case TWO_TYPE:
                 view=LayoutInflater.from(parent.getContext()).inflate(R.layout.subscribed_read_interest_group_cell,parent,false);
                 return new InterestGroupsAdpater.SecondViewHolder(view);
             case THIRD_TYPE:
                 view=LayoutInflater.from(parent.getContext()).inflate(R.layout.unsubscribed_interest_group_container,parent,false);
-                return new InterestGroupsAdpater.ThirdViewHolder(view);
+                return new InterestGroupsAdpater.ThirdViewHolder(view,onItemClickListener);
 
             case FOURTH_TYPE:
                 view=LayoutInflater.from(parent.getContext()).inflate(R.layout.unsubscribed_interest_group_does_not_match_cell,parent,false);
@@ -62,7 +63,29 @@ public class InterestGroupsAdpater extends RecyclerView.Adapter<RecyclerView.Vie
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-
+        InterestGroupsModel interestGroupsModel=modelArrayList.get(position);
+        switch (interestGroupsModel.getViewType()) {
+            case ONE_TYPE:
+                ((OneViewHolder)holder).interestCategoryTitle.setText(interestGroupsModel.getAddInterestCategoryTitle());
+                ((OneViewHolder)holder).interestGroupTitle.setText(interestGroupsModel.getAddInterestGroupTitle());
+                ((OneViewHolder)holder).interestGroupDescription.setText(interestGroupsModel.getAddInterestGroupDescription());
+                break;
+            case TWO_TYPE:
+                ((SecondViewHolder)holder).interestCategoryTitle.setText(interestGroupsModel.getAddInterestCategoryTitle());
+                ((SecondViewHolder)holder).interestGroupTitle.setText(interestGroupsModel.getAddInterestGroupTitle());
+                ((SecondViewHolder)holder).interestGroupDescription.setText(interestGroupsModel.getAddInterestGroupDescription());
+                break;
+            case THIRD_TYPE:
+                ((ThirdViewHolder)holder).interestCategoryTitle.setText(interestGroupsModel.getAddInterestCategoryTitle());
+                ((ThirdViewHolder)holder).interestGroupTitle.setText(interestGroupsModel.getAddInterestGroupTitle());
+                ((ThirdViewHolder)holder).interestGroupDescription.setText(interestGroupsModel.getAddInterestGroupDescription());
+                break;
+            case FOURTH_TYPE:
+                ((FourthViewHolder)holder).interestCategoryTitle.setText(interestGroupsModel.getAddInterestCategoryTitle());
+                ((FourthViewHolder)holder).interestGroupTitle.setText(interestGroupsModel.getAddInterestGroupTitle());
+                ((FourthViewHolder)holder).interestGroupDescription.setText(interestGroupsModel.getAddInterestGroupDescription());
+                break;
+        }
     }
 
     @Override
@@ -70,22 +93,37 @@ public class InterestGroupsAdpater extends RecyclerView.Adapter<RecyclerView.Vie
         return modelArrayList.size();
     }
 
-    class OneViewHolder extends RecyclerView.ViewHolder{
-
-         public OneViewHolder(@NonNull View itemView) {
+    class OneViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+        TextView interestCategoryTitle,interestGroupTitle,interestGroupDescription;
+        OnItemClickListener onItemClickListener;
+         public OneViewHolder(@NonNull View itemView,OnItemClickListener onItemClickListener) {
              super(itemView);
+             interestCategoryTitle=itemView.findViewById(R.id.subscribedInterestCategoryTitle);
+             interestGroupTitle=itemView.findViewById(R.id.subscribedInterestGroupTitle);
+             interestGroupDescription=itemView.findViewById(R.id.interestLargeDescription);
+             this.onItemClickListener=onItemClickListener;
+             itemView.setOnClickListener(this);
          }
+        @Override
+        public void onClick(View v) {
+            onItemClickListener.onclickSubscribeGroup(getAdapterPosition());
+        }
      }
     class SecondViewHolder extends RecyclerView.ViewHolder{
+        TextView interestCategoryTitle,interestGroupTitle,interestGroupDescription;
 
         public SecondViewHolder(@NonNull View itemView) {
             super(itemView);
+            interestCategoryTitle=itemView.findViewById(R.id.techTitle);
+            interestGroupTitle=itemView.findViewById(R.id.textView4);
+            interestGroupDescription=itemView.findViewById(R.id.roboticsLargeDescription);
         }
     }
-    class ThirdViewHolder extends RecyclerView.ViewHolder{
+    class ThirdViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView interestCategoryTitle,interestGroupTitle,interestGroupDescription,indicatorDescription;
         ImageView indicators,informationIcons;
-        public ThirdViewHolder(@NonNull View itemView) {
+        OnItemClickListener onItemClickListener;
+        public ThirdViewHolder(@NonNull View itemView,OnItemClickListener onItemClickListener) {
             super(itemView);
             interestCategoryTitle=itemView.findViewById(R.id.interestCategoryTitle);
             interestGroupTitle=itemView.findViewById(R.id.interestGroupTitle);
@@ -95,61 +133,31 @@ public class InterestGroupsAdpater extends RecyclerView.Adapter<RecyclerView.Vie
             informationIcons=itemView.findViewById(R.id.informationIcon);
             indicators.setImageResource(R.drawable.indicator_icon);
             informationIcons.setImageResource(R.drawable.information_icon);
+            this.onItemClickListener=onItemClickListener;
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            onItemClickListener.onclickUnsubscribeGroup(getAdapterPosition());
         }
     }
-    class FourthViewHolder extends RecyclerView.ViewHolder{
+    class FourthViewHolder extends RecyclerView.ViewHolder {
         TextView interestCategoryTitle,interestGroupTitle,interestGroupDescription;
         ImageView indicators,informationIcons;
         public FourthViewHolder(@NonNull View itemView) {
             super(itemView);
-            interestCategoryTitle=itemView.findViewById(R.id.interestCategoryTitle);
-            interestGroupTitle=itemView.findViewById(R.id.interestGroupTitle);
-            interestGroupDescription=itemView.findViewById(R.id.interestGroupDescription);
-            informationIcons=itemView.findViewById(R.id.informationIcon);
+            interestCategoryTitle=itemView.findViewById(R.id.outdoorTitle);
+            interestGroupTitle=itemView.findViewById(R.id.skyDivingTitle);
+            interestGroupDescription=itemView.findViewById(R.id.skyDivingLargeDescription);
+            informationIcons=itemView.findViewById(R.id.circleIcon);
+
         }
+
     }
-//    private ArrayList<InterestGroupsModel> interestGroupsList;
-//    public InterestGroupsAdpater(ArrayList<InterestGroupsModel> interestGroupsList) {
-//        this.interestGroupsList=interestGroupsList;
-//    }
-//
-//    @NonNull
-//    @Override
-//    public InterestGroupsAdpater.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.unsubscribed_interest_group_container,parent,false);
-//        ViewHolder viewHolder=new ViewHolder(view);
-//        return viewHolder;
-//    }
-//
-//    @Override
-//    public void onBindViewHolder(@NonNull InterestGroupsAdpater.ViewHolder holder, int position) {
-////        final InterestGroupsModel interestGroupsModel=this.interestGroupsList.get(position);
-////        holder.interestCategoryTitle.setText(String.valueOf(interestGroupsModel.getAddInterestCategoryTitle()));
-////        holder.interestGroupTitle.setText(String.valueOf(interestGroupsModel.getAddInterestGroupTitle()));
-////        holder.interestGroupDescription.setText(String.valueOf(interestGroupsModel.getAddInterestGroupDescription()));
-////        holder.indicatorDescription.setText(String.valueOf(interestGroupsModel.getAddIndicatorDescription()));
-////        holder.indicators.setImageResource(interestGroupsModel.getAddIndicator());
-////        holder.informationIcons.setImageResource(interestGroupsModel.getAddInformationIcons());
-//    }
-//
-//    @Override
-//    public int getItemCount() {
-//        return interestGroupsList.size();
-//    }
-//
-//    public class ViewHolder extends RecyclerView.ViewHolder{
-//        TextView interestCategoryTitle,interestGroupTitle,interestGroupDescription,indicatorDescription;
-//        ImageView indicators,informationIcons;
-//        public ViewHolder(@NonNull View itemView) {
-//            super(itemView);
-//            interestCategoryTitle=itemView.findViewById(R.id.interestCategoryTitle);
-//            interestGroupTitle=itemView.findViewById(R.id.interestGroupTitle);
-//            interestGroupDescription=itemView.findViewById(R.id.interestGroupDescription);
-//            indicatorDescription=itemView.findViewById(R.id.indicatorSmallDescription);
-//            indicators=itemView.findViewById(R.id.interestGroupIndicator);
-//            informationIcons=itemView.findViewById(R.id.informationIcon);
-//            indicators.setImageResource(R.drawable.indicator_icon);
-//            informationIcons.setImageResource(R.drawable.information_icon);
-//        }
-//    }
+    public interface OnItemClickListener{
+        void onclickUnsubscribeGroup(int position);
+        void onclickSubscribeGroup(int position);
+
+    }
 }

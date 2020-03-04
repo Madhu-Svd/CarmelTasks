@@ -52,7 +52,6 @@ public class CommunityLandingFragment extends Fragment implements CommunityLandi
         fragmentTransaction.replace(R.id.CommunityPlaceHolder, groupsLandingFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
-
     }
 
     @Override

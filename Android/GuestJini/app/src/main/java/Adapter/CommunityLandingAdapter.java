@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.carmel.guestjini.CommunityActivity;
 import com.carmel.guestjini.GroupsActivity;
+import com.carmel.guestjini.InterestGroupsActivity;
 import com.carmel.guestjini.PeopleActivity;
 import com.carmel.guestjini.ProfileActivity;
 import com.carmel.guestjini.R;
@@ -86,7 +87,7 @@ public class CommunityLandingAdapter extends RecyclerView.Adapter<CommunityLandi
                     intent =  new Intent(context, PeopleActivity.class);
                     break;
                 case 2:
-                    intent =  new Intent(context, GroupsActivity.class);
+                    intent =  new Intent(context, InterestGroupsActivity.class);
                     break;
                 default:
                     intent =  new Intent(context, CommunityActivity.class);

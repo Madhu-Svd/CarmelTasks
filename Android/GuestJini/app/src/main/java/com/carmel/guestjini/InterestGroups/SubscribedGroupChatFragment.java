@@ -30,11 +30,12 @@ public class SubscribedGroupChatFragment extends Fragment {
     ImageView backArrow,informationIcon;
     RecyclerView groupChatRecyclerView,groupInformationRecyclerView;
     ArrayList<GroupChatModel> groupChatList=new ArrayList<>();
-    ArrayList<InterestGroupMembersModel> interestGroupMemberslist=new ArrayList<>();
     private TextView groupType,groupName,groupDescription;
     String group_Type,group_Name,group_Description;
-    RelativeLayout recyclerViewMainLayout,unsubscribedLayout;
-    Button subscribeButton;
+    String group_Type1,group_Name1,group_Description1;
+
+//    RelativeLayout recyclerViewMainLayout,unsubscribedLayout;
+
     ImageView informationButton;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,10 +46,8 @@ public class SubscribedGroupChatFragment extends Fragment {
         informationIcon=rootView.findViewById(R.id.informationButton);
         groupChatRecyclerView=rootView.findViewById(R.id.groupChatRecyclerView);
         groupInformationRecyclerView=rootView.findViewById(R.id.groupInformationRecyclerView);
-        recyclerViewMainLayout=rootView.findViewById(R.id.recyclerViewMainLayout);
-        unsubscribedLayout=rootView.findViewById(R.id.unsubscribedLayout);
-        subscribeButton=rootView.findViewById(R.id.subscribeButton);
-        informationButton=rootView.findViewById(R.id.informationButton);
+//        recyclerViewMainLayout=rootView.findViewById(R.id.recyclerViewMainLayout);
+//        unsubscribedLayout=rootView.findViewById(R.id.unsubscribedLayout);
 
         groupType=rootView.findViewById(R.id.interestGroupType);
         groupName=rootView.findViewById(R.id.interestGroupName);
@@ -65,25 +64,23 @@ public class SubscribedGroupChatFragment extends Fragment {
             groupDescription.setText(group_Description);
 
         }
-        if(group_Name.equals("HIKING")){
-            recyclerViewMainLayout.setVisibility(View.GONE);
-            unsubscribedLayout.setVisibility(View.VISIBLE);
-            subscribeButton.setVisibility(View.VISIBLE);
-            informationButton.setVisibility(View.GONE);
-        }
-        else {
-            unsubscribedLayout.setVisibility(View.GONE);
-            recyclerViewMainLayout.setVisibility(View.VISIBLE);
-            subscribeButton.setVisibility(View.GONE);
-            informationButton.setVisibility(View.VISIBLE);
-        }
-
-        subscribeButton.setOnClickListener(new View.OnClickListener() {
+        informationIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                SubscribedGroupDetailedFragment subscribedGroupDetailedFragment=new SubscribedGroupDetailedFragment();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.interestGroupsPlaceHolder, subscribedGroupDetailedFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+                Bundle bundle=new Bundle();
+                bundle.putString("Interest Group Type",group_Type);
+                bundle.putString("Interest Group Name",group_Name);
+                bundle.putString("interestGroupDescription",group_Description);
+                subscribedGroupDetailedFragment.setArguments(bundle);
             }
         });
+
 
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,49 +93,6 @@ public class SubscribedGroupChatFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
-        informationIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                SubscribedGroupInformationFragment subscribedGroupInformationFragment=new SubscribedGroupInformationFragment();
-//                FragmentManager fragmentManager=getFragmentManager();
-//                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.interestGroupsPlaceHolder,subscribedGroupInformationFragment);
-//                fragmentTransaction.addToBackStack(null);
-//                fragmentTransaction.commit();
-            }
-        });
-        LinearLayoutManager linearLayoutManager1=new LinearLayoutManager(getContext());
-        groupInformationRecyclerView.setLayoutManager(linearLayoutManager1);
-        groupInformationRecyclerView.setHasFixedSize(true);
-        InterestGroupMemberAdapter interestGroupMemmberRecyclerAdapter=new InterestGroupMemberAdapter(rootView.getContext(),interestGroupMemberslist);
-        groupInformationRecyclerView.setAdapter(interestGroupMemmberRecyclerAdapter);
-
-        InterestGroupMembersModel interestGroupMembersModel=new InterestGroupMembersModel();
-        interestGroupMembersModel.setInterestGroupMemberProfileName("You");
-        interestGroupMembersModel.setInterestGroupMemberProfileCreatedDate("Since 29 July 2019");
-        interestGroupMemberslist.add(interestGroupMembersModel);
-
-        interestGroupMembersModel=new InterestGroupMembersModel();
-        interestGroupMembersModel.setInterestGroupMemberProfileName("Luke Ray");
-        interestGroupMembersModel.setInterestGroupMemberProfileCreatedDate("Since 29 July 2019");
-        interestGroupMemberslist.add(interestGroupMembersModel);
-
-        interestGroupMembersModel=new InterestGroupMembersModel();
-        interestGroupMembersModel.setInterestGroupMemberProfileName("Daisy Lake");
-        interestGroupMembersModel.setInterestGroupMemberProfileCreatedDate("Since 29 July 2019");
-        interestGroupMemberslist.add(interestGroupMembersModel);
-
-        interestGroupMembersModel=new InterestGroupMembersModel();
-        interestGroupMembersModel.setInterestGroupMemberProfileName("Mark Smith");
-        interestGroupMembersModel.setInterestGroupMemberProfileCreatedDate("Since 29 July 2019");
-        interestGroupMemberslist.add(interestGroupMembersModel);
-
-        interestGroupMembersModel=new InterestGroupMembersModel();
-        interestGroupMembersModel.setInterestGroupMemberProfileName("Dan Park");
-        interestGroupMembersModel.setInterestGroupMemberProfileCreatedDate("Since 29 July 2019");
-        interestGroupMemberslist.add(interestGroupMembersModel);
-
-
 
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         groupChatRecyclerView.setLayoutManager(linearLayoutManager);

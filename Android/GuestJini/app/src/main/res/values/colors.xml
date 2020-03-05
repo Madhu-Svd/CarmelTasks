@@ -44,7 +44,11 @@
     <color name="colorOnahau">#CDEEF4</color>
     <color name="colorRed">#FF0000</color>
     <color name="colorSolitude">#DFEBF7</color>
-
+    <color name="colorLightGrayishYellow">#E2DDC2</color>
+    <color name="colorTana">#DBD6BC</color>
+    <color name="colorNapa">#B1AD9C</color>
+    <color name="colorCharlestonGreen">#272727</color>
+    <color name="colorBisonHide">#BEBAA4</color>
 
 
 </resources>

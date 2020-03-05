@@ -1,10 +1,12 @@
 package com.carmel.guestjini.InterestGroups;
 
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -14,9 +16,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.carmel.guestjini.CommunityActivity;
+import com.carmel.guestjini.GroupsActivity;
 import com.carmel.guestjini.R;
 import com.google.android.material.card.MaterialCardView;
 
@@ -30,21 +35,40 @@ public class InterestGroupsFragment extends Fragment implements InterestGroupsAd
 
    private RecyclerView interestGroupsRecyclerView;
     ArrayList<InterestGroupsModel> interestGroupsList=new ArrayList<>();
-    private ImageView filterIcon;
+    private ImageView filterIcon,backArrow;
     MaterialCardView filterPopup;
-    private TextView filterTitle,subscribedTitle,ClearTitle,newTitle;
+    private EditText search;
+    private TextView filterTitle,subscribedTitle,ClearTitle,newTitle,searchResultCount;
+    private ConstraintLayout searchLayout,noResultFoundLayout,recyclerViewLayout;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_interest_groups, container, false);
         interestGroupsRecyclerView=view.findViewById(R.id.interestGroupsRecyclerView);
+        searchLayout=view.findViewById(R.id.searchLayout);
+        noResultFoundLayout=view.findViewById(R.id.noResultFoundLayout);
+        recyclerViewLayout=view.findViewById(R.id.recyclerViewLayout);
+        search=view.findViewById(R.id.search);
+        searchResultCount=view.findViewById(R.id.searchResultCount);
+        backArrow=view.findViewById(R.id.backArrow);
         filterIcon=view.findViewById(R.id.filterIcon);
         filterPopup=view.findViewById(R.id.filterPopup);
         filterTitle=view.findViewById(R.id.filterTitle);
         subscribedTitle=view.findViewById(R.id.subscribedTitle);
         newTitle=view.findViewById(R.id.newTitle);
         ClearTitle=view.findViewById(R.id.ClearTitle);
+
+
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), GroupsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         filterIcon.setOnClickListener(new View.OnClickListener() {
             private boolean flag=true;
             @Override
@@ -96,6 +120,22 @@ public class InterestGroupsFragment extends Fragment implements InterestGroupsAd
 
             }
         });
+        searchLayout.setOnClickListener(new View.OnClickListener() {
+            private boolean flag=true;
+            @Override
+            public void onClick(View v) {
+                if(flag) {
+                    flag=false;
+                    noResultFoundLayout.setVisibility(View.VISIBLE);
+                    recyclerViewLayout.setVisibility(View.GONE);
+                    search.setText("John");
+                }else {
+                    flag=true;
+                    searchResultCount.setVisibility(View.VISIBLE);
+                }
+
+            }
+        });
 
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         interestGroupsRecyclerView.setLayoutManager(linearLayoutManager);
@@ -127,17 +167,17 @@ public class InterestGroupsFragment extends Fragment implements InterestGroupsAd
 
     @Override
     public void onclickUnsubscribeGroup(int position) {
-        SubscribedGroupChatFragment subscribedGroupChatFragment=new SubscribedGroupChatFragment();
+        SubscribedGroupDetailedFragment subscribedGroupDetailedFragment=new SubscribedGroupDetailedFragment();
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.interestGroupsPlaceHolder, subscribedGroupChatFragment);
+        fragmentTransaction.replace(R.id.interestGroupsPlaceHolder, subscribedGroupDetailedFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
         Bundle bundle=new Bundle();
         bundle.putString("Interest Group Type",interestGroupsList.get(position).getAddInterestCategoryTitle());
         bundle.putString("Interest Group Name",interestGroupsList.get(position).getAddInterestGroupTitle());
         bundle.putString("interestGroupDescription",interestGroupsList.get(position).getAddInterestGroupDescription());
-        subscribedGroupChatFragment.setArguments(bundle);
+        subscribedGroupDetailedFragment.setArguments(bundle);
     }
 
     @Override

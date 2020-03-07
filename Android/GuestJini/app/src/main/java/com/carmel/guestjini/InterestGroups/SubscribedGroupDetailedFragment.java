@@ -38,6 +38,7 @@ public class SubscribedGroupDetailedFragment extends Fragment {
     private TextView groupType,groupName,groupDescription;
     private ImageView backArrow;
     String group_Type,group_Name,group_Description;
+    String name;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -51,7 +52,7 @@ public class SubscribedGroupDetailedFragment extends Fragment {
         groupName=rootView.findViewById(R.id.interestGroupName);
         backArrow=rootView.findViewById(R.id.backButton);
         groupDescription=rootView.findViewById(R.id.interestsGroupDescription);
-        Bundle bundle=getArguments();
+        final Bundle bundle=getArguments();
         if(bundle!=null){
             group_Type=bundle.getString("Interest Group Type");
             group_Name=bundle.getString("Interest Group Name");
@@ -130,7 +131,12 @@ public class SubscribedGroupDetailedFragment extends Fragment {
                         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.interestGroupsPlaceHolder,subscribedGroupChatFragment);
                         fragmentTransaction.addToBackStack(null);
+                        Bundle bundle1=new Bundle();
+                        bundle1.putString("Interest Group Type",group_Type);
+                        bundle1.putString("Interest Group Name",group_Name);
+                        bundle1.putString("interestGroupDescription",group_Description);
                         fragmentTransaction.commit();
+                        subscribedGroupChatFragment.setArguments(bundle1);
                     }
                 });
 

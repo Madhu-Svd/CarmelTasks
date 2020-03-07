@@ -6,8 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import com.carmel.guestjini.Groups.GroupsLandingFragment;
-import com.carmel.guestjini.People.PeopleLandingFragment;
+import com.carmel.guestjini.Groups.GroupsFragment;
 
 public class GroupsActivity extends AppCompatActivity {
 
@@ -15,7 +14,7 @@ public class GroupsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_groups);
-        GroupsLandingFragment groupsLandingFragment=new GroupsLandingFragment();
+        GroupsFragment groupsLandingFragment=new GroupsFragment();
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.groupsPlaceHolder,groupsLandingFragment);

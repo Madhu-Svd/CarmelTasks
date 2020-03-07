@@ -6,8 +6,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import com.carmel.guestjini.Community.CommunityLandingFragment;
-import com.carmel.guestjini.CommunityGroups.CommunityGroups1Fragment;
 import com.carmel.guestjini.CommunityGroups.CommunityGroupsFragment;
 
 public class CommunityGroupsActivity extends AppCompatActivity {

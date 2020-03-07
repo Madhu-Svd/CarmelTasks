@@ -30,10 +30,11 @@ import static Model.CommunityGroupsModel.UnsubscribedCell;
 public class CommunityGroupsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private ArrayList<CommunityGroupsModel> communityGroupsArrayList;
-
-    public CommunityGroupsAdapter(Context context, ArrayList<CommunityGroupsModel> communityGroupsList) {
+    private OnItemClickListener onItemClickListener;
+    public CommunityGroupsAdapter(Context context, ArrayList<CommunityGroupsModel> communityGroupsList,OnItemClickListener onItemClickListener) {
         this.context=context;
         this.communityGroupsArrayList=communityGroupsList;
+        this.onItemClickListener=onItemClickListener;
     }
         @Override
     public int getItemViewType(int position){
@@ -153,10 +154,11 @@ public class CommunityGroupsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     public int getItemCount() {
         return communityGroupsArrayList.size();
     }
-        class InvitedUnreadUserHolder extends RecyclerView.ViewHolder {
-            TextView communityGroupTitle,communityGroupAdmin,communityGroupDescription;
-            TextView communityGroupCreationDateAndTime,communityGroupInformationMessage;
-            ImageView informationIcon,adminProfileIcon;
+
+    class InvitedUnreadUserHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        TextView communityGroupTitle,communityGroupAdmin,communityGroupDescription;
+        TextView communityGroupCreationDateAndTime,communityGroupInformationMessage;
+        ImageView informationIcon,adminProfileIcon;
         public InvitedUnreadUserHolder(@NonNull View itemView) {
             super(itemView);
             communityGroupTitle=itemView.findViewById(R.id.groupsName);
@@ -168,13 +170,20 @@ public class CommunityGroupsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             informationIcon=itemView.findViewById(R.id.informationIcon);
             adminProfileIcon.setImageResource(R.drawable.profile_image);
             informationIcon.setImageResource(R.drawable.information_icon);
+            itemView.setOnClickListener(this);
 
         }
+
+        @Override
+        public void onClick(View v) {
+            onItemClickListener.onClikInvitedUnreadGroup(getAdapterPosition());
+        }
     }
-        class RequestAcceptedHolder extends RecyclerView.ViewHolder {
-            TextView communityGroupTitle,communityGroupAdmin,communityGroupDescription;
-            TextView communityGroupCreationDateAndTime,communityGroupInformationMessage;
-            ImageView informationIcon,adminProfileIcon;
+
+    class RequestAcceptedHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        TextView communityGroupTitle,communityGroupAdmin,communityGroupDescription;
+        TextView communityGroupCreationDateAndTime,communityGroupInformationMessage;
+        ImageView informationIcon,adminProfileIcon;
         public RequestAcceptedHolder(@NonNull View itemView) {
             super(itemView);
             communityGroupTitle=itemView.findViewById(R.id.groupsName);
@@ -186,13 +195,20 @@ public class CommunityGroupsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             informationIcon=itemView.findViewById(R.id.invitedInformationIcon);
             adminProfileIcon.setImageResource(R.drawable.profile_image);
             informationIcon.setImageResource(R.drawable.information_icon);
+            itemView.setOnClickListener(this);
 
         }
+
+        @Override
+        public void onClick(View v) {
+            onItemClickListener.onClikRequestAcceptedGroup(getAdapterPosition());
+        }
     }
-         class JoinedGroupsHolder extends RecyclerView.ViewHolder {
-             TextView communityGroupTitle,communityGroupAdmin,communityGroupDescription;
-             TextView communityGroupCreationDateAndTime,communityGroupInformationMessage;
-             ImageView informationIcon,adminProfileIcon;
+
+    class JoinedGroupsHolder extends RecyclerView.ViewHolder {
+        TextView communityGroupTitle,communityGroupAdmin,communityGroupDescription;
+        TextView communityGroupCreationDateAndTime,communityGroupInformationMessage;
+        ImageView informationIcon,adminProfileIcon;
         public JoinedGroupsHolder(@NonNull View itemView) {
             super(itemView);
             communityGroupTitle=itemView.findViewById(R.id.groupsName);
@@ -206,10 +222,10 @@ public class CommunityGroupsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         }
     }
 
-     class RemovedViewHoler extends RecyclerView.ViewHolder {
-         TextView communityGroupTitle,communityGroupAdmin,communityGroupDescription;
-         TextView communityGroupCreationDateAndTime,communityGroupInformationMessage;
-         ImageView informationIcon,adminProfileIcon;
+    class RemovedViewHoler extends RecyclerView.ViewHolder {
+        TextView communityGroupTitle,communityGroupAdmin,communityGroupDescription;
+        TextView communityGroupCreationDateAndTime,communityGroupInformationMessage;
+        ImageView informationIcon,adminProfileIcon;
         public RemovedViewHoler(@NonNull View itemView) {
             super(itemView);
             communityGroupTitle=itemView.findViewById(R.id.groupsName);
@@ -222,6 +238,7 @@ public class CommunityGroupsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
         }
     }
+
     class RequestedViewHolder extends RecyclerView.ViewHolder {
         TextView communityGroupTitle,communityGroupAdmin,communityGroupDescription;
         TextView communityGroupCreationDateAndTime,communityGroupInformationMessage;
@@ -241,10 +258,11 @@ public class CommunityGroupsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
         }
     }
-     class UnsubscribedViewHolder extends RecyclerView.ViewHolder {
-         TextView communityGroupTitle,communityGroupAdmin,communityGroupDescription;
-         TextView communityGroupCreationDateAndTime,communityGroupInformationMessage;
-         ImageView informationIcon,adminProfileIcon;
+
+    class UnsubscribedViewHolder extends RecyclerView.ViewHolder {
+        TextView communityGroupTitle,communityGroupAdmin,communityGroupDescription;
+        TextView communityGroupCreationDateAndTime,communityGroupInformationMessage;
+        ImageView informationIcon,adminProfileIcon;
         public UnsubscribedViewHolder(@NonNull View itemView) {
             super(itemView);
             communityGroupTitle=itemView.findViewById(R.id.groupsName);
@@ -256,13 +274,10 @@ public class CommunityGroupsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             informationIcon=itemView.findViewById(R.id.invitedInformationIcon);
             adminProfileIcon.setImageResource(R.drawable.profile_image);
             informationIcon.setImageResource(R.drawable.information_icon);
-
-
         }
     }
 
-
-    class InvitedReadViewHolder extends RecyclerView.ViewHolder {
+    class InvitedReadViewHolder extends RecyclerView.ViewHolder  {
         TextView communityGroupTitle,communityGroupAdmin,communityGroupDescription;
         TextView communityGroupCreationDateAndTime,communityGroupInformationMessage;
         ImageView informationIcon,adminProfileIcon;
@@ -277,8 +292,16 @@ public class CommunityGroupsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             informationIcon=itemView.findViewById(R.id.informationIcon);
             adminProfileIcon.setImageResource(R.drawable.profile_image);
             informationIcon.setImageResource(R.drawable.information_icon);
-
         }
+    }
+
+    public interface OnItemClickListener{
+        void onClikInvitedUnreadGroup(int position);
+        void onClikRequestAcceptedGroup(int position);
+        void onClikRemovedGroup(int position);
+        void onClikRequestedGroup(int position);
+        void onClikUnsubscribedGroup(int position);
+
     }
 
 }

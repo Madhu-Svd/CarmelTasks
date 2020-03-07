@@ -23,7 +23,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.carmel.guestjini.Community.CommunityLandingFragment;
 import com.carmel.guestjini.CommunityActivity;
 import com.carmel.guestjini.R;
 

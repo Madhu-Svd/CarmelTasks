@@ -101,29 +101,29 @@
         <Button
             android:id="@+id/subscribeButton1"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="32dp"
             android:backgroundTint="@color/colorSummerSky"
             android:text="@string/subscribe"
             android:textColor="@color/colorWhite"
-            android:textSize="12sp"
+            android:textSize="10sp"
             android:letterSpacing="0.06"
             app:fontFamily="@font/roboto_bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <Button
             android:id="@+id/exitButton"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="32dp"
             android:backgroundTint="@color/colorRoman"
             android:text="@string/exit"
             android:textColor="@color/colorWhite"
-            android:textSize="12sp"
+            android:textSize="10sp"
             android:visibility="gone"
             android:letterSpacing="0.06"
             app:fontFamily="@font/roboto_bold"
@@ -176,7 +176,7 @@
                 android:layout_marginTop="26dp"
                 android:text="CREATED BY"
                 android:textColor="@color/colorSuvaGray"
-                android:textSize="10sp"
+                android:textSize="8sp"
                 app:fontFamily="@font/roboto"
                 app:layout_constraintStart_toEndOf="@+id/systemIcon"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -187,11 +187,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="2dp"
                 android:text="System"
                 android:textColor="@color/colorZambezi1"
                 android:textSize="12sp"
-                app:fontFamily="@font/roboto_medium"
+                app:fontFamily="@font/roboto"
                 app:layout_constraintStart_toEndOf="@+id/systemIcon"
                 app:layout_constraintTop_toBottomOf="@+id/createByText" />
 
@@ -201,7 +201,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:text="26 Jul 2018 03:48 PM"
-                android:textColor="@color/colorDimGray"
+                android:textColor="@color/colorSuvaGray"
                 android:textSize="8sp"
                 app:fontFamily="@font/roboto"
                 app:layout_constraintStart_toEndOf="@+id/systemIcon"
@@ -238,7 +238,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="8dp"
-                    android:inputType="textPersonName"
                     android:text="27 Members"
                     android:textColor="#505050"
                     android:textSize="10sp"
@@ -255,7 +254,7 @@
                     app:layout_constraintBottom_toTopOf="@id/navigationLayout"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout14"></View>
+                    ></View>
 
             </LinearLayout>
 

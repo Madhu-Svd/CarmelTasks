@@ -6,9 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import com.carmel.guestjini.Groups.GroupsLandingFragment;
 import com.carmel.guestjini.InterestGroups.InterestGroupsFragment;
-import com.carmel.guestjini.InterestGroups.SubscribedGroupChatFragment;
 
 public class InterestGroupsActivity extends AppCompatActivity {
 

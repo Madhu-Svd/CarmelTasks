@@ -64,6 +64,17 @@ public class SubscribedGroupChatFragment extends Fragment {
             groupDescription.setText(group_Description);
 
         }
+        Bundle bundle1=this.getArguments();
+        if(bundle1!=null){
+            group_Type=bundle.getString("Interest Group Type");
+            group_Name=bundle.getString("Interest Group Name");
+            group_Description=bundle.getString("interestGroupDescription");
+
+            groupType.setText(group_Type);
+            groupName.setText(group_Name);
+            groupDescription.setText(group_Description);
+
+        }
         informationIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

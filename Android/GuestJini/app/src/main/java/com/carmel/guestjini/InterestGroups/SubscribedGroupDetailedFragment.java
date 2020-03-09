@@ -151,28 +151,33 @@ public class SubscribedGroupDetailedFragment extends Fragment {
         groupInformationRecyclerView.setAdapter(interestGroupMemmberRecyclerAdapter);
 
         InterestGroupMembersModel interestGroupMembersModel=new InterestGroupMembersModel();
-        interestGroupMembersModel.setInterestGroupMemberProfileName("You");
-        interestGroupMembersModel.setInterestGroupMemberProfileCreatedDate("Since 29 July 2019");
+        interestGroupMembersModel.setGroupMemberProfileName("You");
+        interestGroupMembersModel.setGroupMemberProfileCreatedDate("Since 29 July 2019");
+        interestGroupMembersModel.setGroupProfileIcon(R.drawable.profile);
         interestGroupMemberslist.add(interestGroupMembersModel);
 
         interestGroupMembersModel=new InterestGroupMembersModel();
-        interestGroupMembersModel.setInterestGroupMemberProfileName("Luke Ray");
-        interestGroupMembersModel.setInterestGroupMemberProfileCreatedDate("Since 29 July 2019");
+        interestGroupMembersModel.setGroupMemberProfileName("Luke Ray");
+        interestGroupMembersModel.setGroupMemberProfileCreatedDate("Since 29 July 2019");
+        interestGroupMembersModel.setGroupProfileIcon(R.drawable.profile_image);
         interestGroupMemberslist.add(interestGroupMembersModel);
 
         interestGroupMembersModel=new InterestGroupMembersModel();
-        interestGroupMembersModel.setInterestGroupMemberProfileName("Daisy Lake");
-        interestGroupMembersModel.setInterestGroupMemberProfileCreatedDate("Since 29 July 2019");
+        interestGroupMembersModel.setGroupMemberProfileName("Daisy Lake");
+        interestGroupMembersModel.setGroupMemberProfileCreatedDate("Since 29 July 2019");
+        interestGroupMembersModel.setGroupProfileIcon(R.drawable.profile);
         interestGroupMemberslist.add(interestGroupMembersModel);
 
         interestGroupMembersModel=new InterestGroupMembersModel();
-        interestGroupMembersModel.setInterestGroupMemberProfileName("Mark Smith");
-        interestGroupMembersModel.setInterestGroupMemberProfileCreatedDate("Since 29 July 2019");
+        interestGroupMembersModel.setGroupMemberProfileName("Mark Smith");
+        interestGroupMembersModel.setGroupMemberProfileCreatedDate("Since 29 July 2019");
+        interestGroupMembersModel.setGroupProfileIcon(R.drawable.profile2);
         interestGroupMemberslist.add(interestGroupMembersModel);
 
         interestGroupMembersModel=new InterestGroupMembersModel();
-        interestGroupMembersModel.setInterestGroupMemberProfileName("Dan Park");
-        interestGroupMembersModel.setInterestGroupMemberProfileCreatedDate("Since 29 July 2019");
+        interestGroupMembersModel.setGroupMemberProfileName("Dan Park");
+        interestGroupMembersModel.setGroupMemberProfileCreatedDate("Since 29 July 2019");
+        interestGroupMembersModel.setGroupProfileIcon(R.drawable.profile1);
         interestGroupMemberslist.add(interestGroupMembersModel);
 
         backArrow.setOnClickListener(new View.OnClickListener() {

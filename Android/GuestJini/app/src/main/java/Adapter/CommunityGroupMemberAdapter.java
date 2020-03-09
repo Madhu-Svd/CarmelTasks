@@ -35,8 +35,10 @@ public class CommunityGroupMemberAdapter extends RecyclerView.Adapter<CommunityG
     @Override
     public void onBindViewHolder(@NonNull final CommunityGroupMemberAdapter.ViewHolder holder, int position) {
         final InterestGroupMembersModel interestGroupMembersModel=this.groupMembersModels.get(position);
-        holder.getInterestGroupMemberProfileCreatedDate.setText(interestGroupMembersModel.getInterestGroupMemberProfileCreatedDate());
-        holder.interestGroupMemberProfileName.setText(interestGroupMembersModel.getInterestGroupMemberProfileName());
+        holder.interestGroupMemberProfileName.setText(interestGroupMembersModel.getGroupMemberProfileName());
+        holder.interestGroupMemberProfileCreatedDate.setText(interestGroupMembersModel.getGroupMemberProfileCreatedDate());
+        holder.interestGroupMemberProfileImage.setImageResource(interestGroupMembersModel.getGroupProfileIcon());
+
 
     }
 
@@ -46,13 +48,13 @@ public class CommunityGroupMemberAdapter extends RecyclerView.Adapter<CommunityG
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView interestGroupMemberProfileName,getInterestGroupMemberProfileCreatedDate,profileDivider;
+        TextView interestGroupMemberProfileName,interestGroupMemberProfileCreatedDate,profileDivider;
         ImageView interestGroupMemberProfileImage;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             interestGroupMemberProfileImage=itemView.findViewById(R.id.interestGroupMemberProfileImage);
             interestGroupMemberProfileName=itemView.findViewById(R.id.interestGroupMemberProfileName);
-            getInterestGroupMemberProfileCreatedDate=itemView.findViewById(R.id.interestGroupMemberCreatedDate);
+            interestGroupMemberProfileCreatedDate=itemView.findViewById(R.id.interestGroupMemberCreatedDate);
             profileDivider=itemView.findViewById(R.id.profileDivider);
             interestGroupMemberProfileImage.setImageResource(R.drawable.profile_image);
         }

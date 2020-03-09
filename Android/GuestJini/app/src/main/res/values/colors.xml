@@ -50,6 +50,9 @@
     <color name="colorCharlestonGreen">#272727</color>
     <color name="colorBisonHide">#BEBAA4</color>
     <color name="colorMediumLightGray">#999999</color>
+    <color name="colorAllports">#206771</color>
+    <color name="colorScooter">#318E9B</color>
+    <color name="colorPattensBlue">#EDF8FA</color>
 
 
 </resources>

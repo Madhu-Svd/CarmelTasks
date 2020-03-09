@@ -35,8 +35,9 @@ public class InterestGroupMemberAdapter extends RecyclerView.Adapter<InterestGro
     @Override
     public void onBindViewHolder(@NonNull final InterestGroupMemberAdapter.ViewHolder holder, int position) {
         final InterestGroupMembersModel interestGroupMembersModel=this.interestGroupMembersList.get(position);
-        holder.getInterestGroupMemberProfileCreatedDate.setText(interestGroupMembersModel.getInterestGroupMemberProfileCreatedDate());
-        holder.interestGroupMemberProfileName.setText(interestGroupMembersModel.getInterestGroupMemberProfileName());
+        holder.interestGroupMemberProfileName.setText(interestGroupMembersModel.getGroupMemberProfileName());
+        holder.getInterestGroupMemberProfileCreatedDate.setText(interestGroupMembersModel.getGroupMemberProfileCreatedDate());
+        holder.interestGroupMemberProfileImage.setImageResource(interestGroupMembersModel.getGroupProfileIcon());
 
     }
 
@@ -54,7 +55,7 @@ public class InterestGroupMemberAdapter extends RecyclerView.Adapter<InterestGro
             interestGroupMemberProfileName=itemView.findViewById(R.id.interestGroupMemberProfileName);
             getInterestGroupMemberProfileCreatedDate=itemView.findViewById(R.id.interestGroupMemberCreatedDate);
             profileDivider=itemView.findViewById(R.id.profileDivider);
-            interestGroupMemberProfileImage.setImageResource(R.drawable.profile_image);
+
         }
     }
 }

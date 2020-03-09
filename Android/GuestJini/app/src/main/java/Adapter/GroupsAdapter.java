@@ -14,6 +14,7 @@ import com.carmel.guestjini.CommunityActivity;
 import com.carmel.guestjini.CommunityGroupsActivity;
 import com.carmel.guestjini.InterestGroupsActivity;
 
+import com.carmel.guestjini.MyGroupsActivity;
 import com.carmel.guestjini.R;
 
 import java.util.ArrayList;
@@ -72,7 +73,7 @@ public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.ViewHolder
                     intent =  new Intent(context, CommunityGroupsActivity.class);
                     break;
                 case 2:
-                    intent =  new Intent(context, InterestGroupsActivity.class);
+                    intent =  new Intent(context, MyGroupsActivity.class);
                     break;
                 default:
                     intent =  new Intent(context, CommunityActivity.class);

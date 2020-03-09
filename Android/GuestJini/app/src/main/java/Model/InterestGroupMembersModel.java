@@ -1,23 +1,36 @@
 package Model;
 
 public class InterestGroupMembersModel {
-    public String InterestGroupMemberProfileName;
-    public String InterestGroupMemberProfileCreatedDate;
 
+    public String groupMemberProfileName;
+    public String groupMemberProfileCreatedDate;
+    private int groupProfileIcon;
 
-    public String getInterestGroupMemberProfileName() {
-        return InterestGroupMemberProfileName;
+    public String getGroupMemberProfileName() {
+        return groupMemberProfileName;
     }
 
-    public void setInterestGroupMemberProfileName(String interestGroupMemberProfileName) {
-        InterestGroupMemberProfileName = interestGroupMemberProfileName;
+    public void setGroupMemberProfileName(String groupMemberProfileName) {
+        this.groupMemberProfileName = groupMemberProfileName;
     }
 
-    public String getInterestGroupMemberProfileCreatedDate() {
-        return InterestGroupMemberProfileCreatedDate;
+    public String getGroupMemberProfileCreatedDate() {
+        return groupMemberProfileCreatedDate;
     }
 
-    public void setInterestGroupMemberProfileCreatedDate(String interestGroupMemberProfileCreatedDate) {
-        InterestGroupMemberProfileCreatedDate = interestGroupMemberProfileCreatedDate;
+    public void setGroupMemberProfileCreatedDate(String groupMemberProfileCreatedDate) {
+        this.groupMemberProfileCreatedDate = groupMemberProfileCreatedDate;
     }
+
+    public int getGroupProfileIcon() {
+        return groupProfileIcon;
+    }
+
+    public void setGroupProfileIcon(int groupProfileIcon) {
+        this.groupProfileIcon = groupProfileIcon;
+    }
+
+
+
+
 }

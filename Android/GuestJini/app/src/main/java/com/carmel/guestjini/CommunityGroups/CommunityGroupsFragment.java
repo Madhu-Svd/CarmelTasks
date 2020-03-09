@@ -11,12 +11,14 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.carmel.guestjini.CommunityActivity;
 import com.carmel.guestjini.GroupsActivity;
@@ -59,8 +61,10 @@ public class CommunityGroupsFragment extends Fragment implements CommunityGroups
         communityGroupsList.add(new CommunityGroupsModel("MOVIE NIGHT - LION KING",
                 "Daisy Lake",
                 "Today 11:38 AM (2 Hours ago)",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies." +
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim felis et magna mattis finibus." +
+                        " Nulla elit ligula, placerat tincidunt ipsum eu, ornare semper felis. Duis arcu massa," +
+                        " venenatis eget ante sodales, posuere volutpat risus. Aenean et justo eu massa sodales posuere." +
+                        " Nullam sollicitudin nibh in turpis placerat venenatis. Aenean et justo eu massa sodales posuere. Aenean et justo eu massa sodales posuere.",
                 "You have been invited to join this group.",
                  R.drawable.profile_image,
                  R.drawable.information_icon,
@@ -71,7 +75,7 @@ public class CommunityGroupsFragment extends Fragment implements CommunityGroups
                 "2nd July 2019 06:21 PM (4 Days ago)",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies.",
                 "Your request has been accepted.",
-                R.drawable.profile_image,
+                R.drawable.profile,
                 R.drawable.done_button_xhdpi,
                 CommunityGroupsModel.RequestAcceptedCell));
 
@@ -80,7 +84,7 @@ public class CommunityGroupsFragment extends Fragment implements CommunityGroups
                 "2nd July 2019 06:21 PM (4 Days ago)",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies.",
                 null,
-                R.drawable.profile_image,
+                R.drawable.no_profile_picture,
                 0,
                 CommunityGroupsModel.JoinedGroupsCell));
 
@@ -89,14 +93,16 @@ public class CommunityGroupsFragment extends Fragment implements CommunityGroups
                 "2nd July 2019 06:21 PM (4 Days ago)",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies.",
                 null,
-                R.drawable.profile_image,
+                R.drawable.profile2,
                 0,
                 CommunityGroupsModel.RemovedCell));
 
         communityGroupsList.add(new CommunityGroupsModel("POT LUCK",
                 "Nora Bravos",
                 "2nd July 2019 06:21 PM (4 Days ago)",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim felis et magna mattis finibus." +
+                        " Nulla elit ligula, placerat tincidunt ipsum eu, ornare semper felis. Duis arcu massa, venenatis eget ante sodales," +
+                        " posuere volutpat risus. Aenean et justo eu massa sodales posuere. Nullam sollicitudin nibh in turpis placerat venenatis.",
                 "You have requested to join this group.",
                 R.drawable.profile_image,
                 R.drawable.exclamation_icon_xhdpi,
@@ -105,9 +111,11 @@ public class CommunityGroupsFragment extends Fragment implements CommunityGroups
         communityGroupsList.add(new CommunityGroupsModel("GEEKS",
                 "Markus Lawless",
                 "2nd July 2019 06:21 PM (4 Days ago)",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim felis et magna mattis finibus." +
+                        " Nulla elit ligula, placerat tincidunt ipsum eu, ornare semper felis. Duis arcu massa," +
+                        " venenatis eget ante sodales, posuere volutpat risus. Aenean et justo eu massa sodales posuere.",
                 "Send a request to join this group.",
-                R.drawable.profile_image,
+                R.drawable.profile,
                 R.drawable.information_icon,
                 CommunityGroupsModel.UnsubscribedCell));
 
@@ -159,6 +167,7 @@ public class CommunityGroupsFragment extends Fragment implements CommunityGroups
         bundle.putString("GroupDescription",communityGroupsList.get(position).getCommunityGroupDescription());
         bundle.putString("GroupAdminName",communityGroupsList.get(position).getCommunityGroupAdmin());
         bundle.putString("GroupCreationDateAndTime",communityGroupsList.get(position).getCommunityGroupCreationDateAndTime());
+        bundle.putInt("GroupIcon",communityGroupsList.get(position).getAdminProfileIcon());
         fragmentTransaction.commit();
         invitedGroupViewFragment.setArguments(bundle);
 
@@ -177,22 +186,57 @@ public class CommunityGroupsFragment extends Fragment implements CommunityGroups
         bundle.putString("GroupDescription",communityGroupsList.get(position).getCommunityGroupDescription());
         bundle.putString("GroupAdminName",communityGroupsList.get(position).getCommunityGroupAdmin());
         bundle.putString("GroupCreationDateAndTime",communityGroupsList.get(position).getCommunityGroupCreationDateAndTime());
+        bundle.putInt("GroupIcon",communityGroupsList.get(position).getAdminProfileIcon());
         communityGroupChatFragment.setArguments(bundle);
         fragmentTransaction.commit();
     }
 
     @Override
     public void onClikRemovedGroup(int position) {
-
+        Toast toast=new Toast(getContext());
+        ViewGroup viewGroup = null;
+        View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.toast_layout, viewGroup, false);
+        TextView text = (TextView) dialogView.findViewById(R.id.visibleToast);
+        text.setText(getText(R.string.groupRemovedMessage));
+        toast.setView(dialogView);
+//        toast.makeText(getActivity(),"", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.getAbsoluteGravity(0,0),0,520);
+        toast.show();
     }
 
     @Override
     public void onClikRequestedGroup(int position) {
-
+        communityGroupsList.get(position);
+        InvitedGroupViewFragment invitedGroupViewFragment=new InvitedGroupViewFragment();
+        FragmentManager fragmentManager=getFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.communityGroupsPlaceHolder,invitedGroupViewFragment);
+        fragmentTransaction.addToBackStack(null);
+        Bundle bundle=new Bundle();
+        bundle.putString("GroupName",communityGroupsList.get(position).getCommunityGroupTitle());
+        bundle.putString("GroupDescription",communityGroupsList.get(position).getCommunityGroupDescription());
+        bundle.putString("GroupAdminName",communityGroupsList.get(position).getCommunityGroupAdmin());
+        bundle.putString("GroupCreationDateAndTime",communityGroupsList.get(position).getCommunityGroupCreationDateAndTime());
+        bundle.putInt("GroupIcon",communityGroupsList.get(position).getAdminProfileIcon());
+        invitedGroupViewFragment.setArguments(bundle);
+        fragmentTransaction.commit();
     }
 
     @Override
     public void onClikUnsubscribedGroup(int position) {
-
+        communityGroupsList.get(position);
+        InvitedGroupViewFragment invitedGroupViewFragment=new InvitedGroupViewFragment();
+        FragmentManager fragmentManager=getFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.communityGroupsPlaceHolder,invitedGroupViewFragment);
+        fragmentTransaction.addToBackStack(null);
+        Bundle bundle=new Bundle();
+        bundle.putString("GroupName",communityGroupsList.get(position).getCommunityGroupTitle());
+        bundle.putString("GroupDescription",communityGroupsList.get(position).getCommunityGroupDescription());
+        bundle.putString("GroupAdminName",communityGroupsList.get(position).getCommunityGroupAdmin());
+        bundle.putString("GroupCreationDateAndTime",communityGroupsList.get(position).getCommunityGroupCreationDateAndTime());
+        bundle.putInt("GroupIcon",communityGroupsList.get(position).getAdminProfileIcon());
+        invitedGroupViewFragment.setArguments(bundle);
+        fragmentTransaction.commit();
     }
 }

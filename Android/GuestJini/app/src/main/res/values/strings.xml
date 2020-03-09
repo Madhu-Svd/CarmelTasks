@@ -236,8 +236,26 @@
     <string name="ignoreDescription">You will not be able to see and participate in the conversation.</string>
     <string name="ignoreButton">IGNORE</string>
     <string name="ignore">IGNORE?</string>
+    <string name="requestMessage">You sent a request to join this group on 8th July 2019</string>
+    <string name="acceptRequest">Awaiting Admin_name to accept your request.</string>
+    <string name="sendRequestButton">SEND REQUEST</string>
+    <string name="joinMessage">I would like to join group_name.</string>
+    <string name="sendRequest"> Your request will be sent to Admin.</string>
+    <string name="pleaseWait">PLEASE WAIT</string>
+    <string name="requestSuccess">Your request to join this group has been sent to admin.</string>
+    <string name="groupRemovedMessage">You have been removed from the group.</string>
+
+    <!-- My Groups -->
+    <string name="my_groups">MY GROUPS</string>
+    <string name="no_group_created">EMPTY! You have not created any groups yet.</string>
+    <string name="new_group">NEW GROUP</string>
+    <string name="group_name">GROUP NAME</string>
+    <string name="group_description_title">GROUP DESCRIPTION</string>
+    <string name="group_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim felis et magna mattis finibus. Nulla elit ligula, placerat tincidunt ipsum eu, ornare semper felis.</string>
+    <string name="create">CREATE</string>
+    <string name="invite">INVITE</string>
+    <string name="later">LATER</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
 </resources>

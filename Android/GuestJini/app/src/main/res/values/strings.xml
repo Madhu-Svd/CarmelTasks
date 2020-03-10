@@ -255,6 +255,11 @@
     <string name="create">CREATE</string>
     <string name="invite">INVITE</string>
     <string name="later">LATER</string>
+    <string name="groupname">Apache Riders</string>
+    <string name="people_age">People Age</string>
+    <string name="invitation_sent_message">Invitation Sent</string>
+    <string name="invitation_sent_date">Invitation Date</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

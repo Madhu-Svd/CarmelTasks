@@ -101,7 +101,7 @@
                     android:layout_toEndOf="@+id/communityGroupsProfileIcon"
                     android:letterSpacing="0.06"
                     android:text="@string/groupCreationDateAndTime"
-                    android:textColor="@color/colorMatterhon"
+                    android:textColor="@color/colorCharlestonGreen"
                     android:textSize="8sp"
                     app:fontFamily="@font/lato"
                     app:layout_constraintStart_toEndOf="@+id/communityGroupsProfileIcon"

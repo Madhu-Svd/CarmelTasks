@@ -7,7 +7,7 @@
     tools:context=".MyGroups.NewGroupFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/interestGroupsTitle"
+        android:id="@+id/myGroupsHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,30 +20,33 @@
             android:layout_height="12dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="36dp"
+            android:contentDescription="@string/back_arrow_icon"
             android:src="@drawable/back_arrow_icon_xxhdpi"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/interestGroupsHeading"
+            android:id="@+id/myGroupsTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
             android:text="@string/my_groups"
-            android:textColor="#595959"
-            android:textSize="15dp"
+            android:textColor="@color/colorZambezi"
+            android:textSize="15sp"
             app:fontFamily="@font/roboto_bold"
             app:layout_constraintStart_toEndOf="@+id/backArrow"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
-        android:layout_height="599dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/interestGroupsTitle">
+        app:layout_constraintTop_toBottomOf="@+id/myGroupsHeader">
 
         <RelativeLayout
             android:id="@+id/newGroupLayout"
@@ -63,8 +66,8 @@
                 android:layout_marginStart="67dp"
                 android:layout_marginTop="14dp"
                 android:fontFamily="@font/roboto_bold"
-                android:text="@string/new_group"
                 android:letterSpacing="0.1"
+                android:text="@string/new_group"
                 android:textColor="@color/colorZambezi"
                 android:textSize="11sp">
 
@@ -92,10 +95,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:paddingBottom="6dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/newGroupLayout"
-            android:paddingBottom="6dp">
+            app:layout_constraintTop_toBottomOf="@+id/newGroupLayout">
 
             <TextView
                 android:id="@+id/groupName"
@@ -106,8 +109,8 @@
                 android:layout_marginStart="67dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/roboto_bold"
-                android:text="@string/group_name"
                 android:letterSpacing="0.05"
+                android:text="@string/group_name"
                 android:textColor="@color/colorSummerSky"
                 android:textSize="11sp" />
 
@@ -124,9 +127,10 @@
                 android:layout_marginBottom="17dp"
                 android:background="@drawable/edit_textbox"
                 android:elevation="3dp"
+                android:hint="@string/groupname"
                 android:inputType="text"
-                android:padding="16dp"
                 android:letterSpacing="0.05"
+                android:padding="16dp"
                 android:shadowColor="@color/colorBlackRussian"
                 android:textColor="@color/colorSuvaGray"
                 android:textSize="12sp"
@@ -135,14 +139,15 @@
 
 
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/groupDescriptionLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/groupNameLayout"
-            android:paddingBottom="16dp">
+            app:layout_constraintTop_toBottomOf="@+id/groupNameLayout">
 
             <TextView
                 android:id="@+id/groupDescription"
@@ -153,8 +158,8 @@
                 android:layout_marginStart="67dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/roboto_bold"
-                android:text="@string/group_description_title"
                 android:letterSpacing="0.05"
+                android:text="@string/group_description_title"
                 android:textColor="@color/colorSummerSky"
                 android:textSize="11sp" />
 
@@ -171,15 +176,15 @@
                 android:layout_marginBottom="17dp"
                 android:background="@drawable/edit_textbox"
                 android:elevation="3dp"
-                android:text="@string/group_description"
                 android:inputType="textMultiLine"
-                android:padding="16dp"
                 android:letterSpacing="0.05"
+                android:lineSpacingExtra="2dp"
+                android:padding="16dp"
                 android:shadowColor="@color/colorBlackRussian"
+                android:text="@string/group_description"
                 android:textColor="@color/colorSuvaGray"
                 android:textSize="12sp"
                 app:fontFamily="@font/roboto"
-                android:lineSpacingExtra="2dp"
                 app:layout_constraintEnd_toEndOf="parent" />
 
         </RelativeLayout>
@@ -195,10 +200,9 @@
             app:layout_constraintTop_toBottomOf="@+id/groupDescriptionLayout">
 
             <Button
-                android:id="@+id/conversationButton"
+                android:id="@+id/createButton"
                 android:layout_width="80dp"
                 android:layout_height="40dp"
-                android:layout_alignParentStart="true"
                 android:layout_marginTop="0dp"
                 android:backgroundTint="@color/colorSummerSky"
                 android:elevation="2dp"

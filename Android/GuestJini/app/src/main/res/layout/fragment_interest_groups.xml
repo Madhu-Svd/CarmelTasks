@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
-            android:text="INTEREST GROUPS"
+            android:text="@string/interest_groups"
             android:textColor="#595959"
             android:textSize="14dp"
             app:fontFamily="@font/roboto_bold"

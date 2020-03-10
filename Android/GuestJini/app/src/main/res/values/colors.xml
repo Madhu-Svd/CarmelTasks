@@ -53,6 +53,7 @@
     <color name="colorAllports">#206771</color>
     <color name="colorScooter">#318E9B</color>
     <color name="colorPattensBlue">#EDF8FA</color>
+    <color name="colorDarkGray">#999999</color>
 
 
 </resources>

@@ -259,8 +259,14 @@
     <string name="people_age">People Age</string>
     <string name="invitation_sent_message">Invitation Sent</string>
     <string name="invitation_sent_date">Invitation Date</string>
-
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="conversation">CONVERSATION</string>
+    <string name="requests">REQUESTS</string>
+    <string name="requestText">You have requests to join the group from people whom you have not invited.</string>
+    <string name="inviteTitle">Invite member(s) to your group.</string>
+    <string name="inviteDescription"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="invitations">18 Invitations</string>
+    <string name="count_of_joined_members">06 Joined</string>
+    <string name="count_of_pending_requests">12 Pending</string>
+    <string name="joined_member_name">Joined Member Name</string>
+    <string name="joined_date">Joined Date</string>
 </resources>

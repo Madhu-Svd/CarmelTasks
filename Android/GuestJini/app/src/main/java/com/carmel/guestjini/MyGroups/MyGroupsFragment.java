@@ -48,7 +48,11 @@ public class MyGroupsFragment extends Fragment implements MyGroupsAdapter.OnItem
         myGroupsArrayList.add(new CommunityGroupsModel("Apache Riders",
                 "John Doe",
                 "2nd July 2019 06:21 PM (4 Days ago)",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+                        "Donec dignissim felis et magna mattis finibus." +
+                        " Nulla elit ligula, placerat tincidunt ipsum eu, ornare semper felis. " +
+                        "Duis arcu massa, venenatis eget ante sodales, posuere volutpat risus." +
+                        " Aenean et justo eu massa sodales posuere.Duis arcu massa, venenatis eget ante sodales, posuere volutpat risus.",
                 null,
                 R.drawable.profile2,
                 0,
@@ -97,12 +101,11 @@ public class MyGroupsFragment extends Fragment implements MyGroupsAdapter.OnItem
         MyGroupsDetailsFragment myGroupsDetailsFragment=new MyGroupsDetailsFragment();
         FragmentManager fragmentManager=getFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.communityGroupsPlaceHolder,myGroupsDetailsFragment);
+        fragmentTransaction.replace(R.id.myGroupsPlaceHolder,myGroupsDetailsFragment);
         fragmentTransaction.addToBackStack(null);
         Bundle bundle=new Bundle();
         bundle.putString("GroupName",myGroupsArrayList.get(position).getCommunityGroupTitle());
         bundle.putString("GroupDescription",myGroupsArrayList.get(position).getCommunityGroupDescription());
-        bundle.putString("GroupAdminName",myGroupsArrayList.get(position).getCommunityGroupAdmin());
         bundle.putString("GroupCreationDateAndTime",myGroupsArrayList.get(position).getCommunityGroupCreationDateAndTime());
         bundle.putInt("GroupIcon",myGroupsArrayList.get(position).getAdminProfileIcon());
         myGroupsDetailsFragment.setArguments(bundle);

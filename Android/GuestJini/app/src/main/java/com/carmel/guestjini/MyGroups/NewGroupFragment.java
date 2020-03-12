@@ -35,8 +35,6 @@ public class NewGroupFragment extends Fragment {
         backArrow=rootview.findViewById(R.id.backArrow);
         createButton=rootview.findViewById(R.id.createButton);
 
-
-
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

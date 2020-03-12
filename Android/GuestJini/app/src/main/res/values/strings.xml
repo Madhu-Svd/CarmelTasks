@@ -248,6 +248,7 @@
     <!-- My Groups -->
     <string name="my_groups">MY GROUPS</string>
     <string name="no_group_created">EMPTY! You have not created any groups yet.</string>
+    <string name="no_group_invited">EMPTY! You have not invited any members yet.</string>
     <string name="new_group">NEW GROUP</string>
     <string name="group_name">GROUP NAME</string>
     <string name="group_description_title">GROUP DESCRIPTION</string>
@@ -269,4 +270,10 @@
     <string name="count_of_pending_requests">12 Pending</string>
     <string name="joined_member_name">Joined Member Name</string>
     <string name="joined_date">Joined Date</string>
+    <string name="delete_group">DELETE GROUP?</string>
+    <string name="requests_title">REQUEST(s)</string>
+    <string name="requests_description">These people have sent request to join the group. You have not sent an invitation to them. You can either accept or ignore.</string>
+    <string name="requests_member_name">Requests Member Name</string>
+    <string name="requests_date">Requests Date</string>
+    <string name="requests_status">Requests Status</string>
 </resources>

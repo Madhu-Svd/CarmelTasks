@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,9 +21,11 @@ import Model.JoinedMemberModel;
 public class JoinedMembersAdapter extends RecyclerView.Adapter<JoinedMembersAdapter.ViewHolder> {
     private Context context;
     private  ArrayList<JoinedMemberModel> joinedMembersList;
-    public JoinedMembersAdapter(Context context, ArrayList<JoinedMemberModel> joinedMembersArrayList) {
+    private OnItemClickListener onItemClickListener;
+    public JoinedMembersAdapter(Context context, ArrayList<JoinedMemberModel> joinedMembersArrayList,OnItemClickListener onItemClickListener) {
         this.context=context;
         this.joinedMembersList=joinedMembersArrayList;
+        this.onItemClickListener=onItemClickListener;
     }
 
     @NonNull
@@ -33,7 +36,7 @@ public class JoinedMembersAdapter extends RecyclerView.Adapter<JoinedMembersAdap
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         JoinedMemberModel joinedMembersModel=joinedMembersList.get(position);
         holder.joinedProfilePicture.setImageResource(joinedMembersModel.getJoinedProfilePicture());
         holder.joinedMemberName.setText(joinedMembersModel.getJoinedMembersName());
@@ -45,14 +48,25 @@ public class JoinedMembersAdapter extends RecyclerView.Adapter<JoinedMembersAdap
         return joinedMembersList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private ImageView joinedProfilePicture;
         private TextView joinedMemberName,joinedDate;
+        private RelativeLayout joinedLayout;
+        private RecyclerView rt;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             joinedProfilePicture=itemView.findViewById(R.id.joinedProfilePicture);
             joinedMemberName=itemView.findViewById(R.id.joinedMemberName);
             joinedDate=itemView.findViewById(R.id.joinedDate);
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View v) {
+            onItemClickListener.onClick(getAdapterPosition());
+        }
+    }
+    public interface OnItemClickListener{
+        void onClick(int position);
     }
 }

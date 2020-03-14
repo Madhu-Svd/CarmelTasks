@@ -106,6 +106,7 @@ public class MyGroupsFragment extends Fragment implements MyGroupsAdapter.OnItem
                 newGroupMainLayout.setVisibility(View.VISIBLE);
                 noCreatedGroupText.setVisibility(View.GONE);
                 createIcon.setVisibility(View.GONE);
+                inviteAndLaterLayout.setVisibility(View.GONE);
 
 //                NewGroupFragment newGroupFragment=new NewGroupFragment();
 //                FragmentManager fragmentManager=getFragmentManager();
@@ -119,6 +120,7 @@ public class MyGroupsFragment extends Fragment implements MyGroupsAdapter.OnItem
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 GroupName1=groupNameEdit.getText().toString();
                 GroupDescription1=groupDescrptionEdit.getText().toString();
                 final Dialog dialog = new Dialog(getContext());

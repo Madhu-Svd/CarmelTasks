@@ -75,7 +75,7 @@ public class MyGroupsDetailsFragment extends Fragment implements JoinedMembersAd
             groupCreationDateAndTime.setText(GroupCreationDateAndTime);
             groupDescription.setText(GroupDescription);
             noInvitedLayout.setVisibility(View.VISIBLE);
-            invitationsLayout.setVisibility(View.VISIBLE);
+            invitationsLayout.setVisibility(View.GONE);
 
         }
 

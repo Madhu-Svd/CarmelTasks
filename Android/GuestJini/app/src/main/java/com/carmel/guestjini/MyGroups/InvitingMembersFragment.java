@@ -1,6 +1,9 @@
 package com.carmel.guestjini.MyGroups;
 
 
+import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -11,13 +14,21 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListPopupWindow;
+import android.widget.PopupMenu;
+import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.carmel.guestjini.R;
 
@@ -26,36 +37,58 @@ import java.util.ArrayList;
 import Adapter.InvitingMembersAdapter;
 import Model.InvitingMembersModel;
 
-public class InvitingMembersFragment extends Fragment implements InvitingMembersAdapter.OnItemClickListener{
+public class InvitingMembersFragment extends Fragment implements InvitingMembersAdapter.OnItemClickListener,AdapterView.OnItemClickListener {
     private RecyclerView inviteGroupsRecyclerView;
-    private ArrayList<InvitingMembersModel> invitingMembersArrayList=new ArrayList<>();
+    private ArrayList<InvitingMembersModel> invitingMembersArrayList = new ArrayList<>();
     private EditText search;
-    private TextView searchResultCount;
-    private ImageView filterIcon,backArrow;
-    private ConstraintLayout searchLayout,noResultFoundLayout,recyclerViewLayout;
+    private TextView searchResultCount,clearTitle;
+    private ImageView filterIcon, backArrow;
+    private ConstraintLayout searchLayout, noResultFoundLayout, recyclerViewLayout;
+    ListPopupWindow  listPopupWindow;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView =inflater.inflate(R.layout.fragment_inviting_members, container, false);
-        inviteGroupsRecyclerView=rootView.findViewById(R.id.inviteGroupsRecyclerView);
-        searchLayout=rootView.findViewById(R.id.searchLayout);
-        noResultFoundLayout=rootView.findViewById(R.id.noResultFoundLayout);
-        recyclerViewLayout=rootView.findViewById(R.id.recyclerViewLayout);
-        search=rootView.findViewById(R.id.search);
-        searchResultCount=rootView.findViewById(R.id.searchResultCount);
-        backArrow=rootView.findViewById(R.id.backArrow);
-        filterIcon=rootView.findViewById(R.id.filterIcon);
+        final View rootView = inflater.inflate(R.layout.fragment_inviting_members, container, false);
+        inviteGroupsRecyclerView = rootView.findViewById(R.id.inviteGroupsRecyclerView);
+        searchLayout = rootView.findViewById(R.id.searchLayout);
+        noResultFoundLayout = rootView.findViewById(R.id.noResultFoundLayout);
+        recyclerViewLayout = rootView.findViewById(R.id.recyclerViewLayout);
+        search = rootView.findViewById(R.id.search);
+        searchResultCount = rootView.findViewById(R.id.searchResultCount);
+        backArrow = rootView.findViewById(R.id.backArrow);
+        filterIcon = rootView.findViewById(R.id.filterIcon);
+        clearTitle=rootView.findViewById(R.id.clearTitle);
+        String[] products={"CLEAR", "FAVOURITES"};
+
+        listPopupWindow = new ListPopupWindow(
+                getActivity());
+        listPopupWindow.setAdapter(new ArrayAdapter(
+                getActivity(),
+                R.layout.my_groups_filter, products));
+        listPopupWindow.setAnchorView(filterIcon);
+        listPopupWindow.setWidth(300);
+        listPopupWindow.setHeight(400);
+
+        listPopupWindow.setModal(true);
+        listPopupWindow.setOnItemClickListener(this);
+        filterIcon.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                listPopupWindow.show();
+            }
+        });
 
 
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
+
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         inviteGroupsRecyclerView.setLayoutManager(linearLayoutManager);
         inviteGroupsRecyclerView.setHasFixedSize(true);
-        InvitingMembersAdapter invitingMembersAdapter=new InvitingMembersAdapter(getContext(),invitingMembersArrayList,this);
+        InvitingMembersAdapter invitingMembersAdapter = new InvitingMembersAdapter(getContext(), invitingMembersArrayList, this);
         inviteGroupsRecyclerView.setAdapter(invitingMembersAdapter);
 
-        InvitingMembersModel invitingMembersModel=new InvitingMembersModel();
+        InvitingMembersModel invitingMembersModel = new InvitingMembersModel();
         invitingMembersModel.setProfilePicture(R.drawable.no_profile_picture);
         invitingMembersModel.setFavouritesIndicator(0);
         invitingMembersModel.setProfileName("Solomon Jakes");
@@ -64,7 +97,7 @@ public class InvitingMembersFragment extends Fragment implements InvitingMembers
         invitingMembersModel.setInvitationSentDate(" 21 July 2019");
         invitingMembersArrayList.add(invitingMembersModel);
 
-         invitingMembersModel=new InvitingMembersModel();
+        invitingMembersModel = new InvitingMembersModel();
         invitingMembersModel.setProfilePicture(R.drawable.profile1);
         invitingMembersModel.setFavouritesIndicator(R.drawable.favourite_icon);
         invitingMembersModel.setProfileName("Linda Raymond");
@@ -73,7 +106,7 @@ public class InvitingMembersFragment extends Fragment implements InvitingMembers
         invitingMembersModel.setInvitationSentDate(" 21 July 2019");
         invitingMembersArrayList.add(invitingMembersModel);
 
-        invitingMembersModel=new InvitingMembersModel();
+        invitingMembersModel = new InvitingMembersModel();
         invitingMembersModel.setProfilePicture(R.drawable.profile_image);
         invitingMembersModel.setFavouritesIndicator(0);
         invitingMembersModel.setProfileName("Daisy Lake");
@@ -82,7 +115,7 @@ public class InvitingMembersFragment extends Fragment implements InvitingMembers
         invitingMembersModel.setInvitationSentDate(" 21 July 2019");
         invitingMembersArrayList.add(invitingMembersModel);
 
-        invitingMembersModel=new InvitingMembersModel();
+        invitingMembersModel = new InvitingMembersModel();
         invitingMembersModel.setProfilePicture(R.drawable.profile);
         invitingMembersModel.setFavouritesIndicator(R.drawable.favourite_icon);
         invitingMembersModel.setProfileName("Diana Smith");
@@ -90,7 +123,7 @@ public class InvitingMembersFragment extends Fragment implements InvitingMembers
         invitingMembersModel.setInvitationSentDate(" 21 July 2019");
         invitingMembersArrayList.add(invitingMembersModel);
 
-        invitingMembersModel=new InvitingMembersModel();
+        invitingMembersModel = new InvitingMembersModel();
         invitingMembersModel.setProfilePicture(R.drawable.profile1);
         invitingMembersModel.setFavouritesIndicator(0);
         invitingMembersModel.setProfileName("Dan Park");
@@ -99,7 +132,7 @@ public class InvitingMembersFragment extends Fragment implements InvitingMembers
         invitingMembersModel.setInvitationSentDate(" 21 July 2019");
         invitingMembersArrayList.add(invitingMembersModel);
 
-        invitingMembersModel=new InvitingMembersModel();
+        invitingMembersModel = new InvitingMembersModel();
         invitingMembersModel.setProfilePicture(R.drawable.profile2);
         invitingMembersModel.setFavouritesIndicator(0);
         invitingMembersModel.setProfileName("Nora Bravos");
@@ -108,18 +141,18 @@ public class InvitingMembersFragment extends Fragment implements InvitingMembers
         invitingMembersModel.setInvitationSentDate(" 21 July 2019");
         invitingMembersArrayList.add(invitingMembersModel);
 
-
         searchLayout.setOnClickListener(new View.OnClickListener() {
-            private boolean flag=true;
+            private boolean flag = true;
+
             @Override
             public void onClick(View v) {
-                if(flag) {
-                    flag=false;
+                if (flag) {
+                    flag = false;
                     noResultFoundLayout.setVisibility(View.VISIBLE);
                     recyclerViewLayout.setVisibility(View.GONE);
                     search.setText("John");
-                }else {
-                    flag=true;
+                } else {
+                    flag = true;
                     searchResultCount.setVisibility(View.VISIBLE);
                 }
 
@@ -128,20 +161,51 @@ public class InvitingMembersFragment extends Fragment implements InvitingMembers
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyGroupsFragment myGroupsFragment=new MyGroupsFragment();
-                FragmentManager fragmentManager=getFragmentManager();
-                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.myGroupsPlaceHolder,myGroupsFragment);
+                MyGroupsFragment myGroupsFragment = new MyGroupsFragment();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.myGroupsPlaceHolder, myGroupsFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
 
             }
         });
+
+
+
+        filterIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                LayoutInflater inflater = (LayoutInflater) InvitingMembersFragment(getContext().LAYOUT_INFLATER_SERVICE);
+                View layout = LayoutInflater.from(getContext()).inflate(R.layout.my_groups_filter, null);
+                PopupWindow window = new PopupWindow(layout,400, 400,true);
+
+                window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                window.setOutsideTouchable(true);
+                window.showAtLocation(layout, Gravity.TOP, 268, 210);
+            }
+        });
+
         return rootView;
     }
 
     @Override
     public void onItemClick(int position) {
 
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        listPopupWindow.getAnchorView();
+        clearTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clearTitle.setVisibility(View.GONE);
+
+            }
+        });
+
+
+        listPopupWindow.dismiss();
     }
 }

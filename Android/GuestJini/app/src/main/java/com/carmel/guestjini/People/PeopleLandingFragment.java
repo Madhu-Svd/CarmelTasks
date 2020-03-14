@@ -4,6 +4,7 @@ package com.carmel.guestjini.People;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -15,11 +16,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -142,26 +145,38 @@ public class PeopleLandingFragment extends Fragment implements PeopleAdapter.OnI
 
             }
         });
+//        filterIcon.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//////                LayoutInflater inflater = (LayoutInflater) InvitingMembersFragment(getContext().LAYOUT_INFLATER_SERVICE);
+////                View layout = LayoutInflater.from(getContext()).inflate(R.layout.my_groups_filter, null);
+////                PopupWindow window = new PopupWindow(layout,400, 400,true);
+////
+////                window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+////                window.setOutsideTouchable(true);
+////                window.showAtLocation(layout, Gravity.TOP, 268, 210);
+//            }
+//        });
 
-        filterIcon.setOnClickListener(new View.OnClickListener() {
-            private boolean flag=true;
-            @Override
-            public void onClick(View v) {
-                if(flag){
-                    flag=false;
-                    filterPopup.setVisibility(View.VISIBLE);
-
-                }else {
-                    flag=true;
-                    filterPopup.setVisibility(View.GONE);
-                }
-            }
-        });
+//        filterIcon.setOnClickListener(new View.OnClickListener() {
+//            private boolean flag=true;
+//            @Override
+//            public void onClick(View v) {
+//                if(flag){
+//                    flag=false;
+//                    filterPopup.setVisibility(View.VISIBLE);
+//
+//                }else {
+//                    flag=true;
+//                    filterPopup.setVisibility(View.GONE);
+//                }
+//            }
+//        });
 
         favouritesTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    filterPopup.setVisibility(View.GONE);
+//                    filterPopup.setVisibility(View.GONE);
                     showingYourFavourites.setVisibility(View.VISIBLE);
                     clearTitle.setTextColor(ColorStateList.valueOf(Color
                             .parseColor("#32BDD2")));
@@ -173,7 +188,7 @@ public class PeopleLandingFragment extends Fragment implements PeopleAdapter.OnI
         clearTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                filterPopup.setVisibility(View.GONE);
+//                filterPopup.setVisibility(View.GONE);
                 showingYourFavourites.setVisibility(View.GONE);
                 clearTitle.setTextColor(ColorStateList.valueOf(Color
                         .parseColor("#B5B5B5")));

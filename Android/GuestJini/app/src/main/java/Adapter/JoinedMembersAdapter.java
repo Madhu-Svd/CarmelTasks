@@ -37,27 +37,38 @@ public class JoinedMembersAdapter extends RecyclerView.Adapter<JoinedMembersAdap
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
-        JoinedMemberModel joinedMembersModel=joinedMembersList.get(position);
+        final JoinedMemberModel joinedMembersModel=joinedMembersList.get(position);
         holder.joinedProfilePicture.setImageResource(joinedMembersModel.getJoinedProfilePicture());
         holder.joinedMemberName.setText(joinedMembersModel.getJoinedMembersName());
         holder.joinedDate.setText(joinedMembersModel.getJoinedDate());
+        holder.removeIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                removeItem(joinedMembersModel);
+            }
+        });
     }
 
+    private void removeItem(JoinedMemberModel joinedMembersModel) {
+        int position =joinedMembersList.indexOf(joinedMembersModel);
+        joinedMembersList.remove(position);
+        notifyItemRemoved(position);
+    }
+    
     @Override
     public int getItemCount() {
         return joinedMembersList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private ImageView joinedProfilePicture;
+        private ImageView joinedProfilePicture,removeIcon;
         private TextView joinedMemberName,joinedDate;
-        private RelativeLayout joinedLayout;
-        private RecyclerView rt;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             joinedProfilePicture=itemView.findViewById(R.id.joinedProfilePicture);
             joinedMemberName=itemView.findViewById(R.id.joinedMemberName);
             joinedDate=itemView.findViewById(R.id.joinedDate);
+            removeIcon=itemView.findViewById(R.id.removeIcon);
             itemView.setOnClickListener(this);
         }
 

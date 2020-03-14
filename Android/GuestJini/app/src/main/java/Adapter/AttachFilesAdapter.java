@@ -34,9 +34,18 @@ public class AttachFilesAdapter extends RecyclerView.Adapter<AttachFilesAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        AttachFilesModel attachFilesModel=this.attachFilesModels.get(position);
+        final AttachFilesModel attachFilesModel=this.attachFilesModels.get(position);
         holder.attachFilesName.setText(String.valueOf(attachFilesModel.getAttachFilesName()));
         holder.attachFilesSize.setText(String.valueOf(attachFilesModel.getAttachFilesSize()));
+        holder.deleteIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position=attachFilesModels.indexOf(attachFilesModel);
+                attachFilesModels.remove(position);
+                notifyItemRemoved(position);
+
+            }
+        });
     }
 
     @Override

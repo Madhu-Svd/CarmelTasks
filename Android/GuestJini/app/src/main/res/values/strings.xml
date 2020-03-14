@@ -276,4 +276,5 @@
     <string name="requests_member_name">Requests Member Name</string>
     <string name="requests_date">Requests Date</string>
     <string name="requests_status">Requests Status</string>
+    <string name="favourites">FAVOURITES</string>
 </resources>

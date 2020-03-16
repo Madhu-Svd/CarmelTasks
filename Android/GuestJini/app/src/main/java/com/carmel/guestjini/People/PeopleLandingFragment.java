@@ -40,7 +40,7 @@ public class PeopleLandingFragment extends Fragment implements PeopleAdapter.OnI
     private RelativeLayout filterPopup;
     private EditText search;
     private ArrayList<PeopleModel> peopleModelArrayList=new ArrayList<>();
-    private TextView showingYourFavourites,favouritesTitle,clearTitle,searchResultCount;
+    private TextView showingYourFavourites,searchResultCount;
     private ConstraintLayout searchLayout,noResultFoundLayout,recyclerViewLayout;
     private PeopleAdapter peopleAdapter;
 
@@ -57,8 +57,6 @@ public class PeopleLandingFragment extends Fragment implements PeopleAdapter.OnI
         filterPopup=rootView.findViewById(R.id.filterPopup);
         backArrow=rootView.findViewById(R.id.backArrow);
         showingYourFavourites=rootView.findViewById(R.id.showingYourFavourites);
-        favouritesTitle=rootView.findViewById(R.id.favouritesTitle);
-        clearTitle=rootView.findViewById(R.id.clearTitle);
         search=rootView.findViewById(R.id.search);
         searchResultCount=rootView.findViewById(R.id.searchResultCount);
 
@@ -145,18 +143,50 @@ public class PeopleLandingFragment extends Fragment implements PeopleAdapter.OnI
 
             }
         });
-//        filterIcon.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//////                LayoutInflater inflater = (LayoutInflater) InvitingMembersFragment(getContext().LAYOUT_INFLATER_SERVICE);
-////                View layout = LayoutInflater.from(getContext()).inflate(R.layout.my_groups_filter, null);
-////                PopupWindow window = new PopupWindow(layout,400, 400,true);
-////
-////                window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-////                window.setOutsideTouchable(true);
-////                window.showAtLocation(layout, Gravity.TOP, 268, 210);
-//            }
-//        });
+        filterIcon.setOnClickListener(new View.OnClickListener() {
+            private boolean flag = true;
+            @Override
+            public void onClick(View v) {
+                if (flag) {
+                    flag = false;
+                    final View layout = LayoutInflater.from(getContext()).inflate(R.layout.my_groups_filter, null);
+                    final PopupWindow window = new PopupWindow(layout, 300, 400, true);
+                    window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    window.setOutsideTouchable(true);
+                    window.showAtLocation(layout, Gravity.TOP, 315, 210);
+                    final TextView clearTitle = (TextView) layout.findViewById(R.id.clearTitle);
+                    final TextView favouritesTitle = (TextView) layout.findViewById(R.id.favouritesTitle);
+
+                    favouritesTitle.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            showingYourFavourites.setVisibility(View.VISIBLE);
+                            window.dismiss();
+                        }
+                    });
+                } else {
+                    flag = true;
+                    final View layout = LayoutInflater.from(getContext()).inflate(R.layout.my_groups_filter, null);
+                    final PopupWindow window = new PopupWindow(layout, 300, 400, true);
+                    window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    window.setOutsideTouchable(true);
+                    window.showAtLocation(layout, Gravity.TOP, 315, 210);
+                    final TextView clearTitle = (TextView) layout.findViewById(R.id.clearTitle);
+                    final TextView favouritesTitle = (TextView) layout.findViewById(R.id.favouritesTitle);
+                    clearTitle.setTextColor(ColorStateList.valueOf(Color
+                            .parseColor("#32BDD2")));
+                    favouritesTitle.setTextColor(ColorStateList.valueOf(Color
+                            .parseColor("#B5B5B5")));
+                    clearTitle.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            showingYourFavourites.setVisibility(View.GONE);
+                            window.dismiss();
+                        }
+                    });
+                }
+            }
+        });
 
 //        filterIcon.setOnClickListener(new View.OnClickListener() {
 //            private boolean flag=true;
@@ -172,31 +202,31 @@ public class PeopleLandingFragment extends Fragment implements PeopleAdapter.OnI
 //                }
 //            }
 //        });
-
-        favouritesTitle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                    filterPopup.setVisibility(View.GONE);
-                    showingYourFavourites.setVisibility(View.VISIBLE);
-                    clearTitle.setTextColor(ColorStateList.valueOf(Color
-                            .parseColor("#32BDD2")));
-                favouritesTitle.setTextColor(ColorStateList.valueOf(Color
-                        .parseColor("#B5B5B5")));
-            }
-        });
-
-        clearTitle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                filterPopup.setVisibility(View.GONE);
-                showingYourFavourites.setVisibility(View.GONE);
-                clearTitle.setTextColor(ColorStateList.valueOf(Color
-                        .parseColor("#B5B5B5")));
-                favouritesTitle.setTextColor(ColorStateList.valueOf(Color
-                        .parseColor("#747474")));
-
-            }
-        });
+//
+//        favouritesTitle.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                    showingYourFavourites.setVisibility(View.VISIBLE);
+//                    clearTitle.setTextColor(ColorStateList.valueOf(Color
+//                            .parseColor("#32BDD2")));
+//                favouritesTitle.setTextColor(ColorStateList.valueOf(Color
+//                        .parseColor("#B5B5B5")));
+//            }
+//        });
+//
+//        clearTitle.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                filterPopup.setVisibility(View.GONE);
+//                showingYourFavourites.setVisibility(View.GONE);
+//                clearTitle.setTextColor(ColorStateList.valueOf(Color
+//                        .parseColor("#B5B5B5")));
+//                favouritesTitle.setTextColor(ColorStateList.valueOf(Color
+//                        .parseColor("#747474")));
+//
+//            }
+//        });
 
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override

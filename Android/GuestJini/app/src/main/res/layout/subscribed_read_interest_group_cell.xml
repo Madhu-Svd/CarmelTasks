@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="28dp"
         app:cardBackgroundColor="@color/colorWhisper1"
         app:cardCornerRadius="5dp"
         app:cardElevation="5dp"
@@ -23,17 +23,19 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp">
 
             <TextView
                 android:id="@+id/techTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="20dp"
                 android:text="Tech"
-                android:textColor="#909090"
+                android:textColor="@color/colorSuvaGray"
                 android:textSize="10dp"
+                android:letterSpacing="0.05"
                 app:fontFamily="@font/roboto_medium"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -43,10 +45,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="2dp"
                 android:text="ROBOTICS"
-                android:textColor="#5A5A5A"
+                android:textColor="@color/colorZambezi1"
                 android:textSize="10dp"
+                android:letterSpacing="0.06"
                 app:fontFamily="@font/roboto_medium"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/techTitle" />
@@ -56,12 +59,13 @@
                 android:layout_width="195dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="10dp"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien. ultricies."
-                android:textColor="#747474"
+                android:textColor="@color/colorDimGray"
                 android:textSize="10dp"
                 app:fontFamily="@font/roboto"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="2dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4" />

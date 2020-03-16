@@ -2,6 +2,7 @@ package com.carmel.guestjini.MyGroups;
 
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -37,11 +38,11 @@ import java.util.ArrayList;
 import Adapter.InvitingMembersAdapter;
 import Model.InvitingMembersModel;
 
-public class InvitingMembersFragment extends Fragment implements InvitingMembersAdapter.OnItemClickListener,AdapterView.OnItemClickListener {
+public class InvitingMembersFragment extends Fragment implements InvitingMembersAdapter.OnItemClickListener {
     private RecyclerView inviteGroupsRecyclerView;
     private ArrayList<InvitingMembersModel> invitingMembersArrayList = new ArrayList<>();
     private EditText search;
-    private TextView searchResultCount,clearTitle;
+    private TextView searchResultCount,showingYourFavourites;
     private ImageView filterIcon, backArrow;
     private ConstraintLayout searchLayout, noResultFoundLayout, recyclerViewLayout;
     ListPopupWindow  listPopupWindow;
@@ -59,27 +60,7 @@ public class InvitingMembersFragment extends Fragment implements InvitingMembers
         searchResultCount = rootView.findViewById(R.id.searchResultCount);
         backArrow = rootView.findViewById(R.id.backArrow);
         filterIcon = rootView.findViewById(R.id.filterIcon);
-        clearTitle=rootView.findViewById(R.id.clearTitle);
-        String[] products={"CLEAR", "FAVOURITES"};
-
-        listPopupWindow = new ListPopupWindow(
-                getActivity());
-        listPopupWindow.setAdapter(new ArrayAdapter(
-                getActivity(),
-                R.layout.my_groups_filter, products));
-        listPopupWindow.setAnchorView(filterIcon);
-        listPopupWindow.setWidth(300);
-        listPopupWindow.setHeight(400);
-
-        listPopupWindow.setModal(true);
-        listPopupWindow.setOnItemClickListener(this);
-        filterIcon.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                listPopupWindow.show();
-            }
-        });
-
-
+        showingYourFavourites=rootView.findViewById(R.id.showingFavourites);
 
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -174,15 +155,47 @@ public class InvitingMembersFragment extends Fragment implements InvitingMembers
 
 
         filterIcon.setOnClickListener(new View.OnClickListener() {
+            private boolean flag = true;
             @Override
             public void onClick(View v) {
-//                LayoutInflater inflater = (LayoutInflater) InvitingMembersFragment(getContext().LAYOUT_INFLATER_SERVICE);
-                View layout = LayoutInflater.from(getContext()).inflate(R.layout.my_groups_filter, null);
-                PopupWindow window = new PopupWindow(layout,400, 400,true);
+                if (flag) {
+                    flag = false;
+                    final View layout = LayoutInflater.from(getContext()).inflate(R.layout.my_groups_filter, null);
+                    final PopupWindow window = new PopupWindow(layout, 300, 400, true);
+                    window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    window.setOutsideTouchable(true);
+                    window.showAtLocation(layout, Gravity.TOP, 315, 210);
+                    final TextView clearTitle = (TextView) layout.findViewById(R.id.clearTitle);
+                    final TextView favouritesTitle = (TextView) layout.findViewById(R.id.favouritesTitle);
 
-                window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                window.setOutsideTouchable(true);
-                window.showAtLocation(layout, Gravity.TOP, 268, 210);
+                    favouritesTitle.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            showingYourFavourites.setVisibility(View.VISIBLE);
+                            window.dismiss();
+                        }
+                    });
+                } else {
+                    flag = true;
+                    final View layout = LayoutInflater.from(getContext()).inflate(R.layout.my_groups_filter, null);
+                    final PopupWindow window = new PopupWindow(layout, 300, 400, true);
+                    window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    window.setOutsideTouchable(true);
+                    window.showAtLocation(layout, Gravity.TOP, 315, 210);
+                    final TextView clearTitle = (TextView) layout.findViewById(R.id.clearTitle);
+                    final TextView favouritesTitle = (TextView) layout.findViewById(R.id.favouritesTitle);
+                    clearTitle.setTextColor(ColorStateList.valueOf(Color
+                            .parseColor("#747474")));
+                    favouritesTitle.setTextColor(ColorStateList.valueOf(Color
+                            .parseColor("#B5B5B5")));
+                    clearTitle.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            showingYourFavourites.setVisibility(View.GONE);
+                            window.dismiss();
+                        }
+                    });
+                }
             }
         });
 
@@ -193,19 +206,11 @@ public class InvitingMembersFragment extends Fragment implements InvitingMembers
     public void onItemClick(int position) {
 
     }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        listPopupWindow.getAnchorView();
-        clearTitle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                clearTitle.setVisibility(View.GONE);
-
-            }
-        });
-
-
-        listPopupWindow.dismiss();
-    }
+//
+//    @Override
+//    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//
+//
+//        listPopupWindow.dismiss();
+//    }
 }

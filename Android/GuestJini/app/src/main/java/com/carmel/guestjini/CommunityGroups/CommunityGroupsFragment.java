@@ -2,6 +2,8 @@ package com.carmel.guestjini.CommunityGroups;
 
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -17,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,6 +53,7 @@ public class CommunityGroupsFragment extends Fragment implements CommunityGroups
         recyclerViewLayout=rootView.findViewById(R.id.recyclerViewLayout);
         searchResultCount=rootView.findViewById(R.id.searchResultCount);
         search=rootView.findViewById(R.id.search);
+        communityGroupFilterIcon=rootView.findViewById(R.id.filterIcon);
 
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         communityGroupsRecyclerView.setLayoutManager(linearLayoutManager);
@@ -135,6 +139,17 @@ public class CommunityGroupsFragment extends Fragment implements CommunityGroups
                 startActivity(intent);
             }
         });
+        communityGroupFilterIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final View layout = LayoutInflater.from(getContext()).inflate(R.layout.community_groups_filter, null);
+                final PopupWindow window = new PopupWindow(layout, 300, 460, true);
+                window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                window.setOutsideTouchable(true);
+                window.showAtLocation(layout, Gravity.TOP, 310, 210);
+            }
+        });
+
 
         searchLayout.setOnClickListener(new View.OnClickListener() {
             private boolean flag=true;

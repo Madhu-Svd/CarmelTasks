@@ -219,6 +219,7 @@
     <string name="New">NEW</string>
     <string name="exit">EXIT</string>
     <string name="exit_group">EXIT GROUP?</string>
+    <string name="showing_subscribed">Showing subscribed groups.</string>
     <!--    Community Groups-->
     <string name="community_groups">COMMUNITY GROUPS</string>
     <string name="groupName">Group Name</string>
@@ -277,4 +278,8 @@
     <string name="requests_date">Requests Date</string>
     <string name="requests_status">Requests Status</string>
     <string name="favourites">FAVOURITES</string>
+    <string name="showing_favourites">Showing your favourites.</string>
+    <string name="joined">JOINED</string>
+    <string name="requested">REQUESTED</string>
+    <string name="invited">INVITED</string>
 </resources>

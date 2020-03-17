@@ -12,8 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
-        <activity android:name=".MyGroupsActivity"></activity>
-        <activity android:name=".CommunityGroupsActivity"></activity>
+        <activity android:name=".AccountsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MyGroupsActivity" />
+        <activity android:name=".CommunityGroupsActivity" />
         <activity android:name=".InterestGroupsActivity" />
         <activity android:name=".GroupsActivity" />
         <activity android:name=".PeopleActivity" />

@@ -282,4 +282,21 @@
     <string name="joined">JOINED</string>
     <string name="requested">REQUESTED</string>
     <string name="invited">INVITED</string>
+
+    <!--Accounts-->
+    <string name="rent_invoice">RENT INVOICE</string>
+    <string name="accounts_title">Accounts Page Title</string>
+    <string name="rent_invoice_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat sapien, ultricies quis</string>
+    <string name="rent_invoice_date">Rent Invoice Date</string>
+    <string name="rent_invoice_no">Rent Invoice No</string>
+    <string name="rent_invoice_amount">Rent Invoice Amount</string>
+    <string name="package_label">Package : </string>
+    <string name="package_Name">Royal-Long Stay</string>
+    <string name="total_amount">Total Amount - </string>
+    <string name="package_name">Package Name</string>
+    <string name="amount_value">Amount</string>
+    <string name="more_details">More Details</string>
+    <string name="pay_now">PAY NOW</string>
+
+
 </resources>

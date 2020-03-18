@@ -89,6 +89,7 @@ public class AccountsDetailsFragment extends Fragment implements RentInvoiceAdap
         bundle.putString("RentInvoiceDate",rentInvoiceArrayList.get(position).getRentInvoiceDate());
         bundle.putString("RentInvoiceNo",rentInvoiceArrayList.get(position).getRentInvoiceNo());
         bundle.putString("RentInvoiceAmount",rentInvoiceArrayList.get(position).getRentInvoiceAmount());
+        bundle.putString("AccountsTitle",AccountsTitle);
          rentInvoiceDetailsFragment.setArguments(bundle);
         fragmentTransaction.commit();
 

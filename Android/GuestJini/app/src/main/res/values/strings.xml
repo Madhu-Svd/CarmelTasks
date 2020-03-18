@@ -297,6 +297,22 @@
     <string name="amount_value">Amount</string>
     <string name="more_details">More Details</string>
     <string name="pay_now">PAY NOW</string>
+    <string name="payment_options">PAYMENT OPTIONS</string>
+    <string name="payment_options_name">Payment Options Name</string>
+    <string name="debit_credit_card">DEBIT/CREDIT CARD</string>
+    <string name="card_number">Card Number</string>
+    <string name="card_number_error_field">This field is required or Invalid Card Number</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="cvv">CVV </string>
+    <string name="card_holder_name">Card Holder Name </string>
+    <string name="card_holder_name_error_field">This field is required or Invalid Name</string>
+    <string name="quik_pay">QuikPay</string>
+    <string name="quik_pay_short_description">Save this card information to this account and make faster payments.</string>
+    <string name="process_dailog">Processing Your Request</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="transaction_id_label">Transaction ID :</string>
+    <string name="transaction_id"> MOBAND3/559790819/3</string>
+    <string name="transaction_process">We are processing your transaction...</string>
 
 
 </resources>

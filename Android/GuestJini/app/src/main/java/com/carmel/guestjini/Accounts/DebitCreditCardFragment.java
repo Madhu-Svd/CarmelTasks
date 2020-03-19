@@ -10,16 +10,20 @@ import android.os.Bundle;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.carmel.guestjini.R;
+import com.carmel.guestjini.Support.MyTicketsRecyclerViewFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class DebitCreditCardFragment extends Fragment {
@@ -27,6 +31,8 @@ public class DebitCreditCardFragment extends Fragment {
     private EditText cardNumberEditText,expiryDateEditText,cvvEditText,cardHolderNameEditText;
     private TextView cardNumberErrorField,expiryDateErrorField,cvvErrorField,cardHolderNameErrorField;
     private ConstraintLayout debitCreditMainLayout,processingLayout;
+    private TextView amount;
+    private ImageView backArrow;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,7 +51,22 @@ public class DebitCreditCardFragment extends Fragment {
         cardHolderNameErrorField=rootview.findViewById(R.id.cardHolderNameErrorField);
         debitCreditMainLayout=rootview.findViewById(R.id.debitCreditMainLayout);
         processingLayout=rootview.findViewById(R.id.processingLayout);
+        amount=rootview.findViewById(R.id.amount);
+        backArrow=rootview.findViewById(R.id.backArrow);
 
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PaymentOptionsFragment paymentOptionsFragment=new PaymentOptionsFragment();
+                FragmentManager fragmentManager=getFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.AccountsPlaceHolder,paymentOptionsFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+        final String Amount=amount.getText().toString();
         payButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,6 +108,65 @@ public class DebitCreditCardFragment extends Fragment {
                     dialog.show();
 
                 }
+            }
+        });
+
+        processingLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog=new Dialog(getContext());
+                dialog.setContentView(R.layout.alert_dailogbox);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+                TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);
+                alertDailogTitle.setText(getText(R.string.failed));
+                alertDailogTitle.setTextColor(Color.parseColor("#E65959"));
+
+                TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
+                alertDailogMessage.setText(R.string.ticket_failed);
+
+                FloatingActionButton doneButton= (FloatingActionButton) dialog.findViewById(R.id.done_button);
+                doneButton.setBackgroundTintList(ColorStateList.valueOf(Color
+                        .parseColor("#E65959")));
+
+                doneButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+
+                        final Dialog dialog=new Dialog(getContext());
+                        dialog.setContentView(R.layout.alert_dailogbox);
+                        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+                        TextView alertDailogTitle = (TextView) dialog.findViewById(R.id.alertDailogTitle);
+                        alertDailogTitle.setText(getText(R.string.success));
+
+                        TextView alertDailogMessage = (TextView) dialog.findViewById(R.id.alertDailogDescription);
+                        alertDailogMessage.setText(getText(R.string.ticket_success));
+
+                        FloatingActionButton doneButton= (FloatingActionButton) dialog.findViewById(R.id.done_button);
+                        doneButton.setBackgroundTintList(ColorStateList.valueOf(Color
+                                .parseColor("#32BDD2")));
+                        doneButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                dialog.dismiss();
+                                RentInvoiceDetailsFragment rentInvoiceDetailsFragment=new RentInvoiceDetailsFragment();
+                                FragmentManager fragmentManager=getFragmentManager();
+                                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                                fragmentTransaction.replace(R.id.AccountsPlaceHolder,rentInvoiceDetailsFragment);
+                                fragmentTransaction.addToBackStack(null);
+                                fragmentTransaction.commit();
+//                                Bundle bundle=new Bundle();
+//                                bundle.putString("amount",Amount);
+//                                rentInvoiceDetailsFragment.setArguments(bundle);
+                            }
+                        });
+                        dialog.show();
+                    }
+                });
+
+                dialog.show();
             }
         });
         return rootview;

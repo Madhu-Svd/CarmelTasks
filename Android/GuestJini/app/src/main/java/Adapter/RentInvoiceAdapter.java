@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.carmel.guestjini.R;
 
-import java.net.ProtocolFamily;
 import java.util.ArrayList;
 
 import Model.RentInvoiceModel;

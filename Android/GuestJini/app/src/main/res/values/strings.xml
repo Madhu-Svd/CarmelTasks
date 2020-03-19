@@ -313,6 +313,22 @@
     <string name="transaction_id_label">Transaction ID :</string>
     <string name="transaction_id"> MOBAND3/559790819/3</string>
     <string name="transaction_process">We are processing your transaction...</string>
+    <string name="transactionSuccessful">Transaction is Successful</string>
+    <string name="rent_pain_on">Rent paid on Date</string>
+    <string name="receipts_no">Receipts No</string>
+    <string name="created_on">Created On</string>
+    <string name="receipts_date">Receipt Date </string>
+    <string name="date_pattern">(DD/MM/YYYY)</string>
+    <string name="receipts_narration">Receipt Narration</string>
+    <string name="receipts_narration_description">Towards advance deposit</string>
+    <string name="payment_instrument">Payment Instrument</string>
+    <string name="cash">Cash</string>
+    <string name="instrument_narration">Instrument Narration</string>
+    <string name="instrument_narration_descrption">Lorem ipsum doler sit amet</string>
+    <string name="narration">Narration</string>
+    <string name="debit">Debit (Rs)</string>
+    <string name="credit">Credit (Rs)</string>
+    <string name="balance">Balance (Rs)</string>
 
 
 </resources>

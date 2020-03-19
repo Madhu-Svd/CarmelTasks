@@ -61,5 +61,6 @@ public class AccountsAdapter extends RecyclerView.Adapter<AccountsAdapter.ViewHo
     }
     public interface OnItemClickListener {
         void onItemClick(int position);
+        void onReceiptClick(int position);
     }
 }

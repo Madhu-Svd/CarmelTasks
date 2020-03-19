@@ -57,4 +57,17 @@ public class AccountsFragment extends Fragment implements AccountsAdapter.OnItem
         accountsDetailsFragment.setArguments(bundle);
         fragmentTransaction.commit();
     }
+
+    @Override
+    public void onReceiptClick(int position) {
+        AccountsDetailsFragment accountsDetailsFragment=new AccountsDetailsFragment();
+        FragmentManager fragmentManager=getFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.AccountsPlaceHolder,accountsDetailsFragment);
+        fragmentTransaction.addToBackStack(null);
+        Bundle bundle=new Bundle();
+        bundle.putString("AccountsTitle",accountsArrayList.get(position).getAccountsTitle());
+        accountsDetailsFragment.setArguments(bundle);
+        fragmentTransaction.commit();
+    }
 }

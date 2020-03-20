@@ -329,6 +329,15 @@
     <string name="debit">Debit (Rs)</string>
     <string name="credit">Credit (Rs)</string>
     <string name="balance">Balance (Rs)</string>
-
-
+    <string name="balance_amount">Balance</string>
+    <string name="debit_amount">Debit</string>
+    <string name="credit_amount">Credit</string>
+    <string name="ledger_date">Ledger Date</string>
+    <string name="ledger_type">Ledger Type</string>
+    <string name="ledger_name">Ledger Name</string>
+    <string name="rent">Rent</string>
+    <string name="dth">DTH</string>
+    <string name="breakage">Breakage</string>
+    <string name="discount">Discount</string>
+    <string name="net_amount">Net Amount</string>
 </resources>

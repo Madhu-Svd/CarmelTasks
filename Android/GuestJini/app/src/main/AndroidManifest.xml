@@ -3,6 +3,8 @@
     package="com.carmel.guestjini">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -19,12 +21,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".ProfileActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".MyGroupsActivity" />
         <activity android:name=".CommunityGroupsActivity" />
         <activity android:name=".InterestGroupsActivity" />
         <activity android:name=".GroupsActivity" />
         <activity android:name=".PeopleActivity" />
-        <activity android:name=".ProfileActivity" />
+
         <activity android:name=".CommunityActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

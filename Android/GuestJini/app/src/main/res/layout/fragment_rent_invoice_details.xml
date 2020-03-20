@@ -267,7 +267,7 @@
                                     android:layout_marginStart="20dp"
                                     android:fontFamily="@font/roboto"
                                     android:letterSpacing="0.05"
-                                    android:text="Rent"
+                                    android:text="@string/rent"
                                     android:textColor="@color/colorDimGray"
                                     android:textSize="12sp"
                                     app:layout_constraintStart_toStartOf="parent" />
@@ -309,7 +309,7 @@
                                     android:layout_marginStart="20dp"
                                     android:fontFamily="@font/roboto"
                                     android:letterSpacing="0.05"
-                                    android:text="DTH"
+                                    android:text="@string/dth"
                                     android:textColor="@color/colorDimGray"
                                     android:textSize="12sp"
                                     app:layout_constraintStart_toStartOf="parent" />
@@ -340,7 +340,8 @@
                                 android:layout_marginStart="0dp"
                                 android:layout_marginTop="0dp"
                                 android:layout_marginEnd="0dp"
-                                android:paddingTop="14dp">
+                                android:paddingTop="14dp"
+                                >
 
                                 <TextView
                                     android:id="@+id/breakageLabel"
@@ -351,7 +352,7 @@
                                     android:layout_marginStart="20dp"
                                     android:fontFamily="@font/roboto"
                                     android:letterSpacing="0.05"
-                                    android:text="Breakage"
+                                    android:text="@string/breakage"
                                     android:textColor="@color/colorDimGray"
                                     android:textSize="12sp"
                                     app:layout_constraintStart_toStartOf="parent" />
@@ -406,7 +407,7 @@
                                     android:layout_marginStart="20dp"
                                     android:fontFamily="@font/roboto"
                                     android:letterSpacing="0.05"
-                                    android:text="Discount"
+                                    android:text="@string/discount"
                                     android:textColor="@color/colorDimGray"
                                     android:textSize="12sp"
                                     app:layout_constraintStart_toStartOf="parent" />
@@ -450,7 +451,7 @@
                                     android:layout_marginStart="20dp"
                                     android:fontFamily="@font/roboto_bold"
                                     android:letterSpacing="0.05"
-                                    android:text="Net Amount"
+                                    android:text="@string/net_amount"
                                     android:textColor="@color/colorZambezi"
                                     android:textSize="12sp"
                                     app:layout_constraintStart_toStartOf="parent" />
@@ -514,6 +515,7 @@
                         android:fontFamily="@font/roboto_light"
                         android:letterSpacing="0.05"
                         android:paddingStart="32dp"
+                        android:paddingEnd="32dp"
                         android:text="@string/transactionSuccessful"
                         android:textColor="@color/colorSummerSky"
                         android:textSize="18sp">

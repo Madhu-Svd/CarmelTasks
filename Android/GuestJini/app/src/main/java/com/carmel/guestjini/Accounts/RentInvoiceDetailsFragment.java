@@ -75,7 +75,10 @@ public class RentInvoiceDetailsFragment extends Fragment {
             receiptsDetailsLayout.setVisibility(View.VISIBLE);
             rentInvoiceDetails.setVisibility(View.GONE);
         }
-
+        if (AccountsTitle.equals("LEDGER")){
+            receiptsDetailsLayout.setVisibility(View.GONE);
+            rentInvoiceDetails.setVisibility(View.GONE);
+        }
 //        final Bundle bundle1=getArguments();
 //        if(bundle1!=null){
 //

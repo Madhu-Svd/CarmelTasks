@@ -21,17 +21,20 @@ import com.carmel.guestjini.R;
 
 import java.util.ArrayList;
 
+import Adapter.LedgerAdapter;
 import Adapter.ReceiptsAdapter;
 import Adapter.ReceiptsAdapter.OnItemClickListener;
 import Adapter.RentInvoiceAdapter;
+import Model.LedgerModel;
 import Model.ReceiptsModel;
 import Model.RentInvoiceModel;
 
 
-public class AccountsDetailsFragment extends Fragment implements RentInvoiceAdapter.OnItemClickListener, ReceiptsAdapter.OnItemClickListener{
-    private RecyclerView rentInvoiceRecyclerView,receiptsRecyclerView;
+public class AccountsDetailsFragment extends Fragment implements RentInvoiceAdapter.OnItemClickListener, ReceiptsAdapter.OnItemClickListener,LedgerAdapter.OnItemClickListener{
+    private RecyclerView rentInvoiceRecyclerView,receiptsRecyclerView,ledgerRecyclerView;
     private ArrayList<RentInvoiceModel> rentInvoiceArrayList=new ArrayList<>();
     private ArrayList<ReceiptsModel> receiptsArrayList=new ArrayList<>();
+    private ArrayList<LedgerModel> ledgerArrayList=new ArrayList<>();
     String AccountsTitle;
     private TextView accountsTitle;
     private ImageView backArrow;
@@ -48,6 +51,7 @@ public class AccountsDetailsFragment extends Fragment implements RentInvoiceAdap
         backArrow=rootView.findViewById(R.id.backArrow);
         rentInvoiceListLayout=rootView.findViewById(R.id.rentInvoiceListLayout);
         receiptsListLayout=rootView.findViewById(R.id.receiptsListLayout);
+        ledgerRecyclerView=rootView.findViewById(R.id.ledgerRecyclerView);
 
 
 
@@ -74,10 +78,15 @@ public class AccountsDetailsFragment extends Fragment implements RentInvoiceAdap
             AccountsTitle=bundle.getString("AccountsTitle");
             accountsTitle.setText(AccountsTitle);
         }
-        if(AccountsTitle.equals("RECEIPTS")){
-            rentInvoiceListLayout.setVisibility(View.GONE);
-            receiptsListLayout.setVisibility(View.VISIBLE);
-        }
+//        else
+//        if(AccountsTitle.equals("RECEIPTS")){
+//            rentInvoiceListLayout.setVisibility(View.GONE);
+//            receiptsListLayout.setVisibility(View.VISIBLE);
+//        }
+//        if(AccountsTitle.equals("LEDGER")){
+//            rentInvoiceListLayout.setVisibility(View.GONE);
+//            receiptsListLayout.setVisibility(View.VISIBLE);
+//        }
 
 
         rentInvoiceArrayList.add(new RentInvoiceModel("05 Jul 2019","RI00056780","Rs. 10,988",R.drawable.navigation_icon_xhdpi));
@@ -95,6 +104,20 @@ public class AccountsDetailsFragment extends Fragment implements RentInvoiceAdap
         receiptsRecyclerView.setAdapter(receiptsAdapter);
 
         receiptsArrayList.add(new ReceiptsModel("01 Sep 2018","RECEIPT/000001/2018","04 SEP 2018, 7:59 PM","Rs.50,000",R.drawable.navigation_next_xxhdpi));
+
+
+        LinearLayoutManager ledgerLinearLayoutManager=new LinearLayoutManager(getContext());
+        ledgerRecyclerView.setLayoutManager(ledgerLinearLayoutManager);
+        ledgerRecyclerView.setHasFixedSize(true);
+        ledgerRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
+        LedgerAdapter ledgerAdapter=new LedgerAdapter(getContext(),ledgerArrayList,this);
+        ledgerRecyclerView.setAdapter(ledgerAdapter);
+
+        ledgerArrayList.add(new LedgerModel("05 Jul 2018","RENT INVOICE","Rs. 10,000 pm",10000,-22688));
+        ledgerArrayList.add(new LedgerModel("05 Jul 2018","BILL","House Keeping",300,-12568));
+        ledgerArrayList.add(new LedgerModel("05 Jul 2018","BILL","House Keeping",1200,-12268));
+        ledgerArrayList.add(new LedgerModel("05 Jul 2018","DEBIT NOTE","Breakage",500,-11068));
+
         return rootView;
     }
 
@@ -123,6 +146,21 @@ public class AccountsDetailsFragment extends Fragment implements RentInvoiceAdap
         Bundle bundle=new Bundle();
         bundle.putString("ReceiptsDate",receiptsArrayList.get(position).getReceiptsDate());
         bundle.putString("ReceiptsAmount",receiptsArrayList.get(position).getAmount());
+        bundle.putString("AccountsTitle",AccountsTitle);
+        rentInvoiceDetailsFragment.setArguments(bundle);
+        fragmentTransaction.commit();
+    }
+
+    @Override
+    public void onLedgerItemClick(int position) {
+        RentInvoiceDetailsFragment rentInvoiceDetailsFragment=new RentInvoiceDetailsFragment();
+        FragmentManager fragmentManager=getFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.AccountsPlaceHolder,rentInvoiceDetailsFragment);
+        Bundle bundle=new Bundle();
+//        bundle.putString("RentInvoiceDate",rentInvoiceArrayList.get(position).getRentInvoiceDate());
+//        bundle.putString("RentInvoiceNo",rentInvoiceArrayList.get(position).getRentInvoiceNo());
+//        bundle.putString("RentInvoiceAmount",rentInvoiceArrayList.get(position).getRentInvoiceAmount());
         bundle.putString("AccountsTitle",AccountsTitle);
         rentInvoiceDetailsFragment.setArguments(bundle);
         fragmentTransaction.commit();

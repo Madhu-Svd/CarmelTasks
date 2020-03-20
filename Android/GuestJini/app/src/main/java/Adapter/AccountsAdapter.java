@@ -57,10 +57,14 @@ public class AccountsAdapter extends RecyclerView.Adapter<AccountsAdapter.ViewHo
         @Override
         public void onClick(View v) {
             onItemClickListener.onItemClick(getAdapterPosition());
+            onItemClickListener.onReceiptClick(getAdapterPosition());
+            onItemClickListener.onLedgerItemCilck(getAdapterPosition());
+
         }
     }
     public interface OnItemClickListener {
         void onItemClick(int position);
         void onReceiptClick(int position);
+        void onLedgerItemCilck(int position);
     }
 }

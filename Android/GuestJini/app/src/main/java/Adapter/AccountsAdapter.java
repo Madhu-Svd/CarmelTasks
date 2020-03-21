@@ -59,6 +59,7 @@ public class AccountsAdapter extends RecyclerView.Adapter<AccountsAdapter.ViewHo
             onItemClickListener.onItemClick(getAdapterPosition());
             onItemClickListener.onReceiptClick(getAdapterPosition());
             onItemClickListener.onLedgerItemCilck(getAdapterPosition());
+            onItemClickListener.onBillsItemClick(getAdapterPosition());
 
         }
     }
@@ -66,5 +67,6 @@ public class AccountsAdapter extends RecyclerView.Adapter<AccountsAdapter.ViewHo
         void onItemClick(int position);
         void onReceiptClick(int position);
         void onLedgerItemCilck(int position);
+        void onBillsItemClick(int position);
     }
 }

@@ -76,7 +76,7 @@ public class PeopleDetailsFragment extends Fragment {
                 PeopleLandingFragment peopleLandingFragment=new PeopleLandingFragment();
                 FragmentManager fragmentManager=getFragmentManager();
                 FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.CommunityPlaceHolder,peopleLandingFragment);
+                fragmentTransaction.replace(R.id.peoplePlaceHolder,peopleLandingFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
 

@@ -196,7 +196,10 @@
     <string name="groups">GROUPS</string>
     <string name="people_title">PEOPLE</string>
     <string name="interest_groups">INTEREST GROUPS</string>
+    <string name="location">Enter the Location</string>
     <string name="origin_large_text"> If you have a profile picture, your chances of\n making more friends will be higher. However\n you can turn on or turn off the visibility of\n your photo anytime. </string>
+    <string name="my_interests_description">Add interests to enhance your Guesture experience</string>
+    <string name="view_my_interests">View My Interests</string>
     <!--    People -->
     <string name="people_name">People Name</string>
     <string name="people_gender">People Gender</string>
@@ -340,4 +343,13 @@
     <string name="breakage">Breakage</string>
     <string name="discount">Discount</string>
     <string name="net_amount">Net Amount</string>
+    <string name="bills_date">Bills Date</string>
+    <string name="bills_no">Bills No</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_amount">Product Name</string>
+    <string name="maintenance">Maintenance</string>
+    <string name="items">Items</string>
+    <string name="rate">Rate (Rs)</string>
+    <string name="qty">Qty</string>
+    <string name="amount_rs">Amount (Rs)</string>
 </resources>

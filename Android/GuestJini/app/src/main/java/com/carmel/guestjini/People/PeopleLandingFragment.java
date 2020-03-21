@@ -110,22 +110,22 @@ public class PeopleLandingFragment extends Fragment implements PeopleAdapter.OnI
 
 
 
-        search.addTextChangedListener(new TextWatcher() {
-            private boolean flag=true;
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-            @Override
-            public void afterTextChanged(Editable s) {
-                filter(s.toString());
-
-            }
-        });
+//        search.addTextChangedListener(new TextWatcher() {
+//            private boolean flag=true;
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//
+//            }
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//                filter(s.toString());
+//
+//            }
+//        });
 
         searchLayout.setOnClickListener(new View.OnClickListener() {
             private boolean flag=true;
@@ -238,22 +238,22 @@ public class PeopleLandingFragment extends Fragment implements PeopleAdapter.OnI
         return rootView;
 
     }
-    private void filter(String text){
-        ArrayList<PeopleModel> filterList=new ArrayList<>();
-        for(PeopleModel item:peopleModelArrayList){
-            if(item.getAddPeopleName().toLowerCase().contains(text.toLowerCase())){
-                filterList.add(item);
-            }
-        }
-        peopleAdapter.filterList(filterList);
-    }
+//    private void filter(String text){
+//        ArrayList<PeopleModel> filterList=new ArrayList<>();
+//        for(PeopleModel item:peopleModelArrayList){
+//            if(item.getAddPeopleName().toLowerCase().contains(text.toLowerCase())){
+//                filterList.add(item);
+//            }
+//        }
+//        peopleAdapter.filterList(filterList);
+//    }
 
     @Override
     public void onItemClick(int position) {
         PeopleDetailsFragment peopleDetailsFragment=new PeopleDetailsFragment();
         FragmentManager fragmentManager=getFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.CommunityPlaceHolder,peopleDetailsFragment);
+        fragmentTransaction.replace(R.id.peoplePlaceHolder,peopleDetailsFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 

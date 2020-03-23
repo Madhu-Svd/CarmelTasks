@@ -31,7 +31,7 @@ import Model.ReceiptsModel;
 import Model.RentInvoiceModel;
 
 
-public class AccountsDetailsFragment extends Fragment implements RentInvoiceAdapter.OnItemClickListener, ReceiptsAdapter.OnItemClickListener,LedgerAdapter.OnItemClickListener{
+public class AccountsDetailsFragment extends Fragment implements RentInvoiceAdapter.OnItemClickListener, ReceiptsAdapter.OnItemClickListener,LedgerAdapter.OnItemClickListener,BillsAdapter.OnItemClickListener{
     private RecyclerView rentInvoiceRecyclerView,receiptsRecyclerView,ledgerRecyclerView,billsRecyclerView;
     private ArrayList<RentInvoiceModel> rentInvoiceArrayList=new ArrayList<>();
     private ArrayList<ReceiptsModel> receiptsArrayList=new ArrayList<>();
@@ -104,7 +104,11 @@ public class AccountsDetailsFragment extends Fragment implements RentInvoiceAdap
             ledgerMainLayout.setVisibility(View.GONE);
             billsRecyclerView.setVisibility(View.VISIBLE);
         }
-
+//        final Bundle bundle1=getArguments();
+//        if(bundle1!=null){
+//            AccountsTitle=bundle1.getString("PageTitle");
+//            accountsTitle.setText(AccountsTitle);
+//        }
 //       Rent Invoice
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         rentInvoiceRecyclerView.setLayoutManager(linearLayoutManager);
@@ -147,7 +151,7 @@ public class AccountsDetailsFragment extends Fragment implements RentInvoiceAdap
         billsRecyclerView.setLayoutManager(billsLinearLayoutManager);
         billsRecyclerView.setHasFixedSize(true);
         billsRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
-        BillsAdapter billsAdapter=new BillsAdapter(getContext(),billsArrayList);
+        BillsAdapter billsAdapter=new BillsAdapter(getContext(),billsArrayList,this);
         billsRecyclerView.setAdapter(billsAdapter);
 
         billsArrayList.add(new BillsModel("05 Sep 2018","BILL/000024/2018-19","Water Bottle","Rs.110",R.drawable.navigation_next_xxhdpi));
@@ -197,6 +201,21 @@ public class AccountsDetailsFragment extends Fragment implements RentInvoiceAdap
 //        bundle.putString("RentInvoiceDate",rentInvoiceArrayList.get(position).getRentInvoiceDate());
 //        bundle.putString("RentInvoiceNo",rentInvoiceArrayList.get(position).getRentInvoiceNo());
 //        bundle.putString("RentInvoiceAmount",rentInvoiceArrayList.get(position).getRentInvoiceAmount());
+        bundle.putString("AccountsTitle",AccountsTitle);
+        rentInvoiceDetailsFragment.setArguments(bundle);
+        fragmentTransaction.commit();
+    }
+
+    @Override
+    public void onBillsDetailsClick(int position) {
+        RentInvoiceDetailsFragment rentInvoiceDetailsFragment=new RentInvoiceDetailsFragment();
+        FragmentManager fragmentManager=getFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.AccountsPlaceHolder,rentInvoiceDetailsFragment);
+        Bundle bundle=new Bundle();
+        bundle.putString("BillsDate",billsArrayList.get(position).getBillsDate());
+        bundle.putString("BillsNo",billsArrayList.get(position).getBillsNo());
+//        bundle.putString("ProductAmount",billsArrayList.get(position).getProductAmount());
         bundle.putString("AccountsTitle",AccountsTitle);
         rentInvoiceDetailsFragment.setArguments(bundle);
         fragmentTransaction.commit();

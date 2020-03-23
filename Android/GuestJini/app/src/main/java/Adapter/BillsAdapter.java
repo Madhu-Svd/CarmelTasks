@@ -16,10 +16,12 @@ import Model.BillsModel;
 public class BillsAdapter extends RecyclerView.Adapter<BillsAdapter.ViewHolder> {
     private Context context;
     private ArrayList<BillsModel> billsModelList;
+    private OnItemClickListener onItemClickListener;
 
-    public BillsAdapter(Context context, ArrayList<BillsModel> billsArrayList) {
+    public BillsAdapter(Context context, ArrayList<BillsModel> billsArrayList,OnItemClickListener onItemClickListener) {
         this.context = context;
         this.billsModelList = billsArrayList;
+        this.onItemClickListener=onItemClickListener;
     }
 
     @NonNull
@@ -43,7 +45,7 @@ public class BillsAdapter extends RecyclerView.Adapter<BillsAdapter.ViewHolder> 
     public int getItemCount() {
         return billsModelList.size();
     }
-    public class ViewHolder extends RecyclerView.ViewHolder  {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView billsDate,billsNo,productAmount,productName;
         private ImageView rightNavigationIcon;
         public ViewHolder(@NonNull View itemView) {
@@ -53,15 +55,15 @@ public class BillsAdapter extends RecyclerView.Adapter<BillsAdapter.ViewHolder> 
             productName=itemView.findViewById(R.id.productName);
             productAmount=itemView.findViewById(R.id.productAmount);
             rightNavigationIcon=itemView.findViewById(R.id.billsNavigationIcon);
+            itemView.setOnClickListener(this);
         }
 
-//        @Override
-//        public void onClick(View v) {
-//            onItemClickListener.onItemClick(getAdapterPosition());
-//            onItemClickListener.onReceiptClick(getAdapterPosition());
-//            onItemClickListener.onLedgerItemCilck(getAdapterPosition());
-//            onItemClickListener.onBillsItemClick(getAdapterPosition());
-//
-//        }
+        @Override
+        public void onClick(View v) {
+            onItemClickListener.onBillsDetailsClick(getAdapterPosition());
+        }
+    }
+    public interface OnItemClickListener {
+        void onBillsDetailsClick(int position);
     }
 }

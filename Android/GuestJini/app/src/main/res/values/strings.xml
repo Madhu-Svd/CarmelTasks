@@ -352,4 +352,6 @@
     <string name="rate">Rate (Rs)</string>
     <string name="qty">Qty</string>
     <string name="amount_rs">Amount (Rs)</string>
+    <string name="towardsRent">Towards rent for the month of Jul, 2108</string>
+    <string name="rentAddress">Unit : Alta Vista - A Block - Floor 1 - 1A4 - R1 - POD 287</string>
 </resources>
